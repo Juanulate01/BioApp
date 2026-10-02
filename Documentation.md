@@ -20,7 +20,20 @@
      - [Límites del proyecto](#límites-del-proyecto)
    - [1.7. Entregables previstos](#17-entregables-previstos)
    - [1.8. Condiciones generales de aceptación](#18-condiciones-generales-de-aceptación)  
-
+   
+2. [Definición del Scrum Team](#2-definición-del-scrum-team)
+   - [2.1. Product Owner: Juan Daniel Ulate](#21-product-owner-juan-daniel-ulate)
+   - [2.2. Scrum Master y Developer: Kristel Ramírez](#22-scrum-master-y-developer-kristel-ramírez)
+     - [Responsabilidades como Scrum Master](#responsabilidades-como-scrum-master)
+     - [Responsabilidades como Developer](#responsabilidades-como-developer)
+   - [2.3. Developer: Krisley Castro](#23-developer-krisley-castro)
+   - [2.4. Acuerdos de trabajo para las 14 semanas](#24-acuerdos-de-trabajo-para-las-14-semanas)
+     - [Sprint Planning](#sprint-planning)
+     - [Daily Scrum](#daily-scrum)
+     - [Sprint Review](#sprint-review)
+     - [Sprint Retrospective](#sprint-retrospective)
+   - [2.5. Definición de Terminado](#25-definición-de-terminado)
+   - [2.6. Comunicación y seguimiento del trabajo](#26-comunicación-y-seguimiento-del-trabajo)
 
 
 ## 1. Project Charter
@@ -97,3 +110,121 @@ Desarrollar una aplicación para consultar la elaboración de bioinsumos y calcu
 - La aplicación identifica datos obligatorios faltantes o valores inválidos antes de calcular.
 - Los resultados muestran las unidades, los datos utilizados y las cantidades necesarias para cada tanque.
 - Las funcionalidades implementadas se revisan con el Product Owner y se presentan al docente según los criterios de las entregas académicas.
+
+## 2. Definición del Scrum Team
+
+El Scrum Team de BioApp estará conformado por tres integrantes y trabajará durante las 14 semanas del proyecto.
+
+| Integrante | Rol | Responsabilidad principal |
+| --- | --- | --- |
+| Juan Daniel Ulate | Product Owner | Definir el objetivo del producto, ordenar el Product Backlog y aclarar los requisitos para maximizar el valor de BioApp. |
+| Kristel Ramírez | Scrum Master y Developer | Facilitar la aplicación de Scrum, ayudar a resolver impedimentos y participar en el desarrollo, las pruebas y la documentación. |
+| Krisley Castro | Developer | Participar en el diseño, desarrollo, pruebas y documentación de los incrementos de la aplicación. |
+
+### 2.1. Product Owner: Juan Daniel Ulate
+
+Juan Daniel Ulate será responsable de orientar el producto hacia las necesidades de las personas usuarias y mantener claras las prioridades del proyecto.
+
+#### Responsabilidades
+
+- Definir y comunicar el objetivo del producto.
+- Crear, mantener y ordenar el Product Backlog.
+- Aclarar los requisitos y establecer criterios de aceptación para las funcionalidades.
+- Priorizar el catálogo de recetas, los registros de cultivos, terrenos y equipos, la calculadora y el historial de aplicaciones.
+- Recoger las necesidades de las personas agricultoras y las observaciones del docente.
+- Coordinar la revisión del contenido con profesionales en agronomía y personas con experiencia en elaboración de bioinsumos.
+- Revisar los incrementos y ajustar las prioridades según la retroalimentación recibida.
+- Gestionar las decisiones sobre alcance para mantener el proyecto viable dentro de las 14 semanas.
+
+### 2.2. Scrum Master y Developer: Kristel Ramírez
+
+Kristel Ramírez combinará las responsabilidades de Scrum Master con la participación técnica cuando sea requerida durante el desarrollo de BioApp.
+
+#### Responsabilidades como Scrum Master
+
+- Orientar a los integrantes sobre los roles, eventos y artefactos de Scrum.
+- Ayudar al equipo a comprender y aplicar Scrum durante el proyecto.
+- Facilitar que los eventos se realicen, respeten su duración y cumplan su propósito.
+- Promover la autogestión, la colaboración y una comunicación respetuosa.
+- Ayudar a identificar y eliminar impedimentos, como requisitos poco claros, dificultades de coordinación o falta de información técnica.
+- Apoyar al Product Owner en la gestión clara y efectiva del Product Backlog.
+- Facilitar las retrospectivas y dar seguimiento a las acciones de mejora acordadas.
+
+#### Responsabilidades como Developer
+
+- Participar junto con Krisley Castro en la planificación del trabajo de cada Sprint.
+- Diseñar e implementar las funcionalidades priorizadas.
+- Realizar pruebas, corregir errores y verificar los resultados de los cálculos.
+- Mantener actualizado el Sprint Backlog y adaptar el plan de trabajo.
+- Documentar las funcionalidades y las decisiones técnicas.
+
+
+### 2.3. Developer: Krisley Castro
+
+Krisley Castro participará en la construcción de BioApp y colaborará con Kristel Ramírez para entregar incrementos funcionales en cada Sprint.
+
+#### Responsabilidades
+
+- Participar en la planificación de cada Sprint y definir el trabajo necesario para alcanzar su objetivo.
+- Diseñar e implementar las funcionalidades del catálogo, los registros, la calculadora y el historial.
+- Colaborar con Kristel en la integración de las funcionalidades.
+- Realizar pruebas, corregir errores y verificar la calidad de los incrementos.
+- Verificar que los cálculos implementados correspondan con las reglas técnicas revisadas.
+- Mantener actualizado el Sprint Backlog y adaptar el plan de trabajo.
+- Documentar el funcionamiento y las decisiones técnicas necesarias para mantener la aplicación.
+- Comunicar oportunamente las dificultades que puedan afectar el objetivo del Sprint.
+- Entregar incrementos utilizables que cumplan la Definición de Terminado.
+
+### 2.4. Acuerdos de trabajo para las 14 semanas
+
+Como propuesta de organización, el equipo trabajará en **siete Sprints de dos semanas**, ajustando las entregas al calendario del curso.
+
+#### Sprint Planning
+
+Los tres integrantes participarán en la planificación.
+
+Juan Daniel presentará las prioridades del Product Backlog y aclarará los requisitos, el equipo acordará el objetivo del Sprint,  Kristel y Krisley seleccionarán el trabajo que puedan completar según su capacidad disponible.
+
+
+#### Daily Scrum
+
+Kristel y Krisley realizarán una reunión diaria de hasta 15 minutos para revisar el avance hacia el objetivo del Sprint y adaptar su plan de trabajo.
+
+Identificarán dificultades, coordinarán el trabajo técnico y acordarán las siguientes acciones, cuando necesiten aclaraciones sobre requisitos o prioridades, las consultarán con Juan Daniel.
+
+#### Sprint Review
+
+El equipo presentará el incremento desarrollado y recogerá observaciones para orientar las siguientes decisiones del producto.
+
+Se buscará retroalimentación de personas agricultoras y profesionales en agronomía. Juan Daniel utilizará esta información para actualizar el Product Backlog.
+
+#### Sprint Retrospective
+
+Los tres integrantes revisarán la colaboración, las dificultades encontradas y las prácticas que funcionaron.
+
+Kristel facilitará la identificación de mejoras concretas en la comunicación, la organización y la calidad del trabajo, el equipo acordará acciones para aplicar durante el siguiente Sprint.
+
+
+### 2.5. Definición de Terminado
+
+Una funcionalidad se considerará terminada cuando:
+
+- Cumpla los criterios de aceptación establecidos.
+- Esté integrada en la aplicación y pueda utilizarse.
+- Haya sido probada y tenga sus errores relevantes corregidos.
+- Presente información comprensible y unidades claras cuando corresponda.
+- Cuente con la documentación necesaria.
+- En el caso de recetas y cálculos, tenga respaldo técnico para el contenido y las reglas utilizadas.
+
+Kristel y Krisley serán responsables de verificar que los incrementos cumplan esta definición antes de considerarlos terminados.
+
+### 2.6. Comunicación y seguimiento del trabajo
+
+- El equipo mantendrá un tablero de trabajo con las tareas pendientes, en proceso y terminadas.
+- Las decisiones relevantes sobre requisitos, cálculos y alcance quedarán documentadas.
+- Los impedimentos se comunicarán oportunamente para facilitar su resolución.
+- El trabajo se distribuirá según los conocimientos, la disponibilidad y la capacidad de las Developers.
+- Las consultas sobre prioridades y requisitos se dirigirán al Product Owner.
+- Las mejoras en la forma de trabajo se revisarán durante las retrospectivas.
+
+
