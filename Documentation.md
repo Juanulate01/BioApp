@@ -35,6 +35,11 @@
    - [2.5. Definición de Terminado](#25-definición-de-terminado)
    - [2.6. Comunicación y seguimiento del trabajo](#26-comunicación-y-seguimiento-del-trabajo)
 
+3. [Análisis de Entorno](#3-análisis-de-entorno)
+   - [3.1. Factores ambientales (EEFs)](#31-factores-ambientales-eefs)
+   - [3.2. Stakeholder del proyecto](#32-interesados-del-proyecto)
+   - [3.3. Conclusión del análisis](#33-conclusión-del-análisis)
+
 
 ## 1. Project Charter
 
@@ -228,3 +233,40 @@ Kristel y Krisley serán responsables de verificar que los incrementos cumplan e
 - Las mejoras en la forma de trabajo se revisarán durante las retrospectivas.
 
 
+## 3. Análisis de Entorno
+
+BioApp se desarrolla dentro de un entorno en el que existen factores tecnológicos, organizacionales y externos que pueden influir en el proyecto. Estos factores no dependen completamente del equipo de desarrollo, pero pueden afectar la construcción, las pruebas y el funcionamiento de la aplicación. Por esta razón, es importante identificarlos desde la planificación y considerar también a los principales interesados que pueden influir en la solución o aportar información necesaria para su desarrollo.
+
+### 3.1. Factores ambientales (EEFs)
+
+| Factor | Impacto en BioApp |
+|---|---|
+| **Infraestructura tecnológica disponible** | El desarrollo depende de computadoras, herramientas de programación, bases de datos y servicios necesarios para construir y probar la aplicación. |
+| **Conectividad a Internet** | Puede afectar el acceso a herramientas en línea, servicios en la nube y pruebas de funcionamiento de la aplicación. |
+| **Compatibilidad con dispositivos** | La aplicación debe considerar que las personas usuarias pueden acceder desde diferentes dispositivos, principalmente teléfonos y computadoras. |
+| **Seguridad y protección de datos** | BioApp puede manejar información de usuarios, cultivos, terrenos e historial de aplicaciones, por lo que se deben proteger estos datos. |
+| **Normativas aplicables** | Si la aplicación llega a utilizarse fuera del entorno académico, deberá considerar requisitos relacionados con privacidad, manejo de datos y uso de información agrícola. |
+| **Disponibilidad de información confiable** | Las recetas, dosis y reglas de cálculo deben provenir de información previamente validada para evitar resultados incorrectos. |
+| **Disponibilidad de usuarios para pruebas** | Se necesita la participación de agricultores y personas relacionadas con bioinsumos para comprobar que la aplicación sea clara y útil. |
+| **Tiempo y recursos disponibles** | El proyecto se desarrolla dentro de un periodo académico de 14 semanas y con recursos limitados, por lo que el alcance debe mantenerse realista. |
+
+### 3.2. Stakeholders del proyecto
+
+| Interesado | Impacto en BioApp |
+|---|---|
+| **Personas agricultoras** | Permiten validar si la aplicación responde a necesidades reales y si resulta práctica para sus cultivos y terrenos. |
+| **Profesionales en agronomía** | Apoyan en la validación de recetas, dosis y reglas de cálculo antes de incorporarlas a la aplicación. |
+| **Personas encargadas de atomizar** | Ayudan a verificar si los cálculos de mezcla y cantidad por tanque son claros y útiles. |
+| **Personas con experiencia en bioinsumos** | Pueden revisar ingredientes, pasos de elaboración y recomendaciones de uso. |
+| **Equipo de desarrollo** | Se encarga de diseñar, programar, probar y mejorar la aplicación. |
+| **Docente o persona evaluadora** | Influye en los criterios académicos, los entregables y el alcance del proyecto. |
+| **Cooperativas o asociaciones agrícolas** | Pueden facilitar el contacto con personas agricultoras y apoyar posibles pruebas de la aplicación. |
+| **Autoridades relacionadas con el área agrícola** | Pueden influir si la aplicación llega a utilizarse de manera pública o comercial. |
+
+### 3.3. Conclusión del análisis
+
+La identificación de estos factores ambientales y de los principales interesados permite comprender mejor el entorno en el que se desarrollará BioApp y las condiciones que pueden influir en el proyecto.
+
+Tener estos elementos claros desde el inicio ayuda a anticipar posibles limitaciones relacionadas con la infraestructura tecnológica, la conectividad, la disponibilidad de recursos, la validación de la información y la participación de las personas usuarias durante las pruebas.
+
+Además, reconocer a los interesados permite identificar quiénes pueden aportar información importante, validar funcionalidades o influir en determinadas decisiones del proyecto. De esta manera, el equipo puede organizar mejor el desarrollo, reducir posibles inconvenientes y mantener la solución enfocada en las necesidades reales de las personas usuarias y en los objetivos definidos para BioApp.
