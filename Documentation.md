@@ -5,9 +5,9 @@
 **Docente:** Deiber Cubero Molina  
 **Periodo académico:** III cuatrimestre de 2026  
 **Integrantes:** Kristel Ramírez, Juan Daniel Ulate y Krisley Castro  
-**Duración del trabajo:** 14 semanas
+**Duración del trabajo:** 10 semanas
 
-  ## Índice
+  ## Índice 
 
 1. [Project Charter](#1-acta-de-inicio-del-proyecto-project-charter)
    - [1.1. Nombre y descripción del proyecto](#11-nombre-y-descripción-del-proyecto)
@@ -97,8 +97,8 @@ Desarrollar una aplicación para consultar la elaboración de bioinsumos y calcu
 - La edad del cultivo podrá complementar los datos, pero se considerará también su etapa de desarrollo, ya que cultivos de la misma edad pueden requerir aplicaciones distintas.
 - Los resultados dependerán de la exactitud de los datos registrados por la persona usuaria y de la calibración del equipo de atomización.
 - La aplicación no sustituirá la valoración profesional en agronomía ni realizará diagnósticos automáticos de plagas o enfermedades.
-- El alcance corresponde al desarrollo académico durante 14 semanas. Una eventual publicación para uso real o comercial requerirá una revisión adicional de los requisitos aplicables.
-- La plataforma, las tecnologías y el presupuesto deberán acordarse durante la planificación, pues no están definidos en el material base.
+- El alcance del proyecto llegará a una etapa de producción 
+- La plataforma, las tecnologías y el presupuesto deberán acordarse durante la planificación
 
 ### 1.7. Entregables previstos
 
@@ -114,11 +114,11 @@ Desarrollar una aplicación para consultar la elaboración de bioinsumos y calcu
 - Los cálculos utilizan reglas revisadas y producen resultados consistentes con casos de referencia validados.
 - La aplicación identifica datos obligatorios faltantes o valores inválidos antes de calcular.
 - Los resultados muestran las unidades, los datos utilizados y las cantidades necesarias para cada tanque.
-- Las funcionalidades implementadas se revisan con el Product Owner y se presentan al docente según los criterios de las entregas académicas.
+- Las funcionalidades implementadas se revisan con el Product Owner
 
 ## 2. Definición del Scrum Team
 
-El Scrum Team de BioApp estará conformado por tres integrantes y trabajará durante las 14 semanas del proyecto.
+El Scrum Team de BioApp estará conformado por tres integrantes y trabajará durante las 10 semanas del proyecto.
 
 | Integrante | Rol | Responsabilidad principal |
 | --- | --- | --- |
@@ -130,7 +130,7 @@ El Scrum Team de BioApp estará conformado por tres integrantes y trabajará dur
 
 Juan Daniel Ulate será responsable de orientar el producto hacia las necesidades de las personas usuarias y mantener claras las prioridades del proyecto.
 
-#### Responsabilidades
+#### Responsabilidades 
 
 - Definir y comunicar el objetivo del producto.
 - Crear, mantener y ordenar el Product Backlog.
@@ -154,7 +154,7 @@ Kristel Ramírez combinará las responsabilidades de Scrum Master con la partici
 - Ayudar a identificar y eliminar impedimentos, como requisitos poco claros, dificultades de coordinación o falta de información técnica.
 - Apoyar al Product Owner en la gestión clara y efectiva del Product Backlog.
 - Facilitar las retrospectivas y dar seguimiento a las acciones de mejora acordadas.
-
+   
 #### Responsabilidades como Developer
 
 - Participar junto con Krisley Castro en la planificación del trabajo de cada Sprint.
@@ -164,9 +164,10 @@ Kristel Ramírez combinará las responsabilidades de Scrum Master con la partici
 - Documentar las funcionalidades y las decisiones técnicas.
 
 
-### 2.3. Developer: Krisley Castro
+### 2.3. Developer principal: Krisley Castro
 
-Krisley Castro participará en la construcción de BioApp y colaborará con Kristel Ramírez para entregar incrementos funcionales en cada Sprint.
+Krisley Castro participará en la construcción de BioApp y colaborará con el equipo de desarrollo y el SCRUM master para entregar incrementos funcionales en cada Sprint.
+
 
 #### Responsabilidades
 
@@ -180,9 +181,14 @@ Krisley Castro participará en la construcción de BioApp y colaborará con Kris
 - Comunicar oportunamente las dificultades que puedan afectar el objetivo del Sprint.
 - Entregar incrementos utilizables que cumplan la Definición de Terminado.
 
-### 2.4. Acuerdos de trabajo para las 14 semanas
 
-Como propuesta de organización, el equipo trabajará en **siete Sprints de dos semanas**, ajustando las entregas al calendario del curso.
+## Equipo de desarrollo 
+
+
+
+### 2.4. Acuerdos de trabajo para las 10 semanas
+
+Como propuesta de organización, el equipo trabajará en **5 Sprints de dos semanas**, ajustando las entregas al calendario.
 
 #### Sprint Planning
 
@@ -193,7 +199,7 @@ Juan Daniel presentará las prioridades del Product Backlog y aclarará los requ
 
 #### Daily Scrum
 
-Kristel y Krisley realizarán una reunión diaria de hasta 15 minutos para revisar el avance hacia el objetivo del Sprint y adaptar su plan de trabajo.
+Kristel,Krisley  y todos los desarrolladores realizarán una reunión diaria de hasta 15 minutos para revisar el avance hacia el objetivo del Sprint y adaptar su plan de trabajo.
 
 Identificarán dificultades, coordinarán el trabajo técnico y acordarán las siguientes acciones, cuando necesiten aclaraciones sobre requisitos o prioridades, las consultarán con Juan Daniel.
 
@@ -208,6 +214,11 @@ Se buscará retroalimentación de personas agricultoras y profesionales en agron
 Los tres integrantes revisarán la colaboración, las dificultades encontradas y las prácticas que funcionaron.
 
 Kristel facilitará la identificación de mejoras concretas en la comunicación, la organización y la calidad del trabajo, el equipo acordará acciones para aplicar durante el siguiente Sprint.
+
+### Cronograma de Sprints 
+
+
+
 
 
 ### 2.5. Definición de Terminado
@@ -245,10 +256,10 @@ BioApp se desarrolla dentro de un entorno en el que existen factores tecnológic
 | **Conectividad a Internet** | Puede afectar el acceso a herramientas en línea, servicios en la nube y pruebas de funcionamiento de la aplicación. |
 | **Compatibilidad con dispositivos** | La aplicación debe considerar que las personas usuarias pueden acceder desde diferentes dispositivos, principalmente teléfonos y computadoras. |
 | **Seguridad y protección de datos** | BioApp puede manejar información de usuarios, cultivos, terrenos e historial de aplicaciones, por lo que se deben proteger estos datos. |
-| **Normativas aplicables** | Si la aplicación llega a utilizarse fuera del entorno académico, deberá considerar requisitos relacionados con privacidad, manejo de datos y uso de información agrícola. |
+| **Normativas aplicables** | Se deberá considerar requisitos relacionados con privacidad, manejo de datos y uso de información agrícola. |
 | **Disponibilidad de información confiable** | Las recetas, dosis y reglas de cálculo deben provenir de información previamente validada para evitar resultados incorrectos. |
 | **Disponibilidad de usuarios para pruebas** | Se necesita la participación de agricultores y personas relacionadas con bioinsumos para comprobar que la aplicación sea clara y útil. |
-| **Tiempo y recursos disponibles** | El proyecto se desarrolla dentro de un periodo académico de 14 semanas y con recursos limitados, por lo que el alcance debe mantenerse realista. |
+| **Tiempo y recursos disponibles** | El proyecto se desarrolla dentro de un periodo de 10 semanas y con recursos limitados |
 
 ### 3.2. Stakeholders del proyecto
 
@@ -259,7 +270,7 @@ BioApp se desarrolla dentro de un entorno en el que existen factores tecnológic
 | **Personas encargadas de atomizar** | Ayudan a verificar si los cálculos de mezcla y cantidad por tanque son claros y útiles. |
 | **Personas con experiencia en bioinsumos** | Pueden revisar ingredientes, pasos de elaboración y recomendaciones de uso. |
 | **Equipo de desarrollo** | Se encarga de diseñar, programar, probar y mejorar la aplicación. |
-| **Docente o persona evaluadora** | Influye en los criterios académicos, los entregables y el alcance del proyecto. |
+
 | **Cooperativas o asociaciones agrícolas** | Pueden facilitar el contacto con personas agricultoras y apoyar posibles pruebas de la aplicación. |
 | **Autoridades relacionadas con el área agrícola** | Pueden influir si la aplicación llega a utilizarse de manera pública o comercial. |
 
