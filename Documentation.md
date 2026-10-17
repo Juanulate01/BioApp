@@ -39,6 +39,8 @@
   - [04.3. Hitos del proyecto](#043-hitos-del-proyecto)
   - [04.4. Ciclo de cada Sprint](#044-ciclo-de-cada-sprint)
   - [04.5. Primer Sprint](#045-primer-sprint)
+- [05. Product Backlog, Sprint Backlog y mecanismo de seguimiento](#05-product-backlog-sprint-backlog-y-mecanismo-de-seguimiento)
+  - [05.1. Product Backlog inicial](#051-product-backlog-inicial)
 
 
 ## 00. Project Charter (borrador) y Product Goal
@@ -404,4 +406,36 @@ Acordar el alcance de BioApp, ordenar el Product Backlog y validar un prototipo 
 | No se defina a tiempo la plataforma ni las tecnologías. | Tomar la decisión antes del cierre del Sprint, ya que el Sprint 2 inicia con el desarrollo de las cuentas de usuario. |
 | No se confirme la participación de la persona especialista en agronomía. | Confirmarla antes del 13 de octubre, ya que las recetas validadas se necesitan el 21 de octubre. |
 
+## 05. Product Backlog, Sprint Backlog y mecanismo de seguimiento
 
+### 05.1. Product Backlog inicial
+
+El Product Backlog es una lista ordenada: la columna **Orden** indica la prioridad de cada elemento, mientras que el **ID** solo lo identifica, la prioridad se expresa con el método MoSCoW: *Must* (imprescindible), *Should* (importante), *Could* (deseable) y *Won't* (fuera de esta versión).
+
+Los elementos se clasifican en tres tipos:
+
+- **Historia de usuario:** funcionalidad que aporta valor directo a las personas usuarias.
+- **Habilitador:** trabajo del equipo necesario para construir, validar o entregar el producto.
+- **Contenido:** incorporación de información validada técnicamente, como recetas y dosis.
+
+| Orden | ID | Tipo | Elemento | Prioridad | Estimación (días-persona) | Dependencias | Sprint |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | PB-01 | Habilitador | Definir requisitos y organizar el proyecto | Must | 3 | - | 1 |
+| 2 | PB-02 | Habilitador | Diseñar y validar el prototipo | Must | 5 | PB-01 | 1 |
+| 3 | PB-11 | Historia de usuario | Registrar una cuenta e iniciar sesión | Must | 4 | PB-02 | 2 |
+| 4 | PB-12 | Historia de usuario | Almacenar información vinculada a la cuenta | Must | 5 | PB-11 | 2 |
+| 5 | PB-13 | Contenido | Cargar las recetas validadas | Must | 2 | PB-12 | 2 |
+| 6 | PB-03 | Historia de usuario | Consultar el catálogo de bioinsumos | Must | 4 | PB-13 | 2 |
+| 7 | PB-04 | Historia de usuario | Registrar terrenos y cultivos | Must | 5 | PB-12 | 3 |
+| 8 | PB-05 | Historia de usuario | Registrar equipos de atomización | Must | 4 | PB-12 | 3 |
+| 9 | PB-15 | Contenido | Cargar las dosis validadas | Must | 1 | PB-13 | 3 |
+| 10 | PB-06 | Historia de usuario | Calcular la mezcla y la cantidad de bioinsumo | Must | 5 | PB-04, PB-05, PB-15 | 3 |
+| 11 | PB-07 | Historia de usuario | Mostrar cantidades por tanque | Must | 3 | PB-06 | 4 |
+| 12 | PB-14 | Historia de usuario | Validar los datos antes de calcular | Must | 2 | PB-06 | 4 |
+| 13 | PB-08 | Historia de usuario | Guardar y consultar el historial | Should | 5 | PB-07 | 4 |
+| 14 | PB-16 | Habilitador | Publicar la aplicación en producción | Must | 2 | PB-12 | 5 |
+| 15 | PB-09 | Habilitador | Validar el funcionamiento completo | Must | 5 | PB-08, PB-16 | 5 |
+| 16 | PB-10 | Habilitador | Preparar la versión final y la documentación | Must | 4 | PB-09 | 5 |
+| 17 | PB-17 | Historia de usuario | Recuperar la contraseña | Could | 2 | PB-11 | Si hay capacidad |
+| 18 | PB-18 | Historia de usuario | Administrar recetas y dosis desde la aplicación | Won't | 4 | PB-13, PB-15 | Fuera de esta versión |
+| | | | **Total planificado (PB-01 a PB-16)** | | **59** | | |
