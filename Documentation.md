@@ -41,6 +41,7 @@
   - [04.5. Primer Sprint](#045-primer-sprint)
 - [05. Product Backlog, Sprint Backlog y mecanismo de seguimiento](#05-product-backlog-sprint-backlog-y-mecanismo-de-seguimiento)
   - [05.1. Product Backlog inicial](#051-product-backlog-inicial)
+  - [05.2. Historias de usuario y criterios de aceptación](#052-historias-de-usuario-y-criterios-de-aceptación)
 
 
 ## 00. Project Charter (borrador) y Product Goal
@@ -439,3 +440,458 @@ Los elementos se clasifican en tres tipos:
 | 17 | PB-17 | Historia de usuario | Recuperar la contraseña | Could | 2 | PB-11 | Si hay capacidad |
 | 18 | PB-18 | Historia de usuario | Administrar recetas y dosis desde la aplicación | Won't | 4 | PB-13, PB-15 | Fuera de esta versión |
 | | | | **Total planificado (PB-01 a PB-16)** | | **59** | | |
+
+
+
+### 05.2. Historias de usuario y criterios de aceptación
+
+En esta sección se detallan las historias de usuario y los demás elementos del Product Backlog de BioApp. Cada elemento incluye su descripción, criterios de aceptación, prioridad, estimación, Sprint previsto, dependencias y notas adicionales.
+
+Las estimaciones de esta sección se expresan en puntos de historia, mientras que el Product Backlog inicial utiliza días-persona. Ambas medidas son diferentes.
+
+---
+
+#### PB-01. Definir requisitos y organizar el proyecto
+
+**Título:** Definición de requisitos y organización de BioApp
+
+**Historia de usuario**
+
+Como equipo de BioApp, queremos definir los requisitos, el alcance y los acuerdos de trabajo, para organizar el desarrollo y mantener una planificación viable dentro del tiempo disponible.
+
+**Criterios de aceptación**
+
+1. Dado que se inicia la planificación del proyecto, cuando el equipo define la orientación de BioApp, entonces quedan documentados el objetivo del producto, el Product Goal, el alcance y los límites de esta versión.
+2. Dado que se identificaron las necesidades de las personas usuarias, cuando se documentan los requisitos iniciales, entonces se incluyen las cuentas de usuario, el catálogo, los terrenos y cultivos, los equipos, la calculadora y el historial.
+3. Dado que existen elementos identificados para desarrollar, cuando el Product Owner organiza el Product Backlog, entonces cada elemento cuenta con un identificador, orden, prioridad, estimación inicial, dependencias y Sprint previsto.
+4. Dado que el equipo acuerda cómo construirá y verificará BioApp, cuando finaliza la organización inicial, entonces quedan documentadas las tecnologías seleccionadas y la Definición de Terminado.
+
+**Tipo:** Habilitador  
+**Prioridad:** Alta (Must)  
+**Estimación propuesta:** 3 puntos  
+**Sprint previsto:** 1  
+**Dependencias:** Ninguna
+
+**Notas adicionales:** Este elemento es un habilitador. El Product Owner ordena el backlog y los Developers realizan las estimaciones del trabajo de desarrollo. No tiene dependencias previas.
+
+---
+
+#### PB-02. Diseñar y validar el prototipo
+
+**Título:** Prototipo de navegación de BioApp
+
+**Historia de usuario**
+
+Como persona agricultora, quiero contar con una navegación clara entre las pantallas de BioApp, para comprender cómo consultar recetas, registrar mi información y acceder a los cálculos.
+
+**Criterios de aceptación**
+
+1. Dado que los requisitos iniciales están definidos, cuando se elabora el prototipo, entonces se incluyen las pantallas de registro, inicio de sesión, catálogo, terrenos y cultivos, equipos, calculadora e historial.
+2. Dado que una persona recorre el prototipo, cuando selecciona las opciones principales, entonces puede identificar cómo avanzar entre las pantallas y regresar a las secciones anteriores.
+3. Dado que el prototipo incluye formularios y resultados de cálculo, cuando se revisan sus pantallas, entonces los campos, las unidades de medida y los resultados se presentan de manera comprensible.
+4. Dado que el prototipo está disponible para revisión, cuando el Product Owner evalúa los recorridos, entonces se documentan sus observaciones y los ajustes acordados.
+5. Dado que se identificaron cambios durante la revisión, cuando se prepara la versión revisada del prototipo, entonces los ajustes acordados quedan incorporados o registrados como pendientes en el backlog.
+
+**Tipo:** Habilitador  
+**Prioridad:** Alta (Must)  
+**Estimación propuesta:** 5 puntos  
+**Sprint previsto:** 1  
+**Dependencias:** PB-01
+
+**Notas adicionales:** Depende de PB-01. El prototipo permite revisar la navegación y la presentación de información antes de implementar las funcionalidades.
+
+---
+
+#### PB-11. Registrar una cuenta e iniciar sesión
+
+**Título:** Registro y acceso de usuarios
+
+**Historia de usuario**
+
+Como persona agricultora, quiero crear una cuenta e iniciar sesión en BioApp, para acceder a mi información personal y utilizarla desde distintos dispositivos.
+
+**Criterios de aceptación**
+
+1. Dado que una persona no tiene una cuenta registrada, cuando ingresa un correo válido y una contraseña que cumple los requisitos definidos, entonces el sistema crea la cuenta y permite utilizar esas credenciales para iniciar sesión.
+2. Dado que el correo ingresado ya pertenece a una cuenta, cuando se intenta realizar otro registro con ese correo, entonces el sistema impide crear una cuenta duplicada e informa la situación.
+3. Dado que existen campos obligatorios vacíos o datos con formato inválido, cuando la persona intenta registrarse, entonces el sistema indica qué información debe corregir y no completa el registro.
+4. Dado que la persona tiene una cuenta, cuando ingresa sus credenciales, entonces el sistema permite el acceso si son correctas y lo rechaza si son incorrectas.
+5. Dado que el usuario tiene una sesión activa, cuando selecciona cerrar sesión, entonces el sistema finaliza el acceso y solicita autenticación para volver a consultar las secciones privadas.
+6. Dado que se registra una contraseña, cuando el sistema la almacena, entonces guarda su hash mediante un mecanismo seguro y no conserva la contraseña en texto plano.
+
+**Tipo:** Historia de usuario  
+**Prioridad:** Alta (Must)  
+**Estimación propuesta:** 5 puntos  
+**Sprint previsto:** 2  
+**Dependencias:** PB-02
+
+**Notas adicionales:** Depende de PB-02. La recuperación de contraseña corresponde a PB-17 y se mantiene como funcionalidad opcional si existe capacidad.
+
+---
+
+#### PB-12. Almacenar información vinculada a la cuenta
+
+**Título:** Almacenamiento y acceso a información por usuario
+
+**Historia de usuario**
+
+Como persona agricultora, quiero que mi información permanezca guardada y vinculada a mi cuenta, para consultarla desde distintos dispositivos sin perder mis registros.
+
+**Criterios de aceptación**
+
+1. Dado que el usuario ha iniciado sesión, cuando se guarda un registro personal, entonces la información se almacena en la base de datos centralizada y queda asociada a su cuenta.
+2. Dado que existe información guardada en una cuenta, cuando el usuario cierra sesión y vuelve a ingresar con esa misma cuenta, entonces los registros continúan disponibles.
+3. Dado que el usuario tiene registros almacenados, cuando inicia sesión con la misma cuenta desde otro dispositivo con conexión a Internet, entonces puede consultar la misma información.
+4. Dado que un registro pertenece a una cuenta, cuando otra cuenta intenta consultarlo o modificarlo, entonces el sistema rechaza el acceso y conserva la información sin cambios.
+5. Dado que una persona no tiene una sesión activa, cuando intenta acceder a información privada, entonces el sistema impide la consulta y solicita iniciar sesión.
+
+**Tipo:** Historia de usuario  
+**Prioridad:** Alta (Must)  
+**Estimación propuesta:** 8 puntos  
+**Sprint previsto:** 2  
+**Dependencias:** PB-11
+
+**Notas adicionales:** Depende de PB-11. Durante el Sprint 2, la persistencia y los controles de acceso pueden comprobarse con registros de prueba en el entorno de pruebas. Posteriormente, esta estructura se utilizará para los terrenos y cultivos de PB-04, los equipos de PB-05 y el historial de PB-08. Así, este elemento puede verificarse sin adelantar el registro de terrenos previsto para el Sprint 3.
+
+---
+
+#### PB-13. Cargar las recetas validadas
+
+**Título:** Incorporación de recetas con revisión técnica
+
+**Historia de usuario**
+
+Como Product Owner, quiero que las recetas revisadas técnicamente queden incorporadas en BioApp, para ofrecer un catálogo con información documentada y respaldada.
+
+**Criterios de aceptación**
+
+1. Dado que las recetas requieren revisión técnica, cuando se coordina su entrega con la persona especialista en agronomía, entonces se establece el 21 de octubre como fecha límite y se registra la recepción del material revisado.
+2. Dado que se recibe una receta revisada, cuando se verifica su información, entonces contiene ingredientes, cantidades, pasos de elaboración, forma de uso, recomendaciones de almacenamiento, fuente, versión, fecha de revisión y responsable de la revisión.
+3. Dado que una receta cuenta con toda la información y la revisión requeridas, cuando se realiza la carga, entonces queda almacenada en la base de datos y disponible para su consulta mediante PB-03.
+4. Dado que una receta tiene información incompleta o no cuenta con revisión técnica documentada, cuando se evalúa su incorporación, entonces queda pendiente de corrección y no se incluye como receta validada.
+5. Dado que finaliza la carga de las recetas, cuando se compara la información almacenada con el material recibido, entonces los ingredientes, cantidades e instrucciones coinciden con la versión revisada.
+
+**Tipo:** Contenido  
+**Prioridad:** Alta (Must)  
+**Estimación propuesta:** 3 puntos  
+**Sprint previsto:** 2  
+**Dependencias:** PB-12
+
+**Notas adicionales:** Este elemento corresponde a contenido y depende de PB-12, según la planificación inicial. El Product Owner coordina la recepción y comprueba la integridad del material; los Developers realizan la carga técnica. No requiere un panel de administración, ya que esa funcionalidad pertenece a PB-18 y está fuera de esta versión.
+
+---
+
+#### PB-03. Consultar el catálogo de bioinsumos
+
+**Título:** Consulta de recetas de bioinsumos
+
+**Historia de usuario**
+
+Como persona agricultora, quiero consultar un catálogo de recetas de bioinsumos, para conocer los ingredientes, las cantidades y los pasos necesarios para elaborarlos correctamente.
+
+**Criterios de aceptación**
+
+1. Dado que el usuario ingresa al catálogo de bioinsumos, cuando consulta las recetas disponibles, entonces el sistema muestra un listado y permite seleccionar una receta para ver su información.
+2. Dado que el usuario selecciona una receta, cuando abre su información, entonces el sistema muestra los ingredientes, cantidades, pasos de elaboración, forma de uso y recomendaciones de almacenamiento.
+3. Dado que el usuario consulta una receta, cuando revisa su información, entonces puede visualizar la fuente y versión del contenido, el cual debe contar con una revisión técnica documentada.
+
+**Tipo:** Historia de usuario  
+**Prioridad:** Alta (Must)  
+**Estimación propuesta:** 5 puntos  
+**Sprint previsto:** 2  
+**Dependencias:** PB-13
+
+**Notas adicionales:** Las recetas deben haber sido revisadas técnicamente antes de incorporarse al catálogo. Esta historia depende de PB-13, que corresponde a la carga de recetas validadas.
+
+---
+
+#### PB-04. Registrar terrenos y cultivos
+
+**Título:** Registro de terrenos y cultivos
+
+**Historia de usuario**
+
+Como persona agricultora, quiero registrar la información de mis terrenos y cultivos, para tener sus características guardadas y utilizarlas al calcular la cantidad de mezcla necesaria para atomizar.
+
+**Criterios de aceptación**
+
+1. Dado que el usuario ha iniciado sesión, cuando registra un terreno y su cultivo, entonces el sistema guarda la información y permite consultarla, modificarla o eliminarla, solicitando confirmación antes de eliminar.
+2. Dado que el usuario está registrando un terreno, cuando ingresa sus características, entonces el sistema permite indicar el área, la unidad de medida, el tipo de cultivo y su etapa de desarrollo, según las etapas validadas para ese cultivo.
+3. Dado que el usuario ingresa el área del terreno, cuando selecciona la unidad de medida, entonces el sistema permite utilizar metros cuadrados, hectáreas o manzanas y realiza las conversiones correspondientes, considerando que una manzana equivale a 6 987 m².
+4. Dado que el usuario deja campos obligatorios vacíos o ingresa un área igual o menor que cero, cuando intenta guardar el registro, entonces el sistema muestra un mensaje indicando qué información debe corregir.
+
+**Tipo:** Historia de usuario  
+**Prioridad:** Alta (Must)  
+**Estimación propuesta:** 8 puntos  
+**Sprint previsto:** 3  
+**Dependencias:** PB-12
+
+**Notas adicionales:** Las conversiones de unidades deben comprobarse con casos de referencia. Los registros deben permanecer asociados a la cuenta del usuario.
+
+---
+
+#### PB-05. Registrar equipos de atomización
+
+**Título:** Registro de equipos de atomización
+
+**Historia de usuario**
+
+Como persona encargada de atomizar, quiero registrar las características de los equipos de atomización, para utilizar esa información al calcular la mezcla necesaria para aplicar en un terreno.
+
+**Criterios de aceptación**
+
+1. Dado que el usuario ha iniciado sesión, cuando registra un equipo de atomización, entonces el sistema guarda la información y permite consultarla, modificarla o eliminarla, solicitando confirmación antes de eliminar.
+2. Dado que el usuario está registrando un equipo, cuando ingresa sus características, entonces el sistema permite indicar la capacidad del tanque y el volumen que aplica por unidad de área, junto con sus respectivas unidades de medida.
+3. Dado que el usuario ingresa una capacidad o un volumen igual o menor que cero, cuando intenta guardar el equipo, entonces el sistema le indica que debe corregir el valor.
+4. Dado que el usuario tiene equipos registrados, cuando inicia sesión desde otro dispositivo, entonces puede consultar la información de sus equipos guardados.
+
+**Tipo:** Historia de usuario  
+**Prioridad:** Alta (Must)  
+**Estimación propuesta:** 5 puntos  
+**Sprint previsto:** 3  
+**Dependencias:** PB-12
+
+**Notas adicionales:** Los datos registrados deben utilizarse posteriormente en la calculadora de BioApp. Los equipos deben quedar vinculados a la cuenta del usuario.
+
+---
+
+#### PB-15. Cargar las dosis validadas
+
+**Título:** Registro de dosis validadas
+
+**Historia de usuario**
+
+Como Product Owner, quiero incorporar las dosis validadas de los bioinsumos según el cultivo y su etapa de desarrollo, para que la calculadora utilice únicamente recomendaciones que cuenten con respaldo técnico.
+
+**Criterios de aceptación**
+
+1. Dado que la persona especialista en agronomía debe revisar las dosis de los bioinsumos, cuando finaliza la validación, entonces entrega la tabla de dosis revisadas a más tardar el 28 de octubre.
+2. Dado que se reciben las dosis validadas, cuando se incorporan a la base de datos, entonces cada dosis queda asociada al bioinsumo, cultivo y etapa correspondiente, junto con su fuente, versión y responsable de la revisión.
+3. Dado que las dosis están disponibles, cuando se preparan las pruebas de la calculadora, entonces se cuenta con casos de referencia que incluyen los datos de entrada y los resultados esperados para comprobar los cálculos.
+
+**Tipo:** Contenido  
+**Prioridad:** Alta (Must)  
+**Estimación propuesta:** 3 puntos  
+**Sprint previsto:** 3  
+**Dependencias:** PB-13
+
+**Notas adicionales:** Esta actividad depende de contar con las recetas y la información técnica revisadas. No se deben incorporar dosis que no hayan sido validadas por una persona especialista en agronomía.
+
+---
+
+#### PB-06. Calcular la mezcla y la cantidad de bioinsumo
+
+**Título:** Cálculo bioinsumo
+
+**Historia de usuario**
+
+Como persona agricultora, quiero calcular la cantidad de bioinsumos necesarios según el terreno, el equipo de aplicación, el cultivo y su etapa, para preparar la dosis adecuada para cubrir el terreno seleccionado.
+
+**Criterios de aceptación**
+
+1. Dado que el usuario selecciona un terreno, un equipo, un bioinsumo, un cultivo y una etapa con una dosis validada, cuando solicita el cálculo, entonces el sistema muestra el volumen total de mezcla y la cantidad de bioinsumo necesaria para cubrir el terreno.
+2. Dado que la combinación seleccionada no cuenta con una dosis validada, cuando el usuario intenta realizar el cálculo, entonces el sistema muestra un aviso indicando que no es posible calcular la cantidad para esa combinación.
+3. Dado que el usuario no completa la información necesaria, cuando intenta calcular, entonces el sistema indica qué dato debe ingresar para continuar.
+
+**Tipo:** Historia de usuario  
+**Prioridad:** Alta (Must)  
+**Estimación propuesta:** 5 puntos  
+**Sprint previsto:** 3  
+**Dependencias:** PB-04, PB-05, PB-15
+
+**Notas adicionales:** Los casos de referencia para validar los cálculos deben quedar definidos y automatizados como pruebas durante el Sprint.
+
+---
+
+#### PB-07. Mostrar cantidades por tanque
+
+**Título:** Cantidades de preparación por tanque
+
+**Historia de usuario**
+
+Como persona encargada de atomizar, quiero conocer cuántos tanques debo preparar y qué cantidades de bioinsumo y agua necesito en cada uno, para realizar la preparación sin confusiones y utilizar las cantidades correctas.
+
+**Criterios de aceptación**
+
+1. Dado que el usuario realiza un cálculo de mezcla, cuando obtiene el resultado, entonces el sistema muestra la cantidad de tanques completos que necesita preparar y si debe preparar un tanque parcial.
+2. Dado que el usuario consulta el resultado por tanque, cuando revisa las cantidades, entonces el sistema muestra cuánto bioinsumo y agua debe utilizar en cada tanque.
+3. Dado que el sistema presenta las cantidades necesarias, cuando muestra los resultados, entonces expresa el bioinsumo en mililitros o gramos enteros y el agua en litros con un decimal, indicando también los datos utilizados para el cálculo.
+4. Dado que el cálculo requiere varios tanques, cuando se suman las cantidades de mezcla de los tanques completos y del tanque parcial, entonces el resultado coincide con el volumen total calculado, considerando únicamente la diferencia permitida por el redondeo.
+
+**Tipo:** Historia de usuario  
+**Prioridad:** Alta (Must)  
+**Estimación propuesta:** 5 puntos  
+**Sprint previsto:** 4  
+**Dependencias:** PB-06
+
+**Notas adicionales:** Esta historia depende de PB-06, porque primero debe funcionar el cálculo de la mezcla total. También deben verificarse los resultados cuando se necesita preparar un tanque parcial.
+
+---
+
+#### PB-14. Validar los datos antes de calcular
+
+**Título:** Validación de datos para el cálculo
+
+**Historia de usuario**
+
+Como persona agricultora, quiero recibir mensajes claros cuando falten datos, haya información incorrecta o no exista una dosis validada, para saber qué debo corregir o cuándo consultar a un profesional en agronomía.
+
+**Criterios de aceptación**
+
+1. Dado que el usuario dejó sin completar un dato necesario, cuando intenta realizar el cálculo, entonces el sistema le indica qué dato le hace falta por ingresar.
+2. Dado que el usuario ingresa un valor inválido, fuera de rango o con unidades incompatibles, cuando intenta realizar el cálculo, entonces el sistema le indica qué dato debe corregir y no realiza el cálculo.
+3. Dado que no existe una dosis validada para la combinación seleccionada, cuando el usuario intenta calcular, entonces el sistema le explica que no puede realizar el cálculo porque falta una dosis validada y le recomienda consultar a un profesional en agronomía.
+
+**Tipo:** Historia de usuario  
+**Prioridad:** Alta (Must)  
+**Estimación propuesta:** 5 puntos  
+**Sprint previsto:** 4  
+**Dependencias:** PB-06
+
+**Notas adicionales:** Cada criterio de validación debe contar con pruebas que comprueben que el sistema responde correctamente.
+
+---
+
+#### PB-08. Guardar y consultar el historial
+
+**Título:** Historial de preparaciones y aplicaciones
+
+**Historia de usuario**
+
+Como persona agricultora, quiero guardar y consultar mis preparaciones y aplicaciones anteriores, para llevar un registro y usarlo como apoyo al planificar futuras labores.
+
+**Criterios de aceptación**
+
+1. Dado que el usuario realiza un cálculo, cuando obtiene el resultado, entonces el sistema guarda la preparación con la fecha, el terreno, el cultivo, el bioinsumo, el equipo y las cantidades utilizadas.
+2. Dado que una preparación está guardada, cuando el usuario la marca como una aplicación realizada e indica la fecha, entonces el sistema la registra como aplicación y muestra claramente ese estado en el historial.
+3. Dado que el usuario consulta su historial desde un dispositivo, cuando inicia sesión con su cuenta desde otro dispositivo, entonces puede consultar los mismos registros.
+4. Dado que existen registros guardados, cuando el usuario consulta el historial, entonces puede distinguir cuáles son preparaciones y cuáles son aplicaciones realizadas.
+
+**Tipo:** Historia de usuario  
+**Prioridad:** Media (Should)  
+**Estimación propuesta:** 8 puntos  
+**Sprint previsto:** 4  
+**Dependencias:** PB-07
+
+**Notas adicionales:** La estimación considera que el historial debe guardarse en la cuenta del usuario y estar disponible desde distintos dispositivos.
+
+---
+
+#### PB-16. Publicar la aplicación en producción
+
+**Título:** Publicación de BioApp para su uso
+
+**Historia de usuario**
+
+Como persona agricultora, quiero acceder a BioApp por Internet desde mi teléfono o computadora, para consultar y utilizar la aplicación desde mis dispositivos.
+
+**Criterios de aceptación**
+
+1. Dado que BioApp está publicada, cuando una persona usuaria ingresa desde Internet, entonces puede acceder de forma segura mediante HTTPS.
+2. Dado que la aplicación se encuentra en producción, cuando se comprueba la configuración del entorno, entonces se verifica que la base de datos de producción está separada de la base de pruebas y cuenta con un respaldo.
+3. Dado que BioApp está publicada, cuando la persona usuaria consulta el contenido, entonces encuentra cargadas las recetas y las dosis validadas.
+4. Dado que la persona usuaria accede desde un teléfono o una computadora, entonces puede ingresar y utilizar BioApp correctamente desde ambos dispositivos.
+
+**Tipo:** Habilitador  
+**Prioridad:** Alta (Must)  
+**Estimación propuesta:** 8 puntos  
+**Sprint previsto:** 5  
+**Dependencias:** PB-12
+
+**Notas adicionales:** La estimación es alta porque la historia incluye preparar la publicación, cargar el contenido y comprobar el acceso desde distintos dispositivos.
+
+---
+
+#### PB-09. Validar el funcionamiento completo
+
+**Título:** Validación del funcionamiento de BioApp
+
+**Historia de usuario**
+
+Como equipo de desarrollo, queremos comprobar que BioApp sea fácil de entender y que sus funciones, cálculos y controles de acceso funcionen correctamente, para ofrecer una aplicación confiable a las personas usuarias.
+
+**Criterios de aceptación**
+
+1. Dado que BioApp está disponible en producción, cuando las personas usuarias realizan el recorrido completo, entonces se comprueba que pueden entender y utilizar la aplicación.
+2. Dado que se ingresan los datos de los casos de referencia, cuando se repiten los cálculos, entonces los resultados coinciden con los valores esperados.
+3. Dado que se realizan pruebas con distintas cuentas, cuando cada persona consulta sus datos, entonces solo puede ver la información correspondiente a su cuenta.
+4. Dado que una funcionalidad se completa durante un Sprint, cuando se verifica según la Definición de Terminado, entonces cumple las pruebas establecidas para ese Sprint.
+5. Dado que durante las pruebas se encuentra un problema, cuando se registra, entonces queda documentado y los errores relevantes se corrigen y se vuelven a probar.
+
+**Tipo:** Habilitador  
+**Prioridad:** Alta (Must)  
+**Estimación propuesta:** 8 puntos  
+**Sprint previsto:** 5  
+**Dependencias:** PB-08, PB-16
+
+**Notas adicionales:** Como esta historia incluye pruebas de cada Sprint y una validación completa en producción, el equipo podría dividirla en historias más pequeñas si resulta demasiado amplia para estimarla o completarla en un Sprint.
+
+---
+
+#### PB-10. Preparar la versión final y la documentación
+
+**Título:** Versión final y documentación de BioApp
+
+**Historia de usuario**
+
+Como equipo de BioApp, queremos integrar y documentar la versión final de la aplicación, para entregar un producto completo, revisado y listo para presentar.
+
+**Criterios de aceptación**
+
+1. Dado que se prepara la versión final, cuando se revisan las funcionalidades comprometidas, entonces todas cumplen la Definición de Terminado.
+2. Dado que se prepara la entrega, cuando se revisa la documentación, entonces están completas la guía de uso, la documentación técnica, las evidencias de las pruebas y la presentación.
+3. Dado que la aplicación está lista para entregarse, cuando el Product Owner revisa la versión final antes del 7 de diciembre, entonces puede confirmar si está preparada para la entrega.
+
+**Tipo:** Habilitador  
+**Prioridad:** Alta (Must)  
+**Estimación propuesta:** 8 puntos  
+**Sprint previsto:** 5  
+**Dependencias:** PB-09
+
+---
+
+#### PB-17. Recuperar la contraseña
+
+**Título:** Recuperación de contraseña
+
+**Historia de usuario**
+
+Como persona agricultora, quiero restablecer mi contraseña si la olvido, para recuperar el acceso a mi cuenta y a mi información.
+
+**Criterios de aceptación**
+
+1. Dado que el usuario tiene una cuenta registrada, cuando solicita restablecer su contraseña, entonces el sistema envía un enlace al correo asociado con esa cuenta.
+2. Dado que el usuario recibe el enlace, cuando intenta usarlo después de que venció, entonces el sistema no permite cambiar la contraseña con ese enlace.
+3. Dado que el enlace aún está vigente, cuando el usuario ingresa una nueva contraseña, entonces el sistema la actualiza y le permite utilizarla para iniciar sesión.
+
+**Tipo:** Historia de usuario  
+**Prioridad:** Could (Opcional)  
+**Estimación propuesta:** 5 puntos  
+**Sprint previsto:** Si hay capacidad  
+**Dependencias:** PB-11
+
+**Notas adicionales:** La nueva contraseña debe guardarse de forma segura mediante un hash en la base de datos. También conviene definir cuánto tiempo estará vigente el enlace.
+
+---
+
+#### PB-18. Administrar recetas y dosis desde la aplicación
+
+**Título:** Administración de recetas y dosis validadas
+
+**Historia de usuario**
+
+Como Product Owner, quiero crear y actualizar recetas y dosis validadas desde BioApp, para mantener la información al día sin modificar directamente la base de datos.
+
+**Criterios de aceptación**
+
+1. Dado que el Product Owner tiene acceso autorizado, cuando crea o actualiza una receta o una dosis, entonces puede registrar la fuente de la información, su versión y quién realizó la revisión técnica.
+2. Dado que una cuenta no está autorizada para administrar recetas y dosis, cuando intenta acceder a esa función, entonces el sistema le impide hacerlo.
+3. Dado que una receta o dosis fue actualizada, cuando se guarda el cambio, entonces la información queda registrada en BioApp.
+
+**Tipo:** Historia de usuario  
+**Prioridad (MoSCoW):** Won't (Fuera de esta versión)  
+**Estimación propuesta:** 5 puntos  
+**Sprint previsto:** Fuera de esta versión  
+**Dependencias:** PB-13, PB-15
+
+**Notas adicionales:** Conviene definir cuáles cuentas estarán autorizadas para administrar esta información.
