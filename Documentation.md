@@ -1,5 +1,7 @@
 # Proyecto BioApp
 
+## 00. Portada e identificación del equipo
+
 **Universidad:** Universidad Técnica Nacional, Sede San Carlos  
 **Curso:** ISW-912 — Administración de Proyectos Informáticos  
 **Docente:** Deiber Cubero Molina  
@@ -7,125 +9,51 @@
 **Integrantes:** Kristel Ramírez, Juan Daniel Ulate y Krisley Castro  
 **Duración del trabajo:** 10 semanas
 
-## Índice
+**Índice**
 
-- [00. Project Charter (borrador) y Product Goal](#00-project-charter-borrador-y-product-goal)
-  - [00.1. Nombre y descripción del proyecto](#001-nombre-y-descripción-del-proyecto)
-  - [00.2. Problemática](#002-problemática)
-  - [00.3. Justificación](#003-justificación)
-  - [00.4. Objetivo general](#004-objetivo-general)
-  - [00.5. Objetivos específicos](#005-objetivos-específicos)
-  - [00.6. Alcance y límites generales](#006-alcance-y-límites-generales)
-  - [00.7. Entregables previstos](#007-entregables-previstos)
-  - [00.8. Condiciones generales de aceptación](#008-condiciones-generales-de-aceptación)
-  - [00.9. Product Goal](#009-product-goal)
-- [01. Scrum Team](#01-scrum-team)
-  - [01.1. Product Owner: Juan Daniel Ulate](#011-product-owner-juan-daniel-ulate)
-  - [01.2. Scrum Master y apoyo al desarrollo: Kristel Ramírez](#012-scrum-master-y-apoyo-al-desarrollo-kristel-ramírez)
-  - [01.3. Developers: Krisley Castro, Developer 2 y Developer 3](#013-developers-krisley-castro-developer-2-y-developer-3)
-  - [01.4. Equipo de trabajo](#014-equipo-de-trabajo)
-  - [01.5. Acuerdos de trabajo para las 10 semanas](#015-acuerdos-de-trabajo-para-las-10-semanas)
-  - [01.6. Definición de Terminado](#016-definición-de-terminado)
-  - [01.7. Comunicación y seguimiento del trabajo](#017-comunicación-y-seguimiento-del-trabajo)
-- [02. Contexto organizacional](#02-contexto-organizacional)
+- [00. Portada e identificación del equipo](#00-portada-e-identificación-del-equipo)
+  - [00.1. Product Owner: Juan Daniel Ulate](#001-product-owner-juan-daniel-ulate)
+  - [00.2. Scrum Master y apoyo al desarrollo: Kristel Ramírez](#002-scrum-master-y-apoyo-al-desarrollo-kristel-ramírez)
+  - [00.3. Developers: Krisley Castro, Developer 2 y Developer 3](#003-developers-krisley-castro-developer-2-y-developer-3)
+- [01. Problema, oportunidad y Product Goal](#01-problema-oportunidad-y-product-goal)
+  - [01.1. Nombre y descripción del proyecto](#011-nombre-y-descripción-del-proyecto)
+  - [01.2. Problemática](#012-problemática)
+  - [01.3. Justificación](#013-justificación)
+  - [01.4. Objetivo general](#014-objetivo-general)
+  - [01.5. Objetivos específicos](#015-objetivos-específicos)
+  - [01.6. Alcance y límites generales](#016-alcance-y-límites-generales)
+  - [01.7. Entregables previstos](#017-entregables-previstos)
+  - [01.8. Condiciones generales de aceptación](#018-condiciones-generales-de-aceptación)
+  - [01.9. Product Goal](#019-product-goal)
+- [02. Contexto organizacional y restricciones](#02-contexto-organizacional-y-restricciones)
   - [02.1. Factores ambientales (EEFs)](#021-factores-ambientales-eefs)
-- [03. Mapa de interesados y restricciones](#03-mapa-de-interesados-y-restricciones)
+  - [02.2. Restricciones del proyecto](#022-restricciones-del-proyecto)
+- [03. Interesados / stakeholders](#03-interesados--stakeholders)
   - [03.1. Mapa de interesados](#031-mapa-de-interesados)
-  - [03.2. Restricciones del proyecto](#032-restricciones-del-proyecto)
-  - [03.3. Conclusión del análisis](#033-conclusión-del-análisis)
+  - [03.2. Conclusión del análisis](#032-conclusión-del-análisis)
 - [04. Ciclo de vida del proyecto y primer Sprint](#04-ciclo-de-vida-del-proyecto-y-primer-sprint)
   - [04.1. Enfoque del ciclo de vida](#041-enfoque-del-ciclo-de-vida)
   - [04.2. Fases del proyecto](#042-fases-del-proyecto)
   - [04.3. Hitos del proyecto](#043-hitos-del-proyecto)
   - [04.4. Ciclo de cada Sprint](#044-ciclo-de-cada-sprint)
   - [04.5. Primer Sprint](#045-primer-sprint)
-- [05. Product Backlog, Sprint Backlog y mecanismo de seguimiento](#05-product-backlog-sprint-backlog-y-mecanismo-de-seguimiento)
+- [05. Backlog inicial y Sprint Backlog](#05-backlog-inicial-y-sprint-backlog)
   - [05.1. Product Backlog inicial](#051-product-backlog-inicial)
-  - [05.2. Historias de usuario y criterios de aceptación](#052-historias-de-usuario-y-criterios-de-aceptación)
-
-
-## 00. Project Charter (borrador) y Product Goal
-
-### 00.1. Nombre y descripción del proyecto
-
-**BioApp** es una aplicación para consultar recetas paso a paso de bioinsumos agrícolas, como insecticidas orgánicos y bioles, y calcular las cantidades necesarias para su aplicación mediante atomización.
-
-El cálculo considerará el área del terreno, el tipo de cultivo, su etapa de desarrollo y las características del equipo utilizado.
-
-### 00.2. Problemática
-
-Las personas productoras que desean utilizar bioinsumos pueden encontrar recetas con instrucciones incompletas o dispersas. Además, calcular cuánto producto y cuánta mezcla preparar para atomizar un terreno requiere considerar diferentes variables del cultivo, del terreno y del equipo de aplicación.
-
-Realizar estos cálculos manualmente puede provocar desperdicio de insumos, mezclas insuficientes o aplicaciones inadecuadas; por ello, se necesita una herramienta que reúna las instrucciones de elaboración y facilite la planificación de cada aplicación.
-
-### 00.3. Justificación
-
-BioApp busca facilitar el acceso a instrucciones claras de elaboración y apoyar el cálculo de las cantidades necesarias para aplicar bioinsumos.
-
-Su desarrollo permitirá integrar en una misma herramienta la consulta de recetas, el registro de cultivos y terrenos, los datos del equipo de atomización y el historial de preparaciones y aplicaciones.
-
-#### ¿Cuál es el valor esperado?
-
-Se espera mejorar la planificación de recursos, reducir errores de cálculo y facilitar la consulta de aplicaciones anteriores.
-
-Para que los resultados sean confiables, las recetas, dosis y reglas de cálculo deberán revisarse con profesionales en agronomía y personas con experiencia en elaboración de bioinsumos antes de incorporarse a la aplicación.
-
-### 00.4. Objetivo general
-
-Desarrollar una aplicación para consultar la elaboración de bioinsumos y calcular las cantidades necesarias para su aplicación mediante atomización, considerando el área del terreno, el tipo y la etapa de desarrollo del cultivo, y las características del equipo utilizado.
-
-### 00.5. Objetivos específicos
-
-1. Organizar un catálogo de bioinsumos que incluya ingredientes, cantidades, pasos de elaboración, forma de uso y recomendaciones de almacenamiento.
-2. Permitir el registro de cultivos y terrenos, incluyendo el tipo de cultivo, el área y la etapa de desarrollo.
-3. Registrar los datos del equipo de atomización, como la capacidad del tanque y el volumen que aplica por unidad de área.
-4. Calcular el volumen total de mezcla, la cantidad de bioinsumo y el número de tanques necesarios para cubrir el terreno indicado.
-5. Mostrar los resultados de forma comprensible, detallando los datos utilizados y las cantidades que deben medirse para cada tanque.
-6. Guardar un historial de preparaciones y aplicaciones para facilitar la consulta y la planificación posterior.
-
-### 00.6. Alcance y límites generales
-
-#### Funcionalidades incluidas
-
-- Consulta de un catálogo de recetas de bioinsumos con instrucciones de elaboración y uso.
-- Registro de terrenos y cultivos con los datos necesarios para realizar los cálculos.
-- Registro de las características del equipo de atomización.
-- Cálculo del volumen de mezcla, la cantidad de bioinsumo y los tanques necesarios, incluida la preparación de un tanque parcial cuando corresponda.
-- Presentación de resultados y cantidades por tanque.
-- Consulta del historial de preparaciones y aplicaciones.
-
-#### Límites del proyecto
-
-- La aplicación calculará a partir de dosis y recomendaciones previamente validadas para cada combinación de bioinsumo y cultivo; no generará dosis sin respaldo técnico.
-- La edad del cultivo podrá complementar los datos, pero se considerará también su etapa de desarrollo, ya que cultivos de la misma edad pueden requerir aplicaciones distintas.
-- Los resultados dependerán de la exactitud de los datos registrados por la persona usuaria y de la calibración del equipo de atomización.
-- La aplicación no sustituirá la valoración profesional en agronomía ni realizará diagnósticos automáticos de plagas o enfermedades.
-- El alcance del proyecto llegará a una etapa de producción.
-- La plataforma, las tecnologías y el presupuesto deberán acordarse durante la planificación.
-
-### 00.7. Entregables previstos
-
-1. Catálogo inicial de recetas revisadas y documentadas.
-2. Funcionalidades para registrar cultivos, terrenos y equipos de atomización.
-3. Calculadora con resultados totales y cantidades por tanque.
-4. Historial de preparaciones y aplicaciones.
-5. Documentación del proyecto y evidencia de las pruebas realizadas.
-
-### 00.8. Condiciones generales de aceptación
-
-- Las recetas presentan ingredientes, cantidades y pasos comprensibles, junto con su fuente y versión.
-- Los cálculos utilizan reglas revisadas y producen resultados consistentes con casos de referencia validados.
-- La aplicación identifica datos obligatorios faltantes o valores inválidos antes de calcular.
-- Los resultados muestran las unidades, los datos utilizados y las cantidades necesarias para cada tanque.
-- Las funcionalidades implementadas se revisan con el Product Owner.
-
-### 00.9. Product Goal
-
-Al finalizar las 10 semanas, las personas agricultoras podrán consultar recetas de bioinsumos con revisión técnica y calcular, con su propia cuenta, la mezcla, la cantidad de bioinsumo y los tanques necesarios para atomizar sus terrenos, a partir de dosis validadas, y conservar el historial de sus preparaciones y aplicaciones.
-
-El Product Goal orienta la ordenación del Product Backlog y sirve como referencia para definir el objetivo de cada Sprint.
-
-## 01. Scrum Team
+- [06. Alcance, Product Backlog priorizado y criterios de aceptación](#06-alcance-product-backlog-priorizado-y-criterios-de-aceptación)
+  - [06.1. Historias de usuario y criterios de aceptación](#061-historias-de-usuario-y-criterios-de-aceptación)
+- [07. Planificación temporal, estimaciones y costos](#07-planificación-temporal-estimaciones-y-costos)
+  - [07.1. Matriz de Estimación](#071-matriz-de-estimación)
+  - [07.2. Cronograma de Entregas (Release Plan)](#072-cronograma-de-entregas-release-plan)
+  - [07.3. Costo estimado del release](#073-costo-estimado-del-release)
+  - [07.4. Seguimiento del release](#074-seguimiento-del-release)
+- [09. Calidad y Definition of Done](#09-calidad-y-definition-of-done)
+  - [09.1. Definición de Terminado](#091-definición-de-terminado)
+- [10. Comunicación y responsabilidades del equipo](#10-comunicación-y-responsabilidades-del-equipo)
+  - [10.1. Equipo de trabajo](#101-equipo-de-trabajo)
+  - [10.2. Acuerdos de trabajo para las 10 semanas](#102-acuerdos-de-trabajo-para-las-10-semanas)
+  - [10.3. Comunicación y seguimiento del trabajo](#103-comunicación-y-seguimiento-del-trabajo)
+- [11. Decisiones, cambios y evidencias](#11-decisiones-cambios-y-evidencias)
+  - [11.1. Historial de cambios](#111-historial-de-cambios)
 
 El Scrum Team de BioApp estará conformado por cinco integrantes y trabajará durante las 10 semanas del proyecto: un Product Owner, una Scrum Master con apoyo parcial al desarrollo y tres Developers a tiempo completo.
 
@@ -137,7 +65,7 @@ El Scrum Team de BioApp estará conformado por cinco integrantes y trabajará du
 | Developer 2 (por definir) | Developer | Senior | Tiempo completo | Participar en el diseño, desarrollo, pruebas y documentación de los incrementos de la aplicación, y acompañar al Developer junior. |
 | Developer 3 (por definir) | Developer | Junior | Tiempo completo | Participar en el desarrollo, las pruebas y la documentación de los incrementos de la aplicación, con el acompañamiento de los Developers senior. |
 
-### 01.1. Product Owner: Juan Daniel Ulate
+### 00.1. Product Owner: Juan Daniel Ulate
 
 Juan Daniel Ulate será responsable de orientar el producto hacia las necesidades de las personas usuarias y mantener claras las prioridades del proyecto.
 
@@ -152,7 +80,7 @@ Juan Daniel Ulate será responsable de orientar el producto hacia las necesidade
 - Revisar los incrementos y ajustar las prioridades según la retroalimentación recibida.
 - Gestionar las decisiones sobre alcance para mantener el proyecto viable dentro de las 10 semanas.
 
-### 01.2. Scrum Master y apoyo al desarrollo: Kristel Ramírez
+### 00.2. Scrum Master y apoyo al desarrollo: Kristel Ramírez
 
 Kristel Ramírez será la Scrum Master del proyecto y apoyará al equipo de desarrollo a tiempo parcial; no se considera desarrolladora a tiempo completo.
 
@@ -172,7 +100,7 @@ Kristel Ramírez será la Scrum Master del proyecto y apoyará al equipo de desa
 - Colaborar en la documentación de las funcionalidades y de las decisiones técnicas.
 - Apoyar en tareas de desarrollo puntuales cuando su disponibilidad lo permita, sin asumir compromisos que pongan en riesgo su rol de Scrum Master.
 
-### 01.3. Developers: Krisley Castro, Developer 2 y Developer 3
+### 00.3. Developers: Krisley Castro, Developer 2 y Developer 3
 
 Krisley Castro y dos Developers por definir trabajarán a tiempo completo en la construcción de BioApp y colaborarán con el Product Owner y la Scrum Master para entregar incrementos funcionales en cada Sprint.
 
@@ -192,82 +120,92 @@ Como referencia, se recomienda que los Developers senior asuman los elementos de
 - Comunicar oportunamente las dificultades que puedan afectar el objetivo del Sprint.
 - Entregar incrementos utilizables que cumplan la Definición de Terminado.
 
-### 01.4. Equipo de trabajo
+## 01. Problema, oportunidad y Product Goal
 
-Además del Scrum Team, para desarrollar BioApp en 10 semanas se recomienda contar con los siguientes puestos de apoyo y con la conformación de equipo que se resume al final de esta sección.
+Esta sección corresponde al Project Charter (borrador) de BioApp: describe el problema que se atiende, la oportunidad que representa el proyecto y el Product Goal que orienta el trabajo del equipo.
 
-#### 1. Otros puestos recomendados
+### 01.1. Nombre y descripción del proyecto
 
-| Puesto | Dedicación | Justificación |
-| --- | --- | --- |
-| QA / Tester | Medio tiempo desde el Sprint 2 y tiempo completo en el Sprint 5 | Verificaría el acceso por cuenta y la separación de datos (PB-11, PB-12), los casos de referencia de los cálculos (PB-06, PB-07), la validación de datos (PB-14) y la validación completa (PB-09). Un error de cálculo puede provocar desperdicio de insumos o aplicaciones inadecuadas. |
-| Especialista en agronomía o bioinsumos | Tiempo parcial (4 a 8 horas por semana) | Debe entregar las recetas revisadas a más tardar el 21 de octubre (PB-13) y la tabla de dosis validadas con sus casos de referencia a más tardar el 28 de octubre (PB-15). Sin esta información, PB-03, PB-06, PB-07 y PB-08 no pueden cumplir la Definición de Terminado. |
-| Diseñador/a UX/UI | Tiempo parcial durante el Sprint 1 | Responsable del prototipo (PB-02), considerando que las personas usuarias utilizarán la aplicación en el campo. |
-| Curador/a de contenido | Tiempo parcial en los Sprints 2 y 3 | Transcripción y carga de las recetas y dosis validadas con su fuente y versión (PB-13 y PB-15). Puede asumirlo el Product Owner o la persona especialista en agronomía. |
+**BioApp** es una aplicación para consultar recetas paso a paso de bioinsumos agrícolas, como insecticidas orgánicos y bioles, y calcular las cantidades necesarias para su aplicación mediante atomización.
 
-Por el tamaño del proyecto, no se consideran necesarios puestos dedicados de DevOps, arquitectura, administración de bases de datos ni gestión de proyectos, ya que estas funciones pueden cubrirse por los Developers, la Scrum Master y el Product Owner.
+El cálculo considerará el área del terreno, el tipo de cultivo, su etapa de desarrollo y las características del equipo utilizado.
 
-#### 2. Equipo recomendado
+### 01.2. Problemática
 
-1. Product Owner: Juan Daniel Ulate.
-2. Scrum Master con apoyo parcial al desarrollo: Kristel Ramírez.
-3. Tres Developers a tiempo completo: dos senior (Krisley Castro y Developer 2) y un junior (Developer 3).
-4. Una persona de QA a medio tiempo desde el Sprint 2 y a tiempo completo en el Sprint 5.
-5. Especialista en agronomía a tiempo parcial y diseñador/a UX/UI durante el Sprint 1.
+Las personas productoras que desean utilizar bioinsumos pueden encontrar recetas con instrucciones incompletas o dispersas. Además, calcular cuánto producto y cuánta mezcla preparar para atomizar un terreno requiere considerar diferentes variables del cultivo, del terreno y del equipo de aplicación.
 
-### 01.5. Acuerdos de trabajo para las 10 semanas
+Realizar estos cálculos manualmente puede provocar desperdicio de insumos, mezclas insuficientes o aplicaciones inadecuadas; por ello, se necesita una herramienta que reúna las instrucciones de elaboración y facilite la planificación de cada aplicación.
 
-Como propuesta de organización, el equipo trabajará en **5 Sprints de dos semanas**, ajustando las entregas al calendario.
+### 01.3. Justificación
 
-#### Sprint Planning
+BioApp busca facilitar el acceso a instrucciones claras de elaboración y apoyar el cálculo de las cantidades necesarias para aplicar bioinsumos.
 
-Los cinco integrantes participarán en la planificación.
+Su desarrollo permitirá integrar en una misma herramienta la consulta de recetas, el registro de cultivos y terrenos, los datos del equipo de atomización y el historial de preparaciones y aplicaciones.
 
-Juan Daniel presentará las prioridades del Product Backlog y aclarará los requisitos, el equipo acordará el objetivo del Sprint y los Developers seleccionarán el trabajo que puedan completar según su capacidad disponible.
+#### ¿Cuál es el valor esperado?
 
-#### Daily Scrum
+Se espera mejorar la planificación de recursos, reducir errores de cálculo y facilitar la consulta de aplicaciones anteriores.
 
-Krisley Castro, Developer 2 y Developer 3 realizarán una reunión diaria de hasta 15 minutos para revisar el avance hacia el objetivo del Sprint y adaptar su plan de trabajo. Kristel participará para facilitar la reunión y dar seguimiento a los impedimentos.
+Para que los resultados sean confiables, las recetas, dosis y reglas de cálculo deberán revisarse con profesionales en agronomía y personas con experiencia en elaboración de bioinsumos antes de incorporarse a la aplicación.
 
-Identificarán dificultades, coordinarán el trabajo técnico y acordarán las siguientes acciones. Cuando necesiten aclaraciones sobre requisitos o prioridades, las consultarán con Juan Daniel.
+### 01.4. Objetivo general
 
-#### Sprint Review
+Desarrollar una aplicación para consultar la elaboración de bioinsumos y calcular las cantidades necesarias para su aplicación mediante atomización, considerando el área del terreno, el tipo y la etapa de desarrollo del cultivo, y las características del equipo utilizado.
 
-El equipo presentará el incremento desarrollado y recogerá observaciones para orientar las siguientes decisiones del producto.
+### 01.5. Objetivos específicos
 
-Se buscará retroalimentación de personas agricultoras y profesionales en agronomía. Juan Daniel utilizará esta información para actualizar el Product Backlog.
+1. Organizar un catálogo de bioinsumos que incluya ingredientes, cantidades, pasos de elaboración, forma de uso y recomendaciones de almacenamiento.
+2. Permitir el registro de cultivos y terrenos, incluyendo el tipo de cultivo, el área y la etapa de desarrollo.
+3. Registrar los datos del equipo de atomización, como la capacidad del tanque y el volumen que aplica por unidad de área.
+4. Calcular el volumen total de mezcla, la cantidad de bioinsumo y el número de tanques necesarios para cubrir el terreno indicado.
+5. Mostrar los resultados de forma comprensible, detallando los datos utilizados y las cantidades que deben medirse para cada tanque.
+6. Guardar un historial de preparaciones y aplicaciones para facilitar la consulta y la planificación posterior.
 
-#### Sprint Retrospective
+### 01.6. Alcance y límites generales
 
-Los cinco integrantes revisarán la colaboración, las dificultades encontradas y las prácticas que funcionaron.
+#### Funcionalidades incluidas
 
-Kristel facilitará la identificación de mejoras concretas en la comunicación, la organización y la calidad del trabajo, y el equipo acordará acciones para aplicar durante el siguiente Sprint.
+- Consulta de un catálogo de recetas de bioinsumos con instrucciones de elaboración y uso.
+- Registro de terrenos y cultivos con los datos necesarios para realizar los cálculos.
+- Registro de las características del equipo de atomización.
+- Cálculo del volumen de mezcla, la cantidad de bioinsumo y los tanques necesarios, incluida la preparación de un tanque parcial cuando corresponda.
+- Presentación de resultados y cantidades por tanque.
+- Consulta del historial de preparaciones y aplicaciones.
 
-### 01.6. Definición de Terminado
+#### Límites del proyecto
 
-Una funcionalidad se considerará terminada cuando:
+- La aplicación calculará a partir de dosis y recomendaciones previamente validadas para cada combinación de bioinsumo y cultivo; no generará dosis sin respaldo técnico.
+- La edad del cultivo podrá complementar los datos, pero se considerará también su etapa de desarrollo, ya que cultivos de la misma edad pueden requerir aplicaciones distintas.
+- Los resultados dependerán de la exactitud de los datos registrados por la persona usuaria y de la calibración del equipo de atomización.
+- La aplicación no sustituirá la valoración profesional en agronomía ni realizará diagnósticos automáticos de plagas o enfermedades.
+- El alcance del proyecto llegará a una etapa de producción.
+- La plataforma, las tecnologías y el presupuesto deberán acordarse durante la planificación.
 
-- Cumpla los criterios de aceptación establecidos.
-- Esté integrada en la aplicación y pueda utilizarse.
-- Haya sido probada y tenga sus errores relevantes corregidos.
-- Presente información comprensible y unidades claras cuando corresponda.
-- Cuente con la documentación necesaria.
-- En el caso de recetas y cálculos, tenga respaldo técnico para el contenido y las reglas utilizadas.
+### 01.7. Entregables previstos
 
-Los Developers serán responsables de verificar que los incrementos cumplan esta definición antes de considerarlos terminados, con el apoyo de Kristel en la revisión de las pruebas.
+1. Catálogo inicial de recetas revisadas y documentadas.
+2. Funcionalidades para registrar cultivos, terrenos y equipos de atomización.
+3. Calculadora con resultados totales y cantidades por tanque.
+4. Historial de preparaciones y aplicaciones.
+5. Documentación del proyecto y evidencia de las pruebas realizadas.
 
-### 01.7. Comunicación y seguimiento del trabajo
+### 01.8. Condiciones generales de aceptación
 
-- El equipo mantendrá un tablero de trabajo con las tareas pendientes, en proceso y terminadas.
-- Las decisiones relevantes sobre requisitos, cálculos y alcance quedarán documentadas.
-- Los impedimentos se comunicarán oportunamente para facilitar su resolución.
-- El trabajo se distribuirá según los conocimientos, la disponibilidad y la capacidad de los Developers.
-- Las consultas sobre prioridades y requisitos se dirigirán al Product Owner.
-- Las mejoras en la forma de trabajo se revisarán durante las retrospectivas.
+- Las recetas presentan ingredientes, cantidades y pasos comprensibles, junto con su fuente y versión.
+- Los cálculos utilizan reglas revisadas y producen resultados consistentes con casos de referencia validados.
+- La aplicación identifica datos obligatorios faltantes o valores inválidos antes de calcular.
+- Los resultados muestran las unidades, los datos utilizados y las cantidades necesarias para cada tanque.
+- Las funcionalidades implementadas se revisan con el Product Owner.
 
-## 02. Contexto organizacional
+### 01.9. Product Goal
 
-BioApp se desarrolla dentro de un entorno en el que existen factores tecnológicos, organizacionales y externos que pueden influir en el proyecto, estos factores no dependen completamente del equipo de desarrollo, pero pueden afectar la construcción, las pruebas y el funcionamiento de la aplicación. Por esta razón, es importante identificarlos desde la planificación.
+Al finalizar las 10 semanas, las personas agricultoras podrán consultar recetas de bioinsumos con revisión técnica y calcular, con su propia cuenta, la mezcla, la cantidad de bioinsumo y los tanques necesarios para atomizar sus terrenos, a partir de dosis validadas, y conservar el historial de sus preparaciones y aplicaciones.
+
+El Product Goal orienta la ordenación del Product Backlog y sirve como referencia para definir el objetivo de cada Sprint.
+
+## 02. Contexto organizacional y restricciones
+
+BioApp se desarrolla dentro de un entorno en el que existen factores tecnológicos, organizacionales y externos que pueden influir en el proyecto, estos factores no dependen completamente del equipo de desarrollo, pero pueden afectar la construcción, las pruebas y el funcionamiento de la aplicación. Por esta razón, es importante identificarlos desde la planificación, junto con las restricciones dentro de las cuales se desarrollará el proyecto.
 
 ### 02.1. Factores ambientales (EEFs)
 
@@ -282,9 +220,21 @@ BioApp se desarrolla dentro de un entorno en el que existen factores tecnológic
 | **Disponibilidad de usuarios para pruebas** | Se necesita la participación de agricultores y personas relacionadas con bioinsumos para comprobar que la aplicación sea clara y útil. |
 | **Tiempo y recursos disponibles** | El proyecto se desarrolla dentro de un periodo de 10 semanas y con recursos limitados. |
 
-## 03. Mapa de interesados y restricciones
+### 02.2. Restricciones del proyecto
 
-Además del contexto, es necesario considerar a los principales interesados que pueden influir en la solución o aportar información necesaria para su desarrollo, así como las restricciones dentro de las cuales se desarrollará el proyecto.
+| Restricción | Descripción |
+|---|---|
+| **Tiempo** | El proyecto tiene una duración fija de 10 semanas, organizadas en 5 Sprints de dos semanas, con entrega final el 7 de diciembre. |
+| **Equipo** | El Scrum Team está conformado por cinco integrantes. El desarrollo está a cargo de tres Developers a tiempo completo, dos senior y un junior; la Scrum Master apoya a tiempo parcial. Dos de los Developers aún deben confirmarse. |
+| **Validación técnica** | La aplicación solo podrá calcular a partir de recetas y dosis validadas por profesionales en agronomía; no generará dosis sin respaldo técnico. |
+| **Alcance** | La aplicación no sustituirá la valoración profesional en agronomía ni realizará diagnósticos automáticos de plagas o enfermedades. |
+| **Plataforma, tecnologías y presupuesto** | Aún no están definidos y deberán acordarse durante la planificación. |
+| **Protección de datos** | Cada cuenta solo podrá consultar y modificar su propia información, y las contraseñas deberán almacenarse de forma segura. |
+| **Exactitud de los datos** | Los resultados dependerán de los datos registrados por la persona usuaria y de la calibración del equipo de atomización. |
+
+## 03. Interesados / stakeholders
+
+Además del contexto y las restricciones, es necesario considerar a los principales interesados que pueden influir en la solución o aportar información necesaria para su desarrollo.
 
 ### 03.1. Mapa de interesados
 
@@ -298,19 +248,7 @@ Además del contexto, es necesario considerar a los principales interesados que 
 | **Cooperativas o asociaciones agrícolas** | Pueden facilitar el contacto con personas agricultoras y apoyar posibles pruebas de la aplicación. |
 | **Autoridades relacionadas con el área agrícola** | Pueden influir si la aplicación llega a utilizarse de manera pública o comercial. |
 
-### 03.2. Restricciones del proyecto
-
-| Restricción | Descripción |
-|---|---|
-| **Tiempo** | El proyecto tiene una duración fija de 10 semanas, organizadas en 5 Sprints de dos semanas, con entrega final el 7 de diciembre. |
-| **Equipo** | El Scrum Team está conformado por cinco integrantes. El desarrollo está a cargo de tres Developers a tiempo completo, dos senior y un junior; la Scrum Master apoya a tiempo parcial. Dos de los Developers aún deben confirmarse. |
-| **Validación técnica** | La aplicación solo podrá calcular a partir de recetas y dosis validadas por profesionales en agronomía; no generará dosis sin respaldo técnico. |
-| **Alcance** | La aplicación no sustituirá la valoración profesional en agronomía ni realizará diagnósticos automáticos de plagas o enfermedades. |
-| **Plataforma, tecnologías y presupuesto** | Aún no están definidos y deberán acordarse durante la planificación. |
-| **Protección de datos** | Cada cuenta solo podrá consultar y modificar su propia información, y las contraseñas deberán almacenarse de forma segura. |
-| **Exactitud de los datos** | Los resultados dependerán de los datos registrados por la persona usuaria y de la calibración del equipo de atomización. |
-
-### 03.3. Conclusión del análisis
+### 03.2. Conclusión del análisis
 
 La identificación de estos factores ambientales y de los principales interesados permite comprender mejor el entorno en el que se desarrollará BioApp y las condiciones que pueden influir en el proyecto.
 
@@ -407,7 +345,7 @@ Acordar el alcance de BioApp, ordenar el Product Backlog y validar un prototipo 
 | No se defina a tiempo la plataforma ni las tecnologías. | Tomar la decisión antes del cierre del Sprint, ya que el Sprint 2 inicia con el desarrollo de las cuentas de usuario. |
 | No se confirme la participación de la persona especialista en agronomía. | Confirmarla antes del 13 de octubre, ya que las recetas validadas se necesitan el 21 de octubre. |
 
-## 05. Product Backlog, Sprint Backlog y mecanismo de seguimiento
+## 05. Backlog inicial y Sprint Backlog
 
 ### 05.1. Product Backlog inicial
 
@@ -443,7 +381,11 @@ Los elementos se clasifican en tres tipos:
 
 
 
-### 05.2. Historias de usuario y criterios de aceptación
+## 06. Alcance, Product Backlog priorizado y criterios de aceptación
+
+El alcance del producto queda definido por el Product Backlog: lo que no está en el backlog queda fuera de esta versión. Los límites generales del proyecto se describen en la sección 01.6, y los elementos marcados como *Won't*, como PB-18, se excluyen de forma explícita. El orden y la prioridad de cada elemento se presentan en la sección 05.1.
+
+### 06.1. Historias de usuario y criterios de aceptación
 
 En esta sección se detallan las historias de usuario y los demás elementos del Product Backlog de BioApp. Cada elemento incluye su descripción, criterios de aceptación, prioridad, estimación, Sprint previsto, dependencias y notas adicionales.
 
@@ -895,3 +837,195 @@ Como Product Owner, quiero crear y actualizar recetas y dosis validadas desde Bi
 **Dependencias:** PB-13, PB-15
 
 **Notas adicionales:** Conviene definir cuáles cuentas estarán autorizadas para administrar esta información.
+
+## 07. Planificación temporal, estimaciones y costos
+
+En esta sección se estima el Product Backlog en puntos de historia y, a partir de la velocidad del equipo, se proyecta cuántos Sprints se necesitan, qué Incremento se entrega en cada uno y cuánto cuesta el release.
+
+
+### 07.1. Matriz de Estimación
+
+#### Escala e historia de referencia
+
+Se utiliza la secuencia de Fibonacci, porque a mayor tamaño de una historia, mayor es su incertidumbre:
+
+| Puntos | 1 | 2 | 3 | 5 | 8 | 13 |
+| --- | --- | --- | --- | --- | --- | --- |
+| **Tamaño** | Trivial | Pequeña | Mediana | Grande | Muy grande | Debe dividirse |
+
+**Historia de referencia:** PB-13. Cargar las recetas validadas (3 puntos), porque es un trabajo conocido y con poca incertidumbre; las demás historias se estiman comparándolas con ella.
+
+Las estimaciones las realizan los Developers mediante planning poker; el Product Owner aclara los requisitos, pero no estima.
+
+#### Matriz
+
+| Orden | ID | Elemento | Épica | Puntos | Prioridad | Dependencias | Sprint |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | PB-01 | Definir requisitos y organizar el proyecto | Organización y diseño | 3 | Must | - | 1 |
+| 2 | PB-02 | Diseñar y validar el prototipo | Organización y diseño | 5 | Must | PB-01 | 1 |
+| 3 | PB-11 | Registrar una cuenta e iniciar sesión | Cuentas y datos | 5 | Must | PB-02 | 2 |
+| 4 | PB-12 | Almacenar información vinculada a la cuenta | Cuentas y datos | 8 | Must | PB-11 | 2 |
+| 5 | PB-13 | Cargar las recetas validadas | Catálogo de recetas | 3 | Must | PB-12 | 2 |
+| 6 | PB-03 | Consultar el catálogo de bioinsumos | Catálogo de recetas | 5 | Must | PB-13 | 2 |
+| 7 | PB-04 | Registrar terrenos y cultivos | Registros | 8 | Must | PB-12 | 3 |
+| 8 | PB-05 | Registrar equipos de atomización | Registros | 5 | Must | PB-12 | 3 |
+| 9 | PB-15 | Cargar las dosis validadas | Cálculos | 3 | Must | PB-13 | 3 |
+| 10 | PB-06 | Calcular la mezcla y la cantidad de bioinsumo | Cálculos | 5 | Must | PB-04, PB-05, PB-15 | 3 |
+| 11 | PB-07 | Mostrar cantidades por tanque | Cálculos | 5 | Must | PB-06 | 4 |
+| 12 | PB-14 | Validar los datos antes de calcular | Cálculos | 5 | Must | PB-06 | 4 |
+| 13 | PB-08 | Guardar y consultar el historial | Historial | 8 | Should | PB-07 | 4 |
+| 14 | PB-16 | Publicar la aplicación en producción | Publicación y cierre | 8 | Must | PB-12 | 5 |
+| 15 | PB-09 | Validar el funcionamiento completo | Publicación y cierre | 8 | Must | PB-08, PB-16 | 5 |
+| 16 | PB-10 | Preparar la versión final y la documentación | Publicación y cierre | 8 | Must | PB-09 | 5 |
+| | | **Total planificado (PB-01 a PB-16)** | | **92** | | | |
+| 17 | PB-17 | Recuperar la contraseña | Cuentas y datos | 5 | Could | PB-11 | Si hay capacidad |
+| 18 | PB-18 | Administrar recetas y dosis desde la aplicación | Catálogo de recetas | 5 | Won't | PB-13, PB-15 | Fuera de esta versión |
+
+PB-17 y PB-18 no forman parte del total planificado: PB-17 solo se incorporará si sobra capacidad y PB-18 queda fuera de esta versión.
+
+#### Desglose por épica
+
+| Épica | Elementos | Puntos | Porcentaje |
+| --- | --- | --- | --- |
+| Organización y diseño | PB-01, PB-02 | 8 | 8.7 % |
+| Cuentas y datos | PB-11, PB-12 | 13 | 14.1 % |
+| Catálogo de recetas | PB-13, PB-03 | 8 | 8.7 % |
+| Registros | PB-04, PB-05 | 13 | 14.1 % |
+| Cálculos | PB-15, PB-06, PB-07, PB-14 | 18 | 19.6 % |
+| Historial | PB-08 | 8 | 8.7 % |
+| Publicación y cierre | PB-16, PB-09, PB-10 | 24 | 26.1 % |
+| **Total** | | **92** | **100 %** |
+
+La épica más grande es la de publicación y cierre: publicar, validar con personas usuarias y documentar es un trabajo considerable, le sigue la de cálculos, que es el núcleo del producto.
+
+#### Historias que deben dividirse
+
+Ningún elemento supera los 8 puntos, por lo que ninguno debe dividirse de forma obligatoria. Sin embargo, seis elementos están en el límite (PB-12, PB-04, PB-08, PB-16, PB-09 y PB-10), y dos de ellos se marcan como candidatos a dividirse durante el refinamiento del Sprint 3:
+
+| Elemento | División propuesta | Beneficio |
+| --- | --- | --- |
+| PB-16. Publicar la aplicación en producción | (a) Preparar el entorno de producción y su respaldo; (b) publicar, cargar el contenido y comprobar el acceso desde distintos dispositivos. | La parte (a) solo depende de PB-12 y puede adelantarse al Sprint 4, lo que equilibra la carga entre los Sprints 4 y 5. |
+| PB-09. Validar el funcionamiento completo | (a) Validación con casos de referencia y entre cuentas; (b) validación con personas usuarias en producción. | Las pruebas de cada Sprint (criterio 4) ya las exige la Definición de Terminado, por lo que al dividirla el elemento se reduce y se enfoca en la validación final. |
+
+#### Velocidad inicial
+
+- **Sprint 1:** se planificaron 8 puntos en las primeras dos historias (PB-01 y PB-02). Este valor no representa la velocidad de desarrollo, porque corresponde a trabajo de planificación y diseño.
+- **Velocidad inicial acordada: 21 puntos por Sprint**, que es la carga planificada para los Sprints 2 y 3, según el cálculo de capacidad del equipo, estos Sprints requieren 108 horas (incluido un 20 % de margen) frente a **129.6 horas disponibles**, por lo que esta velocidad es alcanzable.
+- **Rango:** velocidad mínima de **18 puntos** y máxima de **24 puntos** (aproximadamente un 15 % por debajo y por encima de la velocidad inicial), la mínima representa, por ejemplo, la ausencia parcial de un Developer o un atraso en el contenido; la máxima, un Sprint sin impedimentos.
+- **Actualización:** 
+  1. En cada Sprint Review se suman los puntos de los elementos que cumplen la Definición de Terminado, un elemento incompleto no suma puntos, aunque esté casi terminado.
+  2. La primera velocidad real se obtendrá al cerrar el Sprint 2, el 27 de octubre.
+  3. Desde el cierre del Sprint 3, la velocidad será el promedio de los Sprints de desarrollo terminados, y el rango irá de la menor a la mayor velocidad observada.
+
+  Por ejemplo, si el equipo termina 16 puntos en el Sprint 2 y 20 puntos en el Sprint 3, la velocidad pasa a ser de 18 puntos ((16 + 20) ÷ 2), con un rango de 16 a 20.
+
+#### Supuestos y riesgos de la estimación
+
+| Supuesto o riesgo | Efecto en la estimación | Respuesta prevista |
+| --- | --- | --- |
+| Developer 2 y Developer 3 aún no están confirmados. | Sin ellos, la velocidad quedaría por debajo de la mínima. | Confirmar su incorporación y, si se atrasa, ajustar el alcance con el Product Owner. |
+| La tabla de dosis validadas debe entregarse el 28 de octubre (PB-15). | Su atraso bloquea PB-06, PB-07 y PB-14. | Dar seguimiento con la persona especialista en agronomía; las recetas revisadas ya se recibieron el 21 de octubre. |
+| Las estimaciones suponen tecnologías conocidas por el equipo. | Una tecnología nueva reduce la velocidad por la curva de aprendizaje. | Reestimar al cerrar el Sprint 2 con la velocidad real. |
+| El Sprint 5 planifica 24 puntos, por encima de la velocidad inicial. | El último Sprint solo se cumple con la velocidad máxima. | Dividir PB-16 y adelantar la preparación del entorno al Sprint 4. |
+| PB-06 y PB-14 comparten criterios de aceptación (datos faltantes y combinaciones sin dosis validada). | Parte del esfuerzo de PB-14 podría estar contado dos veces. | Revisar los criterios en el refinamiento y reestimar PB-14. |
+
+### 07.2. Cronograma de Entregas (Release Plan)
+
+### 07.3. Costo estimado del release
+
+### 07.4. Seguimiento del release
+
+## 09. Calidad y Definition of Done
+
+### 09.1. Definición de Terminado
+
+Una funcionalidad se considerará terminada cuando:
+
+- Cumpla los criterios de aceptación establecidos.
+- Esté integrada en la aplicación y pueda utilizarse.
+- Haya sido probada y tenga sus errores relevantes corregidos.
+- Presente información comprensible y unidades claras cuando corresponda.
+- Cuente con la documentación necesaria.
+- En el caso de recetas y cálculos, tenga respaldo técnico para el contenido y las reglas utilizadas.
+
+Los Developers serán responsables de verificar que los incrementos cumplan esta definición antes de considerarlos terminados, con el apoyo de Kristel en la revisión de las pruebas.
+
+## 10. Comunicación y responsabilidades del equipo
+
+Las responsabilidades de cada rol del Scrum Team se describen en las secciones 00.1 a 00.3. En esta sección se presentan los puestos de apoyo recomendados, los acuerdos de trabajo y la forma en que el equipo se comunicará y dará seguimiento al trabajo.
+
+### 10.1. Equipo de trabajo
+
+Además del Scrum Team, para desarrollar BioApp en 10 semanas se recomienda contar con los siguientes puestos de apoyo y con la conformación de equipo que se resume al final de esta sección.
+
+#### 1. Otros puestos recomendados
+
+| Puesto | Dedicación | Justificación |
+| --- | --- | --- |
+| QA / Tester | Medio tiempo desde el Sprint 2 y tiempo completo en el Sprint 5 | Verificaría el acceso por cuenta y la separación de datos (PB-11, PB-12), los casos de referencia de los cálculos (PB-06, PB-07), la validación de datos (PB-14) y la validación completa (PB-09). Un error de cálculo puede provocar desperdicio de insumos o aplicaciones inadecuadas. |
+| Especialista en agronomía o bioinsumos | Tiempo parcial (4 a 8 horas por semana) | Debe entregar las recetas revisadas a más tardar el 21 de octubre (PB-13) y la tabla de dosis validadas con sus casos de referencia a más tardar el 28 de octubre (PB-15). Sin esta información, PB-03, PB-06, PB-07 y PB-08 no pueden cumplir la Definición de Terminado. |
+| Diseñador/a UX/UI | Tiempo parcial durante el Sprint 1 | Responsable del prototipo (PB-02), considerando que las personas usuarias utilizarán la aplicación en el campo. |
+| Curador/a de contenido | Tiempo parcial en los Sprints 2 y 3 | Transcripción y carga de las recetas y dosis validadas con su fuente y versión (PB-13 y PB-15). Puede asumirlo el Product Owner o la persona especialista en agronomía. |
+
+Por el tamaño del proyecto, no se consideran necesarios puestos dedicados de DevOps, arquitectura, administración de bases de datos ni gestión de proyectos, ya que estas funciones pueden cubrirse por los Developers, la Scrum Master y el Product Owner.
+
+#### 2. Equipo recomendado
+
+1. Product Owner: Juan Daniel Ulate.
+2. Scrum Master con apoyo parcial al desarrollo: Kristel Ramírez.
+3. Tres Developers a tiempo completo: dos senior (Krisley Castro y Developer 2) y un junior (Developer 3).
+4. Una persona de QA a medio tiempo desde el Sprint 2 y a tiempo completo en el Sprint 5.
+5. Especialista en agronomía a tiempo parcial y diseñador/a UX/UI durante el Sprint 1.
+
+### 10.2. Acuerdos de trabajo para las 10 semanas
+
+Como propuesta de organización, el equipo trabajará en **5 Sprints de dos semanas**, ajustando las entregas al calendario.
+
+#### Sprint Planning
+
+Los cinco integrantes participarán en la planificación.
+
+Juan Daniel presentará las prioridades del Product Backlog y aclarará los requisitos, el equipo acordará el objetivo del Sprint y los Developers seleccionarán el trabajo que puedan completar según su capacidad disponible.
+
+#### Daily Scrum
+
+Krisley Castro, Developer 2 y Developer 3 realizarán una reunión diaria de hasta 15 minutos para revisar el avance hacia el objetivo del Sprint y adaptar su plan de trabajo. Kristel participará para facilitar la reunión y dar seguimiento a los impedimentos.
+
+Identificarán dificultades, coordinarán el trabajo técnico y acordarán las siguientes acciones. Cuando necesiten aclaraciones sobre requisitos o prioridades, las consultarán con Juan Daniel.
+
+#### Sprint Review
+
+El equipo presentará el incremento desarrollado y recogerá observaciones para orientar las siguientes decisiones del producto.
+
+Se buscará retroalimentación de personas agricultoras y profesionales en agronomía. Juan Daniel utilizará esta información para actualizar el Product Backlog.
+
+#### Sprint Retrospective
+
+Los cinco integrantes revisarán la colaboración, las dificultades encontradas y las prácticas que funcionaron.
+
+Kristel facilitará la identificación de mejoras concretas en la comunicación, la organización y la calidad del trabajo, y el equipo acordará acciones para aplicar durante el siguiente Sprint.
+
+### 10.3. Comunicación y seguimiento del trabajo
+
+- El equipo mantendrá un tablero de trabajo con las tareas pendientes, en proceso y terminadas.
+- Las decisiones relevantes sobre requisitos, cálculos y alcance quedarán documentadas.
+- Los impedimentos se comunicarán oportunamente para facilitar su resolución.
+- El trabajo se distribuirá según los conocimientos, la disponibilidad y la capacidad de los Developers.
+- Las consultas sobre prioridades y requisitos se dirigirán al Product Owner.
+- Las mejoras en la forma de trabajo se revisarán durante las retrospectivas.
+
+## 11. Decisiones, cambios y evidencias
+
+### 11.1. Historial de cambios
+
+| Fecha | Autor/a | Cambio |
+| --- | --- | --- |
+| 1 de octubre de 2026 | Juan Daniel Ulate | Creación del documento. |
+| 1 de octubre de 2026 | Kristel Ramírez | Definición del Scrum Team y sus funciones (Entregable 1, punto 2). |
+| 5 de octubre de 2026 | Krisley Castro | Factores ambientales e interesados del proyecto (Entregable 1, punto 3). |
+| 7 de octubre de 2026 | Kristel Ramírez | Corrección de contenido. |
+| 16 de octubre de 2026 | Kristel Ramírez | Formato según lo indicado por el docente; ciclo de vida del proyecto y cronograma de Sprints. |
+| 17 de octubre de 2026 | Juan Daniel Ulate | Product Backlog, Sprint Backlog y mecanismo de seguimiento. |
+| 21 de octubre de 2026 | Krisley Castro | Integración de las 18 historias de usuario con criterios de aceptación, prioridades, estimaciones y dependencias. |
+| 23 de octubre de 2026 | Kristel Ramírez | Matriz de Estimación con puntos de historia, desglose por épica y velocidad inicial (Semana 6). |
+| 23 de octubre de 2026 | Kristel Ramírez | Reorganización del documento según la estructura del Expediente del Proyecto . |
