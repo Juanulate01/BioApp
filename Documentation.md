@@ -929,7 +929,82 @@ Ningún elemento supera los 8 puntos, por lo que ninguno debe dividirse de forma
 | El Sprint 5 planifica 24 puntos, por encima de la velocidad inicial. | El último Sprint solo se cumple con la velocidad máxima. | Dividir PB-16 y adelantar la preparación del entorno al Sprint 4. |
 | PB-06 y PB-14 comparten criterios de aceptación (datos faltantes y combinaciones sin dosis validada). | Parte del esfuerzo de PB-14 podría estar contado dos veces. | Revisar los criterios en el refinamiento y reestimar PB-14. |
 
+
 ### 07.2. Cronograma de Entregas (Release Plan)
+
+El Release Plan de BioApp organiza las entregas necesarias para alcanzar el Product Goal y publicar la versión 1.0 el **7 de diciembre de 2026**.
+
+La planificación contempla cinco Sprints y un alcance de **92 puntos de historia**: 8 puntos de organización y diseño y 84 puntos de construcción, validación y entrega.
+
+Las entregas de los Sprints 2, 3 y 4 se revisarán en un entorno de pruebas. La publicación en producción se realizará durante el Sprint 5.
+
+Las fechas representan objetivos de planificación. El contenido de cada entrega podrá ajustarse según la velocidad real del equipo, las dependencias y la revisión técnica de las recetas y dosis.
+
+#### Calendario de entregas
+
+Todas las fechas corresponden al año 2026. Los Sprints comienzan un miércoles. La última ventana se cierra excepcionalmente el lunes 7 de diciembre para coincidir con la entrega final.
+
+| Sprint | Periodo | Fecha de entrega y revisión | Elementos previstos | Puntos previstos | Resultado esperado |
+| --- | --- | --- | --- | --- | --- |
+| **Sprint 1 — Organización y diseño** | 30 de septiembre al 13 de octubre | **13 de octubre** | PB-01 y PB-02 | **8** | Product Goal, alcance, requisitos, tecnologías, backlog ordenado, Definición de Terminado y prototipo revisado. Es un hito de preparación, previo a las versiones funcionales. |
+| **Sprint 2 — Cuentas y catálogo** | 14 al 27 de octubre | **27 de octubre** | PB-11, PB-12, PB-13 y PB-03 | **21** | Versión 0.1: registro, inicio y cierre de sesión, almacenamiento vinculado a la cuenta y consulta del catálogo inicial de recetas revisadas. |
+| **Sprint 3 — Registros y cálculo total** | 28 de octubre al 10 de noviembre | **10 de noviembre** | PB-04, PB-05, PB-15 y PB-06 | **21** | Versión 0.2: registro de terrenos, cultivos y equipos por usuario; incorporación de dosis validadas y cálculo del volumen total de mezcla y cantidad de bioinsumo. |
+| **Sprint 4 — Preparación por tanque e historial** | 11 al 24 de noviembre | **24 de noviembre** | PB-07, PB-14, PB-08 y PB-16-A | **21** | Versión 0.3: cantidades por tanque completo y parcial, validaciones de datos e historial. Entorno de producción preparado y verificado para la publicación posterior. |
+| **Sprint 5 — Publicación y entrega final** | 25 de noviembre al 7 de diciembre | **7 de diciembre** | PB-16-B, PB-09 y PB-10 | **21** | Versión 1.0: aplicación publicada mediante HTTPS, contenido revisado cargado, validación final, guía de uso, documentación técnica, evidencias de pruebas y presentación. |
+| **Total** | **Cinco Sprints** | **7 de diciembre** | **Alcance planificado** | **92** | **BioApp publicada y entregada.** |
+
+#### Distribución de la publicación entre los Sprints 4 y 5
+
+La matriz inicial concentra 18 puntos en el Sprint 4 y 24 puntos en el Sprint 5. Para equilibrar el trabajo con la velocidad inicial de 21 puntos por Sprint, se propone dividir PB-16:
+
+| Subdivisión propuesta | Sprint | Estimación provisional | Entregable verificable |
+| --- | --- | --- | --- |
+| **PB-16-A. Preparar el entorno de producción** | 4 | **3 puntos** | Entorno configurado, base de datos separada de la de pruebas, configuración de HTTPS preparada y respaldo con restauración comprobada mediante datos de prueba. |
+| **PB-16-B. Publicar y comprobar BioApp** | 5 | **5 puntos** | Versión final desplegada, recetas y dosis revisadas cargadas, acceso mediante HTTPS y comprobación de funcionamiento desde teléfono y computadora. |
+| **Total de PB-16** | **4 y 5** | **8 puntos** | **Publicación completa de BioApp.** |
+
+La distribución de 3 y 5 puntos es una propuesta de refinamiento que deben confirmar los Developers. Si se adopta, deberán actualizarse las referencias de PB-16 en las matrices y en el cronograma general.
+
+Cada subdivisión deberá tener criterios de aceptación propios. Solo se contabilizarán sus puntos cuando cumpla la Definición de Terminado; no se contarán nuevamente los 8 puntos del elemento original.
+
+#### Dependencias e hitos de contenido
+
+| Fecha objetivo | Hito | Dependencia que resuelve |
+| --- | --- | --- |
+| **21 de octubre** | Disponibilidad de las recetas revisadas para su carga. | Permite completar PB-13 y la consulta del catálogo en PB-03. |
+| **28 de octubre** | Disponibilidad de la tabla de dosis validadas y los casos de referencia. | Permite completar PB-15 y desarrollar PB-06 con resultados verificables. |
+| **10 de noviembre** | Calculadora total contrastada con los casos de referencia. | Habilita las cantidades por tanque de PB-07 y la integración posterior del historial. |
+| **24 de noviembre** | Funcionalidades previstas integradas y entorno de producción preparado. | Permite concentrar el Sprint 5 en publicación, validación final y documentación. |
+| **2 de diciembre** | Revisión de una versión candidata a entrega. | Permite identificar y resolver pendientes antes de la entrega final. |
+| **7 de diciembre** | Publicación y entrega de la versión 1.0. | Cumplimiento del hito final del proyecto. |
+
+Si se atrasa la revisión de una receta o dosis, podrán continuar las tareas que no dependan de ese contenido. El elemento bloqueado no se considerará terminado hasta contar con la información requerida.
+
+#### Proyección según la velocidad del equipo
+
+Después de los 8 puntos de organización y diseño quedan **84 puntos** para los cuatro Sprints restantes.
+
+| Escenario | Velocidad por Sprint | Sprints necesarios para los 84 puntos | Proyección |
+| --- | --- | --- | --- |
+| **Conservador** | **18 puntos** | **5 Sprints de desarrollo** | Se necesitarían seis Sprints contando el de organización. Para conservar la fecha del 7 de diciembre sería necesario acordar una reducción del alcance. |
+| **Base** | **21 puntos** | **4 Sprints de desarrollo** | Permite completar los cinco Sprints totales, con la distribución equilibrada propuesta. |
+| **Favorable** | **24 puntos** | **4 Sprints de desarrollo** | Permite completar el alcance previsto con mayor capacidad para resolver incidencias. PB-17 solo se incorporará si las funcionalidades comprometidas y la calidad están aseguradas. |
+
+La proyección se actualizará con los puntos realmente terminados. PB-18 permanece fuera del release y las pruebas de cada funcionalidad se realizarán durante su propio Sprint.
+
+#### Condiciones para liberar la versión 1.0
+
+La entrega final estará preparada cuando:
+
+1. Las funcionalidades comprometidas cumplan la Definición de Terminado.
+2. El registro, inicio y cierre de sesión funcionen correctamente y cada cuenta acceda únicamente a su información.
+3. Los datos guardados puedan consultarse desde distintos dispositivos con la misma cuenta.
+4. Las recetas y las reglas de cálculo publicadas tengan su revisión documentada.
+5. Los cálculos totales y por tanque coincidan con los casos de referencia validados.
+6. La aplicación detecte datos inválidos y combinaciones sin dosis admitida.
+7. BioApp esté accesible mediante HTTPS y disponga de un respaldo de su base de datos.
+8. Estén completas la guía de uso, la documentación técnica, las evidencias de pruebas y la presentación.
+9. El Product Owner haya revisado el alcance entregado y los pendientes documentados antes de la presentación final.
 
 ### 07.3. Costo estimado del release
 
@@ -1029,3 +1104,4 @@ Kristel facilitará la identificación de mejoras concretas en la comunicación,
 | 21 de octubre de 2026 | Krisley Castro | Integración de las 18 historias de usuario con criterios de aceptación, prioridades, estimaciones y dependencias. |
 | 23 de octubre de 2026 | Kristel Ramírez | Matriz de Estimación con puntos de historia, desglose por épica y velocidad inicial (Semana 6). |
 | 23 de octubre de 2026 | Kristel Ramírez | Reorganización del documento según la estructura del Expediente del Proyecto . |
+  26 de octubre de 2026 | Juan Daniel Ulate| Cronograma de Entregas (Release Plan). |
