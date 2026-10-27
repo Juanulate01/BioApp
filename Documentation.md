@@ -1006,9 +1006,136 @@ La entrega final estará preparada cuando:
 8. Estén completas la guía de uso, la documentación técnica, las evidencias de pruebas y la presentación.
 9. El Product Owner haya revisado el alcance entregado y los pendientes documentados antes de la presentación final.
 
+
 ### 07.3. Costo estimado del release
 
+El presupuesto de BioApp se organiza a partir de los **cinco Sprints** del Release Plan (sección 07.2). El costo principal corresponde al trabajo del Scrum Team; también se incluyen las actividades de pruebas, revisión agronómica, diseño UX/UI y los servicios tecnológicos necesarios para desarrollar y publicar la aplicación. Todos los montos se expresan en **colones costarricenses (₡)**.
+
+
+#### Criterios para calcular los costos
+
+- Para calcular los costos del personal se establece una dedicación de **80 horas por Sprint** para los integrantes a tiempo completo, considerando jornadas de 8 horas. Las horas presupuestadas se diferencian de las horas productivas utilizadas para calcular la capacidad del equipo. En el Sprint 5, aunque el calendario contempla nueve días hábiles, se mantiene la misma asignación presupuestaria para cubrir las actividades de publicación, pruebas finales, documentación y cierre del proyecto.
+- Los tres Developers tienen una dedicación presupuestada de **80 horas por Sprint**. La Scrum Master dedica **40 horas** y el Product Owner **20 horas** por Sprint.
+- La persona de QA trabaja **40 horas en cada uno de los Sprints 2, 3 y 4**, y tiene asignadas **80 horas en el Sprint 5**, cuando se realiza la validación final de BioApp.
+- La persona especialista en agronomía participa **12 horas por Sprint** para revisar recetas, dosis y reglas de cálculo. El trabajo de UX/UI contempla **40 horas en el Sprint 1**, durante el diseño y la revisión del prototipo.
+- La curaduría del contenido está incluida en el trabajo del Product Owner y la persona especialista en agronomía, por lo que no se agrega un costo independiente.
+- El presupuesto de **herramientas e infraestructura es de ₡50 000 por Sprint** e incluye alojamiento, base de datos, dominio y servicios en la nube.
+- El presupuesto contempla la participación de los cinco integrantes del Scrum Team durante los Sprints planificados. La incorporación de los Developers pendientes de confirmar es necesaria para mantener la capacidad de desarrollo y cumplir con las entregas establecidas.
+
+
+#### Costo del Scrum Team por Sprint
+
+| Integrante | Rol | Tarifa por hora | Horas por Sprint | Costo por Sprint |
+| --- | --- | ---: | ---: | ---: |
+| Krisley Castro | Developer senior | ₡12 500 | 80 | ₡1 000 000 |
+| Developer 2 (por definir) | Developer senior | ₡12 500 | 80 | ₡1 000 000 |
+| Developer 3 (por definir) | Developer junior | ₡6 000 | 80 | ₡480 000 |
+| Kristel Ramírez | Scrum Master y apoyo parcial al desarrollo | ₡10 000 | 40 | ₡400 000 |
+| Juan Daniel Ulate | Product Owner | ₡10 000 | 20 | ₡200 000 |
+| **Total** | | | **300** | **₡3 080 000** |
+
+El Scrum Team tiene un costo de **₡3 080 000 por Sprint** y **₡15 400 000 durante los cinco Sprints**. A esta cantidad se suman los servicios de apoyo y la infraestructura.
+
+#### Costo por Sprint y costo total del release
+
+Las tarifas por hora de los puestos de apoyo son: **QA: ₡6 000; especialista en agronomía: ₡12 500; UX/UI: ₡9 000**.
+
+| Concepto | Sprint 1 | Sprint 2 | Sprint 3 | Sprint 4 | Sprint 5 | Total |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Scrum Team | ₡3 080 000 | ₡3 080 000 | ₡3 080 000 | ₡3 080 000 | ₡3 080 000 | ₡15 400 000 |
+| QA / Tester | ₡0 | ₡240 000 | ₡240 000 | ₡240 000 | ₡480 000 | ₡1 200 000 |
+| Especialista en agronomía | ₡150 000 | ₡150 000 | ₡150 000 | ₡150 000 | ₡150 000 | ₡750 000 |
+| Diseño UX/UI | ₡360 000 | ₡0 | ₡0 | ₡0 | ₡0 | ₡360 000 |
+| Herramientas e infraestructura | ₡50 000 | ₡50 000 | ₡50 000 | ₡50 000 | ₡50 000 | ₡250 000 |
+| **Costo del Sprint** | **₡3 640 000** | **₡3 520 000** | **₡3 520 000** | **₡3 520 000** | **₡3 760 000** | **₡17 960 000** |
+| **Costo acumulado** | **₡3 640 000** | **₡7 160 000** | **₡10 680 000** | **₡14 200 000** | **₡17 960 000** | — |
+
+El **costo planificado del release es de ₡17 960 000**. La fila de costo acumulado establece el gasto previsto al finalizar cada Sprint y sirve para comparar el presupuesto con los costos registrados durante el seguimiento.
+
+#### Presupuesto y reservas
+
+Se establecen dos reservas para proteger el cumplimiento del cronograma y atender situaciones que afecten la ejecución, como retrasos en la validación de dosis o cambios en la disponibilidad del equipo.
+
+| Concepto | Monto |
+| --- | ---: |
+| Costo planificado de los cinco Sprints | ₡17 960 000 |
+| Reserva de contingencia (10 %) | ₡1 796 000 |
+| **Línea base del costo, con contingencia** | **₡19 756 000** |
+| Reserva de gestión (5 %) | ₡898 000 |
+| **Presupuesto total del release** | **₡20 654 000** |
+
+La **reserva de contingencia** cubre riesgos identificados, mientras que la **reserva de gestión** se destina a necesidades imprevistas que requieran aprobación. El seguimiento del trabajo ordinario utiliza como referencia los **₡17 960 000 planificados**; cualquier uso de las reservas se registra y justifica por separado.
+
+Al dividir el costo planificado entre los **92 puntos de historia** se obtiene un promedio de **₡195 217,39 por punto** (₡17 960 000 ÷ 92). Este valor ayuda a relacionar el presupuesto con el tamaño del backlog, pero no implica que cada historia tenga un costo fijo: el gasto del equipo depende principalmente de la duración de los Sprints.
+
+Un Sprint adicional con la composición de los Sprints 2, 3 y 4 tendría un costo de **₡3 520 000**, superior a la reserva de contingencia de **₡1 796 000**. Por esta razón, si la velocidad real disminuye, el Product Owner revisará la prioridad y el alcance del backlog antes de considerar una extensión, manteniendo la calidad y la fecha de entrega del **7 de diciembre de 2026**.
+
 ### 07.4. Seguimiento del release
+
+El seguimiento del release permitirá revisar, al cierre de cada Sprint, **cuánto trabajo se ha completado y cuánto se ha utilizado del presupuesto**. Para ello, se compararán los puntos pendientes y los costos registrados con la planificación de las secciones 07.2 y 07.3.
+
+El avance se representará mediante un **burndown del release**. Solo se descontarán los puntos de los elementos que cumplan sus criterios de aceptación y la **Definición de Terminado (DoD)**. Las funcionalidades incompletas continuarán como trabajo pendiente, aunque su desarrollo esté avanzado.
+
+
+#### Registro del avance y de los costos
+
+El Release Plan distribuye **8 puntos en el Sprint 1** y **21 puntos en cada uno de los Sprints 2 a 5**. La siguiente tabla presenta los valores planificados y permite registrar los resultados reales al cierre de cada Sprint, facilitando la comparación entre el avance esperado, el trabajo completado y los costos del proyecto.
+
+| Momento | Puntos pendientes planificados | Puntos completados planificados (acumulados) | Puntos pendientes reales | Velocidad real del Sprint | Costo planificado acumulado | Costo real acumulado |
+| --- | ---: | ---: | --- | --- | ---: | --- |
+| Inicio | 92 | 0 | 92 | — | ₡0 | ₡0 |
+| Cierre del Sprint 1 (13/oct) | 84 | 8 | Pendiente de consolidación | No aplica | ₡3 640 000 | Pendiente de consolidación |
+| Cierre del Sprint 2 (27/oct) | 63 | 29 | Por registrar | Por registrar | ₡7 160 000 | Por registrar |
+| Cierre del Sprint 3 (10/nov) | 42 | 50 | Por registrar | Por registrar | ₡10 680 000 | Por registrar |
+| Cierre del Sprint 4 (24/nov) | 21 | 71 | Por registrar | Por registrar | ₡14 200 000 | Por registrar |
+| Cierre del Sprint 5 (7/dic) | 0 | 92 | Por registrar | Por registrar | ₡17 960 000 | Por registrar |
+
+El Sprint 1 corresponde a las actividades de organización y diseño, por lo que sus puntos completados se registran como avance del proyecto, pero no se utilizan para calcular la velocidad de desarrollo. Esta comenzará a medirse al finalizar el Sprint 2, el 27 de octubre.
+
+En el burndown se mostrarán dos líneas: la **planificada**, con los valores **92, 84, 63, 42, 21 y 0**, y la **real**, que se actualizará al verificar los elementos terminados. Si la línea real queda por encima de la planificada, significa que hay más puntos pendientes de los previstos.
+
+La distribución de los puntos pendientes se basa en el Release Plan de la sección 07.2, que contempla 21 puntos para cada Sprint de desarrollo. Esta planificación incorpora la división de PB-16 entre los Sprints 4 y 5 y se actualizará cuando el equipo confirme los ajustes del backlog.
+
+
+#### Indicadores de seguimiento
+
+Para relacionar el avance del backlog con el presupuesto, el equipo revisará los siguientes datos en cada Sprint Review:
+
+- **PV (valor planificado en puntos):** puntos que deberían estar terminados de forma acumulada según el Release Plan.
+- **EV (valor ganado en puntos):** puntos realmente terminados de forma acumulada y que cumplen la DoD.
+- **AC (costo real acumulado):** monto en colones utilizado hasta el cierre del Sprint.
+- **SPI = EV ÷ PV:** indicador de cumplimiento del cronograma. Un valor **menor que 1** significa que el avance está por debajo del plan; un valor **igual a 1** indica que se han terminado los puntos previstos.
+- **CPI = valor monetario del avance ÷ AC:** indicador de rendimiento del costo. Un valor **menor que 1** indica que se está utilizando más presupuesto del que corresponde al avance conseguido.
+
+Para obtener el **valor monetario del avance**, se toma el costo planificado acumulado de ese Sprint y se multiplica por la proporción de puntos realmente completados:
+
+**Valor monetario del avance = costo planificado acumulado × (EV ÷ PV)**
+
+Esta relación permite comparar las dos magnitudes en colones. Los índices SPI y CPI se calculan a partir del primer cierre con PV mayor que cero y AC registrado.
+
+**Ejemplo de seguimiento al cierre del Sprint 3:** se planificaron **50 puntos acumulados** y un costo acumulado de **₡10 680 000**. Si al cerrar el Sprint el equipo completa **42 puntos** y registra un costo real de **₡10 680 000**, los indicadores serían:
+
+- **SPI = 42 ÷ 50 = 0,84.** Se habría completado el **84 % del avance previsto**, con una diferencia del 16 %.
+- **Valor monetario del avance = ₡10 680 000 × (42 ÷ 50) = ₡8 971 200.**
+- **CPI = ₡8 971 200 ÷ ₡10 680 000 = 0,84.** El gasto acumulado sería el previsto, pero con menos puntos terminados de los programados.
+
+Cuando se alcancen los puntos planificados y el costo real coincida con el acumulado previsto, los dos indicadores serán **1**.
+
+#### Medidas ante diferencias con el plan
+
+Si el equipo termina menos puntos de los esperados, se revisarán los impedimentos, las dependencias y la velocidad real. El Product Owner podrá reordenar los elementos del Product Backlog, priorizando las funcionalidades **Must** y evaluando ajustes en elementos **Should**, como **PB-08 (historial)**, siempre revisando antes las dependencias con otras actividades.
+
+Cuando el gasto supere lo planificado, se revisarán las horas utilizadas, los costos de los servicios y el apoyo requerido. Si es necesario utilizar una reserva, se documentará su motivo y el monto asignado. En todos los casos se mantendrán los criterios de aceptación y la Definición de Terminado.
+
+#### Responsables del seguimiento
+
+- **Kristel Ramírez, Scrum Master:** actualiza el burndown, consolida los puntos terminados y registra los costos e indicadores después de cada Sprint Review.
+- **Juan Daniel Ulate, Product Owner:** revisa el estado del release y toma decisiones sobre la prioridad y los ajustes del alcance.
+- **Krisley Castro y los demás Developers:** verifican el cumplimiento de la DoD, aportan la evidencia de las funcionalidades terminadas y comunican los impedimentos del desarrollo.
+- **Todo el Scrum Team:** analiza las diferencias entre lo planificado y lo realizado durante la Sprint Retrospective y acuerda mejoras para el siguiente Sprint.
+
+De esta forma, el seguimiento une el **alcance, el cronograma y los costos**, y facilita tomar decisiones a tiempo para completar BioApp dentro de las cinco entregas previstas.
+
 
 ## 09. Calidad y Definition of Done
 
@@ -1104,4 +1231,5 @@ Kristel facilitará la identificación de mejoras concretas en la comunicación,
 | 21 de octubre de 2026 | Krisley Castro | Integración de las 18 historias de usuario con criterios de aceptación, prioridades, estimaciones y dependencias. |
 | 23 de octubre de 2026 | Kristel Ramírez | Matriz de Estimación con puntos de historia, desglose por épica y velocidad inicial (Semana 6). |
 | 23 de octubre de 2026 | Kristel Ramírez | Reorganización del documento según la estructura del Expediente del Proyecto . |
-  26 de octubre de 2026 | Juan Daniel Ulate| Cronograma de Entregas (Release Plan). |
+| 26 de octubre de 2026 | Juan Daniel Ulate| Cronograma de Entregas (Release Plan). |
+| 26 de octubre de 2026 | Krisley Castro| Costo estimado del release y Seguimiento del release. |
