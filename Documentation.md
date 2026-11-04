@@ -52,6 +52,7 @@
   - [10.1. Equipo de trabajo](#101-equipo-de-trabajo)
   - [10.2. Acuerdos de trabajo para las 10 semanas](#102-acuerdos-de-trabajo-para-las-10-semanas)
   - [10.3. Comunicación y seguimiento del trabajo](#103-comunicación-y-seguimiento-del-trabajo)
+  - [10.4. Plan de comunicaciones](#104-plan-de-comunicaciones)
 - [11. Decisiones, cambios y evidencias](#11-decisiones-cambios-y-evidencias)
   - [11.1. Historial de cambios](#111-historial-de-cambios)
 
@@ -238,15 +239,22 @@ Además del contexto y las restricciones, es necesario considerar a los principa
 
 ### 03.1. Mapa de interesados
 
-| Interesado | Impacto en BioApp |
-|---|---|
-| **Personas agricultoras** | Permiten validar si la aplicación responde a necesidades reales y si resulta práctica para sus cultivos y terrenos. |
-| **Profesionales en agronomía** | Apoyan en la validación de recetas, dosis y reglas de cálculo antes de incorporarlas a la aplicación. |
-| **Personas encargadas de atomizar** | Ayudan a verificar si los cálculos de mezcla y cantidad por tanque son claros y útiles. |
-| **Personas con experiencia en bioinsumos** | Pueden revisar ingredientes, pasos de elaboración y recomendaciones de uso. |
-| **Equipo de desarrollo** | Se encarga de diseñar, programar, probar y mejorar la aplicación. |
-| **Cooperativas o asociaciones agrícolas** | Pueden facilitar el contacto con personas agricultoras y apoyar posibles pruebas de la aplicación. |
-| **Autoridades relacionadas con el área agrícola** | Pueden influir si la aplicación llega a utilizarse de manera pública o comercial. |
+El poder representa la capacidad para influir en las decisiones o entregas del proyecto. El interés representa el grado de participación y atención a sus resultados. La clasificación es inicial y se revisará cuando cambien los participantes o sus responsabilidades.
+
+| Interesado | Poder | Interés | Motivo y estrategia de participación |
+|---|---|---|---|
+| Juan Daniel Ulate — Product Owner | Alto | Alto | Define las prioridades y orienta las decisiones de alcance. Mantener una participación continua en la planificación y revisión del producto. |
+| Kristel Ramírez — Scrum Master y apoyo al desarrollo | Medio | Alto | Facilita la colaboración y la resolución de impedimentos. Mantener coordinación frecuente sobre riesgos, bloqueos y mejoras del equipo. |
+| Developers: Krisley Castro, Developer 2 y Developer 3 | Alto | Alto | Deciden cómo implementar el producto y estiman el trabajo. Involucrarlos en las decisiones técnicas, la planificación y el seguimiento diario. |
+| Profesionales en agronomía | Alto | Alto | Su validación de recetas, dosis y casos de referencia condiciona las funcionalidades de cálculo. Coordinar revisiones y documentar sus resultados. |
+| Personas agricultoras | Bajo | Alto | Aportan necesidades y validan la utilidad de la aplicación. Mantenerlas informadas e invitarlas a pruebas y revisiones. |
+| Personas encargadas de atomizar | Bajo | Alto | Validan la claridad de las mezclas y cantidades por tanque. Consultarlas durante las pruebas de la calculadora. |
+| Personas con experiencia en bioinsumos | Medio | Alto | Aportan conocimiento sobre ingredientes, preparación y uso. Consultarlas para complementar la revisión del contenido. |
+| QA / Tester, si se incorpora | Medio | Alto | Aporta evidencia sobre defectos y cumplimiento de los criterios de calidad. Integrarlo en la coordinación de pruebas. |
+| Diseñador/a UX/UI, si se incorpora | Medio | Alto | Influye en la navegación y facilidad de uso. Coordinar la revisión del prototipo y los ajustes de usabilidad. |
+| Responsable de curaduría de contenido | Medio | Alto | Prepara recetas y dosis para su carga, conservando fuente y versión. Coordinar las entregas con agronomía y Developers. |
+| Cooperativas o asociaciones agrícolas | Medio | Medio | Pueden facilitar participantes y espacios para pruebas. Mantener contacto en los hitos que requieran su colaboración. |
+| Autoridades relacionadas con el área agrícola | Alto | Bajo inicialmente | Pueden influir en las condiciones aplicables a un uso público o comercial. Consultarlas cuando corresponda y revisar su clasificación si participan directamente. |
 
 ### 03.2. Conclusión del análisis
 
@@ -1215,6 +1223,37 @@ Kristel facilitará la identificación de mejoras concretas en la comunicación,
 - El trabajo se distribuirá según los conocimientos, la disponibilidad y la capacidad de los Developers.
 - Las consultas sobre prioridades y requisitos se dirigirán al Product Owner.
 - Las mejoras en la forma de trabajo se revisarán durante las retrospectivas.
+
+### 10.4. Plan de comunicaciones
+
+El plan de comunicaciones define qué información necesita cada interesado, con qué frecuencia se comparte y quién coordina su entrega. Se utilizarán reuniones presenciales o virtuales, mensajería del equipo, el tablero de trabajo y la documentación compartida.
+
+| Destinatario | Información que necesita | Frecuencia y evento | Medio o evidencia | Responsable de coordinar |
+|---|---|---|---|---|
+| Product Owner: Juan Daniel Ulate | Avance del producto, funcionalidades terminadas, pendientes, riesgos, costos y decisiones de alcance. | Cada miércoles en el seguimiento semanal; cada dos semanas en la Sprint Review; cuando un bloqueo requiera una decisión. | Tablero, informe de avance y costos, acuerdos de la Review. | Scrum Master consolida; Developers aportan evidencia. |
+| Scrum Master: Kristel Ramírez | Impedimentos, dependencias, dificultades de colaboración y acciones de mejora. | Al detectar impedimentos; seguimiento semanal; Sprint Retrospective al cierre de cada Sprint. | Mensajería, registro de impedimentos y acuerdos de retrospectiva. | Cada integrante comunica sus dificultades; Scrum Master da seguimiento. |
+| Developers: Krisley Castro, Developer 2 y Developer 3 | Objetivo del Sprint, prioridades, criterios de aceptación, dependencias y cambios en el trabajo. | Daily Scrum cada día hábil, de 15 minutos; Sprint Planning al inicio de cada Sprint; refinamiento durante el Sprint. | Daily, Sprint Backlog, Product Backlog y documentación técnica. | Developers coordinan el trabajo diario; Product Owner aclara prioridades y requisitos. |
+| Profesionales en agronomía | Recetas, dosis, fuentes, unidades, reglas de cálculo y casos de referencia que necesitan validación. | Revisión semanal mientras existan validaciones pendientes; antes de incorporar contenido o considerar terminados los cálculos; Sprint Review cuando corresponda. | Sesión técnica y registro de validación con fuente, versión, responsable y fecha. | Product Owner coordina; Developers presentan dudas y resultados. |
+| Personas agricultoras | Funcionalidades disponibles, instrucciones para las pruebas y cambios derivados de sus observaciones. | Sprint Review cada dos semanas, según disponibilidad; pruebas de uso cuando exista un incremento pertinente. | Demostración, guía breve y registro de observaciones. | Product Owner. |
+| Personas encargadas de atomizar | Datos de entrada, unidades, resultados de mezcla y cantidades por tanque. | Durante las pruebas de PB-06 y PB-07 y después de cambios relevantes en esos cálculos. | Prueba guiada y registro de dificultades de uso. | Product Owner coordina; Developers y QA apoyan. |
+| Personas con experiencia en bioinsumos | Ingredientes, pasos de preparación, recomendaciones y observaciones pendientes del contenido. | Durante la preparación o modificación del contenido, antes de la validación agronómica final. | Revisión de contenido y observaciones documentadas. | Product Owner o responsable de curaduría. |
+| QA / Tester, si se incorpora | Criterios de aceptación, funcionalidades listas para probar, casos de referencia, defectos y correcciones. | Cada día con pruebas activas; informe de resultados antes de cada Sprint Review y de la entrega final. | Tablero de defectos y evidencias de pruebas. | Developers y QA. |
+| Diseñador/a UX/UI, si se incorpora | Necesidades de usuarios, recorridos y observaciones sobre navegación y facilidad de uso. | Durante el Sprint 1 y cuando se detecten problemas de usabilidad que requieran su apoyo. | Prototipo, sesión de revisión y registro de ajustes. | Product Owner. |
+| Responsable de curaduría de contenido | Recetas y dosis validadas, fuentes, versiones, formato de carga y correcciones pendientes. | Semanalmente durante los Sprints 2 y 3; ante cada entrega o corrección de contenido. | Registro de contenido y lista de comprobación de carga. | Product Owner y especialista en agronomía. |
+| Cooperativas o asociaciones agrícolas | Objetivo del proyecto, perfil de participantes, fechas de pruebas y resultados generales de su colaboración. | Al organizar pruebas y después de cada actividad en la que participen. | Invitación y resumen de resultados por el canal acordado. | Product Owner. |
+| Autoridades relacionadas con el área agrícola | Alcance de BioApp, uso previsto y consultas sobre condiciones aplicables. | Cuando exista una consulta pertinente y antes de un uso público o comercial que requiera su intervención. | Consulta formal y registro de la respuesta. | Product Owner. |
+| Todo el Scrum Team | Puntos terminados y pendientes, costos, proyección del release, riesgos y decisiones necesarias. | Informe al cierre de cada Sprint, revisado en la Sprint Review; comunicación inmediata de desviaciones que comprometan la entrega. | Seguimiento de la sección 07.4, burndown del release y acuerdos. | Scrum Master consolida; Product Owner revisa prioridades; Developers aportan evidencia. |
+
+#### Reglas de comunicación y seguimiento
+
+- Las decisiones relevantes se registrarán con fecha, responsable y acción acordada.
+- El tablero se actualizará cuando cambie el estado del trabajo.
+- Los bloqueos se comunicarán al detectarlos. Si afectan el alcance o las prioridades, se revisarán con el Product Owner.
+- Los cambios en recetas, dosis o reglas de cálculo se documentarán y recibirán validación agronómica antes de utilizarse.
+- El informe de cada Sprint incluirá avance, costos, riesgos, pendientes y decisiones necesarias, tomando como referencia la sección 07.4.
+- La eficacia del plan se revisará en cada Sprint Retrospective para ajustar participantes, canales o frecuencia.
+
+
 
 ## 11. Decisiones, cambios y evidencias
 
