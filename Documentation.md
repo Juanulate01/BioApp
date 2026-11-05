@@ -53,6 +53,8 @@
   - [10.2. Acuerdos de trabajo para las 10 semanas](#102-acuerdos-de-trabajo-para-las-10-semanas)
   - [10.3. Comunicación y seguimiento del trabajo](#103-comunicación-y-seguimiento-del-trabajo)
   - [10.4. Plan de comunicaciones](#104-plan-de-comunicaciones)
+    - [10.4.1. Reglas de comunicación del equipo](#1041-reglas-de-comunicación-del-equipo)
+    - [10.4.2. Escalamiento de impedimentos y conflictos](#1042-escalamiento-de-impedimentos-y-conflictos)
 - [11. Decisiones, cambios y evidencias](#11-decisiones-cambios-y-evidencias)
   - [11.1. Historial de cambios](#111-historial-de-cambios)
 
@@ -1224,6 +1226,7 @@ Kristel facilitará la identificación de mejoras concretas en la comunicación,
 - Las consultas sobre prioridades y requisitos se dirigirán al Product Owner.
 - Las mejoras en la forma de trabajo se revisarán durante las retrospectivas.
 
+
 ### 10.4. Plan de comunicaciones
 
 El plan de comunicaciones define qué información necesita cada interesado, con qué frecuencia se comparte y quién coordina su entrega. Se utilizarán reuniones presenciales o virtuales, mensajería del equipo, el tablero de trabajo y la documentación compartida.
@@ -1254,6 +1257,20 @@ El plan de comunicaciones define qué información necesita cada interesado, con
 - La eficacia del plan se revisará en cada Sprint Retrospective para ajustar participantes, canales o frecuencia.
 
 
+#### 10.4.1. Reglas de comunicación del equipo
+
+Para mantener una comunicación organizada, los integrantes deberán responder los mensajes en un plazo máximo de 24 horas durante los días hábiles. Cuando surja un problema que pueda afectar el avance del Sprint, deberá comunicarse lo antes posible.
+
+Las decisiones técnicas se tomarán entre los Developers, mientras que los cambios relacionados con requisitos, prioridades o alcance serán revisados con el Product Owner. Los acuerdos importantes quedarán documentados para que todos los integrantes puedan consultarlos.
+
+#### 10.4.2. Escalamiento de impedimentos y conflictos
+
+Cuando se presente algún impedimento durante el desarrollo, el equipo intentará resolverlo inicialmente entre los integrantes involucrados. Si no se encuentra una solución, se solicitará apoyo a la Scrum Master para coordinar las acciones necesarias.
+
+Si el problema afecta las prioridades o el alcance de BioApp, se consultará con el Product Owner para determinar cómo proceder.
+
+En caso de desacuerdos dentro del equipo, se buscará llegar a una solución mediante el diálogo. Si no se logra un acuerdo, la Scrum Master ayudará a facilitar la conversación y encontrar una alternativa que permita continuar con el trabajo.
+
 
 ## 11. Decisiones, cambios y evidencias
 
@@ -1272,3 +1289,4 @@ El plan de comunicaciones define qué información necesita cada interesado, con
 | 23 de octubre de 2026 | Kristel Ramírez | Reorganización del documento según la estructura del Expediente del Proyecto . |
 | 26 de octubre de 2026 | Juan Daniel Ulate| Cronograma de Entregas (Release Plan). |
 | 26 de octubre de 2026 | Krisley Castro| Costo estimado del release y Seguimiento del release. |
+| 11 de noviembre de 2026 | Krisley Castro| Plan de comunicaciones |
