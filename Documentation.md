@@ -39,6 +39,7 @@
   - [04.5. Primer Sprint](#045-primer-sprint)
 - [05. Backlog inicial y Sprint Backlog](#05-backlog-inicial-y-sprint-backlog)
   - [05.1. Product Backlog inicial](#051-product-backlog-inicial)
+  - [05.2. Tablero de trabajo](#052-tablero-de-trabajo)
 - [06. Alcance, Product Backlog priorizado y criterios de aceptación](#06-alcance-product-backlog-priorizado-y-criterios-de-aceptación)
   - [06.1. Historias de usuario y criterios de aceptación](#061-historias-de-usuario-y-criterios-de-aceptación)
 - [07. Planificación temporal, estimaciones y costos](#07-planificación-temporal-estimaciones-y-costos)
@@ -398,6 +399,55 @@ Los elementos se clasifican en tres tipos:
 | 17 | PB-17 | Historia de usuario | Recuperar la contraseña | Could | 2 | PB-11 | Si hay capacidad |
 | 18 | PB-18 | Historia de usuario | Administrar recetas y dosis desde la aplicación | Won't | 4 | PB-13, PB-15 | Fuera de esta versión |
 | | | | **Total planificado (PB-01 a PB-16)** | | **59** | | |
+
+### 05.2. Tablero de trabajo
+
+El equipo da seguimiento al trabajo en un tablero de Jira, donde están el Product Backlog, los cinco Sprints y el estado de cada tarea:
+
+[Tablero de BioApp en Jira](https://krisdaram27.atlassian.net/jira/software/projects/SCRUM/boards/1/backlog?atlOrigin=eyJpIjoiY2FiN2NjMWM5NzFjNDcxY2FhNmUyNjFkNDM1OTU0YzEiLCJwIjoiaiJ9)
+
+#### Columnas y límites WIP
+
+Cada columna es un paso hacia la Definición de Terminado (sección 09.1). El límite WIP es la cantidad máxima de tarjetas que puede haber en una columna al mismo tiempo.
+
+| Columna | Qué significa | Límite WIP | Por qué |
+| --- | --- | --- | --- |
+| Por hacer | Trabajo del Sprint que todavía no se empieza. | Sin límite | Lo que entra ya se decidió en la Sprint Planning. |
+| En curso | Alguien lo está desarrollando para cumplir los criterios de aceptación. | 3 | Una tarea por cada Developer a tiempo completo. |
+| En pruebas | Ya está integrado en la aplicación y se está probando y corrigiendo. | 2 | Para que no se junte trabajo sin probar. |
+| En revisión | El Product Owner lo revisa y, si son recetas o cálculos, la especialista en agronomía lo valida. | 2 | Quienes revisan tienen poco tiempo, así que se evita que se acumule. |
+| Terminado | Cumple toda la Definición de Terminado. | Sin límite | Es lo que el Sprint entrega. |
+
+Si una columna está llena, no se pasa otra tarjeta a ella: primero se termina o se desbloquea lo que ya está ahí.
+
+#### Sprint Backlog 1 y responsables
+
+Las tareas del Sprint 1 ya están cargadas en el tablero: 
+PB-01 (Juan Daniel Ulate)
+PB-02 (Krisley Castro) 
+Las tareas de la Scrum Master para facilitar los eventos y dar seguimiento al Sprint (Kristel Ramírez). Cada tarjeta muestra a su responsable, y nadie empieza una tarea sin asignársela primero.
+
+#### Regla para pasar una tarjeta a Terminado
+
+Una tarjeta solo pasa a **Terminado** cuando cumple todos los puntos de la Definición de Terminado, el Product Owner la aprobó en la revisión y, si se trata de recetas o cálculos, la especialista en agronomía la validó. Si falta algo, la tarjeta vuelve a la columna que corresponda.
+
+#### Sprints en el tablero
+
+![Sprint 1 en Jira](img/Sprint1.png)
+
+![Sprint 2 en Jira](img/Sprint2.png)
+
+![Sprint 3 en Jira](img/Sprint3.png)
+
+![Sprint 4 en Jira](img/Sprint4.png)
+
+![Sprint 5 en Jira](img/Sprint5.png)
+
+#### Historias para una segunda versión
+
+PB-17 y PB-18 quedan en el Product Backlog, fuera de los Sprints planificados: PB-17 se incorporará solo si hay capacidad y PB-18 queda para una segunda versión.
+
+![Historias para una segunda versión](img/Historias%20segunda%20versi%C3%B3n.png)
 
 
 
@@ -1229,7 +1279,7 @@ Kristel facilitará la identificación de mejoras concretas en la comunicación,
 
 ### 10.3. Comunicación y seguimiento del trabajo
 
-- El equipo mantendrá un tablero de trabajo con las tareas pendientes, en proceso y terminadas.
+- El equipo mantendrá un tablero de trabajo en Jira con las tareas pendientes, en proceso y terminadas (sección 05.2).
 - Las decisiones relevantes sobre requisitos, cálculos y alcance quedarán documentadas.
 - Los impedimentos se comunicarán oportunamente para facilitar su resolución.
 - El trabajo se distribuirá según los conocimientos, la disponibilidad y la capacidad de los Developers.
@@ -1405,5 +1455,10 @@ La matriz deberá revisarse periódicamente durante el proyecto para actualizar 
 | 23 de octubre de 2026 | Kristel Ramírez | Reorganización del documento según la estructura del Expediente del Proyecto . |
 | 26 de octubre de 2026 | Juan Daniel Ulate| Cronograma de Entregas (Release Plan). |
 | 26 de octubre de 2026 | Krisley Castro| Costo estimado del release y Seguimiento del release. |
+<<<<<<< HEAD
 | 2 de noviembre de 2026 | Krisley Castro| Plan de comunicaciones |
 | 9 de noviembre de 2026 | Krisley Castro | Matriz de Riesgos de y elaboración del mapa de calor |
+=======
+|04 de noviembre de 2026 | Krisley Castro| Plan de comunicaciones |
+| 4 de noviembre de 2026 | Kristel Ramírez | Tablero de trabajo en Jira: columnas, límites WIP, Sprint Backlog 1 con responsables, regla para pasar a Terminado y capturas de los Sprints. |
+>>>>>>> e6a6bf8b7868cea14b4f3d6b5d7884dc66d9c9ec
