@@ -47,6 +47,17 @@
   - [07.2. Cronograma de Entregas (Release Plan)](#072-cronograma-de-entregas-release-plan)
   - [07.3. Costo estimado del release](#073-costo-estimado-del-release)
   - [07.4. Seguimiento del release](#074-seguimiento-del-release)
+- [08. Riesgos y adquisiciones](#08-riesgos-y-adquisiciones)
+  - [08.1. Objetivo](#081-objetivo)
+  - [08.2. Escala de valoración](#082-escala-de-valoración)
+  - [08.3. Registro de Riesgos](#083-registro-de-riesgos)
+  - [08.4. Matriz de Probabilidad e Impacto](#084-matriz-de-probabilidad-e-impacto)
+  - [08.5. Riesgos de mayor prioridad](#085-riesgos-de-mayor-prioridad)
+  - [08.6. Plan de Mitigación](#086-plan-de-mitigación)
+  - [08.7. Acciones de mitigación](#087-acciones-de-mitigación)
+  - [08.8. Disparadores](#088-disparadores)
+  - [08.9. Plan de contingencia](#089-plan-de-contingencia)
+  - [08.10. Observaciones](#0810-observaciones)
 - [09. Calidad y Definition of Done](#09-calidad-y-definition-of-done)
   - [09.1. Definición de Terminado](#091-definición-de-terminado)
 - [10. Comunicación y responsabilidades del equipo](#10-comunicación-y-responsabilidades-del-equipo)
@@ -56,18 +67,9 @@
   - [10.4. Plan de comunicaciones](#104-plan-de-comunicaciones)
     - [10.4.1. Reglas de comunicación del equipo](#1041-reglas-de-comunicación-del-equipo)
     - [10.4.2. Escalamiento de impedimentos y conflictos](#1042-escalamiento-de-impedimentos-y-conflictos)
-- [11. Matriz de Riesgos](#11-matriz-de-riesgos)
-  - [11.1. Objetivo](#111-objetivo)
-  - [11.2. Escala de valoración](#112-escala-de-valoración)
-  - [11.3. Registro de Riesgos](#113-registro-de-riesgos)
-  - [11.4. Matriz de Probabilidad e Impacto](#114-matriz-de-probabilidad-e-impacto)
-  - [11.5. Riesgos de mayor prioridad](#115-riesgos-de-mayor-prioridad)
-  - [11.6. Observaciones](#116-observaciones)
-- [12. Decisiones, cambios y evidencias](#12-decisiones-cambios-y-evidencias)
-  - [12.1. Historial de cambios](#121-historial-de-cambios)
-
-- [12. Decisiones, cambios y evidencias](#12-decisiones-cambios-y-evidencias)
-  - [12.1. Historial de cambios](#111-historial-de-cambios)
+- [11. Decisiones, cambios y evidencias](#11-decisiones-cambios-y-evidencias)
+  - [11.1. Historial de cambios](#111-historial-de-cambios)
+- [12. Producto / Incremento final y cierre del proyecto](#12-producto--incremento-final-y-cierre-del-proyecto)
 
 El Scrum Team de BioApp estará conformado por cinco integrantes y trabajará durante las 10 semanas del proyecto: un Product Owner, una Scrum Master con apoyo parcial al desarrollo y tres Developers a tiempo completo.
 
@@ -1207,6 +1209,205 @@ Cuando el gasto supere lo planificado, se revisarán las horas utilizadas, los c
 De esta forma, el seguimiento une el **alcance, el cronograma y los costos**, y facilita tomar decisiones a tiempo para completar BioApp dentro de las cinco entregas previstas.
 
 
+## 08. Riesgos y adquisiciones
+
+### 08.1. Objetivo
+
+Identificar los principales riesgos que podrían afectar el desarrollo de BioApp, una aplicación que permitirá consultar recetas de bioinsumos y calcular las cantidades necesarias para aplicarlos en los cultivos.
+
+La matriz permitirá evaluar la probabilidad de que ocurra cada riesgo y el impacto que tendría en el proyecto, para identificar cuáles necesitan mayor atención.
+
+### 08.2. Escala de valoración
+
+Para evaluar los riesgos se utilizará una escala del 1 al 3.
+
+| Valor | Probabilidad | Impacto |
+|---|---|---|
+| 1 | Baja: es poco probable que ocurra. | Bajo: genera ajustes menores. |
+| 2 | Media: podría ocurrir durante el proyecto. | Medio: provoca atrasos o trabajo adicional. |
+| 3 | Alta: es bastante probable que ocurra. | Alto: afecta las entregas, la calidad o los objetivos del proyecto. |
+
+La prioridad se calcula multiplicando la probabilidad por el impacto.
+
+**Prioridad = Probabilidad × Impacto**
+
+Clasificación de los resultados:
+
+- **Baja:** 1 a 2 puntos.
+- **Media:** 3 a 4 puntos.
+- **Alta:** 6 a 9 puntos.
+
+Las valoraciones son estimaciones iniciales que deberán revisarse durante el desarrollo del proyecto.
+
+### 08.3. Registro de Riesgos
+
+| ID | Descripción del riesgo | Categoría | Tipo | Probabilidad | Impacto | Prioridad | Nivel | Dueño propuesto |
+|---|---|---|---|---|---|---|---|---|
+| R01 | Si las recetas de bioinsumos contienen información incompleta o sin validar, entonces la aplicación podría mostrar instrucciones poco confiables. | Técnico | Amenaza | 2 | 3 | 6 | Alta | Kristel |
+| R02 | Si las fórmulas no consideran correctamente el área del terreno, la dosis o la capacidad del tanque, entonces podrían calcularse cantidades incorrectas de mezcla. | Técnico | Amenaza | 2 | 3 | 6 | Alta | Juan Daniel |
+| R03 | Si no se consigue a tiempo un profesional en agronomía para revisar las recetas y los cálculos, entonces podría atrasarse la validación del contenido. | Tercero | Amenaza | 3 | 3 | 9 | Alta | Krisley |
+| R04 | Si las personas agricultoras tienen dificultades para comprender la aplicación, entonces podrían cometer errores al utilizarla. | Negocio | Amenaza | 2 | 2 | 4 | Media | Kristel |
+| R05 | Si durante el desarrollo se agregan funciones que no estaban contempladas inicialmente, entonces podrían generarse atrasos y quedar pendientes funciones importantes. | Alcance | Amenaza | 2 | 2 | 4 | Media | Juan Daniel |
+| R06 | Si las tareas no se distribuyen correctamente o los integrantes disponen de menos tiempo del esperado, entonces podrían incumplirse las fechas de entrega. | Equipo | Amenaza | 3 | 3 | 9 | Alta | Krisley |
+| R07 | Si no se cuenta con personas agricultoras disponibles para probar la aplicación, entonces podrían pasar desapercibidos problemas de funcionamiento o facilidad de uso. | Tercero | Amenaza | 2 | 2 | 4 | Media | Kristel |
+| R08 | Si se necesitan materiales o insumos para validar recetas y estos no se consiguen a tiempo o dentro del presupuesto, entonces podrían retrasarse las pruebas del proyecto. | Tercero | Amenaza | 2 | 2 | 4 | Media | Juan Daniel |
+
+### 08.4. Matriz de Probabilidad e Impacto
+
+La siguiente matriz muestra la ubicación de los ocho riesgos identificados según su probabilidad de ocurrencia y el impacto que podrían generar.
+
+Las zonas se clasifican de la siguiente manera:
+
+- **Verde - Aceptar:** riesgos de baja prioridad.
+- **Amarillo - Vigilar:** riesgos que requieren seguimiento.
+- **Rojo - Alta prioridad:** riesgos que necesitan mayor atención.
+
+#### Mapa de calor
+
+![Mapa de calor de BioApp](./imagenes/mapa_calor.png)
+
+#### Distribución de los riesgos
+
+| Probabilidad / Impacto | Bajo (1) | Medio (2) | Alto (3) |
+|---|---|---|---|
+| Alta (3) | Vigilar | Alta prioridad | R03, R06 |
+| Media (2) | Aceptar | R04, R05, R07, R08 | R01, R02 |
+| Baja (1) | Aceptar | Aceptar | Vigilar |
+
+Los riesgos se encuentran distribuidos de la siguiente manera:
+
+- **R03 y R06:** probabilidad alta e impacto alto.
+- **R01 y R02:** probabilidad media e impacto alto.
+- **R04, R05, R07 y R08:** probabilidad media e impacto medio.
+
+### 08.5. Riesgos de mayor prioridad
+
+De acuerdo con los resultados obtenidos, los riesgos que necesitan mayor atención son:
+
+**R03 - Falta de validación por parte de un profesional en agronomía.**
+
+Este riesgo obtuvo una prioridad de 9 puntos, ya que BioApp necesita información confiable para mostrar recetas y realizar cálculos. Si no se consigue la validación necesaria, podría verse afectado el avance del proyecto.
+
+**R06 - Atrasos por falta de tiempo u organización del equipo.**
+
+También obtuvo una prioridad de 9 puntos. Al tratarse de un proyecto académico, la disponibilidad de los integrantes puede afectar el cumplimiento de las tareas y las fechas de entrega.
+
+**R01 - Información incompleta o incorrecta en las recetas.**
+
+Obtuvo una prioridad de 6 puntos. Es importante porque las recetas son una de las principales funciones de BioApp y la información incorrecta podría afectar la confianza de los usuarios.
+
+**R02 - Errores en el cálculo de las cantidades de mezcla.**
+
+Obtuvo una prioridad de 6 puntos. Un error en los cálculos podría provocar que las personas agricultoras preparen cantidades incorrectas de bioinsumos.
+
+### 08.6. Plan de Mitigación
+
+El Plan de Mitigación define cómo responderá el equipo a cada riesgo del registro (sección 08.3). Para cada riesgo se elige una de las siguientes estrategias:
+
+| Estrategia | En qué consiste |
+| --- | --- |
+| **Evitar** | Cambiar el plan o el alcance para eliminar la causa del riesgo. |
+| **Mitigar** | Tomar acciones antes de que ocurra para reducir su probabilidad o su impacto. |
+| **Transferir** | Trasladar la responsabilidad o el impacto a un tercero que pueda manejarlo mejor. |
+| **Aceptar** | No actuar de forma anticipada, pero vigilar el riesgo y tener preparada una respuesta si ocurre. |
+
+| ID | Riesgo | Nivel | Estrategia | Justificación | Responsable |
+| --- | --- | --- | --- | --- | --- |
+| R03 | Falta de validación por parte de un profesional en agronomía | Alta (9) | **Mitigar** | No se puede eliminar la dependencia de la validación técnica, pero sí asegurar la disponibilidad de la especialista y tener alternativas. | Krisley |
+| R06 | Atrasos por falta de tiempo u organización del equipo | Alta (9) | **Mitigar** | La disponibilidad del equipo es un factor interno que se puede controlar con planificación y seguimiento. | Krisley |
+| R01 | Recetas incompletas o sin validar | Alta (6) | **Mitigar** | Se reduce con una plantilla obligatoria y una revisión técnica antes de cargar cada receta. | Kristel |
+| R02 | Errores en el cálculo de las cantidades de mezcla | Alta (6) | **Mitigar** | Se reduce con casos de referencia validados y pruebas de los cálculos antes de liberarlos. | Juan Daniel |
+| R04 | Dificultad de las personas agricultoras para usar la aplicación | Media (4) | **Mitigar** | Se reduce con un prototipo revisado por usuarios y mensajes claros en la aplicación. | Kristel |
+| R05 | Funciones nuevas no contempladas al inicio | Media (4) | **Evitar** | Se elimina la causa al no aceptar cambios de alcance fuera del Product Backlog priorizado. | Juan Daniel |
+| R07 | Falta de personas agricultoras para las pruebas | Media (4) | **Aceptar** | Depende de terceros; se vigila y, si ocurre, se prueba con alternativas. | Kristel |
+| R08 | Materiales o insumos no disponibles para validar recetas | Media (4) | **Transferir** | La obtención de los insumos se traslada a la especialista en agronomía o a una cooperativa que ya los maneja, en lugar de que el equipo los compre. | Juan Daniel |
+
+### 08.7. Acciones de mitigación
+
+Las acciones se aplican antes de que el riesgo ocurra y se revisan en cada Sprint Review y Sprint Retrospective.
+
+**R03 - Falta de validación por parte de un profesional en agronomía**
+
+- Confirmar por escrito con la especialista en agronomía las fechas de entrega de las recetas y de las dosis validadas, y las 12 horas por Sprint de revisión presupuestadas (sección 07.3).
+- Identificar al menos un segundo profesional en agronomía (por ejemplo, de una cooperativa o del MAG) que pueda revisar el contenido si la especialista no está disponible.
+- Enviar las recetas y dosis por lotes pequeños, para que la revisión avance de forma continua y no se acumule al final.
+- Registrar cada validación con fuente, versión, responsable y fecha (sección 10.4).
+
+**R06 - Atrasos por falta de tiempo u organización del equipo**
+
+- Asignar en la Sprint Planning solo el trabajo que cabe en la capacidad real del equipo (21 puntos por Sprint, sección 07.1).
+- Respetar los límites WIP del tablero de Jira (sección 05.2) para no tener tareas abiertas sin terminar.
+- Revisar el avance en el Daily Scrum y en el seguimiento semanal de los miércoles, y registrar impedimentos en cuanto aparezcan.
+- Dar prioridad a las historias **Must** para que lo esencial quede terminado primero.
+- Confirmar a los dos Developers pendientes o, si no se confirman, ajustar la capacidad y el plan del release.
+
+**R01 - Recetas incompletas o sin validar**
+
+- Usar una plantilla obligatoria para cada receta: ingredientes, cantidades, pasos de elaboración, forma de uso, fuente y revisión técnica.
+- No cargar en la aplicación ninguna receta que no tenga la revisión técnica documentada (criterio de aceptación de PB-13).
+- Hacer que una segunda persona del equipo revise que cada receta esté completa antes de cargarla.
+
+**R02 - Errores en el cálculo de las cantidades de mezcla**
+
+- Definir, junto con la especialista en agronomía, casos de referencia con resultados esperados para cada tipo de cálculo.
+- Probar los cálculos contra esos casos de referencia antes de pasar la historia a Terminado (Definición de Terminado, sección 09.1).
+- Validar los datos antes de calcular (PB-14) y mostrar siempre las unidades en los resultados.
+- No calcular cuando no existe una dosis validada para la combinación seleccionada.
+
+**Riesgos de prioridad media**
+
+| ID | Acciones de mitigación |
+| --- | --- |
+| R04 | Revisar el prototipo con personas agricultoras durante el Sprint 1, usar lenguaje sencillo y mensajes de error claros, y ajustar la navegación según sus observaciones. |
+| R05 | Toda funcionalidad nueva pasa por el Product Owner, se agrega al Product Backlog y se prioriza; no entra al Sprint en curso. Las historias opcionales quedan para una segunda versión (PB-17 y PB-18). |
+| R07 | Coordinar con anticipación las sesiones de prueba con personas agricultoras y cooperativas, y tener una lista de contactos de respaldo. |
+| R08 | Acordar con la especialista en agronomía o con una cooperativa que ellas aporten los insumos necesarios para las pruebas, y definir desde el inicio qué recetas los necesitan. |
+
+### 08.8. Disparadores
+
+Los disparadores son las señales que indican que un riesgo se está presentando o está por presentarse. Cada responsable los vigila y avisa al equipo en el Daily Scrum o por el canal del equipo.
+
+| ID | Disparador (señal de alerta) | Dónde se detecta | Responsable |
+| --- | --- | --- | --- |
+| R03 | La especialista no confirma la fecha de revisión o pasa la fecha acordada sin entregar las recetas o dosis validadas. | Registro de validaciones y comunicación con la especialista | Krisley |
+| R06 | La línea real del burndown queda por encima de la planificada, una tarea pasa más de tres días sin avanzar o un integrante avisa que tendrá menos tiempo. | Burndown, tablero de Jira y Daily Scrum | Krisley |
+| R01 | Una receta llega sin alguno de los campos de la plantilla o sin la revisión técnica documentada. | Revisión de la receta antes de cargarla | Kristel |
+| R02 | Un resultado no coincide con el caso de referencia o se reporta una cantidad incoherente durante las pruebas. | Pruebas de los cálculos y tablero de defectos | Juan Daniel |
+| R04 | En las pruebas de uso, las personas necesitan ayuda para completar una tarea o cometen errores al ingresar datos. | Sprint Review y pruebas con usuarios | Kristel |
+| R05 | Llega una solicitud de funcionalidad que no está en el Product Backlog o se intenta agregar trabajo al Sprint en curso. | Sprint Planning, Sprint Review y tablero de Jira | Juan Daniel |
+| R07 | Menos de tres personas agricultoras confirman su participación una semana antes de la sesión de pruebas. | Coordinación de pruebas | Kristel |
+| R08 | Una receta que se va a validar necesita un insumo que nadie tiene disponible o cuyo costo no está contemplado. | Planificación de la validación de recetas | Juan Daniel |
+
+### 08.9. Plan de contingencia
+
+El plan de contingencia indica qué hará el equipo si el riesgo ocurre a pesar de las acciones de mitigación.
+
+| ID | Qué se hará si el riesgo ocurre | Responsable |
+| --- | --- | --- |
+| R03 | Contactar al profesional de respaldo identificado. Mientras tanto, publicar solo las recetas y dosis ya validadas y mover las funcionalidades de cálculo pendientes al siguiente Sprint. | Krisley |
+| R06 | Reunir al equipo para redistribuir las tareas. El Product Owner reordena el Product Backlog para terminar primero las historias **Must** y pasa elementos **Should** (por ejemplo, PB-08) a un Sprint posterior. Si hace falta más capacidad, se evalúa usar la reserva de contingencia (₡1 796 000, sección 07.3). | Krisley y Juan Daniel |
+| R01 | Retirar o marcar como no disponible la receta afectada, enviarla a revisión técnica y volver a cargarla solo cuando esté validada. | Kristel |
+| R02 | Desactivar el cálculo afectado, corregir la fórmula, volver a probarla contra todos los casos de referencia y avisar a los usuarios si ya habían usado el resultado. | Juan Daniel |
+| R04 | Simplificar las pantallas con más problemas, agregar ayudas o instrucciones breves y repetir la prueba con usuarios. | Kristel |
+| R05 | Registrar la solicitud en el Product Backlog para una versión futura y mantener el objetivo del Sprint sin cambios. | Juan Daniel |
+| R07 | Hacer las pruebas con personas cercanas al sector agrícola o con el propio equipo usando escenarios reales, y documentar la limitación. | Kristel |
+| R08 | Reemplazar la receta por otra que use insumos disponibles o usar la reserva de contingencia para comprarlos, con aprobación del Product Owner. | Juan Daniel |
+
+### 08.10. Observaciones
+
+Los riesgos identificados corresponden a situaciones que podrían presentarse durante el desarrollo de BioApp, por lo que no significa que ya hayan ocurrido.
+
+Se identificaron riesgos técnicos, del equipo, del alcance, del negocio y relacionados con terceros.
+
+Los riesgos R03 y R07 representan dependencias de personas externas al equipo, mientras que R08 contempla posibles dificultades relacionadas con la adquisición de materiales o insumos para realizar pruebas, si estos llegan a necesitarse.
+
+Los responsables indicados son propuestas que deberán ser confirmadas por el equipo.
+
+El Plan de Mitigación (secciones 08.6 a 08.9) define la estrategia, las acciones, los disparadores y el plan de contingencia de cada riesgo.
+
+La matriz deberá revisarse periódicamente durante el proyecto para actualizar las probabilidades, los impactos y agregar nuevos riesgos cuando sea necesario.
+
+
 ## 09. Calidad y Definition of Done
 
 ### 09.1. Definición de Terminado
@@ -1332,133 +1533,30 @@ Si el problema afecta las prioridades o el alcance de BioApp, se consultará con
 En caso de desacuerdos dentro del equipo, se buscará llegar a una solución mediante el diálogo. Si no se logra un acuerdo, la Scrum Master ayudará a facilitar la conversación y encontrar una alternativa que permita continuar con el trabajo.
 
 
-## 11. Matriz de Riesgos
+## 11. Decisiones, cambios y evidencias
 
-### 11.1. Objetivo
+### 11.1. Historial de cambios
 
-Identificar los principales riesgos que podrían afectar el desarrollo de BioApp, una aplicación que permitirá consultar recetas de bioinsumos y calcular las cantidades necesarias para aplicarlos en los cultivos.
+| Fecha | Versión | Autor/a | Sección afectada | Cambio |
+| --- | --- | --- | --- | --- |
+| 1 de octubre de 2026 | 0.1 | Juan Daniel Ulate | Todo el documento | Creación del documento. |
+| 1 de octubre de 2026 | 0.2 | Kristel Ramírez | 00. Portada e identificación del equipo | Definición del Scrum Team y sus funciones (Entregable 1, punto 2). |
+| 5 de octubre de 2026 | 0.3 | Krisley Castro | 02. Contexto organizacional y restricciones; 03. Interesados | Factores ambientales e interesados del proyecto (Entregable 1, punto 3). |
+| 7 de octubre de 2026 | 0.4 | Kristel Ramírez | 00. Portada e identificación del equipo | Corrección de contenido. |
+| 16 de octubre de 2026 | 0.5 | Kristel Ramírez | Todo el documento; 04. Ciclo de vida del proyecto | Formato según lo indicado por el docente; ciclo de vida del proyecto y cronograma de Sprints. |
+| 17 de octubre de 2026 | 0.6 | Juan Daniel Ulate | 05.1. Product Backlog inicial | Product Backlog inicial. |
+| 21 de octubre de 2026 | 0.7 | Krisley Castro | 06. Alcance, Product Backlog priorizado y criterios de aceptación | Integración de las 18 historias de usuario con criterios de aceptación, prioridades, estimaciones y dependencias. |
+| 23 de octubre de 2026 | 0.8 | Kristel Ramírez | 07.1. Matriz de Estimación | Matriz de Estimación con puntos de historia, desglose por épica y velocidad inicial. |
+| 23 de octubre de 2026 | 0.9 | Kristel Ramírez | Todo el documento; 11.1. Historial de cambios | Reorganización del documento según la estructura del Expediente del Proyecto; creación del historial de cambios. |
+| 26 de octubre de 2026 | 0.10 | Juan Daniel Ulate | 07.2. Cronograma de Entregas | Cronograma de Entregas (Release Plan). |
+| 26 de octubre de 2026 | 0.11 | Krisley Castro | 07.3. Costo estimado del release; 07.4. Seguimiento del release | Costo estimado del release y Seguimiento del release. |
+| 4 de noviembre de 2026 | 0.12 | Juan Daniel Ulate | 03.1. Mapa de interesados; 10.4. Plan de comunicaciones | Registro de interesados con poder e interés y Plan de comunicaciones. |
+| 4 de noviembre de 2026 | 0.13 | Krisley Castro | 10.4.1. Reglas de comunicación; 10.4.2. Escalamiento | Reglas de comunicación del equipo y escalamiento de impedimentos y conflictos. |
+| 4 de noviembre de 2026 | 0.14 | Kristel Ramírez | 05.2. Tablero de trabajo | Tablero de trabajo en Jira: columnas, límites WIP, Sprint Backlog 1 con responsables, regla para pasar a Terminado y capturas de los Sprints. |
+| 9 de noviembre de 2026 | 0.15 | Krisley Castro | 08. Riesgos y adquisiciones | Matriz de Riesgos y elaboración del mapa de calor. |
+| 11 de noviembre de 2026 | 0.16 | Kristel Ramírez | Índice; 08. Riesgos y adquisiciones; 11. Decisiones, cambios y evidencias; 12. Producto / Incremento final | Organización del documento según la estructura oficial del Expediente: los riesgos pasan a la sección 08, el historial de cambios pasa a la sección 11, se agrega la sección 12 y se incorporan las columnas Versión y Sección afectada al historial. |
+| 12 de noviembre de 2026 | 0.17 | Kristel Ramírez | 08.6 a 08.9. Plan de Mitigación | Plan de Mitigación: estrategia de respuesta, acciones de mitigación, disparadores y plan de contingencia de cada riesgo. |
 
-La matriz permitirá evaluar la probabilidad de que ocurra cada riesgo y el impacto que tendría en el proyecto, para identificar cuáles necesitan mayor atención.
+## 12. Producto / Incremento final y cierre del proyecto
 
-### 11.2. Escala de valoración
-
-Para evaluar los riesgos se utilizará una escala del 1 al 3.
-
-| Valor | Probabilidad | Impacto |
-|---|---|---|
-| 1 | Baja: es poco probable que ocurra. | Bajo: genera ajustes menores. |
-| 2 | Media: podría ocurrir durante el proyecto. | Medio: provoca atrasos o trabajo adicional. |
-| 3 | Alta: es bastante probable que ocurra. | Alto: afecta las entregas, la calidad o los objetivos del proyecto. |
-
-La prioridad se calcula multiplicando la probabilidad por el impacto.
-
-**Prioridad = Probabilidad × Impacto**
-
-Clasificación de los resultados:
-
-- **Baja:** 1 a 2 puntos.
-- **Media:** 3 a 4 puntos.
-- **Alta:** 6 a 9 puntos.
-
-Las valoraciones son estimaciones iniciales que deberán revisarse durante el desarrollo del proyecto.
-
-### 11.3. Registro de Riesgos
-
-| ID | Descripción del riesgo | Categoría | Tipo | Probabilidad | Impacto | Prioridad | Nivel | Dueño propuesto |
-|---|---|---|---|---|---|---|---|---|
-| R01 | Si las recetas de bioinsumos contienen información incompleta o sin validar, entonces la aplicación podría mostrar instrucciones poco confiables. | Técnico | Amenaza | 2 | 3 | 6 | Alta | Kristel |
-| R02 | Si las fórmulas no consideran correctamente el área del terreno, la dosis o la capacidad del tanque, entonces podrían calcularse cantidades incorrectas de mezcla. | Técnico | Amenaza | 2 | 3 | 6 | Alta | Juan Daniel |
-| R03 | Si no se consigue a tiempo un profesional en agronomía para revisar las recetas y los cálculos, entonces podría atrasarse la validación del contenido. | Tercero | Amenaza | 3 | 3 | 9 | Alta | Krisley |
-| R04 | Si las personas agricultoras tienen dificultades para comprender la aplicación, entonces podrían cometer errores al utilizarla. | Negocio | Amenaza | 2 | 2 | 4 | Media | Kristel |
-| R05 | Si durante el desarrollo se agregan funciones que no estaban contempladas inicialmente, entonces podrían generarse atrasos y quedar pendientes funciones importantes. | Alcance | Amenaza | 2 | 2 | 4 | Media | Juan Daniel |
-| R06 | Si las tareas no se distribuyen correctamente o los integrantes disponen de menos tiempo del esperado, entonces podrían incumplirse las fechas de entrega. | Equipo | Amenaza | 3 | 3 | 9 | Alta | Krisley |
-| R07 | Si no se cuenta con personas agricultoras disponibles para probar la aplicación, entonces podrían pasar desapercibidos problemas de funcionamiento o facilidad de uso. | Tercero | Amenaza | 2 | 2 | 4 | Media | Kristel |
-| R08 | Si se necesitan materiales o insumos para validar recetas y estos no se consiguen a tiempo o dentro del presupuesto, entonces podrían retrasarse las pruebas del proyecto. | Tercero | Amenaza | 2 | 2 | 4 | Media | Juan Daniel |
-
-### 11.4. Matriz de Probabilidad e Impacto
-
-La siguiente matriz muestra la ubicación de los ocho riesgos identificados según su probabilidad de ocurrencia y el impacto que podrían generar.
-
-Las zonas se clasifican de la siguiente manera:
-
-- **Verde - Aceptar:** riesgos de baja prioridad.
-- **Amarillo - Vigilar:** riesgos que requieren seguimiento.
-- **Rojo - Alta prioridad:** riesgos que necesitan mayor atención.
-
-#### Mapa de calor
-
-![Mapa de calor de BioApp](./imagenes/mapa_calor.png)
-
-#### Distribución de los riesgos
-
-| Probabilidad / Impacto | Bajo (1) | Medio (2) | Alto (3) |
-|---|---|---|---|
-| Alta (3) | Vigilar | Alta prioridad | R03, R06 |
-| Media (2) | Aceptar | R04, R05, R07, R08 | R01, R02 |
-| Baja (1) | Aceptar | Aceptar | Vigilar |
-
-Los riesgos se encuentran distribuidos de la siguiente manera:
-
-- **R03 y R06:** probabilidad alta e impacto alto.
-- **R01 y R02:** probabilidad media e impacto alto.
-- **R04, R05, R07 y R08:** probabilidad media e impacto medio.
-
-### 11.5. Riesgos de mayor prioridad
-
-De acuerdo con los resultados obtenidos, los riesgos que necesitan mayor atención son:
-
-**R03 - Falta de validación por parte de un profesional en agronomía.**
-
-Este riesgo obtuvo una prioridad de 9 puntos, ya que BioApp necesita información confiable para mostrar recetas y realizar cálculos. Si no se consigue la validación necesaria, podría verse afectado el avance del proyecto.
-
-**R06 - Atrasos por falta de tiempo u organización del equipo.**
-
-También obtuvo una prioridad de 9 puntos. Al tratarse de un proyecto académico, la disponibilidad de los integrantes puede afectar el cumplimiento de las tareas y las fechas de entrega.
-
-**R01 - Información incompleta o incorrecta en las recetas.**
-
-Obtuvo una prioridad de 6 puntos. Es importante porque las recetas son una de las principales funciones de BioApp y la información incorrecta podría afectar la confianza de los usuarios.
-
-**R02 - Errores en el cálculo de las cantidades de mezcla.**
-
-Obtuvo una prioridad de 6 puntos. Un error en los cálculos podría provocar que las personas agricultoras preparen cantidades incorrectas de bioinsumos.
-
-### 11.6. Observaciones
-
-Los riesgos identificados corresponden a situaciones que podrían presentarse durante el desarrollo de BioApp, por lo que no significa que ya hayan ocurrido.
-
-Se identificaron riesgos técnicos, del equipo, del alcance, del negocio y relacionados con terceros.
-
-Los riesgos R03 y R07 representan dependencias de personas externas al equipo, mientras que R08 contempla posibles dificultades relacionadas con la adquisición de materiales o insumos para realizar pruebas, si estos llegan a necesitarse.
-
-Los responsables indicados son propuestas que deberán ser confirmadas por el equipo.
-
-Esta matriz servirá como base para elaborar el Plan de Mitigación, donde se definirán las acciones necesarias para reducir o controlar los riesgos identificados.
-
-La matriz deberá revisarse periódicamente durante el proyecto para actualizar las probabilidades, los impactos y agregar nuevos riesgos cuando sea necesario.
-
-
-## 12. Decisiones, cambios y evidencias
-
-### 12.1. Historial de cambios
-
-| Fecha | Autor/a | Cambio |
-| --- | --- | --- |
-| 1 de octubre de 2026 | Juan Daniel Ulate | Creación del documento. |
-| 1 de octubre de 2026 | Kristel Ramírez | Definición del Scrum Team y sus funciones (Entregable 1, punto 2). |
-| 5 de octubre de 2026 | Krisley Castro | Factores ambientales e interesados del proyecto (Entregable 1, punto 3). |
-| 7 de octubre de 2026 | Kristel Ramírez | Corrección de contenido. |
-| 16 de octubre de 2026 | Kristel Ramírez | Formato según lo indicado por el docente; ciclo de vida del proyecto y cronograma de Sprints. |
-| 17 de octubre de 2026 | Juan Daniel Ulate | Product Backlog, Sprint Backlog y mecanismo de seguimiento. |
-| 21 de octubre de 2026 | Krisley Castro | Integración de las 18 historias de usuario con criterios de aceptación, prioridades, estimaciones y dependencias. |
-| 23 de octubre de 2026 | Kristel Ramírez | Matriz de Estimación con puntos de historia, desglose por épica y velocidad inicial. |
-| 23 de octubre de 2026 | Kristel Ramírez | Reorganización del documento según la estructura del Expediente del Proyecto . |
-| 26 de octubre de 2026 | Juan Daniel Ulate| Cronograma de Entregas (Release Plan). |
-| 26 de octubre de 2026 | Krisley Castro| Costo estimado del release y Seguimiento del release. |
-<<<<<<< HEAD
-| 2 de noviembre de 2026 | Krisley Castro| Plan de comunicaciones |
-| 9 de noviembre de 2026 | Krisley Castro | Matriz de Riesgos de y elaboración del mapa de calor |
-=======
-|04 de noviembre de 2026 | Krisley Castro| Plan de comunicaciones |
-| 4 de noviembre de 2026 | Kristel Ramírez | Tablero de trabajo en Jira: columnas, límites WIP, Sprint Backlog 1 con responsables, regla para pasar a Terminado y capturas de los Sprints. |
->>>>>>> e6a6bf8b7868cea14b4f3d6b5d7884dc66d9c9ec
+*Pendiente para la entrega oficial (Semana 11): informe final, incremento entregado y demostración (Demo).*
