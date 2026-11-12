@@ -4,7 +4,7 @@
 
 **Universidad:** Universidad Técnica Nacional, Sede San Carlos  
 **Curso:** ISW-912 — Administración de Proyectos Informáticos  
-**Docente:** Deiber Cubero Molina  
+**Docentes:** Deiver Cubero Molina y Yesenia Calvo Araya  
 **Periodo académico:** III cuatrimestre de 2026  
 **Integrantes:** Kristel Ramírez, Juan Daniel Ulate y Krisley Castro  
 **Duración del trabajo:** 10 semanas
@@ -69,6 +69,8 @@
     - [10.4.2. Escalamiento de impedimentos y conflictos](#1042-escalamiento-de-impedimentos-y-conflictos)
 - [11. Decisiones, cambios y evidencias](#11-decisiones-cambios-y-evidencias)
   - [11.1. Historial de cambios](#111-historial-de-cambios)
+  - [11.2. Registro de decisiones](#112-registro-de-decisiones)
+  - [11.3. Evidencias](#113-evidencias)
 - [12. Producto / Incremento final y cierre del proyecto](#12-producto--incremento-final-y-cierre-del-proyecto)
 
 El Scrum Team de BioApp estará conformado por cinco integrantes y trabajará durante las 10 semanas del proyecto: un Product Owner, una Scrum Master con apoyo parcial al desarrollo y tres Developers a tiempo completo.
@@ -1264,7 +1266,7 @@ Las zonas se clasifican de la siguiente manera:
 
 #### Mapa de calor
 
-![Mapa de calor de BioApp](./imagenes/mapa_calor.png)
+![Mapa de calor de BioApp](./img/mapa_calor.png)
 
 #### Distribución de los riesgos
 
@@ -1556,6 +1558,37 @@ En caso de desacuerdos dentro del equipo, se buscará llegar a una solución med
 | 9 de noviembre de 2026 | 0.15 | Krisley Castro | 08. Riesgos y adquisiciones | Matriz de Riesgos y elaboración del mapa de calor. |
 | 11 de noviembre de 2026 | 0.16 | Kristel Ramírez | Índice; 08. Riesgos y adquisiciones; 11. Decisiones, cambios y evidencias; 12. Producto / Incremento final | Organización del documento según la estructura oficial del Expediente: los riesgos pasan a la sección 08, el historial de cambios pasa a la sección 11, se agrega la sección 12 y se incorporan las columnas Versión y Sección afectada al historial. |
 | 12 de noviembre de 2026 | 0.17 | Kristel Ramírez | 08.6 a 08.9. Plan de Mitigación | Plan de Mitigación: estrategia de respuesta, acciones de mitigación, disparadores y plan de contingencia de cada riesgo. |
+| 12 de noviembre de 2026 | 0.18 | Kristel Ramírez | 00. Portada; 11.2. Registro de decisiones; 11.3. Evidencias | Corrección del nombre del docente y se agrega a la profesora Yesenia Calvo Araya; registro de decisiones y evidencias del proyecto. |
+
+### 11.2. Registro de decisiones
+
+Este registro reúne las decisiones más importantes que el equipo ha tomado durante el proyecto, con su motivo y la sección del Expediente donde se aplican.
+
+| ID | Fecha | Decisión | Motivo | Quién decidió | Sección relacionada |
+| --- | --- | --- | --- | --- | --- |
+| D01 | 16 de octubre de 2026 | Trabajar con un **ciclo de vida adaptativo** basado en Scrum, con cinco Sprints de dos semanas. | Los requisitos de recetas, dosis y cálculos dependen de validaciones externas y pueden cambiar; un enfoque iterativo permite revisar y ajustar en cada Sprint. | Scrum Team | 04. Ciclo de vida del proyecto |
+| D02 | 17 de octubre de 2026 | Ordenar el Product Backlog con el método **MoSCoW** (Must, Should, Could, Won't). | Permite distinguir con claridad lo imprescindible de lo deseable y proteger el alcance mínimo de la versión 1.0. | Product Owner | 05.1. Product Backlog inicial |
+| D03 | 17 de octubre de 2026 | La aplicación **solo calculará con recetas y dosis validadas** por profesionales en agronomía; si no existe una dosis validada, no se realiza el cálculo. | Evitar que las personas agricultoras preparen mezclas con cantidades sin respaldo técnico. | Product Owner y Scrum Team | 02.2. Restricciones; 06. PB-14 |
+| D04 | 23 de octubre de 2026 | Fijar una **velocidad inicial de 21 puntos por Sprint**, con un rango de 18 a 24 puntos. | Corresponde a la capacidad calculada del equipo para los Sprints de desarrollo y se actualizará con la velocidad real. | Scrum Team | 07.1. Matriz de Estimación |
+| D05 | 26 de octubre de 2026 | **Dividir PB-16** (publicación) entre los Sprints 4 y 5 (PB-16-A y PB-16-B). | Equilibrar la carga de los últimos Sprints con la velocidad de 21 puntos. | Product Owner | 07.2. Cronograma de Entregas |
+| D06 | 26 de octubre de 2026 | Si la velocidad disminuye, **reducir o reordenar el alcance antes de extender el proyecto**, manteniendo la fecha de entrega del 7 de diciembre. | Un Sprint adicional (₡3 520 000) supera la reserva de contingencia (₡1 796 000). | Product Owner | 07.3. Costo estimado del release |
+| D07 | 4 de noviembre de 2026 | Dejar **PB-17 (recuperar contraseña) y PB-18 (administrar recetas y dosis)** fuera de los Sprints planificados: PB-17 solo si hay capacidad y PB-18 para una segunda versión. | Concentrar la capacidad del equipo en las funcionalidades esenciales. | Product Owner | 05.2. Tablero de trabajo; 06 |
+| D08 | 4 de noviembre de 2026 | Gestionar el trabajo en un **tablero de Jira con límites WIP** y una regla clara para pasar a Terminado. | Hacer visible el avance y evitar acumular trabajo sin terminar. | Scrum Master y Scrum Team | 05.2. Tablero de trabajo |
+| D09 | 11 de noviembre de 2026 | Organizar el documento según la **estructura oficial del Expediente del Proyecto** (secciones 00 a 12). | Atender la retroalimentación del docente y facilitar la revisión de cada sección. | Scrum Team | Todo el documento |
+
+### 11.3. Evidencias
+
+Las siguientes evidencias respaldan el trabajo documentado en el Expediente:
+
+| Evidencia | Descripción | Dónde se encuentra | Sección relacionada |
+| --- | --- | --- | --- |
+| Repositorio del proyecto | Documento del Expediente, imágenes e historial de commits de cada integrante. | [github.com/Juanulate01/BioApp](https://github.com/Juanulate01/BioApp) | Todo el documento |
+| Tablero de Jira | Product Backlog, Sprints, tareas, responsables y estado de cada tarjeta. | [Tablero de BioApp en Jira](https://krisdaram27.atlassian.net/jira/software/projects/SCRUM/boards/1/backlog?atlOrigin=eyJpIjoiY2FiN2NjMWM5NzFjNDcxY2FhNmUyNjFkNDM1OTU0YzEiLCJwIjoiaiJ9) | 05.2. Tablero de trabajo |
+| Capturas de los Sprints 1 a 5 | Contenido de cada Sprint en Jira. | `img/Sprint1.png` a `img/Sprint5.png` | 05.2. Tablero de trabajo |
+| Historias para una segunda versión | Captura de PB-17 y PB-18 fuera de los Sprints planificados. | `img/Historias segunda versión.png` | 05.2. Tablero de trabajo |
+| Mapa de calor de riesgos | Ubicación de los riesgos según probabilidad e impacto. | `imagenes/mapa_calor.png` | 08.4. Matriz de Probabilidad e Impacto |
+| Historial de cambios | Registro de quién modificó cada sección, cuándo y en qué versión. | Sección 11.1 | 11. Decisiones, cambios y evidencias |
+| Retroalimentación del docente | Observaciones recibidas en las revisiones del Expediente y cambios realizados para atenderlas. | Historial de cambios (versiones 0.5, 0.16 y siguientes) | 11.1. Historial de cambios |
 
 ## 12. Producto / Incremento final y cierre del proyecto
 
