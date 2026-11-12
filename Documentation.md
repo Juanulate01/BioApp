@@ -40,6 +40,7 @@
 - [05. Backlog inicial y Sprint Backlog](#05-backlog-inicial-y-sprint-backlog)
   - [05.1. Product Backlog inicial](#051-product-backlog-inicial)
   - [05.2. Tablero de trabajo](#052-tablero-de-trabajo)
+  - [05.3. Tareas de mitigación en el Sprint Backlog](#053-tareas-de-mitigación-en-el-sprint-backlog)
 - [06. Alcance, Product Backlog priorizado y criterios de aceptación](#06-alcance-product-backlog-priorizado-y-criterios-de-aceptación)
   - [06.1. Historias de usuario y criterios de aceptación](#061-historias-de-usuario-y-criterios-de-aceptación)
 - [07. Planificación temporal, estimaciones y costos](#07-planificación-temporal-estimaciones-y-costos)
@@ -58,6 +59,8 @@
   - [08.8. Disparadores](#088-disparadores)
   - [08.9. Plan de contingencia](#089-plan-de-contingencia)
   - [08.10. Observaciones](#0810-observaciones)
+  - [08.11. Fechas de revisión y riesgo residual](#0811-fechas-de-revisión-y-riesgo-residual)
+  - [08.12. Adquisiciones críticas](#0812-adquisiciones-críticas)
 - [09. Calidad y Definition of Done](#09-calidad-y-definition-of-done)
   - [09.1. Definición de Terminado](#091-definición-de-terminado)
 - [10. Comunicación y responsabilidades del equipo](#10-comunicación-y-responsabilidades-del-equipo)
@@ -453,6 +456,38 @@ PB-17 y PB-18 quedan en el Product Backlog, fuera de los Sprints planificados: P
 
 ![Historias para una segunda versión](img/Historias%20segunda%20versi%C3%B3n.png)
 
+
+### 05.3. Tareas de mitigación en el Sprint Backlog
+
+Las acciones de respuesta a los riesgos se registrarán en Jira como tareas o subtareas vinculadas al riesgo y a los elementos del Product Backlog correspondientes.
+
+La siguiente tabla es una propuesta de incorporación a los Sprints 4 y 5. No implica que las tareas ya estén creadas o terminadas. Los responsables deberán confirmarse con el equipo; si Developer 2 o Developer 3 no están disponibles, los Developers redistribuirán el trabajo según su capacidad real.
+
+| ID de tarea | Riesgo o adquisición | Acción | Sprint y fecha objetivo de 2026 | Responsable propuesto | Evidencia para cerrar la tarea |
+|---|---|---|---|---|---|
+| MIT-01 | R03 / AC-01 | Confirmar disponibilidad de la especialista, entregas pendientes y profesional de respaldo. | Sprint 4 — 13 de noviembre. | Krisley Castro. | Compromiso escrito, fechas acordadas y contacto de respaldo disponible. |
+| MIT-02 | R01 / PB-13 | Auditar las recetas cargadas y completar los campos o validaciones faltantes; retirar temporalmente las que no tengan respaldo. | Sprint 4 — 17 de noviembre. | Kristel Ramírez; Developer 3 apoya los ajustes de carga y la especialista valida el contenido. | Lista de comprobación por receta y registro de revisión técnica. |
+| MIT-03 | R02 / PB-06, PB-07 y PB-15 | Revisar con agronomía los casos de referencia de mezcla total y cantidades por tanque, incluyendo tanque parcial y unidades. | Sprint 4 — 17 de noviembre. | Krisley Castro; Juan Daniel Ulate coordina la revisión externa. | Casos de referencia con entradas, resultados esperados y validación documentada. |
+| MIT-04 | R02 / PB-07 y PB-14 | Ejecutar pruebas de cálculos y datos inválidos, corregir diferencias y bloquear combinaciones sin dosis validada. | Sprint 4 — 23 de noviembre. | Developer 2; Developer 3 apoya las pruebas. | Resultados coincidentes con los casos de referencia y defectos críticos corregidos. |
+| MIT-05 | R04 / PB-07 y PB-14 | Probar navegación, ingreso de datos y comprensión de resultados con personas usuarias; corregir los problemas críticos. | Sprint 4 — sesión el 18 de noviembre y correcciones hasta el 23. | Kristel Ramírez coordina; Developers corrigen. | Observaciones registradas y comprobación de las correcciones. |
+| MIT-06 | R05 | Revisar solicitudes nuevas y registrar su prioridad y efecto sobre alcance, capacidad y objetivo del Sprint. | Sprints 4 y 5 — ante cada solicitud y revisión semanal. | Juan Daniel Ulate. | Decisiones documentadas y Product Backlog actualizado. |
+| MIT-07 | R06 | Confirmar disponibilidad, revisar capacidad, respetar WIP y redistribuir tareas bloqueadas o sin avance. | Sprint 4 — primera revisión el 13 de noviembre; seguimiento diario hasta el 7 de diciembre. | Krisley Castro, con los Developers; Kristel facilita la resolución de impedimentos. | Capacidad registrada, tareas asignadas y ajustes del Sprint Backlog documentados. |
+| MIT-08 | R07 / AC-05 / PB-09 | Confirmar al menos tres personas agricultoras para las pruebas del 25 de noviembre y preparar contactos de respaldo. | Sprint 4 — 18 de noviembre. | Kristel Ramírez. | Confirmaciones, convocatoria y lista de contactos alternativos. |
+| MIT-09 | R08 / AC-06 | Determinar si se requieren insumos físicos y, si aplica, acordar cantidades, disponibilidad y alternativa de suministro. | Sprint 4 — necesidad definida el 13 y disponibilidad confirmada el 18 de noviembre. | Juan Daniel Ulate. | Acuerdo de aporte o compra; si no se requieren insumos, justificación registrada. |
+| MIT-10 | AC-02 y AC-03 / PB-16-A | Confirmar alojamiento y base de datos, accesos, condiciones de salida y alternativa técnica; probar exportación, restauración y despliegue. | Sprint 4 — 23 de noviembre. | Developer 2, con revisión de Krisley Castro. | Copia restaurada en un entorno de prueba e instrucciones de despliegue verificadas. |
+| MIT-11 | AC-07 | Exportar el backlog y conservar una copia del estado de las tareas y responsables. | Sprint 4 — 13 de noviembre; actualizar cada miércoles y al cierre de los Sprints. | Kristel Ramírez. | Copia fechada y accesible para el equipo. |
+| MIT-12 | R02, R04 y R07 / PB-09 | Ejecutar las pruebas finales con usuarios y repetir los casos de cálculo sobre la versión candidata. | Sprint 5 — pruebas desde el 25 de noviembre y revisión el 2 de diciembre. | Krisley Castro coordina las pruebas técnicas; Kristel Ramírez coordina participantes; Developers corrigen. | Informe de pruebas, defectos resueltos y limitaciones documentadas. |
+| MIT-13 | R01–R08 | Actualizar valoraciones residuales y registrar riesgos abiertos, responsables y acciones posteriores. | Sprint 4 — 24 de noviembre; Sprint 5 — 2 y 7 de diciembre. | Cada dueño actualiza sus riesgos; Kristel Ramírez consolida el registro. | Tabla de riesgos revisada con fecha, evidencia y siguiente acción. |
+
+#### Incorporación y seguimiento de las tareas
+
+- Cada tarjeta incluirá identificador, riesgo asociado, descripción, responsable, fecha objetivo, criterio de cierre y evidencia.
+- Las tareas técnicas vinculadas a una historia forman parte del trabajo necesario para cumplir sus criterios de aceptación y la DoD; no suman puntos de historia adicionales por separado.
+- Los Developers estimarán el esfuerzo pendiente antes de incorporar las tareas. No se asumirá que existe capacidad adicional sobre la ya comprometida.
+- Como el Sprint 4 está en curso, los Developers y el Product Owner acordarán los ajustes necesarios preservando su objetivo.
+- Las tareas de coordinación se visualizarán en el tablero, distinguiéndolas de las historias que entregan funcionalidades.
+- En el Daily Scrum se revisarán los impedimentos del trabajo de desarrollo. Los riesgos y adquisiciones también se revisarán en el seguimiento semanal.
+- Una tarea no se cerrará únicamente porque se haya contactado a una persona: debe existir la evidencia indicada en su criterio de cierre.
 
 
 ## 06. Alcance, Product Backlog priorizado y criterios de aceptación
@@ -1408,6 +1443,61 @@ Los responsables indicados son propuestas que deberán ser confirmadas por el eq
 El Plan de Mitigación (secciones 08.6 a 08.9) define la estrategia, las acciones, los disparadores y el plan de contingencia de cada riesgo.
 
 La matriz deberá revisarse periódicamente durante el proyecto para actualizar las probabilidades, los impactos y agregar nuevos riesgos cuando sea necesario.
+
+### 08.11. Fechas de revisión y riesgo residual
+
+El riesgo residual es el nivel de riesgo que se espera mantener después de aplicar y comprobar las medidas de respuesta. Se utiliza la escala de la sección 08.2: probabilidad e impacto de 1 a 3 y prioridad calculada como Probabilidad x Impacto.
+
+Las valoraciones residuales de esta tabla son objetivos estimados, no resultados comprobados. El dueño de cada riesgo deberá confirmar su valoración mediante las evidencias de las tareas de mitigación.
+
+Todas las fechas corresponden al año 2026. La primera revisión se realizará el 13 de noviembre para comprobar el estado de las medidas y detectar pendientes de los Sprints anteriores.
+
+| ID | Dueño del riesgo | Fechas y eventos de revisión | Probabilidad residual prevista | Impacto residual previsto | Prioridad y nivel residual previsto | Evidencia necesaria |
+|---|---|---|---:|---:|---|---|
+| R01 | Kristel Ramírez | 13 de noviembre: auditoría del catálogo. 24 de noviembre: Sprint Review 4. 2 de diciembre: revisión de la versión candidata. También antes de cada carga o modificación de recetas. | 1 | 3 | 3 — Media | Recetas completas, revisión por una segunda persona y validación agronómica con fuente, versión, responsable y fecha. |
+| R02 | Juan Daniel Ulate | 13 de noviembre: revisión de casos de referencia. 18 de noviembre: seguimiento semanal. 24 de noviembre: Sprint Review 4. 2 de diciembre: revisión candidata. También después de modificar fórmulas o unidades. | 1 | 3 | 3 — Media | Pruebas aprobadas de mezcla total, tanques completos y parciales, unidades y datos inválidos; bloqueo de cálculos sin dosis validada. |
+| R03 | Krisley Castro | 13 de noviembre: confirmar especialista principal y respaldo. 18 de noviembre: revisar entregas pendientes. 24 de noviembre y 7 de diciembre: Sprint Reviews. Ante una entrega incumplida, revisar inmediatamente. | 1 | 3 | 3 — Media | Compromiso escrito de disponibilidad, contacto de respaldo y registro de recetas, dosis y casos de referencia validados. |
+| R04 | Kristel Ramírez | 18 de noviembre: prueba de navegación y calculadora. 24 de noviembre: revisar correcciones. 2 de diciembre: repetir pruebas sobre la versión candidata. | 1 | 2 | 2 — Baja | Registro de pruebas con usuarios y corrección de dificultades críticas para completar las tareas principales. |
+| R05 | Juan Daniel Ulate | 13 de noviembre: revisar alcance vigente. 18 y 25 de noviembre y 2 de diciembre: seguimiento semanal. Revisar además cada solicitud nueva y las Sprint Reviews del 24 de noviembre y 7 de diciembre. | 1 | 2 | 2 — Baja | Solicitudes registradas y priorizadas, decisiones documentadas y ausencia de trabajo adicional incorporado sin evaluar su efecto en el objetivo del Sprint. |
+| R06 | Krisley Castro | 13 de noviembre: confirmar capacidad real. Cada día hábil: Daily Scrum. 18 y 25 de noviembre y 2 de diciembre: seguimiento semanal. 24 de noviembre y 7 de diciembre: revisar resultados del Sprint. | 2 | 2 | 4 — Media | Disponibilidad confirmada, tareas con responsables, límites WIP respetados y ajustes del plan cuando la capacidad o el avance se desvíen. |
+| R07 | Kristel Ramírez | 18 de noviembre: confirmar al menos tres participantes para pruebas del 25 de noviembre. 25 de noviembre: revisar participación efectiva. 2 de diciembre: completar pruebas o registrar limitaciones pendientes. | 1 | 2 | 2 — Baja | Confirmaciones, contactos de respaldo y resultados de pruebas con personas del sector agrícola. |
+| R08 | Juan Daniel Ulate | 13 de noviembre: determinar si se requieren pruebas con insumos físicos. Si se requieren, confirmar disponibilidad el 18 de noviembre y revisarla antes de cada prueba. 24 de noviembre: revisar pendientes. | 1 | 2 | 2 — Baja | Acuerdo de suministro, inventario o confirmación de disponibilidad y alternativa definida para los insumos críticos. |
+
+Los riesgos R01, R02 y R03 conservan un impacto alto porque una receta incorrecta, un cálculo equivocado o la ausencia de validación técnica siguen afectando la confiabilidad del producto. Las medidas reducen principalmente su probabilidad.
+
+El nivel bajo previsto para R07 depende de ejecutar la coordinación preventiva y contar con participantes de respaldo. Si únicamente se acepta el riesgo sin realizar estas acciones, se mantiene su valoración inicial de 4 puntos, nivel medio.
+
+#### Actualización y aceptación del riesgo residual
+
+- El dueño registra en cada revisión la fecha, evidencia, probabilidad e impacto observados, nivel residual y siguiente acción.
+- Si las medidas no se han completado o no existe evidencia suficiente, se conserva la valoración inicial o se actualiza según la situación real.
+- Si se activa un disparador de la sección 08.8, se revisa el riesgo inmediatamente y se aplica la contingencia correspondiente.
+- Los riesgos residuales medios se mantienen en seguimiento hasta el cierre; los altos requieren una nueva respuesta y revisión del Product Owner.
+- La aceptación de un riesgo residual no permite omitir la validación agronómica ni los criterios de calidad.
+- El 7 de diciembre se registrarán los riesgos abiertos, sus responsables y las recomendaciones de seguimiento posteriores a la entrega.
+
+### 08.12. Adquisiciones críticas
+
+Las siguientes adquisiciones corresponden a servicios y apoyos externos necesarios o condicionados por las pruebas del proyecto. Los proveedores específicos deberán confirmarse; esta tabla no representa contratos ya firmados.
+
+| ID | Servicio o adquisición | Proveedor o fuente prevista | Tipo de contrato o acuerdo propuesto | Condiciones de aceptación | Plan de salida si falla | Responsable |
+|---|---|---|---|---|---|---|
+| AC-01 | Validación de recetas, dosis y casos de referencia | Profesional en agronomía principal y segundo profesional de respaldo, por confirmar. | Servicios profesionales por horas con entregables definidos y límite de 12 horas por Sprint, según el presupuesto. | Entregas por lote con fuente, versión, responsable y fecha; revisión de las observaciones detectadas. | Activar al profesional de respaldo y entregarle el material y las revisiones existentes. Mantener fuera de la aplicación el contenido no validado y reordenar el trabajo dependiente. | Krisley Castro coordina; Juan Daniel Ulate revisa el costo y el alcance. |
+| AC-02 | Alojamiento de la aplicación y HTTPS | Proveedor de nube por seleccionar o confirmar. | Suscripción mensual o pago por consumo, con límite de gasto y condiciones de cancelación documentadas. | Despliegue reproducible, HTTPS, acceso del equipo, registros de errores y verificación del entorno antes del 24 de noviembre. | Desplegar en un proveedor alternativo mediante las instrucciones de instalación; recuperar configuración y secretos desde medios seguros y verificar el servicio antes de habilitarlo. | Krisley Castro y Developer 2. |
+| AC-03 | Base de datos y almacenamiento | Servicio administrado compatible con la tecnología seleccionada, por confirmar. | Suscripción mensual o pago por consumo; puede formar parte del alojamiento, identificando sus condiciones por separado. | Separación de datos por cuenta, exportación disponible, copias de seguridad y prueba de restauración. | Restaurar una copia en un servicio compatible, cambiar la conexión y comprobar integridad y permisos antes de reabrir el acceso. | Developer 2, con revisión de Krisley Castro. |
+| AC-04 | Pruebas de calidad | QA / Tester externo, si se incorpora el apoyo presupuestado. | Servicios por horas con actividades y evidencias definidas; dedicación conforme a la sección 07.3. | Casos de prueba ejecutados, defectos registrados y resultados verificables para PB-09 y los cálculos. | Redistribuir las pruebas entre los Developers con revisión cruzada; ajustar el alcance si falta capacidad, manteniendo la DoD. | Kristel Ramírez coordina; Developers ejecutan. |
+| AC-05 | Coordinación de participantes para pruebas | Cooperativas, asociaciones agrícolas o contactos directos del sector. | Acuerdo de colaboración con fechas y participación confirmadas por escrito. | Al menos tres personas confirmadas una semana antes de la prueba y registro de sus observaciones. | Contactar participantes de respaldo. Si no es posible realizar pruebas representativas, documentar la limitación y programar una validación posterior. | Kristel Ramírez. |
+| AC-06 | Materiales o bioinsumos para pruebas, únicamente si se necesitan | Especialista, cooperativa o proveedor local por confirmar. | Acuerdo de aporte o préstamo; si hay compra, orden de compra a precio fijo con cantidad y fecha de entrega. | Insumos adecuados y disponibles antes de la prueba, bajo coordinación de la persona especialista. | Buscar un proveedor alternativo o una receta validada que utilice insumos disponibles. Si se necesita comprar, solicitar aprobación del Product Owner y registrar el costo. | Juan Daniel Ulate. |
+| AC-07 | Tablero de seguimiento del proyecto | Atlassian Jira, utilizado actualmente por el equipo. | Uso sujeto a las condiciones del plan vigente; confirmar si es gratuito o de suscripción. | Acceso del equipo, tareas con responsables y posibilidad de conservar una copia del seguimiento. | Exportar periódicamente el backlog y mantener una copia en el repositorio o en una hoja compartida para continuar el seguimiento si el servicio falla. | Kristel Ramírez. |
+
+#### Control y salida de adquisiciones
+
+- El 13 de noviembre se confirmarán los servicios utilizados, sus titulares, accesos, costos y alternativas.
+- Antes del 24 de noviembre se comprobarán la exportación de datos, la restauración de una copia y las instrucciones de despliegue.
+- Las cuentas y los archivos necesarios para continuar el proyecto deberán quedar bajo control del equipo, evitando depender exclusivamente de una cuenta personal externa.
+- Los costos se contrastarán con la sección 07.3. Una adquisición no presupuestada requiere revisar su financiamiento antes de comprometer el gasto.
+- Un acuerdo con un tercero no elimina el riesgo del proyecto: el dueño continuará verificando su cumplimiento.
+- Antes de cancelar o sustituir un servicio, se recuperarán los datos y entregables, se verificará la alternativa y se revocarán los accesos que dejen de ser necesarios.
 
 
 ## 09. Calidad y Definition of Done
