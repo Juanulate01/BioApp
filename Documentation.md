@@ -61,6 +61,7 @@
   - [08.10. Observaciones](#0810-observaciones)
   - [08.11. Fechas de revisión y riesgo residual](#0811-fechas-de-revisión-y-riesgo-residual)
   - [08.12. Adquisiciones críticas](#0812-adquisiciones-críticas)
+  - [08.13. Plan de adquisiciones](#0813-plan-de-adquisiciones)
 - [09. Calidad y Definition of Done](#09-calidad-y-definition-of-done)
   - [09.1. Definición de Terminado](#091-definición-de-terminado)
 - [10. Comunicación y responsabilidades del equipo](#10-comunicación-y-responsabilidades-del-equipo)
@@ -180,7 +181,8 @@ Desarrollar una aplicación para consultar la elaboración de bioinsumos y calcu
 3. Registrar los datos del equipo de atomización, como la capacidad del tanque y el volumen que aplica por unidad de área.
 4. Calcular el volumen total de mezcla, la cantidad de bioinsumo y el número de tanques necesarios para cubrir el terreno indicado.
 5. Mostrar los resultados de forma comprensible, detallando los datos utilizados y las cantidades que deben medirse para cada tanque.
-6. Guardar un historial de preparaciones y aplicaciones para facilitar la consulta y la planificación posterior.
+6. Validar el funcionamiento de las funcionalidades principales mediante pruebas y publicar una versión de la aplicación que cumpla los criterios de calidad establecidos.
+
 
 ### 01.6. Alcance y límites generales
 
@@ -191,7 +193,7 @@ Desarrollar una aplicación para consultar la elaboración de bioinsumos y calcu
 - Registro de las características del equipo de atomización.
 - Cálculo del volumen de mezcla, la cantidad de bioinsumo y los tanques necesarios, incluida la preparación de un tanque parcial cuando corresponda.
 - Presentación de resultados y cantidades por tanque.
-- Consulta del historial de preparaciones y aplicaciones.
+- Validación del funcionamiento de las funcionalidades principales y publicación de la aplicación en producción.
 
 #### Límites del proyecto
 
@@ -249,7 +251,7 @@ BioApp se desarrolla dentro de un entorno en el que existen factores tecnológic
 | **Equipo** | El Scrum Team está conformado por cinco integrantes. El desarrollo está a cargo de tres Developers a tiempo completo, dos senior y un junior; la Scrum Master apoya a tiempo parcial. Dos de los Developers aún deben confirmarse. |
 | **Validación técnica** | La aplicación solo podrá calcular a partir de recetas y dosis validadas por profesionales en agronomía; no generará dosis sin respaldo técnico. |
 | **Alcance** | La aplicación no sustituirá la valoración profesional en agronomía ni realizará diagnósticos automáticos de plagas o enfermedades. |
-| **Plataforma, tecnologías y presupuesto** | Aún no están definidos y deberán acordarse durante la planificación. |
+| **Plataforma, tecnologías y presupuesto** | La plataforma y las tecnologías deberán confirmarse según las necesidades del proyecto. Se cuenta con un presupuesto estimado de ₡20 654 000, incluyendo reservas, que deberá revisarse de acuerdo con los recursos y servicios realmente contratados. |
 | **Protección de datos** | Cada cuenta solo podrá consultar y modificar su propia información, y las contraseñas deberán almacenarse de forma segura. |
 | **Exactitud de los datos** | Los resultados dependerán de los datos registrados por la persona usuaria y de la calibración del equipo de atomización. |
 
@@ -307,8 +309,11 @@ El proyecto mantiene algunos hitos fijos que no dependen del equipo, como la ent
 | 1 | 30 de septiembre al 13 de octubre | PB-01 y PB-02 | Acordar el alcance, ordenar el backlog y validar el prototipo de navegación. |
 | 2 | 14 al 27 de octubre | PB-11, PB-12, PB-13 y PB-03 | Permitir el registro e inicio de sesión, conservar los datos por cuenta y consultar el catálogo de recetas revisadas. |
 | 3 | 28 de octubre al 10 de noviembre | PB-04, PB-05, PB-15 y PB-06 | Registrar terrenos, cultivos y equipos por usuario y calcular la mezcla total a partir de dosis validadas. |
-| 4 | 11 al 24 de noviembre | PB-07, PB-14 y PB-08 | Mostrar las cantidades por tanque, validar los datos antes de calcular y guardar el historial. |
-| 5 | 25 de noviembre al 7 de diciembre | PB-16, PB-09 y PB-10 | Publicar la aplicación, validarla con personas usuarias y entregar la versión final. |
+| 4 | 11 al 24 de noviembre | PB-07, PB-14, PB-08 y PB-16-A | Mostrar las cantidades por tanque, validar los datos antes de calcular, guardar el historial y preparar el entorno de producción. |
+| 5 | 25 de noviembre al 7 de diciembre | PB-16-B, PB-09 y PB-10 | Publicar la aplicación, validarla con personas usuarias y entregar la versión final. |
+
+El siguiente cronograma corresponde a la planificación inicial de los cinco Sprints de BioApp. Durante el seguimiento se identificaron actividades que no finalizaron en las fechas previstas, por lo que se plantearon ajustes para los Sprints 4 y 5. Estos cambios se detallan en la sección 07.2, donde se presenta la actualización del Release Plan.
+
 
 ### 04.3. Hitos del proyecto
 
@@ -318,8 +323,8 @@ El proyecto mantiene algunos hitos fijos que no dependen del equipo, como la ent
 | 13 de octubre | Prototipo validado y Product Backlog ordenado. |
 | 21 de octubre | Entrega de las recetas revisadas por la persona especialista en agronomía. |
 | 28 de octubre | Entrega de la tabla de dosis validadas y de los casos de referencia. |
-| 10 de noviembre | Calculadora funcionando con dosis validadas y comprobada con casos de referencia. |
-| 24 de noviembre | Funcionalidades del producto completas. |
+| 10 de noviembre | Cierre del Sprint 3: registro de terrenos, cultivos y equipos completado, junto con la carga de dosis validadas. La calculadora PB-06 quedó pendiente de finalizar las pruebas y se reprogramó para el Sprint 4. |
+| 24 de noviembre | Finalización prevista de las funcionalidades esenciales del Sprint 4, incluyendo PB-03 y PB-06 reprogramadas, y preparación del entorno de producción. El cumplimiento se verificará durante la Sprint Review. |
 | 7 de diciembre | Entrega de la versión final y de la documentación. |
 
 ### 04.4. Ciclo de cada Sprint
@@ -400,8 +405,8 @@ Los elementos se clasifican en tres tipos:
 | 11 | PB-07 | Historia de usuario | Mostrar cantidades por tanque | Must | 3 | PB-06 | 4 |
 | 12 | PB-14 | Historia de usuario | Validar los datos antes de calcular | Must | 2 | PB-06 | 4 |
 | 13 | PB-08 | Historia de usuario | Guardar y consultar el historial | Should | 5 | PB-07 | 4 |
-| 14 | PB-16 | Habilitador | Publicar la aplicación en producción | Must | 2 | PB-12 | 5 |
-| 15 | PB-09 | Habilitador | Validar el funcionamiento completo | Must | 5 | PB-08, PB-16 | 5 |
+| 14 | PB-16 | Habilitador | Publicar la aplicación en producción | Must | 2 | PB-12 | 4 y 5 (PB-16-A y PB-16-B) |
+| 15 | PB-09 | Habilitador | Validar el funcionamiento completo | Must | 5 | PB-03, PB-07, PB-14, PB-16 | 5 |
 | 16 | PB-10 | Habilitador | Preparar la versión final y la documentación | Must | 4 | PB-09 | 5 |
 | 17 | PB-17 | Historia de usuario | Recuperar la contraseña | Could | 2 | PB-11 | Si hay capacidad |
 | 18 | PB-18 | Historia de usuario | Administrar recetas y dosis desde la aplicación | Won't | 4 | PB-13, PB-15 | Fuera de esta versión |
@@ -477,7 +482,9 @@ La siguiente tabla es una propuesta de incorporación a los Sprints 4 y 5. No im
 | MIT-10 | AC-02 y AC-03 / PB-16-A | Confirmar alojamiento y base de datos, accesos, condiciones de salida y alternativa técnica; probar exportación, restauración y despliegue. | Sprint 4 — 23 de noviembre. | Developer 2, con revisión de Krisley Castro. | Copia restaurada en un entorno de prueba e instrucciones de despliegue verificadas. |
 | MIT-11 | AC-07 | Exportar el backlog y conservar una copia del estado de las tareas y responsables. | Sprint 4 — 13 de noviembre; actualizar cada miércoles y al cierre de los Sprints. | Kristel Ramírez. | Copia fechada y accesible para el equipo. |
 | MIT-12 | R02, R04 y R07 / PB-09 | Ejecutar las pruebas finales con usuarios y repetir los casos de cálculo sobre la versión candidata. | Sprint 5 — pruebas desde el 25 de noviembre y revisión el 2 de diciembre. | Krisley Castro coordina las pruebas técnicas; Kristel Ramírez coordina participantes; Developers corrigen. | Informe de pruebas, defectos resueltos y limitaciones documentadas. |
-| MIT-13 | R01–R08 | Actualizar valoraciones residuales y registrar riesgos abiertos, responsables y acciones posteriores. | Sprint 4 — 24 de noviembre; Sprint 5 — 2 y 7 de diciembre. | Cada dueño actualiza sus riesgos; Kristel Ramírez consolida el registro. | Tabla de riesgos revisada con fecha, evidencia y siguiente acción. |
+| MIT-13 | R01–R10 | Actualizar valoraciones residuales y registrar riesgos abiertos, responsables y acciones posteriores. | Sprint 4 — 24 de noviembre; Sprint 5 — 2 y 7 de diciembre. | Cada dueño actualiza sus riesgos; Kristel Ramírez consolida el registro. | Tabla de riesgos revisada con fecha, evidencia y siguiente acción. |
+| MIT-14 | R09 | Confirmar por escrito las personas que asumirán Developer 2 y Developer 3; si no están disponibles, revisar la capacidad y renegociar el alcance con el Product Owner. | Sprint 4 — revisar el 13 de noviembre. | Juan Daniel Ulate; Kristel facilita los acuerdos. | Confirmación de integrantes o capacidad recalculada y decisión registrada. |
+| MIT-15 | R10 / PB-13, PB-15 y PB-06 | Verificar qué recetas, dosis y casos de referencia han sido realmente aprobados; identificar brechas y bloquear cálculos de combinaciones sin dosis validada. | Sprint 4 — revisar el 13 de noviembre y dar seguimiento hasta recibir validaciones. | Juan Daniel Ulate coordina con agronomía; Krisley verifica implicaciones técnicas. | Registro de validaciones con fecha, fuente y versión; decisiones sobre ítems bloqueados. |
 
 #### Incorporación y seguimiento de las tareas
 
@@ -846,10 +853,11 @@ Como persona agricultora, quiero acceder a BioApp por Internet desde mi teléfon
 **Tipo:** Habilitador  
 **Prioridad:** Alta (Must)  
 **Estimación propuesta:** 8 puntos  
-**Sprint previsto:** 5  
+**Sprint previsto:** 4 y 5 (PB-16-A y PB-16-B)  
 **Dependencias:** PB-12
 
-**Notas adicionales:** La estimación es alta porque la historia incluye preparar la publicación, cargar el contenido y comprobar el acceso desde distintos dispositivos.
+**Notas adicionales:** PB-16 se divide en dos entregables para distribuir mejor el trabajo. PB-16-A corresponde a la preparación del entorno de producción durante el Sprint 4 (3 puntos), mientras que PB-16-B corresponde a la publicación y verificación de BioApp durante el Sprint 5 (5 puntos). Ambas partes suman los 8 puntos originales y deberán cumplir sus respectivos criterios de aceptación.
+
 
 ---
 
@@ -873,9 +881,9 @@ Como equipo de desarrollo, queremos comprobar que BioApp sea fácil de entender 
 **Prioridad:** Alta (Must)  
 **Estimación propuesta:** 8 puntos  
 **Sprint previsto:** 5  
-**Dependencias:** PB-08, PB-16
+**Dependencias:** PB-03, PB-07, PB-14, PB-16
 
-**Notas adicionales:** Como esta historia incluye pruebas de cada Sprint y una validación completa en producción, el equipo podría dividirla en historias más pequeñas si resulta demasiado amplia para estimarla o completarla en un Sprint.
+**Notas adicionales:** La validación final depende de que las funcionalidades esenciales estén implementadas y la aplicación se encuentre publicada. PB-08 (historial) también se incluirá en las pruebas si forma parte del alcance entregado, pero no se considera una dependencia obligatoria porque tiene prioridad Should y podría posponerse. El equipo deberá comprobar que todas las funcionalidades entregadas cumplan sus criterios de aceptación y la Definición de Terminado.
 
 ---
 
@@ -983,8 +991,8 @@ Las estimaciones las realizan los Developers mediante planning poker; el Product
 | 11 | PB-07 | Mostrar cantidades por tanque | Cálculos | 5 | Must | PB-06 | 4 |
 | 12 | PB-14 | Validar los datos antes de calcular | Cálculos | 5 | Must | PB-06 | 4 |
 | 13 | PB-08 | Guardar y consultar el historial | Historial | 8 | Should | PB-07 | 4 |
-| 14 | PB-16 | Publicar la aplicación en producción | Publicación y cierre | 8 | Must | PB-12 | 5 |
-| 15 | PB-09 | Validar el funcionamiento completo | Publicación y cierre | 8 | Must | PB-08, PB-16 | 5 |
+| 14 | PB-16 | Publicar la aplicación en producción (PB-16-A y PB-16-B) | Publicación y cierre | 8 | Must | PB-12 | 4 y 5 |
+| 15 | PB-09 | Validar el funcionamiento completo | Publicación y cierre | 8 | Must | PB-03, PB-07, PB-14, PB-16 | 5 |
 | 16 | PB-10 | Preparar la versión final y la documentación | Publicación y cierre | 8 | Must | PB-09 | 5 |
 | | | **Total planificado (PB-01 a PB-16)** | | **92** | | | |
 | 17 | PB-17 | Recuperar la contraseña | Cuentas y datos | 5 | Could | PB-11 | Si hay capacidad |
@@ -1021,12 +1029,12 @@ Ningún elemento supera los 8 puntos, por lo que ninguno debe dividirse de forma
 - **Sprint 1:** se planificaron 8 puntos en las primeras dos historias (PB-01 y PB-02). Este valor no representa la velocidad de desarrollo, porque corresponde a trabajo de planificación y diseño.
 - **Velocidad inicial acordada: 21 puntos por Sprint**, que es la carga planificada para los Sprints 2 y 3, según el cálculo de capacidad del equipo, estos Sprints requieren 108 horas (incluido un 20 % de margen) frente a **129.6 horas disponibles**, por lo que esta velocidad es alcanzable.
 - **Rango:** velocidad mínima de **18 puntos** y máxima de **24 puntos** (aproximadamente un 15 % por debajo y por encima de la velocidad inicial), la mínima representa, por ejemplo, la ausencia parcial de un Developer o un atraso en el contenido; la máxima, un Sprint sin impedimentos.
-- **Actualización:** 
-  1. En cada Sprint Review se suman los puntos de los elementos que cumplen la Definición de Terminado, un elemento incompleto no suma puntos, aunque esté casi terminado.
-  2. La primera velocidad real se obtendrá al cerrar el Sprint 2, el 27 de octubre.
-  3. Desde el cierre del Sprint 3, la velocidad será el promedio de los Sprints de desarrollo terminados, y el rango irá de la menor a la mayor velocidad observada.
 
-  Por ejemplo, si el equipo termina 16 puntos en el Sprint 2 y 20 puntos en el Sprint 3, la velocidad pasa a ser de 18 puntos ((16 + 20) ÷ 2), con un rango de 16 a 20.
+- **Actualización de la velocidad:**
+  1. En cada Sprint Review se suman los puntos de los elementos que cumplen la Definición de Terminado. Los elementos incompletos no suman puntos.
+  2. Al cierre del Sprint 2, el equipo completó 16 puntos, por debajo de los 21 planificados.
+  3. Al finalizar el Sprint 3, se completaron otros 16 puntos. La velocidad promedio de desarrollo es de **16 puntos por Sprint**, calculada como (16 + 16) ÷ 2.
+  4. La velocidad observada en ambos Sprints fue de 16 puntos, inferior al rango inicial estimado de 18 a 24 puntos. Por esta razón, se deberá revisar la capacidad del equipo y ajustar la planificación del trabajo pendiente.
 
 #### Supuestos y riesgos de la estimación
 
@@ -1035,7 +1043,7 @@ Ningún elemento supera los 8 puntos, por lo que ninguno debe dividirse de forma
 | Developer 2 y Developer 3 aún no están confirmados. | Sin ellos, la velocidad quedaría por debajo de la mínima. | Confirmar su incorporación y, si se atrasa, ajustar el alcance con el Product Owner. |
 | La tabla de dosis validadas debe entregarse el 28 de octubre (PB-15). | Su atraso bloquea PB-06, PB-07 y PB-14. | Dar seguimiento con la persona especialista en agronomía; las recetas revisadas ya se recibieron el 21 de octubre. |
 | Las estimaciones suponen tecnologías conocidas por el equipo. | Una tecnología nueva reduce la velocidad por la curva de aprendizaje. | Reestimar al cerrar el Sprint 2 con la velocidad real. |
-| El Sprint 5 planifica 24 puntos, por encima de la velocidad inicial. | El último Sprint solo se cumple con la velocidad máxima. | Dividir PB-16 y adelantar la preparación del entorno al Sprint 4. |
+| Al cierre del Sprint 3 quedan 52 puntos pendientes, mientras que los Sprints 4 y 5 contemplan 42 puntos en conjunto. | Existe una diferencia de 10 puntos respecto a la planificación y la velocidad observada es inferior a la estimada inicialmente. | Revisar las historias pendientes, priorizar las funcionalidades Must y evaluar ajustes al alcance y a la distribución del trabajo de los últimos Sprints. | El último Sprint solo se cumple con la velocidad máxima. | Dividir PB-16 y adelantar la preparación del entorno al Sprint 4. |
 | PB-06 y PB-14 comparten criterios de aceptación (datos faltantes y combinaciones sin dosis validada). | Parte del esfuerzo de PB-14 podría estar contado dos veces. | Revisar los criterios en el refinamiento y reestimar PB-14. |
 
 
@@ -1072,7 +1080,7 @@ La matriz inicial concentra 18 puntos en el Sprint 4 y 24 puntos en el Sprint 5.
 | **PB-16-B. Publicar y comprobar BioApp** | 5 | **5 puntos** | Versión final desplegada, recetas y dosis revisadas cargadas, acceso mediante HTTPS y comprobación de funcionamiento desde teléfono y computadora. |
 | **Total de PB-16** | **4 y 5** | **8 puntos** | **Publicación completa de BioApp.** |
 
-La distribución de 3 y 5 puntos es una propuesta de refinamiento que deben confirmar los Developers. Si se adopta, deberán actualizarse las referencias de PB-16 en las matrices y en el cronograma general.
+La división de PB-16 entre los Sprints 4 y 5 se incorporó al Release Plan para equilibrar la carga de trabajo. Se asignan provisionalmente 3 puntos a PB-16-A y 5 puntos a PB-16-B, manteniendo los 8 puntos originales. Los Developers deberán confirmar estas estimaciones y los criterios de aceptación de cada parte durante el refinamiento.
 
 Cada subdivisión deberá tener criterios de aceptación propios. Solo se contabilizarán sus puntos cuando cumpla la Definición de Terminado; no se contarán nuevamente los 8 puntos del elemento original.
 
@@ -1100,6 +1108,26 @@ Después de los 8 puntos de organización y diseño quedan **84 puntos** para lo
 | **Favorable** | **24 puntos** | **4 Sprints de desarrollo** | Permite completar el alcance previsto con mayor capacidad para resolver incidencias. PB-17 solo se incorporará si las funcionalidades comprometidas y la calidad están aseguradas. |
 
 La proyección se actualizará con los puntos realmente terminados. PB-18 permanece fuera del release y las pruebas de cada funcionalidad se realizarán durante su propio Sprint.
+
+#### Ajuste del Release Plan después del Sprint 3
+
+Al cierre del Sprint 3, el equipo acumuló 40 puntos completados de los 92 planificados. Las historias PB-03 (5 puntos) y PB-06 (5 puntos) quedaron pendientes, por lo que deberán incorporarse a la planificación de los siguientes Sprints.
+
+Para atender este atraso y mantener como objetivo la entrega del 7 de diciembre, se propone priorizar las funcionalidades Must y posponer PB-08 (historial), de prioridad Should y estimada en 8 puntos. Esta decisión deberá ser aprobada por el Product Owner y registrada como un cambio de alcance.
+
+Con este ajuste, quedarían 44 puntos comprometidos para los dos últimos Sprints, distribuidos de la siguiente manera:
+
+| Sprint | Historias por completar | Puntos |
+| --- | --- | ---: |
+| Sprint 4 | PB-03, PB-06, PB-07, PB-14 y PB-16-A | 23 |
+| Sprint 5 | PB-16-B, PB-09 y PB-10 | 21 |
+| **Total pendiente** | | **44** |
+
+Durante el Sprint 4 se dará prioridad a PB-03 y PB-06, ya que son necesarias para completar otras funcionalidades. Una vez finalizada PB-06, se podrá continuar con PB-07 y PB-14.
+
+El equipo deberá revisar su capacidad y la distribución de tareas, porque completar 23 y 21 puntos en los últimos Sprints exige mejorar el rendimiento observado de 16 puntos por Sprint. Si no se cuenta con la capacidad necesaria, el Product Owner deberá evaluar nuevos ajustes al alcance o al cronograma, sin comprometer los criterios de aceptación ni la Definición de Terminado.
+
+El presupuesto se mantendrá como referencia de planificación y cualquier costo adicional deberá evaluarse y aprobarse antes de incorporarlo.
 
 #### Condiciones para liberar la versión 1.0
 
@@ -1130,6 +1158,16 @@ El presupuesto de BioApp se organiza a partir de los **cinco Sprints** del Relea
 - La curaduría del contenido está incluida en el trabajo del Product Owner y la persona especialista en agronomía, por lo que no se agrega un costo independiente.
 - El presupuesto de **herramientas e infraestructura es de ₡50 000 por Sprint** e incluye alojamiento, base de datos, dominio y servicios en la nube.
 - El presupuesto contempla la participación de los cinco integrantes del Scrum Team durante los Sprints planificados. La incorporación de los Developers pendientes de confirmar es necesaria para mantener la capacidad de desarrollo y cumplir con las entregas establecidas.
+
+#### Conciliación de horas presupuestadas y capacidad del equipo
+
+La estimación económica y la estimación de capacidad utilizan medidas distintas:
+
+- **Horas presupuestadas:** cada uno de los tres Developers tiene 80 horas pagadas por Sprint, para un total de **240 horas** (3 × 80). Estas horas sirven para calcular el costo del personal, incluso cuando parte de la jornada se utiliza en reuniones, coordinación, documentación, preparación de pruebas, revisiones y otras actividades del proyecto.
+- **Horas de capacidad previstas:** el cálculo inicial de la sección 07.1 utiliza **129,6 horas disponibles para trabajo estimado del Sprint**. Esto representa el **54 %** de las 240 horas presupuestadas; las otras **110,4 horas (46 %)** no se asumieron como capacidad directa para completar los ítems estimados. Esta distribución es un **supuesto de planificación**, no un registro de horas realmente trabajadas, y deberá validarse con la disponibilidad efectiva del equipo.
+- **Comparación con el trabajo estimado:** para un Sprint de 21 puntos se plantearon **108 horas de esfuerzo, incluido el margen del 20 %**. La capacidad prevista de 129,6 horas supera esa necesidad en **21,6 horas**; sin embargo, esta proyección solo resulta válida si se confirman los tres Developers y se cumplen los supuestos de dedicación y productividad.
+
+Por tanto, **240 horas no equivalen a 240 horas productivas del backlog**. El presupuesto remunera la dedicación completa, mientras que la estimación de velocidad reserva únicamente 129,6 horas para el trabajo cuantificado. Al cerrar cada Sprint se deben comparar estas hipótesis con las horas y los puntos efectivamente registrados. Si Developer 2 y Developer 3 no se incorporan, se deberá recalcular la capacidad; no se puede conservar automáticamente la velocidad de 21 puntos.
 
 
 #### Costo del Scrum Team por Sprint
@@ -1179,12 +1217,12 @@ Al dividir el costo planificado entre los **92 puntos de historia** se obtiene u
 
 Un Sprint adicional con la composición de los Sprints 2, 3 y 4 tendría un costo de **₡3 520 000**, superior a la reserva de contingencia de **₡1 796 000**. Por esta razón, si la velocidad real disminuye, el Product Owner revisará la prioridad y el alcance del backlog antes de considerar una extensión, manteniendo la calidad y la fecha de entrega del **7 de diciembre de 2026**.
 
+
 ### 07.4. Seguimiento del release
 
 El seguimiento del release permitirá revisar, al cierre de cada Sprint, **cuánto trabajo se ha completado y cuánto se ha utilizado del presupuesto**. Para ello, se compararán los puntos pendientes y los costos registrados con la planificación de las secciones 07.2 y 07.3.
 
 El avance se representará mediante un **burndown del release**. Solo se descontarán los puntos de los elementos que cumplan sus criterios de aceptación y la **Definición de Terminado (DoD)**. Las funcionalidades incompletas continuarán como trabajo pendiente, aunque su desarrollo esté avanzado.
-
 
 #### Registro del avance y de los costos
 
@@ -1193,18 +1231,23 @@ El Release Plan distribuye **8 puntos en el Sprint 1** y **21 puntos en cada uno
 | Momento | Puntos pendientes planificados | Puntos completados planificados (acumulados) | Puntos pendientes reales | Velocidad real del Sprint | Costo planificado acumulado | Costo real acumulado |
 | --- | ---: | ---: | --- | --- | ---: | --- |
 | Inicio | 92 | 0 | 92 | — | ₡0 | ₡0 |
-| Cierre del Sprint 1 (13/oct) | 84 | 8 | Pendiente de consolidación | No aplica | ₡3 640 000 | Pendiente de consolidación |
-| Cierre del Sprint 2 (27/oct) | 63 | 29 | Por registrar | Por registrar | ₡7 160 000 | Por registrar |
-| Cierre del Sprint 3 (10/nov) | 42 | 50 | Por registrar | Por registrar | ₡10 680 000 | Por registrar |
+| Cierre del Sprint 1 (13/oct) | 84 | 8 | 84 | No aplica | ₡3 640 000 | ₡3 640 000 |
+| Cierre del Sprint 2 (27/oct) | 63 | 29 | 68 | 16 | ₡7 160 000 | ₡7 160 000 |
+| Cierre del Sprint 3 (10/nov) | 42 | 50 | 52 | 16 | ₡10 680 000 | ₡10 680 000 |
 | Cierre del Sprint 4 (24/nov) | 21 | 71 | Por registrar | Por registrar | ₡14 200 000 | Por registrar |
 | Cierre del Sprint 5 (7/dic) | 0 | 92 | Por registrar | Por registrar | ₡17 960 000 | Por registrar |
 
-El Sprint 1 corresponde a las actividades de organización y diseño, por lo que sus puntos completados se registran como avance del proyecto, pero no se utilizan para calcular la velocidad de desarrollo. Esta comenzará a medirse al finalizar el Sprint 2, el 27 de octubre.
+**Resultados del seguimiento:** Al finalizar el Sprint 2 se completaron las historias PB-11, PB-12 y PB-13, correspondientes a 16 puntos. La historia PB-03 quedó pendiente, por lo que se acumularon 24 puntos completados y 68 pendientes.
+
+Al cierre del Sprint 3 se completaron PB-04, PB-05 y PB-15, sumando otros 16 puntos. La historia PB-06 quedó pendiente de finalizar las pruebas de cálculo. De esta manera, el proyecto alcanzó 40 puntos completados y 52 pendientes.
+
+Los costos acumulados registrados fueron de ₡7 160 000 y ₡10 680 000, respectivamente.
+
+El Sprint 1 corresponde a las actividades de organización y diseño, por lo que sus puntos completados se registran como avance del proyecto, pero no se utilizan para calcular la velocidad de desarrollo. La velocidad de desarrollo comenzó a medirse al finalizar el Sprint 2, el 27 de octubre.
 
 En el burndown se mostrarán dos líneas: la **planificada**, con los valores **92, 84, 63, 42, 21 y 0**, y la **real**, que se actualizará al verificar los elementos terminados. Si la línea real queda por encima de la planificada, significa que hay más puntos pendientes de los previstos.
 
 La distribución de los puntos pendientes se basa en el Release Plan de la sección 07.2, que contempla 21 puntos para cada Sprint de desarrollo. Esta planificación incorpora la división de PB-16 entre los Sprints 4 y 5 y se actualizará cuando el equipo confirme los ajustes del backlog.
-
 
 #### Indicadores de seguimiento
 
@@ -1222,13 +1265,15 @@ Para obtener el **valor monetario del avance**, se toma el costo planificado acu
 
 Esta relación permite comparar las dos magnitudes en colones. Los índices SPI y CPI se calculan a partir del primer cierre con PV mayor que cero y AC registrado.
 
-**Ejemplo de seguimiento al cierre del Sprint 3:** se planificaron **50 puntos acumulados** y un costo acumulado de **₡10 680 000**. Si al cerrar el Sprint el equipo completa **42 puntos** y registra un costo real de **₡10 680 000**, los indicadores serían:
 
-- **SPI = 42 ÷ 50 = 0,84.** Se habría completado el **84 % del avance previsto**, con una diferencia del 16 %.
-- **Valor monetario del avance = ₡10 680 000 × (42 ÷ 50) = ₡8 971 200.**
-- **CPI = ₡8 971 200 ÷ ₡10 680 000 = 0,84.** El gasto acumulado sería el previsto, pero con menos puntos terminados de los programados.
+**Indicadores al cierre del Sprint 3:** Se planificaron 50 puntos acumulados y un costo de ₡10 680 000. Al cierre se registraron 40 puntos completados y un costo acumulado de ₡10 680 000.
 
-Cuando se alcancen los puntos planificados y el costo real coincida con el acumulado previsto, los dos indicadores serán **1**.
+- **SPI = 40 ÷ 50 = 0,80.** Se completó el 80 % del avance previsto.
+- **Valor monetario del avance = ₡10 680 000 × (40 ÷ 50) = ₡8 544 000.**
+- **CPI = ₡8 544 000 ÷ ₡10 680 000 = 0,80.** El equipo utilizó el presupuesto previsto, pero completó menos trabajo del programado.
+
+Estos resultados muestran un atraso respecto a la planificación, por lo que será necesario revisar las actividades pendientes y ajustar el trabajo del Sprint 4.
+
 
 #### Medidas ante diferencias con el plan
 
@@ -1288,10 +1333,12 @@ Las valoraciones son estimaciones iniciales que deberán revisarse durante el de
 | R06 | Si las tareas no se distribuyen correctamente o los integrantes disponen de menos tiempo del esperado, entonces podrían incumplirse las fechas de entrega. | Equipo | Amenaza | 3 | 3 | 9 | Alta | Krisley |
 | R07 | Si no se cuenta con personas agricultoras disponibles para probar la aplicación, entonces podrían pasar desapercibidos problemas de funcionamiento o facilidad de uso. | Tercero | Amenaza | 2 | 2 | 4 | Media | Kristel |
 | R08 | Si se necesitan materiales o insumos para validar recetas y estos no se consiguen a tiempo o dentro del presupuesto, entonces podrían retrasarse las pruebas del proyecto. | Tercero | Amenaza | 2 | 2 | 4 | Media | Juan Daniel |
+| R09 | Si no se confirman los dos Developers pendientes (Developer 2 y Developer 3), entonces la capacidad real del equipo será inferior a la prevista y podrían incumplirse los Sprints y el release. | Equipo | Amenaza | 3 | 3 | 9 | Alta | Juan Daniel |
+| R10 | Si las recetas, dosis y casos de referencia validados no están disponibles a tiempo, entonces no podrán cerrarse PB-13 y PB-15 ni verificarse los cálculos de PB-06 y sus funcionalidades dependientes. | Tercero | Amenaza | 3 | 3 | 9 | Alta | Juan Daniel |
 
 ### 08.4. Matriz de Probabilidad e Impacto
 
-La siguiente matriz muestra la ubicación de los ocho riesgos identificados según su probabilidad de ocurrencia y el impacto que podrían generar.
+La siguiente matriz muestra la ubicación de los diez riesgos identificados según su probabilidad de ocurrencia y el impacto que podrían generar.
 
 Las zonas se clasifican de la siguiente manera:
 
@@ -1301,21 +1348,23 @@ Las zonas se clasifican de la siguiente manera:
 
 #### Mapa de calor
 
-![Mapa de calor de BioApp](./img/mapa_calor.png)
+![Mapa de calor de BioApp](./img/mapacalor.png)
+
 
 #### Distribución de los riesgos
 
 | Probabilidad / Impacto | Bajo (1) | Medio (2) | Alto (3) |
 |---|---|---|---|
-| Alta (3) | Vigilar | Alta prioridad | R03, R06 |
+| Alta (3) | Vigilar | Alta prioridad | R03, R06, R09, R10 |
 | Media (2) | Aceptar | R04, R05, R07, R08 | R01, R02 |
 | Baja (1) | Aceptar | Aceptar | Vigilar |
 
 Los riesgos se encuentran distribuidos de la siguiente manera:
 
-- **R03 y R06:** probabilidad alta e impacto alto.
+- **R03, R06, R09 y R10:** probabilidad alta e impacto alto.
 - **R01 y R02:** probabilidad media e impacto alto.
 - **R04, R05, R07 y R08:** probabilidad media e impacto medio.
+
 
 ### 08.5. Riesgos de mayor prioridad
 
@@ -1328,6 +1377,14 @@ Este riesgo obtuvo una prioridad de 9 puntos, ya que BioApp necesita informació
 **R06 - Atrasos por falta de tiempo u organización del equipo.**
 
 También obtuvo una prioridad de 9 puntos. Al tratarse de un proyecto académico, la disponibilidad de los integrantes puede afectar el cumplimiento de las tareas y las fechas de entrega.
+
+**R09 - Incorporación pendiente de dos Developers.**
+
+Este riesgo también obtuvo una prioridad de 9 puntos. El Release Plan y los costos parten de tres Developers; sin los otros dos integrantes previstos no se puede asumir una capacidad de 21 puntos por Sprint ni cumplir el mismo alcance sin revisar el plan.
+
+**R10 - Recetas y dosis validadas no disponibles a tiempo.**
+
+Con una prioridad de 9 puntos, este riesgo afecta directamente la secuencia PB-13, PB-15 y PB-06 y, por dependencia, el resultado por tanque y las validaciones posteriores. Es distinto de R03: aun contando con una especialista disponible, pueden faltar entregables validados.
 
 **R01 - Información incompleta o incorrecta en las recetas.**
 
@@ -1358,6 +1415,8 @@ El Plan de Mitigación define cómo responderá el equipo a cada riesgo del regi
 | R05 | Funciones nuevas no contempladas al inicio | Media (4) | **Evitar** | Se elimina la causa al no aceptar cambios de alcance fuera del Product Backlog priorizado. | Juan Daniel |
 | R07 | Falta de personas agricultoras para las pruebas | Media (4) | **Aceptar** | Depende de terceros; se vigila y, si ocurre, se prueba con alternativas. | Kristel |
 | R08 | Materiales o insumos no disponibles para validar recetas | Media (4) | **Transferir** | La obtención de los insumos se traslada a la especialista en agronomía o a una cooperativa que ya los maneja, en lugar de que el equipo los compre. | Juan Daniel |
+| R09 | Dos Developers por definir no se incorporan | Alta (9) | **Mitigar** | Confirmar asignaciones y disponibilidad; si no se concretan, reestimar la capacidad y ajustar el alcance con el Product Owner. | Juan Daniel |
+| R10 | Falta de entrega de recetas, dosis o casos validados | Alta (9) | **Mitigar** | Acordar entregas verificables, registrar contenido recibido y bloquear cálculos sin dosis respaldada. | Juan Daniel |
 
 ### 08.7. Acciones de mitigación
 
@@ -1391,6 +1450,20 @@ Las acciones se aplican antes de que el riesgo ocurra y se revisan en cada Sprin
 - Validar los datos antes de calcular (PB-14) y mostrar siempre las unidades en los resultados.
 - No calcular cuando no existe una dosis validada para la combinación seleccionada.
 
+**R09 - Dos Developers pendientes de confirmar**
+
+- Confirmar con el Product Owner quiénes ocuparán Developer 2 y Developer 3, su disponibilidad y la fecha efectiva de incorporación.
+- Revisar la capacidad de 129,6 horas prevista para tres Developers antes de mantener una velocidad de 21 puntos por Sprint.
+- Si faltan integrantes, ajustar el Release Plan, priorizar funcionalidades Must y registrar en Jira las tareas reasignadas.
+- Actualizar la estimación de costos si no se contrata o incorpora a las personas presupuestadas.
+
+**R10 - Entrega pendiente de recetas y dosis validadas**
+
+- Solicitar el estado real de PB-13 y PB-15, con lista de recetas, dosis y casos de referencia aprobados y pendientes.
+- Acordar con la especialista entregas parciales por fecha y conservar fuente, versión y responsable de validación.
+- No marcar PB-06, PB-07 o PB-14 como terminados sin comprobar las dosis y los resultados esperados para las combinaciones incluidas.
+- Replanificar lo bloqueado sin incorporar dosis por suposición ni omitir la Definición de Terminado.
+
 **Riesgos de prioridad media**
 
 | ID | Acciones de mitigación |
@@ -1414,6 +1487,8 @@ Los disparadores son las señales que indican que un riesgo se está presentando
 | R05 | Llega una solicitud de funcionalidad que no está en el Product Backlog o se intenta agregar trabajo al Sprint en curso. | Sprint Planning, Sprint Review y tablero de Jira | Juan Daniel |
 | R07 | Menos de tres personas agricultoras confirman su participación una semana antes de la sesión de pruebas. | Coordinación de pruebas | Kristel |
 | R08 | Una receta que se va a validar necesita un insumo que nadie tiene disponible o cuyo costo no está contemplado. | Planificación de la validación de recetas | Juan Daniel |
+| R09 | Al revisar el equipo, Developer 2 o Developer 3 siguen sin persona asignada o no confirman su disponibilidad para el Sprint. | Registro del equipo, acuerdos de asignación y Sprint Planning. | Juan Daniel |
+| R10 | Al llegar el hito de validación faltan recetas, dosis o casos de referencia aceptados por agronomía, o los cálculos no pueden comprobarse. | Registro de validaciones, PB-13, PB-15 y pruebas de PB-06. | Juan Daniel |
 
 ### 08.9. Plan de contingencia
 
@@ -1429,6 +1504,8 @@ El plan de contingencia indica qué hará el equipo si el riesgo ocurre a pesar 
 | R05 | Registrar la solicitud en el Product Backlog para una versión futura y mantener el objetivo del Sprint sin cambios. | Juan Daniel |
 | R07 | Hacer las pruebas con personas cercanas al sector agrícola o con el propio equipo usando escenarios reales, y documentar la limitación. | Kristel |
 | R08 | Reemplazar la receta por otra que use insumos disponibles o usar la reserva de contingencia para comprarlos, con aprobación del Product Owner. | Juan Daniel |
+| R09 | Recalcular capacidad y velocidad con las personas efectivamente disponibles, redistribuir trabajo y acordar con el Product Owner una reducción o reprogramación explícita del alcance. Actualizar costos según la dedicación real. | Juan Daniel y Kristel |
+| R10 | Mantener bloqueadas las combinaciones sin dosis validada, continuar tareas independientes y escalar con el Product Owner la entrega parcial o sustitución por contenido previamente revisado. Registrar los objetivos afectados y no publicar resultados sin respaldo. | Juan Daniel y Krisley |
 
 ### 08.10. Observaciones
 
@@ -1437,6 +1514,8 @@ Los riesgos identificados corresponden a situaciones que podrían presentarse du
 Se identificaron riesgos técnicos, del equipo, del alcance, del negocio y relacionados con terceros.
 
 Los riesgos R03 y R07 representan dependencias de personas externas al equipo, mientras que R08 contempla posibles dificultades relacionadas con la adquisición de materiales o insumos para realizar pruebas, si estos llegan a necesitarse.
+
+R09 afecta la capacidad del equipo estimada para el Release Plan. R10 se refiere a la entrega efectiva del contenido validado, mientras que R03 trata sobre la disponibilidad de un profesional para realizar la revisión. Antes de tratarlos como problemas ocurridos, deberá verificarse su estado real y registrar la evidencia.
 
 Los responsables indicados son propuestas que deberán ser confirmadas por el equipo.
 
@@ -1462,6 +1541,8 @@ Todas las fechas corresponden al año 2026. La primera revisión se realizará e
 | R06 | Krisley Castro | 13 de noviembre: confirmar capacidad real. Cada día hábil: Daily Scrum. 18 y 25 de noviembre y 2 de diciembre: seguimiento semanal. 24 de noviembre y 7 de diciembre: revisar resultados del Sprint. | 2 | 2 | 4 — Media | Disponibilidad confirmada, tareas con responsables, límites WIP respetados y ajustes del plan cuando la capacidad o el avance se desvíen. |
 | R07 | Kristel Ramírez | 18 de noviembre: confirmar al menos tres participantes para pruebas del 25 de noviembre. 25 de noviembre: revisar participación efectiva. 2 de diciembre: completar pruebas o registrar limitaciones pendientes. | 1 | 2 | 2 — Baja | Confirmaciones, contactos de respaldo y resultados de pruebas con personas del sector agrícola. |
 | R08 | Juan Daniel Ulate | 13 de noviembre: determinar si se requieren pruebas con insumos físicos. Si se requieren, confirmar disponibilidad el 18 de noviembre y revisarla antes de cada prueba. 24 de noviembre: revisar pendientes. | 1 | 2 | 2 — Baja | Acuerdo de suministro, inventario o confirmación de disponibilidad y alternativa definida para los insumos críticos. |
+| R09 | Juan Daniel Ulate | 13 de noviembre: confirmar incorporación y dedicación. 18 de noviembre: revisar el impacto sobre el Sprint 4. 24 de noviembre: revisar el Release Plan con capacidad real. | 2 | 3 | 6 — Alta | Confirmación escrita de ambos Developers o acta de replanteamiento de capacidad, alcance, responsables y presupuesto. |
+| R10 | Juan Daniel Ulate | 13 de noviembre: contrastar el material recibido con los hitos del 21 y 28 de octubre. 18 y 24 de noviembre: revisar entregas y pruebas. Revisar además ante cualquier cambio de recetas o dosis. | 2 | 3 | 6 — Alta | Tabla de recetas y dosis firmadas/revisadas, casos de referencia aceptados y resultados de pruebas sin combinaciones no validadas. |
 
 Los riesgos R01, R02 y R03 conservan un impacto alto porque una receta incorrecta, un cálculo equivocado o la ausencia de validación técnica siguen afectando la confiabilidad del producto. Las medidas reducen principalmente su probabilidad.
 
@@ -1489,6 +1570,24 @@ Las siguientes adquisiciones corresponden a servicios y apoyos externos necesari
 | AC-05 | Coordinación de participantes para pruebas | Cooperativas, asociaciones agrícolas o contactos directos del sector. | Acuerdo de colaboración con fechas y participación confirmadas por escrito. | Al menos tres personas confirmadas una semana antes de la prueba y registro de sus observaciones. | Contactar participantes de respaldo. Si no es posible realizar pruebas representativas, documentar la limitación y programar una validación posterior. | Kristel Ramírez. |
 | AC-06 | Materiales o bioinsumos para pruebas, únicamente si se necesitan | Especialista, cooperativa o proveedor local por confirmar. | Acuerdo de aporte o préstamo; si hay compra, orden de compra a precio fijo con cantidad y fecha de entrega. | Insumos adecuados y disponibles antes de la prueba, bajo coordinación de la persona especialista. | Buscar un proveedor alternativo o una receta validada que utilice insumos disponibles. Si se necesita comprar, solicitar aprobación del Product Owner y registrar el costo. | Juan Daniel Ulate. |
 | AC-07 | Tablero de seguimiento del proyecto | Atlassian Jira, utilizado actualmente por el equipo. | Uso sujeto a las condiciones del plan vigente; confirmar si es gratuito o de suscripción. | Acceso del equipo, tareas con responsables y posibilidad de conservar una copia del seguimiento. | Exportar periódicamente el backlog y mantener una copia en el repositorio o en una hoja compartida para continuar el seguimiento si el servicio falla. | Kristel Ramírez. |
+
+### 08.13. Plan de adquisiciones
+
+Este plan define qué servicios y apoyos se requieren para desarrollar y publicar BioApp. Los montos son **presupuestos y propuestas, no facturas, contratos firmados ni cotizaciones verificadas**. Los responsables deben confirmar proveedor, fecha efectiva, contrato y gasto antes de registrar un costo real. El detalle de proveedores, criterios de aceptación y planes de salida está en la sección 08.12.
+
+| Adquisición o apoyo | Cuándo se requiere | Costo estimado en el presupuesto | Tipo de acuerdo previsto | Quién lo gestiona | Estado a verificar |
+|---|---|---:|---|---|---|
+| Hosting y despliegue con HTTPS (AC-02) | Preparación durante el Sprint 4; publicación en el Sprint 5. | **₡100 000** para cinco Sprints, asignación preliminar de ₡20 000/Sprint. | Suscripción o pago por consumo con límite de gasto, condiciones de cancelación y portabilidad. | Krisley y Developer 2; Juan autoriza gastos. | Proveedor, servicio contratado, condiciones y desembolso real. |
+| Base de datos, almacenamiento y respaldos (AC-03) | Configuración durante desarrollo; restauración verificada antes del 24 de noviembre. | **₡100 000** para cinco Sprints, asignación preliminar de ₡20 000/Sprint. | Servicio administrado o incluido en hosting; documentar acceso y exportación. | Developer 2 con revisión de Krisley. | Si está incluido en hosting, evitar pagar dos veces. |
+| Dominio de la aplicación | Confirmarlo antes de publicar, durante los Sprints 4 y 5. | **₡10 000**, reserva provisional para un pago único. | Registro renovable de dominio, a nombre del proyecto o responsable autorizado. | Juan Daniel con apoyo de Krisley. | Dominio, titular, renovación y precio real. |
+| Otros servicios de infraestructura y herramientas | Cuando se necesiten para pruebas, desarrollo o publicación. | **₡40 000** como saldo del presupuesto tecnológico, asignación indicativa de ₡10 000 en los Sprints 2 a 5. | Licencia o consumo según herramienta, con tope de gasto. | Kristel coordina necesidades; Juan autoriza. | Uso efectivo y comprobantes. |
+| Validación de agronomía (AC-01) | 12 h/Sprint, con hitos de recetas el 21/oct y dosis el 28/oct; verificar qué entregas se cumplieron. | **₡750 000** (60 h × ₡12 500). | Servicios profesionales por horas y entregables verificables. | Juan Daniel coordina la contratación y validación; Krisley verifica dependencias técnicas. | Profesional confirmado, entregables reales y pagos. |
+| QA / Tester (AC-04) | Sprints 2, 3 y 4: 40 h por Sprint; Sprint 5: 80 h. | **₡1 200 000** (200 h × ₡6 000). | Servicios por horas y reporte de pruebas/defectos. | Kristel coordina y Juan aprueba el gasto. | Participación efectiva y horas ejecutadas. |
+| Diseño UX/UI | Sprint 1: 40 h para prototipo y navegación; revisar si se contrató o se resolvió internamente. | **₡360 000** (40 h × ₡9 000). | Servicios profesionales por entregable u horas con revisión del Product Owner. | Juan Daniel coordina; Kristel apoya la revisión. | Evidencia de contratación, entrega y costo real. |
+
+**Conciliación con la sección 07.3:** hosting (₡100 000) + base de datos (₡100 000) + dominio (₡10 000) + otros servicios (₡40 000) = **₡250 000**, equivalentes a la bolsa ya prevista de **₡50 000 por Sprint**. Este desglose es una **asignación propuesta** y debe sustituirse por valores reales cuando se elijan los servicios. Agronomía (₡750 000), QA (₡1 200 000) y UX/UI (₡360 000) ya están incluidos en el presupuesto del release. Las cuatro partidas suman **₡2 560 000** en apoyos e infraestructura contemplados dentro de los **₡17 960 000** de costo planificado: **no deben añadirse otra vez**.
+
+**Control de adquisiciones:** antes de aprobar una compra, Juan Daniel verifica necesidad, costo y disponibilidad presupuestaria; la persona responsable conserva cotización/acuerdo, evidencia de entrega y comprobante; Kristel registra en el seguimiento los pendientes que puedan afectar el Sprint. Si falla un proveedor, se aplica el plan de salida de 08.12. Cuando no haya pago real (por ejemplo, se use una herramienta gratuita), se registra costo real ₡0 con evidencia, sin modificar retrospectivamente lo que se había presupuestado.
 
 #### Control y salida de adquisiciones
 
@@ -1649,6 +1748,8 @@ En caso de desacuerdos dentro del equipo, se buscará llegar a una solución med
 | 11 de noviembre de 2026 | 0.16 | Kristel Ramírez | Índice; 08. Riesgos y adquisiciones; 11. Decisiones, cambios y evidencias; 12. Producto / Incremento final | Organización del documento según la estructura oficial del Expediente: los riesgos pasan a la sección 08, el historial de cambios pasa a la sección 11, se agrega la sección 12 y se incorporan las columnas Versión y Sección afectada al historial. |
 | 12 de noviembre de 2026 | 0.17 | Kristel Ramírez | 08.6 a 08.9. Plan de Mitigación | Plan de Mitigación: estrategia de respuesta, acciones de mitigación, disparadores y plan de contingencia de cada riesgo. |
 | 12 de noviembre de 2026 | 0.18 | Kristel Ramírez | 00. Portada; 11.2. Registro de decisiones; 11.3. Evidencias | Corrección del nombre del docente y se agrega a la profesora Yesenia Calvo Araya; registro de decisiones y evidencias del proyecto. |
+| 13 de noviembre de 2026 | 0.19 | Krisley Castro | 02.2; 05.3; 07.3; 07.4; 08.3 a 08.13; 11.1 y 11.3 | Revisión del expediente según la retroalimentación docente, incorporación de R09 y R10, actualización de la matriz y mapa de calor, planificación de adquisiciones, conciliación de horas y aclaración del seguimiento de los Sprints. |
+
 
 ### 11.2. Registro de decisiones
 
@@ -1676,7 +1777,7 @@ Las siguientes evidencias respaldan el trabajo documentado en el Expediente:
 | Tablero de Jira | Product Backlog, Sprints, tareas, responsables y estado de cada tarjeta. | [Tablero de BioApp en Jira](https://krisdaram27.atlassian.net/jira/software/projects/SCRUM/boards/1/backlog?atlOrigin=eyJpIjoiY2FiN2NjMWM5NzFjNDcxY2FhNmUyNjFkNDM1OTU0YzEiLCJwIjoiaiJ9) | 05.2. Tablero de trabajo |
 | Capturas de los Sprints 1 a 5 | Contenido de cada Sprint en Jira. | `img/Sprint1.png` a `img/Sprint5.png` | 05.2. Tablero de trabajo |
 | Historias para una segunda versión | Captura de PB-17 y PB-18 fuera de los Sprints planificados. | `img/Historias segunda versión.png` | 05.2. Tablero de trabajo |
-| Mapa de calor de riesgos | Ubicación de los riesgos según probabilidad e impacto. | `imagenes/mapa_calor.png` | 08.4. Matriz de Probabilidad e Impacto |
+| Mapa de calor de riesgos | Ubicación de los diez riesgos según su probabilidad e impacto. | `img/mapacalor.png` | 08.4. Matriz de Probabilidad e Impacto |
 | Historial de cambios | Registro de quién modificó cada sección, cuándo y en qué versión. | Sección 11.1 | 11. Decisiones, cambios y evidencias |
 | Retroalimentación del docente | Observaciones recibidas en las revisiones del Expediente y cambios realizados para atenderlas. | Historial de cambios (versiones 0.5, 0.16 y siguientes) | 11.1. Historial de cambios |
 
