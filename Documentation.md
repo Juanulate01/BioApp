@@ -75,7 +75,7 @@
   - [11.1. Historial de cambios](#111-historial-de-cambios)
   - [11.2. Registro de decisiones](#112-registro-de-decisiones)
   - [11.3. Evidencias](#113-evidencias)
-- [12. Producto / Incremento final y cierre del proyecto](#12-producto--incremento-final-y-cierre-del-proyecto)
+- [ Producto / Incremento final y cierre del proyecto](#12-producto--incremento-final-y-cierre-del-proyecto)
 
 El Scrum Team de BioApp estará conformado por cinco integrantes y trabajará durante las 10 semanas del proyecto: un Product Owner, una Scrum Master con apoyo parcial al desarrollo y tres Developers a tiempo completo.
 
@@ -1724,7 +1724,7 @@ Si el problema afecta las prioridades o el alcance de BioApp, se consultará con
 En caso de desacuerdos dentro del equipo, se buscará llegar a una solución mediante el diálogo. Si no se logra un acuerdo, la Scrum Master ayudará a facilitar la conversación y encontrar una alternativa que permita continuar con el trabajo.
 
 
-## 11. Decisiones, cambios y evidencias
+##  Decisiones, cambios y evidencias
 
 ### 11.1. Historial de cambios
 
@@ -1781,6 +1781,96 @@ Las siguientes evidencias respaldan el trabajo documentado en el Expediente:
 | Historial de cambios | Registro de quién modificó cada sección, cuándo y en qué versión. | Sección 11.1 | 11. Decisiones, cambios y evidencias |
 | Retroalimentación del docente | Observaciones recibidas en las revisiones del Expediente y cambios realizados para atenderlas. | Historial de cambios (versiones 0.5, 0.16 y siguientes) | 11.1. Historial de cambios |
 
-## 12. Producto / Incremento final y cierre del proyecto
+## 13. Acta de Sprint Review y Sprint Retrospective
+
+### 13.1. Acta de Sprint Review — Sprint 1
+
+**Fecha:** 13 de octubre de 2026  
+**Sprint:** 1 — Organización y diseño  
+**Periodo:** 30 de septiembre al 13 de octubre  
+**Duración:** 1 hora  
+
+**Participantes:**
+- Juan Daniel Ulate — Product Owner.
+- Kristel Ramírez — Scrum Master.
+- Krisley Castro — Developer.
+
+**Interesados externos:** No se registró participación.
+
+#### 13.1.1. Objetivo del Sprint
+
+El objetivo del Sprint 1 fue definir el alcance de BioApp, organizar el Product Backlog y diseñar un prototipo que permitiera visualizar cómo funcionaría la aplicación.
+
+**¿Se cumplió el objetivo?**
+
+Sí, se cumplió el objetivo establecido. Durante este Sprint se definieron los requisitos principales, se organizaron las historias del Product Backlog y se revisó el prototipo de navegación.
+
+Estos avances permitieron establecer una base para comenzar el desarrollo de las funcionalidades en el Sprint 2.
+
+#### 13.1.2. Historias presentadas y cumplimiento de la DoD
+
+| Historia | Puntos | Estado | Cumplimiento de la DoD |
+|---|---:|---|---|
+| PB-01 — Definir requisitos y organizar el proyecto | 3 | Terminada | Cumple |
+| PB-02 — Diseñar y validar el prototipo | 5 | Terminada | Cumple |
+| **Total** | **8** | | |
+
+Durante la Sprint Review se presentó la documentación inicial del proyecto, incluyendo los objetivos, el alcance, los roles del equipo y la organización del Product Backlog.
+
+También se revisó el prototipo de navegación, que contempla las pantallas principales de BioApp, como el registro de usuarios, el catálogo de recetas, los terrenos, los equipos de atomización y la calculadora.
+
+Ambas historias cumplieron sus criterios de aceptación y la Definición de Terminado, por lo que se consideraron finalizadas.
+
+**Resultado del Sprint:** Se completaron los 8 puntos planificados.
+
+#### 13.1.3. Retroalimentación recibida
+
+Durante la revisión se destacó la importancia de que la aplicación tenga una navegación sencilla, considerando que estará dirigida principalmente a personas agricultoras.
+
+También se señaló la necesidad de presentar claramente los campos y las unidades de medida que utilizará la calculadora, para evitar confusiones al ingresar los datos.
+
+Se consideró importante mantener organizadas las historias del Product Backlog y respetar las dependencias entre las funcionalidades para facilitar el trabajo de los siguientes Sprints.
+
+#### 13.1.4. Cambios acordados al Product Backlog
+
+Después de revisar los entregables del Sprint 1, se acordó mantener las prioridades establecidas para comenzar el desarrollo de BioApp.
+
+Los principales acuerdos fueron:
+
+- Mantener PB-11 (registro e inicio de sesión) como una de las primeras funcionalidades del Sprint 2.
+- Continuar con PB-12 (almacenamiento de información por usuario) para asegurar que los registros estén vinculados a cada cuenta.
+- Coordinar la incorporación de las recetas validadas mediante PB-13, antes de desarrollar la consulta del catálogo en PB-03.
+- Conservar las observaciones realizadas al prototipo para tomarlas en cuenta durante el desarrollo de las pantallas.
+
+No se incorporaron nuevas funcionalidades al alcance del proyecto. Los acuerdos se enfocaron en mantener claras las prioridades y las dependencias del trabajo previsto.
+
+#### 13.1.5. Estado del release
+
+Al finalizar el Sprint 1, el proyecto presentó los siguientes resultados:
+
+| Indicador | Resultado |
+|---|---:|
+| Puntos totales del release | 92 |
+| Puntos planificados del Sprint 1 | 8 |
+| Puntos completados del Sprint 1 | 8 |
+| Puntos completados acumulados | 8 |
+| Puntos pendientes | 84 |
+| Costo planificado acumulado | ₡3 640 000 |
+| Costo registrado acumulado | ₡3 640 000 |
+
+El Sprint 1 finalizó con los puntos previstos completados y permitió continuar con la planificación del Sprint 2.
+
+Debido a que este primer Sprint se concentró en la organización y el diseño, sus puntos se registraron como avance del proyecto, pero no se utilizaron para calcular la velocidad de desarrollo.
+
+#### 13.1.6. Conclusiones de la Sprint Review
+
+La revisión permitió comprobar que se cumplieron los objetivos del primer Sprint y que el equipo cuenta con una planificación inicial para continuar el proyecto.
+
+Se logró definir el alcance, organizar las historias de usuario y revisar el prototipo de BioApp.
+
+Como siguiente paso, el equipo continuará con el Sprint 2, enfocándose en las cuentas de usuario, el almacenamiento de información y las primeras funcionalidades del catálogo de recetas.
+
+
+## . Producto / Incremento final y cierre del proyecto
 
 *Pendiente para la entrega oficial (Semana 11): informe final, incremento entregado y demostración (Demo).*
