@@ -41,6 +41,7 @@
   - [05.1. Product Backlog inicial](#051-product-backlog-inicial)
   - [05.2. Tablero de trabajo](#052-tablero-de-trabajo)
   - [05.3. Tareas de mitigación en el Sprint Backlog](#053-tareas-de-mitigación-en-el-sprint-backlog)
+  - [05.4. Integración de los acuerdos del Sprint 1 en el Sprint Backlog 2](#054-integración-de-los-acuerdos-del-sprint-1-en-el-sprint-backlog-2)
 - [06. Alcance, Product Backlog priorizado y criterios de aceptación](#06-alcance-product-backlog-priorizado-y-criterios-de-aceptación)
   - [06.1. Historias de usuario y criterios de aceptación](#061-historias-de-usuario-y-criterios-de-aceptación)
 - [07. Planificación temporal, estimaciones y costos](#07-planificación-temporal-estimaciones-y-costos)
@@ -78,6 +79,7 @@
 - [13. Acta de Sprint Review y Sprint Retrospective](#13-acta-de-sprint-review-y-sprint-retrospective)
   - [13.1. Acta de Sprint Review — Sprint 1](#131-acta-de-sprint-review--sprint-1)
   - [13.2. Acta de Sprint Retrospective — Sprint 1](#132-acta-de-sprint-retrospective--sprint-1)
+  - [13.3. Parte 2. Integración y actualización del expediente](#133-parte-2-integración-y-actualización-del-expediente)
 - [ Producto / Incremento final y cierre del proyecto](#12-producto--incremento-final-y-cierre-del-proyecto)
 
 El Scrum Team de BioApp estará conformado por cinco integrantes y trabajará durante las 10 semanas del proyecto: un Product Owner, una Scrum Master con apoyo parcial al desarrollo y tres Developers a tiempo completo.
@@ -527,6 +529,20 @@ La siguiente tabla es una propuesta de incorporación a los Sprints 4 y 5. No im
 - En el Daily Scrum se revisarán los impedimentos del trabajo de desarrollo. Los riesgos y adquisiciones también se revisarán en el seguimiento semanal.
 - Una tarea no se cerrará únicamente porque se haya contactado a una persona: debe existir la evidencia indicada en su criterio de cierre.
 
+
+### 05.4. Integración de los acuerdos del Sprint 1 en el Sprint Backlog 2
+
+La Sprint Review mantuvo las prioridades del Product Backlog: PB-11 y PB-12 para cuentas y almacenamiento, y PB-13 antes de PB-03 por la dependencia de contenido validado. No se agregaron funcionalidades al alcance (sección 13.1.4).
+
+Además del trabajo de producto, el Sprint Backlog 2 incorpora las siguientes acciones de proceso acordadas en la retrospectiva. Se conserva el estado histórico al iniciar el Sprint 2; no se declara su cumplimiento sin la evidencia indicada en 13.2.4.
+
+| Tarea | Responsable | Estado al iniciar el Sprint 2 | Fecha acordada | Verificación |
+|---|---|---|---|---|
+| MEJ-01 — Registrar todas las tareas en Jira con responsable y actualizar su estado el día del cambio. | Kristel Ramírez | Por hacer | Desde el 14 de octubre de 2026; revisión el 21 de octubre. | Todas las tarjetas en curso tienen responsable y no hay trabajo en ejecución fuera del tablero. |
+| MEJ-02 — Confirmar entregas de agronomía e invitar a la especialista y a una persona agricultora a la Review. | Juan Daniel Ulate | Por hacer | Confirmación el 16 de octubre de 2026; invitación a más tardar el 20 de octubre. | Confirmación escrita de recetas para el 21 de octubre y dosis para el 28; invitación y registro de asistencia a la Review del 27 de octubre. |
+| MEJ-03 — Revisar cada sección del expediente con otra persona antes de subirla y registrar el cambio. | Krisley Castro | Por hacer | Desde el 14 de octubre de 2026; revisión el 27 de octubre. | Identificación del revisor y entrada en el historial para cada sección agregada durante el Sprint 2. |
+
+Estas tareas no suman puntos de historia. Los acuerdos y sus criterios completos se conservan en 13.2.4 y 13.2.5. Las fechas corresponden a los acuerdos históricos del acta, no a nuevas fechas de ejecución.
 
 ## 06. Alcance, Product Backlog priorizado y criterios de aceptación
 
@@ -1755,7 +1771,7 @@ Si el problema afecta las prioridades o el alcance de BioApp, se consultará con
 En caso de desacuerdos dentro del equipo, se buscará llegar a una solución mediante el diálogo. Si no se logra un acuerdo, la Scrum Master ayudará a facilitar la conversación y encontrar una alternativa que permita continuar con el trabajo.
 
 
-##  Decisiones, cambios y evidencias
+## 11. Decisiones, cambios y evidencias
 
 ### 11.1. Historial de cambios
 
@@ -1782,7 +1798,7 @@ En caso de desacuerdos dentro del equipo, se buscará llegar a una solución med
 | 13 de noviembre de 2026 | 0.19 | Krisley Castro | 02.2; 05.3; 07.3; 07.4; 08.3 a 08.13; 11.1 y 11.3 | Revisión del expediente según la retroalimentación docente, incorporación de R09 y R10, actualización de la matriz y mapa de calor, planificación de adquisiciones, conciliación de horas y aclaración del seguimiento de los Sprints. |
 | 16 de noviembre de 2026 | 0.20 | Kristel Ramírez | 13.2. Acta de Sprint Retrospective — Sprint 1; índice | Acta de Sprint Retrospective del Sprint 1 (formato Start/Stop/Continue, evidencias, acciones de mejora MEJ-01 a MEJ-03 con dueño, fecha y verificación, e incorporación al Sprint Backlog 2); se agrega la sección 13 al índice. |
 | 16 de noviembre de 2026 | 0.21 | Kristel Ramírez | 00; 02.2; 05.3; 07.1; 07.3; 08.3; 08.5; 08.6; 08.10; 08.11; 13.1; 13.2 | Se confirma la participación de Developer 2 y Developer 3: se elimina "por definir", se cierra el riesgo R09 y se incluyen ambos Developers como participantes de la Sprint Review y la Sprint Retrospective del Sprint 1. |
-
+| 19 de noviembre de 2026 | 0.22 | Juan Daniel Ulate | 03.1; 05.2; 05.4; 07.4; 09.1; 11 a 13; índice | Integración de las actas de Sprint Review y Sprint Retrospective del Sprint 1: interesados críticos, tabla del Sprint Backlog 1, acciones MEJ-01 a MEJ-03 en el Sprint Backlog 2, referencias al avance y la DoD, decisiones D10 a D13 y evidencias. Se corrigen los encabezados 11 y 12 y se documenta la Parte 2. |
 
 ### 11.2. Registro de decisiones
 
@@ -1799,6 +1815,12 @@ Este registro reúne las decisiones más importantes que el equipo ha tomado dur
 | D07 | 4 de noviembre de 2026 | Dejar **PB-17 (recuperar contraseña) y PB-18 (administrar recetas y dosis)** fuera de los Sprints planificados: PB-17 solo si hay capacidad y PB-18 para una segunda versión. | Concentrar la capacidad del equipo en las funcionalidades esenciales. | Product Owner | 05.2. Tablero de trabajo; 06 |
 | D08 | 4 de noviembre de 2026 | Gestionar el trabajo en un **tablero de Jira con límites WIP** y una regla clara para pasar a Terminado. | Hacer visible el avance y evitar acumular trabajo sin terminar. | Scrum Master y Scrum Team | 05.2. Tablero de trabajo |
 | D09 | 11 de noviembre de 2026 | Organizar el documento según la **estructura oficial del Expediente del Proyecto** (secciones 00 a 12). | Atender la retroalimentación del docente y facilitar la revisión de cada sección. | Scrum Team | Todo el documento |
+| D10 | 13 de octubre de 2026 | Mantener las prioridades del Sprint 2 y la dependencia de PB-13 antes de PB-03, sin incorporar funcionalidades nuevas. | La Review confirmó el objetivo del Sprint 1 y la necesidad de conservar las dependencias del catálogo. | Product Owner y Scrum Team, según 13.1.4 | 05.1; 05.4; 13.1.4 |
+| D11 | 13 de octubre de 2026 | Registrar todas las tareas con responsable y actualizar su estado en Jira (MEJ-01). | Hacer visible el trabajo de documentación y coordinación además del desarrollo. | Scrum Team, según 13.2; responsable: Kristel Ramírez | 05.4; 13.2.4 |
+| D12 | 13 de octubre de 2026 | Confirmar por escrito las entregas de agronomía e invitar anticipadamente a interesados a la siguiente Review (MEJ-02). | Reducir la incertidumbre de las dependencias externas y recoger retroalimentación de usuarios. | Scrum Team, según 13.2; responsable: Juan Daniel Ulate | 05.4; 10.4; 13.2.4 |
+| D13 | 13 de octubre de 2026 | Revisar las secciones del expediente con otra persona antes de publicarlas y registrar sus cambios (MEJ-03). | Mejorar la calidad y trazabilidad de la documentación. | Scrum Team, según 13.2; responsable: Krisley Castro | 05.4; 11.1; 13.2.4 |
+
+Las decisiones D10 a D13 se incorporan al registro el 19 de noviembre de 2026 con la fecha del evento que las originó. Su registro no acredita por sí solo la ejecución de las acciones.
 
 ### 11.3. Evidencias
 
@@ -1813,6 +1835,14 @@ Las siguientes evidencias respaldan el trabajo documentado en el Expediente:
 | Mapa de calor de riesgos | Ubicación de los diez riesgos según su probabilidad e impacto. | `img/mapacalor.png` | 08.4. Matriz de Probabilidad e Impacto |
 | Historial de cambios | Registro de quién modificó cada sección, cuándo y en qué versión. | Sección 11.1 | 11. Decisiones, cambios y evidencias |
 | Retroalimentación del docente | Observaciones recibidas en las revisiones del Expediente y cambios realizados para atenderlas. | Historial de cambios (versiones 0.5, 0.16 y siguientes) | 11.1. Historial de cambios |
+| Acta de Sprint Review del Sprint 1 | Objetivo, PB-01 y PB-02 terminados, cumplimiento de la DoD, retroalimentación y acuerdos del backlog. | [Sección 13.1](#131-acta-de-sprint-review--sprint-1); commit `37f668b` | 05.2; 07.4; 13.1 |
+| Acta de Sprint Retrospective del Sprint 1 | Análisis Start/Stop/Continue y acciones MEJ-01 a MEJ-03 con dueño, fecha y verificación. | [Sección 13.2](#132-acta-de-sprint-retrospective--sprint-1); commit `77741a7` | 05.4; 13.2 |
+| Revisión del prototipo de navegación | El acta describe las pantallas y las observaciones sobre navegación, campos y unidades. La referencia al archivo o enlace del prototipo queda pendiente de incorporar; el acta no sustituye ese artefacto. | Secciones 13.1.2 y 13.1.3 | PB-02; 05.2 |
+| Integración de los acuerdos del Sprint 1 | Relación entre las actas, el backlog, el seguimiento del release y los registros del expediente. | Secciones 05.4 y 13.3; historial versión 0.22 | 05; 07.4; 09.1; 11 |
+
+## 12. Producto / Incremento final y cierre del proyecto
+
+*Pendiente para la entrega oficial (Semana 11): informe final, incremento entregado y demostración (Demo).*
 
 ## 13. Acta de Sprint Review y Sprint Retrospective
 
@@ -1972,6 +2002,20 @@ Las tres acciones de mejora se agregaron como tarjetas de mejora en el Sprint 2 
 
 El equipo cumplió el objetivo del Sprint 1 y tiene claros los roles y los eventos. Las mejoras se enfocan en tres puntos: hacer visible todo el trabajo en el tablero, confirmar a tiempo lo que depende de personas externas y revisar el contenido antes de publicarlo. Cada acción tiene dueño, fecha y una forma de comprobarla, y su cumplimiento se revisará al inicio de la próxima retrospectiva.
 
-## . Producto / Incremento final y cierre del proyecto
+### 13.3. Parte 2. Integración y actualización del expediente
 
-*Pendiente para la entrega oficial (Semana 11): informe final, incremento entregado y demostración (Demo).*
+**Fecha de integración:** 19 de noviembre de 2026.
+
+Los resultados de la Sprint Review y la Sprint Retrospective del Sprint 1 se integran al expediente mediante las siguientes actualizaciones:
+
+| Elemento del expediente | Integración realizada | Referencia |
+|---|---|---|
+| Product Backlog | Se mantienen las prioridades y dependencias acordadas en la Review, sin nuevas funcionalidades. | 05.1; 05.4; 13.1.4 |
+| Sprint Backlog 1 | Se explicitan tareas, responsables y estado al cierre, conforme a las actas. | 05.2 |
+| Sprint Backlog 2 | Se incorporan MEJ-01, MEJ-02 y MEJ-03 con responsable, fecha y criterio de verificación. | 05.4; 13.2.4; 13.2.5 |
+| Seguimiento del release | Se conserva el resultado del Sprint 1: 8 puntos terminados y 84 pendientes de los 92 del release, sin utilizar este Sprint de organización para calcular la velocidad de desarrollo. No se altera el cronograma como consecuencia de la Review del Sprint 1. Los ajustes posteriores se documentan por separado en 07.2. | 07.4; 13.1.5 |
+| Calidad y DoD | Las actas no acuerdan modificar la DoD de 09.1. Se mantiene vigente; la revisión cruzada del expediente se incorpora como mejora del proceso, sin declarar cambios adicionales a los criterios de terminado. | 09.1; 13.1.2; MEJ-03 |
+| Decisiones y evidencias | Se registran los acuerdos D10 a D13 y se referencian las actas, sus commits y la revisión del prototipo. | 11.2; 11.3 |
+| Historial e índice | Se agrega la versión 0.22, se corrigen los encabezados 11 y 12 y se incluyen los enlaces de las nuevas subsecciones. | Índice; 11.1 |
+
+La integración documental no confirma que las mejoras ya se hayan ejecutado. Sus estados históricos se conservan y el cierre requiere las evidencias previstas en 13.2.4. El enlace o archivo del prototipo revisado y las evidencias de ejecución de las mejoras deberán incorporarse cuando estén disponibles.
