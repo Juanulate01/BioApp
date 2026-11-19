@@ -281,6 +281,19 @@ El poder representa la capacidad para influir en las decisiones o entregas del p
 | Cooperativas o asociaciones agrícolas | Medio | Medio | Pueden facilitar participantes y espacios para pruebas. Mantener contacto en los hitos que requieran su colaboración. |
 | Autoridades relacionadas con el área agrícola | Alto | Bajo inicialmente | Pueden influir en las condiciones aplicables a un uso público o comercial. Consultarlas cuando corresponda y revisar su clasificación si participan directamente. |
 
+#### Interesados críticos
+
+Se consideran críticos los interesados cuya participación es necesaria para decidir, entregar el producto, validar su contenido o comprobar su utilidad:
+
+- **Juan Daniel Ulate — Product Owner:** define prioridades y resuelve decisiones de alcance y requisitos.
+- **Kristel Ramírez — Scrum Master:** facilita la coordinación y el seguimiento de impedimentos que pueden comprometer las entregas.
+- **Developers: Krisley Castro, Developer 2 y Developer 3:** construyen, integran y prueban el producto.
+- **Profesionales en agronomía, incluida la especialista que valida el contenido:** su revisión de recetas, dosis y casos de referencia es necesaria para incorporar contenido confiable y liberar los cálculos.
+- **Personas agricultoras:** comprueban que BioApp responde a necesidades reales y que sus funciones son comprensibles y útiles.
+- **Personas encargadas de atomizar:** validan la comprensión y utilidad de los cálculos de mezcla y cantidades por tanque.
+
+La criticidad no depende únicamente del poder: las personas agricultoras y quienes realizan la atomización tienen poder bajo en la tabla, pero son críticos para validar el uso del producto. Los demás interesados mantienen la participación descrita en el mapa; su criticidad se revisará si aparece una dependencia que condicione una entrega.
+
 ### 03.2. Conclusión del análisis
 
 La identificación de estos factores ambientales y de los principales interesados permite comprender mejor el entorno en el que se desarrollará BioApp y las condiciones que pueden influir en el proyecto.
@@ -437,10 +450,25 @@ Si una columna está llena, no se pasa otra tarjeta a ella: primero se termina o
 
 #### Sprint Backlog 1 y responsables
 
-Las tareas del Sprint 1 ya están cargadas en el tablero: 
-PB-01 (Juan Daniel Ulate)
-PB-02 (Krisley Castro) 
-Las tareas de la Scrum Master para facilitar los eventos y dar seguimiento al Sprint (Kristel Ramírez). Cada tarjeta muestra a su responsable, y nadie empieza una tarea sin asignársela primero.
+**Sprint 1 — Organización y diseño:** del 30 de septiembre al 13 de octubre de 2026.
+
+**Objetivo:** acordar el alcance, ordenar el backlog y validar el prototipo de navegación.
+
+La tabla explicita las tareas de PB-01 y PB-02 y las actividades de facilitación. Los responsables principales son los ya indicados para el Sprint 1. El estado corresponde al cierre del 13 de octubre de 2026 y se basa en las actas de Sprint Review y Sprint Retrospective de las secciones 13.1 y 13.2; no representa una consulta en tiempo real de Jira.
+
+| Tarea | Responsable | Estado |
+|---|---|---|
+| PB-01 — Definir el objetivo, los requisitos principales y el alcance de BioApp. | Juan Daniel Ulate | Terminado |
+| PB-01 — Organizar y priorizar el Product Backlog e identificar sus dependencias. | Juan Daniel Ulate | Terminado |
+| PB-02 — Diseñar el prototipo de navegación con las pantallas principales. | Krisley Castro | Terminado |
+| PB-02 — Revisar el prototipo con el Product Owner y registrar observaciones sobre navegación, campos y unidades. | Krisley Castro, con revisión de Juan Daniel Ulate | Terminado |
+| Facilitar la Sprint Planning y dar seguimiento al objetivo y los impedimentos del Sprint. | Kristel Ramírez | Terminado |
+| Facilitar y documentar la Sprint Review del Sprint 1. | Kristel Ramírez | Terminado |
+| Facilitar y documentar la Sprint Retrospective y sus acciones de mejora. | Kristel Ramírez | Terminado |
+
+PB-01 y PB-02 completaron los 8 puntos planificados y cumplieron la Definición de Terminado según la sección 13.1.2. Las actividades de facilitación no suman puntos adicionales. Las acciones de mejora surgidas de la retrospectiva se incorporan al Sprint Backlog 2, según la sección 13.2.
+
+El equipo mantiene el seguimiento operativo en Jira: cada tarjeta debe tener responsable y actualizar su estado conforme avance el trabajo.
 
 #### Regla para pasar una tarjeta a Terminado
 
