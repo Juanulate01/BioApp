@@ -76,6 +76,10 @@
   - [11.1. Historial de cambios](#111-historial-de-cambios)
   - [11.2. Registro de decisiones](#112-registro-de-decisiones)
   - [11.3. Evidencias](#113-evidencias)
+  - [11.4. Registro de Solicitudes de Cambio](#114-registro-de-solicitudes-de-cambio)
+    - [11.4.1. Propósito](#1141-propósito)
+    - [11.4.2. Procedimiento de gestión de cambios](#1142-procedimiento-de-gestión-de-cambios)
+    - [11.4.3. Solicitud CR-01](#1143-solicitud-cr-01)
 - [13. Acta de Sprint Review y Sprint Retrospective](#13-acta-de-sprint-review-y-sprint-retrospective)
   - [13.1. Acta de Sprint Review — Sprint 1](#131-acta-de-sprint-review--sprint-1)
   - [13.2. Acta de Sprint Retrospective — Sprint 1](#132-acta-de-sprint-retrospective--sprint-1)
@@ -1796,9 +1800,11 @@ En caso de desacuerdos dentro del equipo, se buscará llegar a una solución med
 | 12 de noviembre de 2026 | 0.17 | Kristel Ramírez | 08.6 a 08.9. Plan de Mitigación | Plan de Mitigación: estrategia de respuesta, acciones de mitigación, disparadores y plan de contingencia de cada riesgo. |
 | 12 de noviembre de 2026 | 0.18 | Kristel Ramírez | 00. Portada; 11.2. Registro de decisiones; 11.3. Evidencias | Corrección del nombre del docente y se agrega a la profesora Yesenia Calvo Araya; registro de decisiones y evidencias del proyecto. |
 | 13 de noviembre de 2026 | 0.19 | Krisley Castro | 02.2; 05.3; 07.3; 07.4; 08.3 a 08.13; 11.1 y 11.3 | Revisión del expediente según la retroalimentación docente, incorporación de R09 y R10, actualización de la matriz y mapa de calor, planificación de adquisiciones, conciliación de horas y aclaración del seguimiento de los Sprints. |
+| 13 de noviembre de 2026 | 0.19.1 | Krisley Castro | 13.1. Acta de Sprint Review — Sprint 1 | Elaboración del acta de Sprint Review del Sprint 1, incluyendo el cumplimiento del objetivo, las historias PB-01 y PB-02 terminadas (8 puntos), verificación de la Definición de Terminado (DoD), retroalimentación del prototipo, acuerdos sobre el Product Backlog y estado del release. |
 | 16 de noviembre de 2026 | 0.20 | Kristel Ramírez | 13.2. Acta de Sprint Retrospective — Sprint 1; índice | Acta de Sprint Retrospective del Sprint 1 (formato Start/Stop/Continue, evidencias, acciones de mejora MEJ-01 a MEJ-03 con dueño, fecha y verificación, e incorporación al Sprint Backlog 2); se agrega la sección 13 al índice. |
 | 16 de noviembre de 2026 | 0.21 | Kristel Ramírez | 00; 02.2; 05.3; 07.1; 07.3; 08.3; 08.5; 08.6; 08.10; 08.11; 13.1; 13.2 | Se confirma la participación de Developer 2 y Developer 3: se elimina "por definir", se cierra el riesgo R09 y se incluyen ambos Developers como participantes de la Sprint Review y la Sprint Retrospective del Sprint 1. |
 | 19 de noviembre de 2026 | 0.22 | Juan Daniel Ulate | 03.1; 05.2; 05.4; 07.4; 09.1; 11 a 13; índice | Integración de las actas de Sprint Review y Sprint Retrospective del Sprint 1: interesados críticos, tabla del Sprint Backlog 1, acciones MEJ-01 a MEJ-03 en el Sprint Backlog 2, referencias al avance y la DoD, decisiones D10 a D13 y evidencias. Se corrigen los encabezados 11 y 12 y se documenta la Parte 2. |
+| 22 de noviembre de 2026 | 0.23 | Krisley Castro | Índice; 11.1; 11.4.1 a 11.4.3 | Incorporación del Registro de Solicitudes de Cambio de la Semana 10, con su propósito, el procedimiento de gestión y el análisis de impacto de CR-01, cuya propuesta es diferir PB-18 para la versión 2. |
 
 ### 11.2. Registro de decisiones
 
@@ -1839,6 +1845,39 @@ Las siguientes evidencias respaldan el trabajo documentado en el Expediente:
 | Acta de Sprint Retrospective del Sprint 1 | Análisis Start/Stop/Continue y acciones MEJ-01 a MEJ-03 con dueño, fecha y verificación. | [Sección 13.2](#132-acta-de-sprint-retrospective--sprint-1); commit `77741a7` | 05.4; 13.2 |
 | Revisión del prototipo de navegación | El acta describe las pantallas y las observaciones sobre navegación, campos y unidades. La referencia al archivo o enlace del prototipo queda pendiente de incorporar; el acta no sustituye ese artefacto. | Secciones 13.1.2 y 13.1.3 | PB-02; 05.2 |
 | Integración de los acuerdos del Sprint 1 | Relación entre las actas, el backlog, el seguimiento del release y los registros del expediente. | Secciones 05.4 y 13.3; historial versión 0.22 | 05; 07.4; 09.1; 11 |
+
+### 11.4. Registro de Solicitudes de Cambio
+
+#### 11.4.1. Propósito
+
+El control de cambios permite que el equipo de BioApp evalúe cada solicitud antes de comprometer trabajo adicional. El registro documenta los impactos y las decisiones tomadas para proteger el alcance esencial de la versión 1.0, el presupuesto y la fecha de entrega del 7 de diciembre de 2026.
+
+#### 11.4.2. Procedimiento de gestión de cambios
+
+1. **Solicitud.** Cualquier integrante del equipo o persona interesada puede solicitar un cambio. Se registra con un identificador CR único, la fecha, el nombre o rol de quien lo solicita y una descripción del cambio.
+2. **Evaluación.** Los Developers analizan el impacto en alcance, tiempo, costo, calidad y riesgos. Si el cambio afecta recetas o dosis, también se requiere una revisión agronómica.
+3. **Decisión.** Juan Daniel Ulate, como Product Owner, decide si aprueba, difiere o rechaza el cambio, considerando la evaluación del equipo. La decisión se documenta con su justificación.
+4. **Registro y comunicación.** El equipo actualiza el registro y comunica la decisión a las personas interesadas. Cuando corresponda, también se actualizan Jira, el Product Backlog y el Release Plan para reflejar el cambio y mantener la información del proyecto al día.
+
+#### 11.4.3. Solicitud CR-01
+
+| Campo | Detalle |
+| --- | --- |
+| ID | CR-01 |
+| Fecha | 22 de noviembre de 2026 |
+| Solicitante | Profesional en agronomía. |
+| Descripción | Incorporar PB-18, «Administrar recetas y dosis desde la aplicación», en la versión 1.0. Esta funcionalidad ya se encuentra identificada en el Product Backlog, pero actualmente está fuera del alcance de la primera versión. |
+| Sprint de implementación | No se incorpora a los Sprints 1 al 5. Su planificación queda para la versión 2, cuyo Sprint todavía no está definido. |
+| Impacto en alcance | PB-18 tiene una estimación de 5 puntos de historia, según la sección 06. Su incorporación aumentaría el alcance planificado de 92 a 97 puntos si no se elimina o sustituye otra historia. |
+| Impacto en tiempo | Incorporar esta funcionalidad requeriría reorganizar el trabajo de los Sprints restantes y podría comprometer la entrega prevista para el 7 de diciembre de 2026. |
+| Impacto en costo | Si fuera necesario realizar un Sprint adicional, su costo de referencia sería de ₡3.520.000, monto superior a la reserva de contingencia disponible de ₡1.796.000. Por lo tanto, cualquier ampliación del cronograma y del presupuesto tendría que evaluarse y aprobarse previamente. |
+| Impacto en calidad | La administración de recetas y dosis requiere controles de acceso, validación agronómica y pruebas que garanticen que solamente se utilice información revisada y autorizada. |
+| Impacto en riesgos | Permitir la modificación de recetas y dosis sin las validaciones correspondientes podría generar información incorrecta y afectar los resultados de los cálculos de BioApp. Por esta razón, se deben establecer controles para prevenir errores en la información utilizada. |
+| Decisión | Diferida para la versión 2, de acuerdo con la decisión D07 del Product Owner, que estableció que PB-18 quedaría fuera del alcance de la versión 1.0. |
+| Justificación | Se mantiene PB-18 fuera de la primera versión para priorizar las funcionalidades esenciales de BioApp, evitar trabajo adicional que pueda afectar el cronograma y mantener el presupuesto previsto. Además, desarrollar esta funcionalidad en una segunda versión permitirá planificar adecuadamente los controles de acceso, las validaciones agronómicas y las pruebas necesarias para garantizar la calidad de la información. |
+| Responsable | Juan Daniel Ulate, Product Owner, encargado de mantener PB-18 en el Product Backlog y revisar su prioridad para la versión 2. |
+
+**Referencia:** La solicitud CR-01 se relaciona con la decisión D07 del Registro de Decisiones (sección 11.2), la historia PB-18 del Product Backlog (secciones 05.1 y 06.1) y el cronograma y presupuesto del proyecto (secciones 07.2 y 07.3).
 
 ## 12. Producto / Incremento final y cierre del proyecto
 
