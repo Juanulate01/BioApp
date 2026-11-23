@@ -44,6 +44,7 @@
   - [05.4. Integración de los acuerdos del Sprint 1 en el Sprint Backlog 2](#054-integración-de-los-acuerdos-del-sprint-1-en-el-sprint-backlog-2)
 - [06. Alcance, Product Backlog priorizado y criterios de aceptación](#06-alcance-product-backlog-priorizado-y-criterios-de-aceptación)
   - [06.1. Historias de usuario y criterios de aceptación](#061-historias-de-usuario-y-criterios-de-aceptación)
+  - [06.2. Reglas de cálculo y casos de prueba](#062-reglas-de-cálculo-y-casos-de-prueba)
 - [07. Planificación temporal, estimaciones y costos](#07-planificación-temporal-estimaciones-y-costos)
   - [07.1. Matriz de Estimación](#071-matriz-de-estimación)
   - [07.2. Cronograma de Entregas (Release Plan)](#072-cronograma-de-entregas-release-plan)
@@ -610,7 +611,7 @@ Como persona agricultora, quiero contar con una navegación clara entre las pant
 **Sprint previsto:** 1  
 **Dependencias:** PB-01
 
-**Notas adicionales:** Depende de PB-01. El prototipo permite revisar la navegación y la presentación de información antes de implementar las funcionalidades.
+**Notas adicionales:** Depende de PB-01. El prototipo permite revisar la navegación y la presentación de información antes de implementar las funcionalidades. La evidencia del Sprint 1 y el estado de la referencia al artefacto se registran en la [sección 11.3](#113-evidencias).
 
 ---
 
@@ -811,7 +812,7 @@ Como persona agricultora, quiero calcular la cantidad de bioinsumos necesarios s
 **Sprint previsto:** 3  
 **Dependencias:** PB-04, PB-05, PB-15
 
-**Notas adicionales:** Los casos de referencia para validar los cálculos deben quedar definidos y automatizados como pruebas durante el Sprint.
+**Notas adicionales:** Los casos de referencia de la [sección 06.2](#062-reglas-de-cálculo-y-casos-de-prueba) deben automatizarse como pruebas durante el Sprint.
 
 ---
 
@@ -1009,6 +1010,46 @@ Como Product Owner, quiero crear y actualizar recetas y dosis validadas desde Bi
 
 **Notas adicionales:** Conviene definir cuáles cuentas estarán autorizadas para administrar esta información.
 
+### 06.2. Reglas de cálculo y casos de prueba
+
+#### Área y volumen de mezcla (PB-06)
+
+BioApp convierte el área a metros cuadrados usando las equivalencias de PB-04. Se multiplica el valor por 10 000 si está en hectáreas o por 6 987 si está en manzanas. Para convertir desde metros cuadrados a hectáreas o manzanas, se divide por el factor correspondiente.
+
+El volumen total de mezcla se calcula multiplicando el área por el volumen de aplicación del equipo, con la misma unidad de área en ambos datos. Si la tasa está en L/ha, se usa **volumen de mezcla (L) = área (m²) ÷ 10 000 × tasa (L/ha)**. Para una tasa en L/manzana se divide entre 6 987 y para una tasa en L/m² se multiplica directamente por el área en m².
+
+BioApp usa únicamente la dosis aprobada por profesionales en agronomía para el bioinsumo, el cultivo y la etapa seleccionados (PB-15). Si la dosis está en mL/L o g/L de mezcla final, **cantidad total de bioinsumo = dosis × volumen total de mezcla (L)**. Si la dosis está en mL/ha o g/ha, **cantidad total de bioinsumo = dosis × área (ha)**. El resultado se expresa en mL o g, según corresponda. La unidad y la base de la dosis deben coincidir con el registro validado.
+
+#### Distribución por tanque (PB-07)
+
+1. Se convierte la capacidad útil del tanque a litros. Los tanques completos se obtienen tomando la parte entera de **volumen total ÷ capacidad**.
+2. El volumen restante es **volumen total − (tanques completos × capacidad)**. Se muestra un tanque parcial cuando el resto es mayor que cero. Si el volumen total es menor que la capacidad, se muestra únicamente el tanque parcial.
+3. La cantidad de bioinsumo por tanque se calcula como **cantidad total de bioinsumo × (volumen de mezcla del tanque ÷ volumen total de mezcla)**. Para un tanque completo se usa la capacidad útil y para el parcial se usa el volumen restante.
+4. La cantidad de agua sigue la indicación técnica de preparación. Para un líquido cuya instrucción permita restar su volumen de la mezcla final, **agua (L) = mezcla del tanque (L) − bioinsumo del tanque (mL) ÷ 1 000**. Para un producto en gramos se sigue la instrucción validada de preparación. Si esta indica completar hasta el volumen objetivo, se muestra ese volumen final y la instrucción de completar con agua, sin convertir gramos a litros. Cuando la instrucción establezca un volumen de agua medible, se muestra el valor correspondiente a cada tanque.
+
+Se conservan los valores sin redondear durante el cálculo y se aplica el redondeo al presentar el resultado. PB-07 establece mililitros o gramos enteros para el bioinsumo y litros con un decimal para el agua. Se usa el valor más cercano, con los empates hacia arriba. El redondeo de presentación puede introducir hasta 0,5 mL o g en el bioinsumo y hasta 0,05 L en el agua por tanque. Los volúmenes de mezcla por tanque se concilian con el total antes del redondeo. El resultado identifica el área, el volumen de aplicación, la capacidad y la dosis utilizados.
+
+#### Validaciones previas (PB-14)
+
+- Comprobar que se hayan seleccionado el terreno, el cultivo, la etapa, el equipo y el bioinsumo, y que estén disponibles el área, el volumen de aplicación y la capacidad del tanque con sus unidades.
+- Rechazar valores no numéricos, no finitos, iguales o inferiores a cero, o fuera de los rangos aplicables. Identificar el campo que debe corregirse y bloquear el cálculo.
+- Comprobar que las unidades y bases de cálculo sean compatibles con el área, el equipo y la dosis. Si la dosis o las indicaciones de preparación son incompatibles con los datos seleccionados, indicar el dato que debe revisarse y bloquear el cálculo.
+- Si falta una dosis validada para la combinación seleccionada, informar que el cálculo queda bloqueado e indicar que se consulte a un profesional en agronomía.
+
+#### Casos de prueba y resultados esperados
+
+Los casos verifican las operaciones y la respuesta del sistema. En los casos con bioinsumo líquido se utiliza una entrada de prueba cuya instrucción permite restar el volumen del bioinsumo.
+
+| Caso | Entradas | Resultado esperado |
+| --- | --- | --- |
+| Conversión de área | 1 manzana, 6 987 m² o 0,6987 ha. Tasa de 100 L/ha. | Las tres entradas producen 69,87 L de mezcla. |
+| División exacta | 0,4 ha, 100 L/ha, tanque de 20 L, dosis de 5 mL/L. | 40 L de mezcla y 200 mL en total. Dos tanques completos, cada uno con 100 mL y 19,9 L de agua. |
+| Tanque parcial y redondeo | 2 525 m², 100 L/ha, tanque de 20 L, dosis de 3 mL/L. | 25,25 L de mezcla y 75,75 mL en total antes del redondeo. Tanque completo con 60 mL y 19,9 L de agua. Tanque parcial de 5,25 L con 16 mL y 5,2 L de agua. |
+| Producto en gramos y tanque parcial único | 0,1 ha, 100 L/ha, tanque de 20 L, dosis de 200 g/ha e instrucción de completar hasta el volumen final. | 10 L de mezcla y 20 g. Cero tanques completos y un tanque parcial. Completar con agua hasta 10,0 L de mezcla. |
+| Campo faltante o valor inválido | Sin etapa de cultivo, o capacidad de 0 L. | Se identifica el campo correspondiente y se bloquea el cálculo. |
+| Unidad incompatible | Volumen de aplicación en kg/ha. | Se solicita una unidad de volumen por área y se bloquea el cálculo. |
+| Dosis no disponible | Combinación de bioinsumo, cultivo y etapa sin dosis validada. | Se informa que falta la dosis validada y se indica consultar a un profesional en agronomía. |
+
 ## 07. Planificación temporal, estimaciones y costos
 
 En esta sección se estima el Product Backlog en puntos de historia y, a partir de la velocidad del equipo, se proyecta cuántos Sprints se necesitan, qué Incremento se entrega en cada uno y cuánto cuesta el release.
@@ -1097,7 +1138,7 @@ Ningún elemento supera los 8 puntos, por lo que ninguno debe dividirse de forma
 | Developer 2 y Developer 3 están confirmados. | La capacidad prevista se mantiene, aunque la velocidad observada sigue por debajo del rango estimado. | Revisar la dedicación real de cada Developer en cada Sprint Planning y ajustar el alcance con el Product Owner si la capacidad cambia. |
 | La tabla de dosis validadas debe entregarse el 28 de octubre (PB-15). | Su atraso bloquea PB-06, PB-07 y PB-14. | Dar seguimiento con la persona especialista en agronomía; las recetas revisadas ya se recibieron el 21 de octubre. |
 | Las estimaciones suponen tecnologías conocidas por el equipo. | Una tecnología nueva reduce la velocidad por la curva de aprendizaje. | Reestimar al cerrar el Sprint 2 con la velocidad real. |
-| Al cierre del Sprint 3 quedan 52 puntos pendientes, mientras que los Sprints 4 y 5 contemplan 42 puntos en conjunto. | Existe una diferencia de 10 puntos respecto a la planificación y la velocidad observada es inferior a la estimada inicialmente. | Revisar las historias pendientes, priorizar las funcionalidades Must y evaluar ajustes al alcance y a la distribución del trabajo de los últimos Sprints. | El último Sprint solo se cumple con la velocidad máxima. | Dividir PB-16 y adelantar la preparación del entorno al Sprint 4. |
+| Al cierre del Sprint 3 quedan 52 puntos pendientes, mientras que los Sprints 4 y 5 contemplan 42 puntos en conjunto. | Existe una diferencia de 10 puntos respecto a la planificación y la velocidad observada es inferior a la estimada inicialmente. | Revisar las historias pendientes, priorizar las funcionalidades Must y evaluar ajustes al alcance y a la distribución del trabajo de los últimos Sprints. Para reducir la carga del cierre, PB-16 se divide y se adelanta la preparación del entorno al Sprint 4. |
 | PB-06 y PB-14 comparten criterios de aceptación (datos faltantes y combinaciones sin dosis validada). | Parte del esfuerzo de PB-14 podría estar contado dos veces. | Revisar los criterios en el refinamiento y reestimar PB-14. |
 
 
@@ -1265,7 +1306,7 @@ Se establecen dos reservas para proteger el cumplimiento del cronograma y atende
 | Reserva de gestión (5 %) | ₡898 000 |
 | **Presupuesto total del release** | **₡20 654 000** |
 
-La **reserva de contingencia** cubre riesgos identificados, mientras que la **reserva de gestión** se destina a necesidades imprevistas que requieran aprobación. El seguimiento del trabajo ordinario utiliza como referencia los **₡17 960 000 planificados**; cualquier uso de las reservas se registra y justifica por separado.
+La **reserva de contingencia** cubre riesgos identificados, mientras que la **reserva de gestión** se destina a necesidades imprevistas que requieran aprobación. El **presupuesto total de ₡20 654 000** incluye ambas reservas. El seguimiento del trabajo ordinario compara los **₡17 960 000 planificados** para los cinco Sprints con los costos registrados al cierre de cada Sprint. Cualquier uso de las reservas se registra y justifica por separado.
 
 Al dividir el costo planificado entre los **92 puntos de historia** se obtiene un promedio de **₡195 217,39 por punto** (₡17 960 000 ÷ 92). Este valor ayuda a relacionar el presupuesto con el tamaño del backlog, pero no implica que cada historia tenga un costo fijo: el gasto del equipo depende principalmente de la duración de los Sprints.
 
@@ -1282,7 +1323,7 @@ El avance se representará mediante un **burndown del release**. Solo se descont
 
 El Release Plan distribuye **8 puntos en el Sprint 1** y **21 puntos en cada uno de los Sprints 2 a 5**. La siguiente tabla presenta los valores planificados y permite registrar los resultados reales al cierre de cada Sprint, facilitando la comparación entre el avance esperado, el trabajo completado y los costos del proyecto.
 
-| Momento | Puntos pendientes planificados | Puntos completados planificados (acumulados) | Puntos pendientes reales | Velocidad real del Sprint | Costo planificado acumulado | Costo real acumulado |
+| Momento | Puntos pendientes planificados | Puntos completados planificados (acumulados) | Puntos pendientes reales | Velocidad real del Sprint | Costo planificado acumulado | Costo acumulado registrado (AC) |
 | --- | ---: | ---: | --- | --- | ---: | --- |
 | Inicio | 92 | 0 | 92 | — | ₡0 | ₡0 |
 | Cierre del Sprint 1 (13/oct) | 84 | 8 | 84 | No aplica | ₡3 640 000 | ₡3 640 000 |
@@ -1295,7 +1336,7 @@ El Release Plan distribuye **8 puntos en el Sprint 1** y **21 puntos en cada uno
 
 Al cierre del Sprint 3 se completaron PB-04, PB-05 y PB-15, sumando otros 16 puntos. La historia PB-06 quedó pendiente de finalizar las pruebas de cálculo. De esta manera, el proyecto alcanzó 40 puntos completados y 52 pendientes.
 
-Los costos acumulados registrados fueron de ₡7 160 000 y ₡10 680 000, respectivamente.
+El seguimiento consigna **₡3 640 000**, **₡7 160 000** y **₡10 680 000** como costos acumulados en los tres primeros cierres. Los importes coinciden con los previstos para esos cortes y quedan pendientes de conciliación con las horas efectivas y los soportes de los servicios y la infraestructura. La columna de AC recoge los importes asentados en el seguimiento. La conciliación determina el costo real confirmado de cada corte.
 
 El Sprint 1 corresponde a las actividades de organización y diseño, por lo que sus puntos completados se registran como avance del proyecto, pero no se utilizan para calcular la velocidad de desarrollo. La velocidad de desarrollo comenzó a medirse al finalizar el Sprint 2, el 27 de octubre.
 
@@ -1307,26 +1348,17 @@ La distribución de los puntos pendientes se basa en el Release Plan de la secci
 
 Para relacionar el avance del backlog con el presupuesto, el equipo revisará los siguientes datos en cada Sprint Review:
 
-- **PV (valor planificado en puntos):** puntos que deberían estar terminados de forma acumulada según el Release Plan.
-- **EV (valor ganado en puntos):** puntos realmente terminados de forma acumulada y que cumplen la DoD.
-- **AC (costo real acumulado):** monto en colones utilizado hasta el cierre del Sprint.
-- **SPI = EV ÷ PV:** indicador de cumplimiento del cronograma. Un valor **menor que 1** significa que el avance está por debajo del plan; un valor **igual a 1** indica que se han terminado los puntos previstos.
-- **CPI = valor monetario del avance ÷ AC:** indicador de rendimiento del costo. Un valor **menor que 1** indica que se está utilizando más presupuesto del que corresponde al avance conseguido.
+- **SPI = puntos completados acumulados ÷ puntos planificados acumulados.** Mide el avance frente al cronograma y se calcula cuando hay puntos planificados en el corte.
+- **Valor ganado estimado (EV) = costo planificado acumulado × SPI.** Expresa en colones el avance del corte. El método asigna a los puntos completados la misma proporción de costo que representan respecto a los puntos planificados en ese corte.
+- **CPI = EV estimado ÷ AC.** Compara el valor ganado estimado con el costo acumulado del mismo corte. Se calcula cuando el AC es mayor que cero. Un CPI inferior a 1 indica que el valor ganado estimado es menor que el costo utilizado en el cálculo.
 
-Para obtener el **valor monetario del avance**, se toma el costo planificado acumulado de ese Sprint y se multiplica por la proporción de puntos realmente completados:
+**Indicadores al cierre del Sprint 3**
 
-**Valor monetario del avance = costo planificado acumulado × (EV ÷ PV)**
+- **SPI = 40 ÷ 50 = 0,80.** Se completó el 80 % de los puntos previstos al corte.
+- **EV estimado = ₡10 680 000 × 0,80 = ₡8 544 000.**
+- **CPI preliminar = ₡8 544 000 ÷ ₡10 680 000 = 0,80.** Con el costo acumulado registrado, se estiman ₡0,80 de valor ganado por cada colón registrado. El CPI se actualiza al conciliar el AC del corte.
 
-Esta relación permite comparar las dos magnitudes en colones. Los índices SPI y CPI se calculan a partir del primer cierre con PV mayor que cero y AC registrado.
-
-
-**Indicadores al cierre del Sprint 3:** Se planificaron 50 puntos acumulados y un costo de ₡10 680 000. Al cierre se registraron 40 puntos completados y un costo acumulado de ₡10 680 000.
-
-- **SPI = 40 ÷ 50 = 0,80.** Se completó el 80 % del avance previsto.
-- **Valor monetario del avance = ₡10 680 000 × (40 ÷ 50) = ₡8 544 000.**
-- **CPI = ₡8 544 000 ÷ ₡10 680 000 = 0,80.** El equipo utilizó el presupuesto previsto, pero completó menos trabajo del programado.
-
-Estos resultados muestran un atraso respecto a la planificación, por lo que será necesario revisar las actividades pendientes y ajustar el trabajo del Sprint 4.
+El atraso de 10 puntos requiere revisar las actividades pendientes y ajustar la planificación del Sprint 4.
 
 
 #### Medidas ante diferencias con el plan
@@ -1839,6 +1871,7 @@ Se construyeron a partir de lo que el equipo descubrió en la Sprint Review y la
 | 19 de noviembre de 2026 | 0.22 | Juan Daniel Ulate | 03.1; 05.2; 05.4; 07.4; 09.1; 11 a 13; índice | Integración de las actas de Sprint Review y Sprint Retrospective del Sprint 1: interesados críticos, tabla del Sprint Backlog 1, acciones MEJ-01 a MEJ-03 en el Sprint Backlog 2, referencias al avance y la DoD, decisiones D10 a D13 y evidencias. Se corrigen los encabezados 11 y 12 y se documenta la Parte 2. |
 | 22 de noviembre de 2026 | 0.23 | Krisley Castro | Índice; 11.1; 11.4.1 a 11.4.3 | Incorporación del Registro de Solicitudes de Cambio de la Semana 10, con su propósito, el procedimiento de gestión y el análisis de impacto de CR-01, cuya propuesta es diferir PB-18 para la versión 2. |
 | 22 de noviembre de 2026 | 0.24 | Kristel Ramírez | Índice; 10.5. Working Agreements del equipo; 11.1 | Working Agreements del equipo (WA-01 a WA-10), con meta medible y revisión en cada Sprint Retrospective. |
+| 23 de noviembre de 2026 | 0.25 | Krisley Castro | Índice; 06; 07.1, 07.3 y 07.4; 11; 13.1 | Se corrige la estructura de una fila de la matriz y se detallan las reglas y los casos de prueba de la calculadora, se aclaran los costos registrados y el CPI, se precisa la trazabilidad de CR-01 y se vincula el respaldo documental de PB-02. |
 
 ### 11.2. Registro de decisiones
 
@@ -1852,7 +1885,7 @@ Este registro reúne las decisiones más importantes que el equipo ha tomado dur
 | D04 | 23 de octubre de 2026 | Fijar una **velocidad inicial de 21 puntos por Sprint**, con un rango de 18 a 24 puntos. | Corresponde a la capacidad calculada del equipo para los Sprints de desarrollo y se actualizará con la velocidad real. | Scrum Team | 07.1. Matriz de Estimación |
 | D05 | 26 de octubre de 2026 | **Dividir PB-16** (publicación) entre los Sprints 4 y 5 (PB-16-A y PB-16-B). | Equilibrar la carga de los últimos Sprints con la velocidad de 21 puntos. | Product Owner | 07.2. Cronograma de Entregas |
 | D06 | 26 de octubre de 2026 | Si la velocidad disminuye, **reducir o reordenar el alcance antes de extender el proyecto**, manteniendo la fecha de entrega del 7 de diciembre. | Un Sprint adicional (₡3 520 000) supera la reserva de contingencia (₡1 796 000). | Product Owner | 07.3. Costo estimado del release |
-| D07 | 4 de noviembre de 2026 | Dejar **PB-17 (recuperar contraseña) y PB-18 (administrar recetas y dosis)** fuera de los Sprints planificados: PB-17 solo si hay capacidad y PB-18 para una segunda versión. | Concentrar la capacidad del equipo en las funcionalidades esenciales. | Product Owner | 05.2. Tablero de trabajo; 06 |
+| D07 | 4 de noviembre de 2026 | Dejar **PB-17 (recuperar contraseña) y PB-18 (administrar recetas y dosis)** fuera de los Sprints planificados: PB-17 solo si hay capacidad y PB-18 para una segunda versión. | Concentrar la capacidad del equipo en las funcionalidades esenciales. | Product Owner | 05.2. Tablero de trabajo; 06.1; antecedente de CR-01 en 11.4.3 |
 | D08 | 4 de noviembre de 2026 | Gestionar el trabajo en un **tablero de Jira con límites WIP** y una regla clara para pasar a Terminado. | Hacer visible el avance y evitar acumular trabajo sin terminar. | Scrum Master y Scrum Team | 05.2. Tablero de trabajo |
 | D09 | 11 de noviembre de 2026 | Organizar el documento según la **estructura oficial del Expediente del Proyecto** (secciones 00 a 12). | Atender la retroalimentación del docente y facilitar la revisión de cada sección. | Scrum Team | Todo el documento |
 | D10 | 13 de octubre de 2026 | Mantener las prioridades del Sprint 2 y la dependencia de PB-13 antes de PB-03, sin incorporar funcionalidades nuevas. | La Review confirmó el objetivo del Sprint 1 y la necesidad de conservar las dependencias del catálogo. | Product Owner y Scrum Team, según 13.1.4 | 05.1; 05.4; 13.1.4 |
@@ -1877,7 +1910,7 @@ Las siguientes evidencias respaldan el trabajo documentado en el Expediente:
 | Retroalimentación del docente | Observaciones recibidas en las revisiones del Expediente y cambios realizados para atenderlas. | Historial de cambios (versiones 0.5, 0.16 y siguientes) | 11.1. Historial de cambios |
 | Acta de Sprint Review del Sprint 1 | Objetivo, PB-01 y PB-02 terminados, cumplimiento de la DoD, retroalimentación y acuerdos del backlog. | [Sección 13.1](#131-acta-de-sprint-review--sprint-1); commit `37f668b` | 05.2; 07.4; 13.1 |
 | Acta de Sprint Retrospective del Sprint 1 | Análisis Start/Stop/Continue y acciones MEJ-01 a MEJ-03 con dueño, fecha y verificación. | [Sección 13.2](#132-acta-de-sprint-retrospective--sprint-1); commit `77741a7` | 05.4; 13.2 |
-| Revisión del prototipo de navegación | El acta describe las pantallas y las observaciones sobre navegación, campos y unidades. La referencia al archivo o enlace del prototipo queda pendiente de incorporar; el acta no sustituye ese artefacto. | Secciones 13.1.2 y 13.1.3 | PB-02; 05.2 |
+| Revisión del prototipo de navegación | La captura de Jira registra la planificación de PB-02. El acta documenta la revisión y las observaciones sobre navegación, campos y unidades. Queda pendiente incorporar la referencia al artefacto revisado. | [Captura del Sprint 1](img/Sprint1.png) y [acta de Sprint Review](#131-acta-de-sprint-review--sprint-1) | PB-02; 05.2; 06.1; 13.1 |
 | Integración de los acuerdos del Sprint 1 | Relación entre las actas, el backlog, el seguimiento del release y los registros del expediente. | Secciones 05.4 y 13.3; historial versión 0.22 | 05; 07.4; 09.1; 11 |
 
 ### 11.4. Registro de Solicitudes de Cambio
@@ -1901,17 +1934,18 @@ El control de cambios permite que el equipo de BioApp evalúe cada solicitud ant
 | Fecha | 22 de noviembre de 2026 |
 | Solicitante | Profesional en agronomía. |
 | Descripción | Incorporar PB-18, «Administrar recetas y dosis desde la aplicación», en la versión 1.0. Esta funcionalidad ya se encuentra identificada en el Product Backlog, pero actualmente está fuera del alcance de la primera versión. |
-| Sprint de implementación | No se incorpora a los Sprints 1 al 5. Su planificación queda para la versión 2, cuyo Sprint todavía no está definido. |
+| Planificación vigente de PB-18 | Fuera del alcance de la versión 1.0 y de los Sprints 1 a 5, según D07. Se mantiene en el backlog para una segunda versión, sin Sprint asignado. |
 | Impacto en alcance | PB-18 tiene una estimación de 5 puntos de historia, según la sección 06. Su incorporación aumentaría el alcance planificado de 92 a 97 puntos si no se elimina o sustituye otra historia. |
 | Impacto en tiempo | Incorporar esta funcionalidad requeriría reorganizar el trabajo de los Sprints restantes y podría comprometer la entrega prevista para el 7 de diciembre de 2026. |
 | Impacto en costo | Si fuera necesario realizar un Sprint adicional, su costo de referencia sería de ₡3.520.000, monto superior a la reserva de contingencia disponible de ₡1.796.000. Por lo tanto, cualquier ampliación del cronograma y del presupuesto tendría que evaluarse y aprobarse previamente. |
 | Impacto en calidad | La administración de recetas y dosis requiere controles de acceso, validación agronómica y pruebas que garanticen que solamente se utilice información revisada y autorizada. |
 | Impacto en riesgos | Permitir la modificación de recetas y dosis sin las validaciones correspondientes podría generar información incorrecta y afectar los resultados de los cálculos de BioApp. Por esta razón, se deben establecer controles para prevenir errores en la información utilizada. |
-| Decisión | Diferida para la versión 2, de acuerdo con la decisión D07 del Product Owner, que estableció que PB-18 quedaría fuera del alcance de la versión 1.0. |
+| Recomendación del análisis | Mantener PB-18 para una segunda versión, conforme a la priorización vigente. |
+| Decisión formal sobre CR-01 | Pendiente de registro por el Product Owner. El alcance vigente de la versión 1.0 se mantiene conforme a D07. |
 | Justificación | Se mantiene PB-18 fuera de la primera versión para priorizar las funcionalidades esenciales de BioApp, evitar trabajo adicional que pueda afectar el cronograma y mantener el presupuesto previsto. Además, desarrollar esta funcionalidad en una segunda versión permitirá planificar adecuadamente los controles de acceso, las validaciones agronómicas y las pruebas necesarias para garantizar la calidad de la información. |
 | Responsable | Juan Daniel Ulate, Product Owner, encargado de mantener PB-18 en el Product Backlog y revisar su prioridad para la versión 2. |
 
-**Referencia:** La solicitud CR-01 se relaciona con la decisión D07 del Registro de Decisiones (sección 11.2), la historia PB-18 del Product Backlog (secciones 05.1 y 06.1) y el cronograma y presupuesto del proyecto (secciones 07.2 y 07.3).
+D07, registrada el 4 de noviembre de 2026, estableció la priorización de PB-18. CR-01, ingresada el 22 de noviembre, solicita reconsiderar esa priorización para la versión 1.0. El análisis de CR-01 toma como referencia el alcance del Product Backlog (05.1 y 06.1), el Release Plan (07.2) y el presupuesto (07.3).
 
 ## 12. Producto / Incremento final y cierre del proyecto
 
@@ -1950,14 +1984,14 @@ Estos avances permitieron establecer una base para comenzar el desarrollo de las
 | Historia | Puntos | Estado | Cumplimiento de la DoD |
 |---|---:|---|---|
 | PB-01 — Definir requisitos y organizar el proyecto | 3 | Terminada | Cumple |
-| PB-02 — Diseñar y validar el prototipo | 5 | Terminada | Cumple |
+| PB-02 — Diseñar y validar el prototipo | 5 | Terminada según el acta | Cumplimiento registrado en la Review. Referencia al artefacto pendiente en 11.3. |
 | **Total** | **8** | | |
 
 Durante la Sprint Review se presentó la documentación inicial del proyecto, incluyendo los objetivos, el alcance, los roles del equipo y la organización del Product Backlog.
 
 También se revisó el prototipo de navegación, que contempla las pantallas principales de BioApp, como el registro de usuarios, el catálogo de recetas, los terrenos, los equipos de atomización y la calculadora.
 
-Ambas historias cumplieron sus criterios de aceptación y la Definición de Terminado, por lo que se consideraron finalizadas.
+El acta registra el cierre de ambas historias. Las observaciones de la revisión de PB-02 se detallan en 13.1.3 y su respaldo documental se recoge en la [sección 11.3](#113-evidencias).
 
 **Resultado del Sprint:** Se completaron los 8 puntos planificados.
 
@@ -1994,7 +2028,7 @@ Al finalizar el Sprint 1, el proyecto presentó los siguientes resultados:
 | Puntos completados acumulados | 8 |
 | Puntos pendientes | 84 |
 | Costo planificado acumulado | ₡3 640 000 |
-| Costo registrado acumulado | ₡3 640 000 |
+| Costo acumulado registrado, pendiente de conciliación (07.4) | ₡3 640 000 |
 
 El Sprint 1 finalizó con los puntos previstos completados y permitió continuar con la planificación del Sprint 2.
 
