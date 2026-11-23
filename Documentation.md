@@ -72,6 +72,9 @@
   - [10.4. Plan de comunicaciones](#104-plan-de-comunicaciones)
     - [10.4.1. Reglas de comunicación del equipo](#1041-reglas-de-comunicación-del-equipo)
     - [10.4.2. Escalamiento de impedimentos y conflictos](#1042-escalamiento-de-impedimentos-y-conflictos)
+  - [10.5. Working Agreements del equipo](#105-working-agreements-del-equipo)
+    - [10.5.1. Acuerdos](#1051-acuerdos)
+    - [10.5.2. Revisión de los acuerdos](#1052-revisión-de-los-acuerdos)
 - [11. Decisiones, cambios y evidencias](#11-decisiones-cambios-y-evidencias)
   - [11.1. Historial de cambios](#111-historial-de-cambios)
   - [11.2. Registro de decisiones](#112-registro-de-decisiones)
@@ -1775,6 +1778,36 @@ Si el problema afecta las prioridades o el alcance de BioApp, se consultará con
 En caso de desacuerdos dentro del equipo, se buscará llegar a una solución mediante el diálogo. Si no se logra un acuerdo, la Scrum Master ayudará a facilitar la conversación y encontrar una alternativa que permita continuar con el trabajo.
 
 
+### 10.5. Working Agreements del equipo
+
+Los Working Agreements son los acuerdos que el Scrum Team de BioApp se compromete a cumplir en su forma de trabajar. Complementan la organización de los eventos de la sección 10.2 y las reglas de comunicación de la sección 10.4: mientras esas secciones describen **qué** reuniones y canales existen, estos acuerdos definen **cómo** se comporta el equipo y **cómo se comprueba** que lo está haciendo.
+
+Se construyeron a partir de lo que el equipo descubrió en la Sprint Review y la Sprint Retrospective del Sprint 1 (secciones 13.1 y 13.2): el trabajo de documentación que no se veía en el tablero (MEJ-01), las dependencias externas sin confirmar (MEJ-02) y el contenido que se publicó sin revisión (MEJ-03). Cada acuerdo está redactado en positivo, tiene una meta que se puede medir y una evidencia concreta para verificarlo.
+
+#### 10.5.1. Acuerdos
+
+| ID | Área | Acuerdo | Meta medible | Cómo se verifica |
+|---|---|---|---|---|
+| WA-01 | Comunicación | Respondemos los mensajes del equipo en máximo 24 horas hábiles; si necesitamos más tiempo, avisamos cuándo responderemos. | ≥ 90 % de los mensajes respondidos en 24 horas hábiles. | Revisión del canal en el seguimiento semanal. |
+| WA-02 | Comunicación | Comunicamos los bloqueos el mismo día en que aparecen y los marcamos en Jira. | 100 % de bloqueos marcados el mismo día; ninguno se conoce por primera vez en la Review. | Tarjetas marcadas como impedimento en Jira. |
+| WA-03 | Reuniones | Empezamos y terminamos a tiempo, respetando la duración máxima de cada evento (sección 04.4). | ≥ 90 % de los eventos inicia con ≤ 5 min de atraso y termina a tiempo. | Hora de inicio y fin anotada en el acta. |
+| WA-04 | Reuniones | Llegamos preparados: agenda compartida 24 horas antes y Jira actualizado antes del Daily. Las ausencias se avisan con 24 horas de anticipación. | 100 % de agendas publicadas a tiempo; asistencia ≥ 90 % por Sprint. | Agenda en el canal y lista de participantes del acta. |
+| WA-05 | Transparencia | Todo trabajo se registra en Jira con responsable antes de empezarlo y respetando los límites WIP (formaliza MEJ-01). | 100 % de tarjetas "En curso" con responsable; 0 excesos de WIP. | Revisión del tablero en el seguimiento semanal. |
+| WA-06 | Calidad | Una tarjeta pasa a "Terminado" solo si cumple la DoD (sección 09.1) y tiene evidencia de pruebas. | 0 tarjetas devueltas desde "Terminado". | Revisión de las tarjetas en la Sprint Review. |
+| WA-07 | Calidad | Otra persona revisa cada cambio antes de subirlo al repositorio, y el cambio se registra en el historial (formaliza MEJ-03). | 100 % de cambios con revisor; 0 commits de "corrección de contenido". | Historial de commits y sección 11.1. |
+| WA-08 | Toma de decisiones | Los Developers deciden lo técnico por consenso (o por mayoría si no lo hay); el Product Owner decide requisitos, prioridades y alcance. | 100 % de decisiones relevantes registradas en ≤ 2 días hábiles. | Registro de decisiones (sección 11.2). |
+| WA-09 | Toma de decisiones | Todo cambio de alcance pasa por una solicitud de cambio (sección 11.4), y los acuerdos con externos se confirman por escrito. | 0 cambios sin CR registrada; 100 % de entregas externas confirmadas por escrito. | Registro de solicitudes de cambio y mensajes guardados. |
+| WA-10 | Manejo de desacuerdos | Discutimos ideas, no personas, y argumentamos con datos. Si en 2 días hábiles no hay acuerdo, facilita la Scrum Master; una vez decidido, todos apoyamos la decisión. | 100 % de desacuerdos escalados con decisión en ≤ 3 días hábiles. | Registro de impedimentos y de decisiones. |
+
+#### 10.5.2. Revisión de los acuerdos
+
+- **Aprobación:** los acuerdos se presentan al Scrum Team en la Sprint Retrospective del Sprint 4 (24 de noviembre de 2026) y rigen desde la Sprint Planning del Sprint 5 (25 de noviembre de 2026). Se aprueban por consenso de los cinco integrantes.
+- **Revisión ordinaria:** se revisan en **cada Sprint Retrospective**, durante los primeros 10 minutos. La Scrum Master presenta el resultado de cada acuerdo frente a su meta como *Cumple*, *Cumple parcialmente* o *No cumple*, con la evidencia indicada en la tabla. La próxima revisión ordinaria será en la Sprint Retrospective del Sprint 5 (7 de diciembre de 2026).
+- **Punto de control intermedio:** en el seguimiento semanal de cada miércoles se revisan los indicadores de WA-01, WA-02, WA-05 y WA-08, para corregir a tiempo sin esperar al cierre del Sprint. En el Sprint 5, el punto de control será el 2 de diciembre de 2026.
+- **Revisión extraordinaria:** se revisan antes de la siguiente retrospectiva si un acuerdo no se cumple dos veces seguidas, si se incorpora una nueva persona al equipo (por ejemplo, QA) o si cualquier integrante lo solicita.
+- **Cambios:** si un acuerdo no funciona, el equipo lo ajusta, lo reemplaza o lo elimina por consenso durante la retrospectiva. El cambio se registra en el historial de cambios (sección 11.1) y, si es una decisión relevante, en el registro de decisiones (sección 11.2).
+- **Responsable del seguimiento:** Kristel Ramírez, Scrum Master, recopila las evidencias y facilita la revisión. Cada integrante es responsable de cumplir los acuerdos.
+
 ## 11. Decisiones, cambios y evidencias
 
 ### 11.1. Historial de cambios
@@ -1805,6 +1838,7 @@ En caso de desacuerdos dentro del equipo, se buscará llegar a una solución med
 | 16 de noviembre de 2026 | 0.21 | Kristel Ramírez | 00; 02.2; 05.3; 07.1; 07.3; 08.3; 08.5; 08.6; 08.10; 08.11; 13.1; 13.2 | Se confirma la participación de Developer 2 y Developer 3: se elimina "por definir", se cierra el riesgo R09 y se incluyen ambos Developers como participantes de la Sprint Review y la Sprint Retrospective del Sprint 1. |
 | 19 de noviembre de 2026 | 0.22 | Juan Daniel Ulate | 03.1; 05.2; 05.4; 07.4; 09.1; 11 a 13; índice | Integración de las actas de Sprint Review y Sprint Retrospective del Sprint 1: interesados críticos, tabla del Sprint Backlog 1, acciones MEJ-01 a MEJ-03 en el Sprint Backlog 2, referencias al avance y la DoD, decisiones D10 a D13 y evidencias. Se corrigen los encabezados 11 y 12 y se documenta la Parte 2. |
 | 22 de noviembre de 2026 | 0.23 | Krisley Castro | Índice; 11.1; 11.4.1 a 11.4.3 | Incorporación del Registro de Solicitudes de Cambio de la Semana 10, con su propósito, el procedimiento de gestión y el análisis de impacto de CR-01, cuya propuesta es diferir PB-18 para la versión 2. |
+| 22 de noviembre de 2026 | 0.24 | Kristel Ramírez | Índice; 10.5. Working Agreements del equipo; 11.1 | Working Agreements del equipo (WA-01 a WA-10), con meta medible y revisión en cada Sprint Retrospective. |
 
 ### 11.2. Registro de decisiones
 
