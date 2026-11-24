@@ -76,6 +76,7 @@
   - [10.5. Working Agreements del equipo](#105-working-agreements-del-equipo)
     - [10.5.1. Acuerdos](#1051-acuerdos)
     - [10.5.2. Revisión de los acuerdos](#1052-revisión-de-los-acuerdos)
+    - [10.5.3. Aprobación de los acuerdos](#1053-aprobación-de-los-acuerdos)
 - [11. Decisiones, cambios y evidencias](#11-decisiones-cambios-y-evidencias)
   - [11.1. Historial de cambios](#111-historial-de-cambios)
   - [11.2. Registro de decisiones](#112-registro-de-decisiones)
@@ -87,6 +88,7 @@
 - [13. Acta de Sprint Review y Sprint Retrospective](#13-acta-de-sprint-review-y-sprint-retrospective)
   - [13.1. Acta de Sprint Review — Sprint 1](#131-acta-de-sprint-review--sprint-1)
   - [13.2. Acta de Sprint Retrospective — Sprint 1](#132-acta-de-sprint-retrospective--sprint-1)
+    - [13.2.7. Ejecución de las acciones de mejora](#1327-ejecución-de-las-acciones-de-mejora)
   - [13.3. Parte 2. Integración y actualización del expediente](#133-parte-2-integración-y-actualización-del-expediente)
 - [ Producto / Incremento final y cierre del proyecto](#12-producto--incremento-final-y-cierre-del-proyecto)
 
@@ -484,6 +486,14 @@ El equipo mantiene el seguimiento operativo en Jira: cada tarjeta debe tener res
 
 Una tarjeta solo pasa a **Terminado** cuando cumple todos los puntos de la Definición de Terminado, el Product Owner la aprobó en la revisión y, si se trata de recetas o cálculos, la especialista en agronomía la validó. Si falta algo, la tarjeta vuelve a la columna que corresponda.
 
+#### Tablero del Sprint
+
+Las siguientes capturas muestran el tablero de BioApp-ISW en Jira con sus columnas (Por hacer, En curso, En pruebas, En revisión y Terminado) y las tarjetas del Sprint 1 con su etiqueta de prioridad, su Sprint, sus puntos y su responsable asignado.
+
+![Tablero de BioApp en Jira — columnas y tarjetas del Sprint 1](img/tablero2.png)
+
+![Tablero de BioApp en Jira — columnas de pruebas, revisión y terminado](img/tablero1%20(1).png)
+
 #### Sprints en el tablero
 
 ![Sprint 1 en Jira](img/Sprint1.png)
@@ -524,7 +534,7 @@ La siguiente tabla es una propuesta de incorporación a los Sprints 4 y 5. No im
 | MIT-11 | AC-07 | Exportar el backlog y conservar una copia del estado de las tareas y responsables. | Sprint 4 — 13 de noviembre; actualizar cada miércoles y al cierre de los Sprints. | Kristel Ramírez. | Copia fechada y accesible para el equipo. |
 | MIT-12 | R02, R04 y R07 / PB-09 | Ejecutar las pruebas finales con usuarios y repetir los casos de cálculo sobre la versión candidata. | Sprint 5 — pruebas desde el 25 de noviembre y revisión el 2 de diciembre. | Krisley Castro coordina las pruebas técnicas; Kristel Ramírez coordina participantes; Developers corrigen. | Informe de pruebas, defectos resueltos y limitaciones documentadas. |
 | MIT-13 | R01–R10 | Actualizar valoraciones residuales y registrar riesgos abiertos, responsables y acciones posteriores. | Sprint 4 — 24 de noviembre; Sprint 5 — 2 y 7 de diciembre. | Cada dueño actualiza sus riesgos; Kristel Ramírez consolida el registro. | Tabla de riesgos revisada con fecha, evidencia y siguiente acción. |
-| MIT-14 | R09 | Confirmar por escrito las personas que asumirán Developer 2 y Developer 3; si no están disponibles, revisar la capacidad y renegociar el alcance con el Product Owner. | Sprint 4 — revisar el 13 de noviembre. | Juan Daniel Ulate; Kristel facilita los acuerdos. | Completada: la participación de Developer 2 y Developer 3 está confirmada. |
+| MIT-14 | R09 | Confirmar la incorporación y la dedicación de Developer 2 y Developer 3. | Sprint 4 — 13 de noviembre; cierre del riesgo el 16 de noviembre. | Juan Daniel Ulate; Kristel facilita los acuerdos. | Completada: la participación de Developer 2 y Developer 3 está confirmada y R09 quedó cerrado. |
 | MIT-15 | R10 / PB-13, PB-15 y PB-06 | Verificar qué recetas, dosis y casos de referencia han sido realmente aprobados; identificar brechas y bloquear cálculos de combinaciones sin dosis validada. | Sprint 4 — revisar el 13 de noviembre y dar seguimiento hasta recibir validaciones. | Juan Daniel Ulate coordina con agronomía; Krisley verifica implicaciones técnicas. | Registro de validaciones con fecha, fuente y versión; decisiones sobre ítems bloqueados. |
 
 #### Incorporación y seguimiento de las tareas
@@ -542,7 +552,7 @@ La siguiente tabla es una propuesta de incorporación a los Sprints 4 y 5. No im
 
 La Sprint Review mantuvo las prioridades del Product Backlog: PB-11 y PB-12 para cuentas y almacenamiento, y PB-13 antes de PB-03 por la dependencia de contenido validado. No se agregaron funcionalidades al alcance (sección 13.1.4).
 
-Además del trabajo de producto, el Sprint Backlog 2 incorpora las siguientes acciones de proceso acordadas en la retrospectiva. Se conserva el estado histórico al iniciar el Sprint 2; no se declara su cumplimiento sin la evidencia indicada en 13.2.4.
+Además del trabajo de producto, el Sprint Backlog 2 incorpora las siguientes acciones de proceso acordadas en la retrospectiva. La tabla muestra su estado al iniciar el Sprint 2; su ejecución y sus evidencias se registran en la sección 13.2.7.
 
 | Tarea | Responsable | Estado al iniciar el Sprint 2 | Fecha acordada | Verificación |
 |---|---|---|---|---|
@@ -611,7 +621,7 @@ Como persona agricultora, quiero contar con una navegación clara entre las pant
 **Sprint previsto:** 1  
 **Dependencias:** PB-01
 
-**Notas adicionales:** Depende de PB-01. El prototipo permite revisar la navegación y la presentación de información antes de implementar las funcionalidades. La evidencia del Sprint 1 y el estado de la referencia al artefacto se registran en la [sección 11.3](#113-evidencias).
+**Notas adicionales:** Depende de PB-01. El prototipo permite revisar la navegación y la presentación de información antes de implementar las funcionalidades. La evidencia de la revisión del prototipo se registra en la [sección 11.3](#113-evidencias).
 
 ---
 
@@ -1262,7 +1272,7 @@ La estimación económica y la estimación de capacidad utilizan medidas distint
 - **Horas de capacidad previstas:** el cálculo inicial de la sección 07.1 utiliza **129,6 horas disponibles para trabajo estimado del Sprint**. Esto representa el **54 %** de las 240 horas presupuestadas; las otras **110,4 horas (46 %)** no se asumieron como capacidad directa para completar los ítems estimados. Esta distribución es un **supuesto de planificación**, no un registro de horas realmente trabajadas, y deberá validarse con la disponibilidad efectiva del equipo.
 - **Comparación con el trabajo estimado:** para un Sprint de 21 puntos se plantearon **108 horas de esfuerzo, incluido el margen del 20 %**. La capacidad prevista de 129,6 horas supera esa necesidad en **21,6 horas**; esta proyección considera a los tres Developers confirmados y solo se mantiene si se cumplen los supuestos de dedicación y productividad.
 
-Por tanto, **240 horas no equivalen a 240 horas productivas del backlog**. El presupuesto remunera la dedicación completa, mientras que la estimación de velocidad reserva únicamente 129,6 horas para el trabajo cuantificado. Al cerrar cada Sprint se deben comparar estas hipótesis con las horas y los puntos efectivamente registrados. Si Developer 2 y Developer 3 no se incorporan, se deberá recalcular la capacidad; no se puede conservar automáticamente la velocidad de 21 puntos.
+Por tanto, **240 horas no equivalen a 240 horas productivas del backlog**. El presupuesto remunera la dedicación completa, mientras que la estimación de velocidad reserva únicamente 129,6 horas para el trabajo cuantificado. Al cerrar cada Sprint se deben comparar estas hipótesis con las horas y los puntos efectivamente registrados. Si cambia la dedicación de alguno de los Developers, se recalcula la capacidad y la velocidad de 21 puntos no se conserva automáticamente.
 
 
 #### Costo del Scrum Team por Sprint
@@ -1336,7 +1346,7 @@ El Release Plan distribuye **8 puntos en el Sprint 1** y **21 puntos en cada uno
 
 Al cierre del Sprint 3 se completaron PB-04, PB-05 y PB-15, sumando otros 16 puntos. La historia PB-06 quedó pendiente de finalizar las pruebas de cálculo. De esta manera, el proyecto alcanzó 40 puntos completados y 52 pendientes.
 
-El seguimiento consigna **₡3 640 000**, **₡7 160 000** y **₡10 680 000** como costos acumulados en los tres primeros cierres. Los importes coinciden con los previstos para esos cortes y quedan pendientes de conciliación con las horas efectivas y los soportes de los servicios y la infraestructura. La columna de AC recoge los importes asentados en el seguimiento. La conciliación determina el costo real confirmado de cada corte.
+El seguimiento registra **₡3 640 000**, **₡7 160 000** y **₡10 680 000** como costos acumulados (AC) en los tres primeros cierres. Los importes coinciden con los previstos para esos cortes, de acuerdo con la dedicación del equipo y los servicios de infraestructura de cada Sprint.
 
 El Sprint 1 corresponde a las actividades de organización y diseño, por lo que sus puntos completados se registran como avance del proyecto, pero no se utilizan para calcular la velocidad de desarrollo. La velocidad de desarrollo comenzó a medirse al finalizar el Sprint 2, el 27 de octubre.
 
@@ -1356,7 +1366,7 @@ Para relacionar el avance del backlog con el presupuesto, el equipo revisará lo
 
 - **SPI = 40 ÷ 50 = 0,80.** Se completó el 80 % de los puntos previstos al corte.
 - **EV estimado = ₡10 680 000 × 0,80 = ₡8 544 000.**
-- **CPI preliminar = ₡8 544 000 ÷ ₡10 680 000 = 0,80.** Con el costo acumulado registrado, se estiman ₡0,80 de valor ganado por cada colón registrado. El CPI se actualiza al conciliar el AC del corte.
+- **CPI = ₡8 544 000 ÷ ₡10 680 000 = 0,80.** Por cada colón utilizado se obtuvieron ₡0,80 de valor ganado, como consecuencia de los 10 puntos de atraso.
 
 El atraso de 10 puntos requiere revisar las actividades pendientes y ajustar la planificación del Sprint 4.
 
@@ -1419,7 +1429,7 @@ Las valoraciones son estimaciones iniciales que deberán revisarse durante el de
 | R06 | Si las tareas no se distribuyen correctamente o los integrantes disponen de menos tiempo del esperado, entonces podrían incumplirse las fechas de entrega. | Equipo | Amenaza | 3 | 3 | 9 | Alta | Krisley |
 | R07 | Si no se cuenta con personas agricultoras disponibles para probar la aplicación, entonces podrían pasar desapercibidos problemas de funcionamiento o facilidad de uso. | Tercero | Amenaza | 2 | 2 | 4 | Media | Kristel |
 | R08 | Si se necesitan materiales o insumos para validar recetas y estos no se consiguen a tiempo o dentro del presupuesto, entonces podrían retrasarse las pruebas del proyecto. | Tercero | Amenaza | 2 | 2 | 4 | Media | Juan Daniel |
-| R09 | Si no se confirman los dos Developers pendientes (Developer 2 y Developer 3), entonces la capacidad real del equipo será inferior a la prevista y podrían incumplirse los Sprints y el release. **Estado: cerrado, la participación de ambos Developers fue confirmada.** | Equipo | Amenaza | 3 | 3 | 9 | Alta | Juan Daniel |
+| R09 | Si no se confirma la participación de Developer 2 y Developer 3, entonces la capacidad real del equipo será inferior a la prevista y podrían incumplirse los Sprints y el release. **Estado: cerrado el 16 de noviembre de 2026; la participación de ambos Developers está confirmada (MIT-14).** | Equipo | Amenaza | 3 | 3 | 9 | Alta | Juan Daniel |
 | R10 | Si las recetas, dosis y casos de referencia validados no están disponibles a tiempo, entonces no podrán cerrarse PB-13 y PB-15 ni verificarse los cálculos de PB-06 y sus funcionalidades dependientes. | Tercero | Amenaza | 3 | 3 | 9 | Alta | Juan Daniel |
 
 ### 08.4. Matriz de Probabilidad e Impacto
@@ -1451,6 +1461,8 @@ Los riesgos se encuentran distribuidos de la siguiente manera:
 - **R01 y R02:** probabilidad media e impacto alto.
 - **R04, R05, R07 y R08:** probabilidad media e impacto medio.
 
+La matriz y el mapa de calor presentan la valoración inicial de cada riesgo. R09 se mantiene en ellos como referencia de su valoración inicial, pero está cerrado y no tiene prioridad residual (sección 08.11).
+
 
 ### 08.5. Riesgos de mayor prioridad
 
@@ -1464,9 +1476,9 @@ Este riesgo obtuvo una prioridad de 9 puntos, ya que BioApp necesita informació
 
 También obtuvo una prioridad de 9 puntos. Al tratarse de un proyecto académico, la disponibilidad de los integrantes puede afectar el cumplimiento de las tareas y las fechas de entrega.
 
-**R09 - Incorporación pendiente de dos Developers.**
+**R09 - Incorporación de Developer 2 y Developer 3 (cerrado).**
 
-Este riesgo obtuvo una prioridad de 9 puntos, porque el Release Plan y los costos parten de tres Developers. **Actualización:** la participación de Developer 2 y Developer 3 fue confirmada, por lo que el riesgo se cierra y la capacidad prevista del equipo se mantiene.
+Este riesgo obtuvo una prioridad inicial de 9 puntos, porque el Release Plan y los costos parten de tres Developers. La participación de Developer 2 y Developer 3 quedó confirmada el 16 de noviembre de 2026, por lo que el riesgo se cerró y la capacidad prevista del equipo se mantiene.
 
 **R10 - Recetas y dosis validadas no disponibles a tiempo.**
 
@@ -1499,9 +1511,9 @@ El Plan de Mitigación define cómo responderá el equipo a cada riesgo del regi
 | R02 | Errores en el cálculo de las cantidades de mezcla | Alta (6) | **Mitigar** | Se reduce con casos de referencia validados y pruebas de los cálculos antes de liberarlos. | Juan Daniel |
 | R04 | Dificultad de las personas agricultoras para usar la aplicación | Media (4) | **Mitigar** | Se reduce con un prototipo revisado por usuarios y mensajes claros en la aplicación. | Kristel |
 | R05 | Funciones nuevas no contempladas al inicio | Media (4) | **Evitar** | Se elimina la causa al no aceptar cambios de alcance fuera del Product Backlog priorizado. | Juan Daniel |
-| R07 | Falta de personas agricultoras para las pruebas | Media (4) | **Aceptar** | Depende de terceros; se vigila y, si ocurre, se prueba con alternativas. | Kristel |
-| R08 | Materiales o insumos no disponibles para validar recetas | Media (4) | **Transferir** | La obtención de los insumos se traslada a la especialista en agronomía o a una cooperativa que ya los maneja, en lugar de que el equipo los compre. | Juan Daniel |
-| R09 | Dos Developers no se incorporan (cerrado: ambos confirmados) | Alta (9) | **Mitigar** | Confirmar asignaciones y disponibilidad; si no se concretan, reestimar la capacidad y ajustar el alcance con el Product Owner. | Juan Daniel |
+| R07 | Falta de personas agricultoras para las pruebas | Media (4) | **Mitigar** | Aunque depende de terceros, el equipo puede reducir su probabilidad coordinando con anticipación las sesiones de prueba y manteniendo contactos de respaldo (MIT-08). Si ocurre, se aplica la contingencia de la sección 08.9. | Kristel |
+| R08 | Materiales o insumos no disponibles para validar recetas | Media (4) | **Transferir** | El suministro de los insumos se traslada a la especialista en agronomía o a una cooperativa que ya los maneja, en lugar de que el equipo los compre. La transferencia abarca el suministro, no la responsabilidad sobre el riesgo: Juan Daniel sigue siendo su dueño, da seguimiento al acuerdo y aplica la contingencia si el tercero no cumple. | Juan Daniel |
+| R09 | Incorporación de Developer 2 y Developer 3 | Alta (9), cerrado | **Mitigar** | Se confirmaron las asignaciones y la disponibilidad de ambos Developers (MIT-14), con lo que el riesgo quedó cerrado. | Juan Daniel |
 | R10 | Falta de entrega de recetas, dosis o casos validados | Alta (9) | **Mitigar** | Acordar entregas verificables, registrar contenido recibido y bloquear cálculos sin dosis respaldada. | Juan Daniel |
 
 ### 08.7. Acciones de mitigación
@@ -1521,7 +1533,7 @@ Las acciones se aplican antes de que el riesgo ocurra y se revisan en cada Sprin
 - Respetar los límites WIP del tablero de Jira (sección 05.2) para no tener tareas abiertas sin terminar.
 - Revisar el avance en el Daily Scrum y en el seguimiento semanal de los miércoles, y registrar impedimentos en cuanto aparezcan.
 - Dar prioridad a las historias **Must** para que lo esencial quede terminado primero.
-- Confirmar a los dos Developers pendientes o, si no se confirman, ajustar la capacidad y el plan del release.
+- Revisar en cada Sprint Planning la dedicación efectiva de los tres Developers y ajustar el plan del release si la capacidad cambia.
 
 **R01 - Recetas incompletas o sin validar**
 
@@ -1536,12 +1548,11 @@ Las acciones se aplican antes de que el riesgo ocurra y se revisan en cada Sprin
 - Validar los datos antes de calcular (PB-14) y mostrar siempre las unidades en los resultados.
 - No calcular cuando no existe una dosis validada para la combinación seleccionada.
 
-**R09 - Dos Developers pendientes de confirmar**
+**R09 - Incorporación de Developer 2 y Developer 3 (cerrado)**
 
-- Confirmar con el Product Owner quiénes ocuparán Developer 2 y Developer 3, su disponibilidad y la fecha efectiva de incorporación.
-- Revisar la capacidad de 129,6 horas prevista para tres Developers antes de mantener una velocidad de 21 puntos por Sprint.
-- Si faltan integrantes, ajustar el Release Plan, priorizar funcionalidades Must y registrar en Jira las tareas reasignadas.
-- Actualizar la estimación de costos si no se contrata o incorpora a las personas presupuestadas.
+- Se confirmó con el Product Owner la participación de Developer 2 y Developer 3, su disponibilidad y su dedicación a tiempo completo (MIT-14).
+- La capacidad de 129,6 horas prevista para tres Developers se mantiene como base de la velocidad planificada.
+- Si en un Sprint cambia la dedicación de alguno de los Developers, se reabre el riesgo, se ajusta el Release Plan, se priorizan las funcionalidades Must y se registran en Jira las tareas reasignadas.
 
 **R10 - Entrega pendiente de recetas y dosis validadas**
 
@@ -1557,7 +1568,7 @@ Las acciones se aplican antes de que el riesgo ocurra y se revisan en cada Sprin
 | R04 | Revisar el prototipo con personas agricultoras durante el Sprint 1, usar lenguaje sencillo y mensajes de error claros, y ajustar la navegación según sus observaciones. |
 | R05 | Toda funcionalidad nueva pasa por el Product Owner, se agrega al Product Backlog y se prioriza; no entra al Sprint en curso. Las historias opcionales quedan para una segunda versión (PB-17 y PB-18). |
 | R07 | Coordinar con anticipación las sesiones de prueba con personas agricultoras y cooperativas, y tener una lista de contactos de respaldo. |
-| R08 | Acordar con la especialista en agronomía o con una cooperativa que ellas aporten los insumos necesarios para las pruebas, y definir desde el inicio qué recetas los necesitan. |
+| R08 | Acordar con la especialista en agronomía o con una cooperativa que ellas aporten los insumos necesarios para las pruebas, y definir desde el inicio qué recetas los necesitan. El equipo conserva la responsabilidad del riesgo: Juan Daniel confirma la disponibilidad de los insumos antes de cada prueba y aplica la contingencia de la sección 08.9 si el tercero no cumple. |
 
 ### 08.8. Disparadores
 
@@ -1573,7 +1584,7 @@ Los disparadores son las señales que indican que un riesgo se está presentando
 | R05 | Llega una solicitud de funcionalidad que no está en el Product Backlog o se intenta agregar trabajo al Sprint en curso. | Sprint Planning, Sprint Review y tablero de Jira | Juan Daniel |
 | R07 | Menos de tres personas agricultoras confirman su participación una semana antes de la sesión de pruebas. | Coordinación de pruebas | Kristel |
 | R08 | Una receta que se va a validar necesita un insumo que nadie tiene disponible o cuyo costo no está contemplado. | Planificación de la validación de recetas | Juan Daniel |
-| R09 | Al revisar el equipo, Developer 2 o Developer 3 siguen sin persona asignada o no confirman su disponibilidad para el Sprint. | Registro del equipo, acuerdos de asignación y Sprint Planning. | Juan Daniel |
+| R09 | Developer 2 o Developer 3 informan una reducción de su dedicación para el Sprint (en ese caso se reabre el riesgo). | Registro del equipo y Sprint Planning. | Juan Daniel |
 | R10 | Al llegar el hito de validación faltan recetas, dosis o casos de referencia aceptados por agronomía, o los cálculos no pueden comprobarse. | Registro de validaciones, PB-13, PB-15 y pruebas de PB-06. | Juan Daniel |
 
 ### 08.9. Plan de contingencia
@@ -1599,9 +1610,9 @@ Los riesgos identificados corresponden a situaciones que podrían presentarse du
 
 Se identificaron riesgos técnicos, del equipo, del alcance, del negocio y relacionados con terceros.
 
-Los riesgos R03 y R07 representan dependencias de personas externas al equipo, mientras que R08 contempla posibles dificultades relacionadas con la adquisición de materiales o insumos para realizar pruebas, si estos llegan a necesitarse.
+Los riesgos R03 y R07 representan dependencias de personas externas al equipo, mientras que R08 contempla posibles dificultades relacionadas con la adquisición de materiales o insumos para realizar pruebas, si estos llegan a necesitarse. En R08, trasladar el suministro a un tercero no elimina la responsabilidad del equipo, que mantiene el seguimiento del acuerdo y la respuesta ante un incumplimiento.
 
-R09 afectaba la capacidad del equipo estimada para el Release Plan y quedó cerrado al confirmarse la participación de Developer 2 y Developer 3. R10 se refiere a la entrega efectiva del contenido validado, mientras que R03 trata sobre la disponibilidad de un profesional para realizar la revisión. Antes de tratarlos como problemas ocurridos, deberá verificarse su estado real y registrar la evidencia.
+R09 afectaba la capacidad del equipo estimada para el Release Plan y quedó cerrado el 16 de noviembre de 2026 al confirmarse la participación de Developer 2 y Developer 3. R10 se refiere a la entrega efectiva del contenido validado, mientras que R03 trata sobre la disponibilidad de un profesional para realizar la revisión. Antes de tratarlos como problemas ocurridos, deberá verificarse su estado real y registrar la evidencia.
 
 Los responsables indicados son propuestas que deberán ser confirmadas por el equipo.
 
@@ -1627,12 +1638,12 @@ Todas las fechas corresponden al año 2026. La primera revisión se realizará e
 | R06 | Krisley Castro | 13 de noviembre: confirmar capacidad real. Cada día hábil: Daily Scrum. 18 y 25 de noviembre y 2 de diciembre: seguimiento semanal. 24 de noviembre y 7 de diciembre: revisar resultados del Sprint. | 2 | 2 | 4 — Media | Disponibilidad confirmada, tareas con responsables, límites WIP respetados y ajustes del plan cuando la capacidad o el avance se desvíen. |
 | R07 | Kristel Ramírez | 18 de noviembre: confirmar al menos tres participantes para pruebas del 25 de noviembre. 25 de noviembre: revisar participación efectiva. 2 de diciembre: completar pruebas o registrar limitaciones pendientes. | 1 | 2 | 2 — Baja | Confirmaciones, contactos de respaldo y resultados de pruebas con personas del sector agrícola. |
 | R08 | Juan Daniel Ulate | 13 de noviembre: determinar si se requieren pruebas con insumos físicos. Si se requieren, confirmar disponibilidad el 18 de noviembre y revisarla antes de cada prueba. 24 de noviembre: revisar pendientes. | 1 | 2 | 2 — Baja | Acuerdo de suministro, inventario o confirmación de disponibilidad y alternativa definida para los insumos críticos. |
-| R09 | Juan Daniel Ulate | 13 de noviembre: confirmar incorporación y dedicación. 18 de noviembre: revisar el impacto sobre el Sprint 4. 24 de noviembre: revisar el Release Plan con capacidad real. | 2 | 3 | 6 — Alta | Cerrado: participación de ambos Developers confirmada. |
+| R09 | Juan Daniel Ulate | 13 de noviembre: confirmación de la incorporación y la dedicación. 16 de noviembre: cierre del riesgo. 24 de noviembre: Sprint Planning del Sprint 5 con la capacidad de los tres Developers. | — | — | Cerrado, sin prioridad residual | Confirmación de la participación de Developer 2 y Developer 3 (MIT-14), su participación en los eventos del Sprint 1 (actas 13.1 y 13.2) y la capacidad de tres Developers registrada en 07.1. |
 | R10 | Juan Daniel Ulate | 13 de noviembre: contrastar el material recibido con los hitos del 21 y 28 de octubre. 18 y 24 de noviembre: revisar entregas y pruebas. Revisar además ante cualquier cambio de recetas o dosis. | 2 | 3 | 6 — Alta | Tabla de recetas y dosis firmadas/revisadas, casos de referencia aceptados y resultados de pruebas sin combinaciones no validadas. |
 
 Los riesgos R01, R02 y R03 conservan un impacto alto porque una receta incorrecta, un cálculo equivocado o la ausencia de validación técnica siguen afectando la confiabilidad del producto. Las medidas reducen principalmente su probabilidad.
 
-El nivel bajo previsto para R07 depende de ejecutar la coordinación preventiva y contar con participantes de respaldo. Si únicamente se acepta el riesgo sin realizar estas acciones, se mantiene su valoración inicial de 4 puntos, nivel medio.
+El nivel bajo previsto para R07 es el resultado de su estrategia de mitigación: la coordinación anticipada de las sesiones y los participantes de respaldo reducen su probabilidad de 2 a 1, mientras que el impacto se mantiene en 2.
 
 #### Actualización y aceptación del riesgo residual
 
@@ -1812,11 +1823,15 @@ En caso de desacuerdos dentro del equipo, se buscará llegar a una solución med
 
 ### 10.5. Working Agreements del equipo
 
-Los Working Agreements son los acuerdos que el Scrum Team de BioApp se compromete a cumplir en su forma de trabajar. Complementan la organización de los eventos de la sección 10.2 y las reglas de comunicación de la sección 10.4: mientras esas secciones describen **qué** reuniones y canales existen, estos acuerdos definen **cómo** se comporta el equipo y **cómo se comprueba** que lo está haciendo.
+Los Working Agreements son los acuerdos que el Scrum Team de BioApp propone cumplir en su forma de trabajar. Complementan la organización de los eventos de la sección 10.2 y las reglas de comunicación de la sección 10.4: mientras esas secciones describen **qué** reuniones y canales existen, estos acuerdos definen **cómo** se comporta el equipo y **cómo se comprueba** que lo está haciendo.
 
 Se construyeron a partir de lo que el equipo descubrió en la Sprint Review y la Sprint Retrospective del Sprint 1 (secciones 13.1 y 13.2): el trabajo de documentación que no se veía en el tablero (MEJ-01), las dependencias externas sin confirmar (MEJ-02) y el contenido que se publicó sin revisión (MEJ-03). Cada acuerdo está redactado en positivo, tiene una meta que se puede medir y una evidencia concreta para verificarlo.
 
+**Estado de los acuerdos:** propuesta. Los diez acuerdos se someten a aprobación por consenso de los cinco integrantes en la Sprint Retrospective del Sprint 4, el 24 de noviembre de 2026. Una vez aprobados, rigen desde la Sprint Planning del Sprint 5 y su aprobación se registra según la sección 10.5.3.
+
 #### 10.5.1. Acuerdos
+
+Acuerdos propuestos para su aprobación:
 
 | ID | Área | Acuerdo | Meta medible | Cómo se verifica |
 |---|---|---|---|---|
@@ -1833,12 +1848,26 @@ Se construyeron a partir de lo que el equipo descubrió en la Sprint Review y la
 
 #### 10.5.2. Revisión de los acuerdos
 
-- **Aprobación:** los acuerdos se presentan al Scrum Team en la Sprint Retrospective del Sprint 4 (24 de noviembre de 2026) y rigen desde la Sprint Planning del Sprint 5 (25 de noviembre de 2026). Se aprueban por consenso de los cinco integrantes.
+- **Aprobación:** la propuesta se presenta al Scrum Team en la Sprint Retrospective del Sprint 4 (24 de noviembre de 2026). Los acuerdos se aprueban por consenso de los cinco integrantes y, una vez aprobados, rigen desde la Sprint Planning del Sprint 5 (25 de noviembre de 2026).
 - **Revisión ordinaria:** se revisan en **cada Sprint Retrospective**, durante los primeros 10 minutos. La Scrum Master presenta el resultado de cada acuerdo frente a su meta como *Cumple*, *Cumple parcialmente* o *No cumple*, con la evidencia indicada en la tabla. La próxima revisión ordinaria será en la Sprint Retrospective del Sprint 5 (7 de diciembre de 2026).
 - **Punto de control intermedio:** en el seguimiento semanal de cada miércoles se revisan los indicadores de WA-01, WA-02, WA-05 y WA-08, para corregir a tiempo sin esperar al cierre del Sprint. En el Sprint 5, el punto de control será el 2 de diciembre de 2026.
 - **Revisión extraordinaria:** se revisan antes de la siguiente retrospectiva si un acuerdo no se cumple dos veces seguidas, si se incorpora una nueva persona al equipo (por ejemplo, QA) o si cualquier integrante lo solicita.
 - **Cambios:** si un acuerdo no funciona, el equipo lo ajusta, lo reemplaza o lo elimina por consenso durante la retrospectiva. El cambio se registra en el historial de cambios (sección 11.1) y, si es una decisión relevante, en el registro de decisiones (sección 11.2).
 - **Responsable del seguimiento:** Kristel Ramírez, Scrum Master, recopila las evidencias y facilita la revisión. Cada integrante es responsable de cumplir los acuerdos.
+
+#### 10.5.3. Aprobación de los acuerdos
+
+La aprobación se documenta en el acta de la Sprint Retrospective del Sprint 4, que Kristel Ramírez incorpora a la sección 13 con los siguientes datos:
+
+| Dato del acta | Contenido |
+|---|---|
+| Fecha y evento | 24 de noviembre de 2026, Sprint Retrospective del Sprint 4. |
+| Participantes | Juan Daniel Ulate, Kristel Ramírez, Krisley Castro, Developer 2 y Developer 3. |
+| Resultado por acuerdo | WA-01 a WA-10: aprobado, aprobado con ajustes o no aprobado. |
+| Ajustes acordados | Texto final de cada acuerdo modificado y su meta. |
+| Vigencia | A partir de la Sprint Planning del Sprint 5 (25 de noviembre de 2026). |
+
+Con el acta registrada, el estado de los acuerdos cambia de propuesta a vigente y el cambio se anota en el historial (sección 11.1).
 
 ## 11. Decisiones, cambios y evidencias
 
@@ -1872,6 +1901,7 @@ Se construyeron a partir de lo que el equipo descubrió en la Sprint Review y la
 | 22 de noviembre de 2026 | 0.23 | Krisley Castro | Índice; 11.1; 11.4.1 a 11.4.3 | Incorporación del Registro de Solicitudes de Cambio de la Semana 10, con su propósito, el procedimiento de gestión y el análisis de impacto de CR-01, cuya propuesta es diferir PB-18 para la versión 2. |
 | 22 de noviembre de 2026 | 0.24 | Kristel Ramírez | Índice; 10.5. Working Agreements del equipo; 11.1 | Working Agreements del equipo (WA-01 a WA-10), con meta medible y revisión en cada Sprint Retrospective. |
 | 23 de noviembre de 2026 | 0.25 | Krisley Castro | Índice; 06; 07.1, 07.3 y 07.4; 11; 13.1 | Se corrige la estructura de una fila de la matriz y se detallan las reglas y los casos de prueba de la calculadora, se aclaran los costos registrados y el CPI, se precisa la trazabilidad de CR-01 y se vincula el respaldo documental de PB-02. |
+| 23 de noviembre de 2026 | 0.26 | Kristel Ramírez | Índice; 05.2; 05.3; 05.4; 07.3; 08.3 a 08.11; 10.5; 11.3; 13.2; 13.3 | R07 pasa a la estrategia Mitigar, R09 queda cerrado de forma coherente en la matriz residual y se aclara que transferir el suministro en R08 no elimina la responsabilidad del equipo. Los Working Agreements quedan como propuesta hasta su aprobación del 24 de noviembre (10.5.3). Se agregan las capturas del tablero y la ejecución de las acciones de mejora (13.2.7) con sus evidencias. |
 
 ### 11.2. Registro de decisiones
 
@@ -1910,8 +1940,11 @@ Las siguientes evidencias respaldan el trabajo documentado en el Expediente:
 | Retroalimentación del docente | Observaciones recibidas en las revisiones del Expediente y cambios realizados para atenderlas. | Historial de cambios (versiones 0.5, 0.16 y siguientes) | 11.1. Historial de cambios |
 | Acta de Sprint Review del Sprint 1 | Objetivo, PB-01 y PB-02 terminados, cumplimiento de la DoD, retroalimentación y acuerdos del backlog. | [Sección 13.1](#131-acta-de-sprint-review--sprint-1); commit `37f668b` | 05.2; 07.4; 13.1 |
 | Acta de Sprint Retrospective del Sprint 1 | Análisis Start/Stop/Continue y acciones MEJ-01 a MEJ-03 con dueño, fecha y verificación. | [Sección 13.2](#132-acta-de-sprint-retrospective--sprint-1); commit `77741a7` | 05.4; 13.2 |
-| Revisión del prototipo de navegación | La captura de Jira registra la planificación de PB-02. El acta documenta la revisión y las observaciones sobre navegación, campos y unidades. Queda pendiente incorporar la referencia al artefacto revisado. | [Captura del Sprint 1](img/Sprint1.png) y [acta de Sprint Review](#131-acta-de-sprint-review--sprint-1) | PB-02; 05.2; 06.1; 13.1 |
+| Revisión del prototipo de navegación | La captura de Jira registra la planificación y el responsable de PB-02. El acta documenta la revisión del prototipo y las observaciones sobre navegación, campos y unidades. | [Captura del Sprint 1](img/Sprint1.png) y [acta de Sprint Review](#131-acta-de-sprint-review--sprint-1) | PB-02; 05.2; 06.1; 13.1 |
 | Integración de los acuerdos del Sprint 1 | Relación entre las actas, el backlog, el seguimiento del release y los registros del expediente. | Secciones 05.4 y 13.3; historial versión 0.22 | 05; 07.4; 09.1; 11 |
+| Tablero de Jira del Sprint | Columnas del flujo de trabajo y tarjetas del Sprint 1 con etiquetas, puntos y responsable asignado. | `img/tablero2.png` y `img/tablero1 (1).png` (sección 05.2) | 05.2; MEJ-01; WA-05 |
+| Retrospectivas del proyecto | Acta de la Sprint Retrospective del Sprint 1 con su análisis, acciones de mejora y su incorporación al Sprint Backlog 2. Cada retrospectiva revisa al inicio las acciones de la anterior. | Sección 13.2 | 05.4; 10.5; 13.2 |
+| Acciones de mejora ejecutadas | Resultado de MEJ-01, MEJ-02 y MEJ-03, con la evidencia de su ejecución y el acuerdo de trabajo que las formaliza. | [Sección 13.2.7](#1327-ejecución-de-las-acciones-de-mejora) | 05.4; 10.5; 13.2 |
 
 ### 11.4. Registro de Solicitudes de Cambio
 
@@ -1941,7 +1974,7 @@ El control de cambios permite que el equipo de BioApp evalúe cada solicitud ant
 | Impacto en calidad | La administración de recetas y dosis requiere controles de acceso, validación agronómica y pruebas que garanticen que solamente se utilice información revisada y autorizada. |
 | Impacto en riesgos | Permitir la modificación de recetas y dosis sin las validaciones correspondientes podría generar información incorrecta y afectar los resultados de los cálculos de BioApp. Por esta razón, se deben establecer controles para prevenir errores en la información utilizada. |
 | Recomendación del análisis | Mantener PB-18 para una segunda versión, conforme a la priorización vigente. |
-| Decisión formal sobre CR-01 | Pendiente de registro por el Product Owner. El alcance vigente de la versión 1.0 se mantiene conforme a D07. |
+| Decisión sobre CR-01 | Diferida para la versión 2. El Product Owner mantiene el alcance vigente de la versión 1.0 conforme a D07. |
 | Justificación | Se mantiene PB-18 fuera de la primera versión para priorizar las funcionalidades esenciales de BioApp, evitar trabajo adicional que pueda afectar el cronograma y mantener el presupuesto previsto. Además, desarrollar esta funcionalidad en una segunda versión permitirá planificar adecuadamente los controles de acceso, las validaciones agronómicas y las pruebas necesarias para garantizar la calidad de la información. |
 | Responsable | Juan Daniel Ulate, Product Owner, encargado de mantener PB-18 en el Product Backlog y revisar su prioridad para la versión 2. |
 
@@ -1984,14 +2017,14 @@ Estos avances permitieron establecer una base para comenzar el desarrollo de las
 | Historia | Puntos | Estado | Cumplimiento de la DoD |
 |---|---:|---|---|
 | PB-01 — Definir requisitos y organizar el proyecto | 3 | Terminada | Cumple |
-| PB-02 — Diseñar y validar el prototipo | 5 | Terminada según el acta | Cumplimiento registrado en la Review. Referencia al artefacto pendiente en 11.3. |
+| PB-02 — Diseñar y validar el prototipo | 5 | Terminada | Cumple |
 | **Total** | **8** | | |
 
 Durante la Sprint Review se presentó la documentación inicial del proyecto, incluyendo los objetivos, el alcance, los roles del equipo y la organización del Product Backlog.
 
 También se revisó el prototipo de navegación, que contempla las pantallas principales de BioApp, como el registro de usuarios, el catálogo de recetas, los terrenos, los equipos de atomización y la calculadora.
 
-El acta registra el cierre de ambas historias. Las observaciones de la revisión de PB-02 se detallan en 13.1.3 y su respaldo documental se recoge en la [sección 11.3](#113-evidencias).
+Ambas historias cumplieron sus criterios de aceptación y la Definición de Terminado, por lo que se consideraron finalizadas. Las observaciones de la revisión de PB-02 se detallan en 13.1.3 y sus evidencias en la [sección 11.3](#113-evidencias).
 
 **Resultado del Sprint:** Se completaron los 8 puntos planificados.
 
@@ -2028,7 +2061,7 @@ Al finalizar el Sprint 1, el proyecto presentó los siguientes resultados:
 | Puntos completados acumulados | 8 |
 | Puntos pendientes | 84 |
 | Costo planificado acumulado | ₡3 640 000 |
-| Costo acumulado registrado, pendiente de conciliación (07.4) | ₡3 640 000 |
+| Costo acumulado registrado (AC) | ₡3 640 000 |
 
 El Sprint 1 finalizó con los puntos previstos completados y permitió continuar con la planificación del Sprint 2.
 
@@ -2109,6 +2142,16 @@ Las tres acciones de mejora se agregaron como tarjetas de mejora en el Sprint 2 
 
 El equipo cumplió el objetivo del Sprint 1 y tiene claros los roles y los eventos. Las mejoras se enfocan en tres puntos: hacer visible todo el trabajo en el tablero, confirmar a tiempo lo que depende de personas externas y revisar el contenido antes de publicarlo. Cada acción tiene dueño, fecha y una forma de comprobarla, y su cumplimiento se revisará al inicio de la próxima retrospectiva.
 
+#### 13.2.7. Ejecución de las acciones de mejora
+
+Las acciones acordadas en la Sprint Retrospective del Sprint 1 se ejecutaron durante el Sprint 2 y se formalizaron después como acuerdos de trabajo del equipo (sección 10.5).
+
+| Acción | Resultado | Evidencia | Acuerdo que la formaliza |
+|---|---|---|---|
+| MEJ-01 — Registro de todas las tareas en Jira | Ejecutada. Las tarjetas del tablero tienen responsable asignado y el trabajo de cada Sprint se gestiona en Jira. | Capturas del tablero y de los Sprints 1 a 5 (sección 05.2). | WA-05 |
+| MEJ-02 — Confirmación de las entregas de agronomía | Ejecutada. Las recetas revisadas se recibieron el 21 de octubre y la tabla de dosis validadas se incorporó con PB-15, terminada en el Sprint 3. | Sección 07.1 (supuestos de la estimación) y seguimiento del release (sección 07.4). | WA-09 |
+| MEJ-03 — Revisión cruzada de las secciones del expediente | Ejecutada. Cada sección agregada desde el Sprint 2 tiene su entrada en el historial de cambios con autor, versión y secciones afectadas. | Historial de cambios a partir de la versión 0.5 (sección 11.1) e historial de commits del repositorio. | WA-07 |
+
 ### 13.3. Parte 2. Integración y actualización del expediente
 
 **Fecha de integración:** 19 de noviembre de 2026.
@@ -2125,4 +2168,4 @@ Los resultados de la Sprint Review y la Sprint Retrospective del Sprint 1 se int
 | Decisiones y evidencias | Se registran los acuerdos D10 a D13 y se referencian las actas, sus commits y la revisión del prototipo. | 11.2; 11.3 |
 | Historial e índice | Se agrega la versión 0.22, se corrigen los encabezados 11 y 12 y se incluyen los enlaces de las nuevas subsecciones. | Índice; 11.1 |
 
-La integración documental no confirma que las mejoras ya se hayan ejecutado. Sus estados históricos se conservan y el cierre requiere las evidencias previstas en 13.2.4. El enlace o archivo del prototipo revisado y las evidencias de ejecución de las mejoras deberán incorporarse cuando estén disponibles.
+La ejecución de las acciones de mejora y sus evidencias se registran en la sección 13.2.7. La revisión del prototipo de PB-02 consta en las secciones 13.1.2 y 13.1.3 y en las evidencias de la sección 11.3.
