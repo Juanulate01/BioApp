@@ -42,6 +42,7 @@
   - [05.2. Tablero de trabajo](#052-tablero-de-trabajo)
   - [05.3. Tareas de mitigación en el Sprint Backlog](#053-tareas-de-mitigación-en-el-sprint-backlog)
   - [05.4. Integración de los acuerdos del Sprint 1 en el Sprint Backlog 2](#054-integración-de-los-acuerdos-del-sprint-1-en-el-sprint-backlog-2)
+  - [05.5. Registro de revisión técnica de las recetas — PB-13](#055-registro-de-revisión-técnica-de-las-recetas--pb-13)
 - [06. Alcance, Product Backlog priorizado y criterios de aceptación](#06-alcance-product-backlog-priorizado-y-criterios-de-aceptación)
   - [06.1. Historias de usuario y criterios de aceptación](#061-historias-de-usuario-y-criterios-de-aceptación)
   - [06.2. Reglas de cálculo y casos de prueba](#062-reglas-de-cálculo-y-casos-de-prueba)
@@ -573,6 +574,155 @@ Además del trabajo de producto, el Sprint Backlog 2 incorpora las siguientes ac
 | MEJ-03 — Revisar cada sección del expediente con otra persona antes de subirla y registrar el cambio. | Krisley Castro | Por hacer | Desde el 14 de octubre de 2026; revisión el 27 de octubre. | Identificación del revisor y entrada en el historial para cada sección agregada durante el Sprint 2. |
 
 Estas tareas no suman puntos de historia. Los acuerdos y sus criterios completos se conservan en 13.2.4 y 13.2.5. Las fechas corresponden a los acuerdos históricos del acta, no a nuevas fechas de ejecución.
+
+### 05.5. Registro de revisión técnica de las recetas — PB-13
+
+**Uso personal y privado:** este registro se incorpora únicamente a la copia local del expediente. Su incorporación no autoriza publicar el folleto ni su contenido en el repositorio remoto.
+
+| Campo | Información |
+|---|---|
+| Responsable de la revisión técnica | Robert Ulate Rojas. |
+| Especialidad | Ingeniero agrónomo certificado, según la información proporcionada por el Product Owner. |
+| Validación reportada | El Product Owner confirma que Robert Ulate Rojas probó las recetas y comprobó su funcionamiento. |
+| Fecha de registro de esta confirmación | 25 de noviembre de 2026. |
+| Fecha exacta de las pruebas y de la revisión técnica | No especificada. |
+| Fecha límite prevista para la entrega | 21 de octubre de 2026, según PB-13. |
+| Fecha efectiva de recepción | Pendiente de confirmar; la fecha límite no acredita la recepción. |
+| Fuente | Folleto privado proporcionado para uso personal. |
+| Versión de la ficha de registro | 1.0. Esta numeración corresponde al registro, no a una versión oficial del folleto. |
+| Estado | Validación técnica reportada por el Product Owner. Pendiente de verificar la integridad de cada ficha, realizar la carga y comparar los registros con el material recibido. |
+
+La fecha de registro de la confirmación no representa la fecha exacta de las pruebas. La confirmación del funcionamiento de las recetas no acredita que ya estén cargadas en la base de datos. PB-13 se considerará terminada cuando también se comprueben su almacenamiento, disponibilidad mediante PB-03 y coincidencia con el material revisado.
+
+#### Recepción y preparación de recetas para su carga
+
+##### Material fuente
+
+| Campo | Información |
+|---|---|
+| Archivo | Folleto_Bioinsumos Word.docx |
+| Título | Guía práctica para la elaboración y aplicación de bioinsumos |
+| Dependencia indicada en la portada | Región de Desarrollo Agropecuario Huetar Norte, Unidad de Extensión Agropecuaria Regional |
+| Elaborado por | Ing. Robert Gerardo Ulate Rojas |
+| Apoyo | Ing. Dinia Campos Víquez |
+| Fecha indicada en la portada | Enero de 2026 |
+| Versión editorial | No identificada expresamente en el documento. |
+| Fecha límite de entrega definida en PB-13 | 21 de octubre de 2026. |
+| Fecha efectiva de recepción del material revisado | Pendiente de confirmar con la evidencia de entrega. |
+| Responsable de revisión técnica para BioApp | Robert Ulate Rojas, según confirmación del Product Owner. |
+| Fecha de revisión técnica | Fecha exacta no especificada. Confirmación del Product Owner registrada el 25 de noviembre de 2026. |
+
+La fecha de publicación del folleto no sustituye la fecha de revisión técnica. La recepción del archivo tampoco acredita por sí sola la aprobación de todas sus recetas.
+
+##### Inventario inicial del material recibido
+
+Los siguientes nombres corresponden a los apartados del índice del folleto. Su inclusión en este inventario no significa que estén aprobados o cargados en BioApp.
+
+| Referencia del folleto | Receta o preparación |
+|---|---|
+| 4.1 | MM sólido |
+| 4.2 | MM líquido |
+| 4.3 | Sílico sulfocálcico |
+| 4.4 | Pasto fermentado |
+| 4.5 | Caldo bordelés |
+| 4.6 | Fosfitos |
+| 4.7 | Compost |
+| 4.8 | Bambuxina |
+| 4.9 | Súper magro sólido |
+| 4.10 | Súper magro líquido |
+| 4.11 | Ácidos húmicos |
+| 4.12 | M-5 bio-insecticida |
+| 4.13 | Caldo ceniza |
+| 4.14 | Producción de bokashi |
+| 4.15 | M.F. biofertilizantes (Bio-Fábrica) |
+| 4.16 | Biol multimineral |
+| 4.17 | Vinagre de maderas |
+| 4.18 | Protecto zinc |
+| 4.19 | Polisulfuro de potasio (30 % Baumé) |
+| 4.20 | Bacterias fototrópicas |
+| 4.21 | Legía de ceniza, según el nombre del folleto |
+| 4.22 | Iones de arena (biol de rocas) |
+| 4.23 | Bio-sangre |
+| 4.24 | Emulsión de pescado |
+| 4.25 | Sustrato para almácigos |
+
+El archivo contiene además un apartado 4.26 sobre levaduras para alimentación animal, precedido por la palabra “AGREGAR”. Se registra como contenido adicional del documento, no como una instrucción para incorporarlo a BioApp. Su uso corresponde a alimentación animal y requiere confirmar su pertinencia para el catálogo agrícola.
+
+##### Verificación individual antes de la carga
+
+Cada receta debe comprobarse por separado.
+
+| Campo obligatorio | Condición para aceptar la receta |
+|---|---|
+| Ingredientes | Lista completa y coincidente con el material revisado. |
+| Cantidades | Cantidad y unidad identificadas; las ambigüedades deben aclararse con la especialista. |
+| Elaboración | Pasos completos y ordenados, conservando tiempos y condiciones indicados. |
+| Forma de uso | Uso descrito en el material revisado, sin completar recomendaciones por suposición. |
+| Almacenamiento | Condiciones y duración indicadas; si faltan, solicitar corrección. |
+| Fuente | Título del folleto y apartado de procedencia. |
+| Versión | Identificación de la versión del contenido aprobada para cargar. |
+| Fecha de revisión | Fecha efectiva de revisión técnica. |
+| Responsable de revisión | Nombre de quien confirma técnicamente la receta. |
+| Evidencia | Documento, mensaje o constancia que permita comprobar la revisión. |
+
+Las recetas incompletas o sin revisión técnica documentada permanecerán pendientes y no se publicarán como recetas validadas.
+
+##### Ejemplo de ficha extraída para revisión
+
+**Identificador propuesto:** REC-01<br>
+**Nombre:** MM sólido<br>
+**Fuente:** Guía práctica para la elaboración y aplicación de bioinsumos, apartado 4.1.<br>
+**Estado:** Funcionamiento probado y revisión técnica reportados por el Product Owner; fecha exacta y evidencia original de revisión pendientes de incorporar.
+
+##### Ingredientes según el folleto
+
+| Ingrediente | Cantidad indicada |
+|---|---|
+| Mantillo de montaña | 2 sacos; el folleto indica 90 kg. |
+| Semolina de arroz u otros materiales mencionados como alternativas | 1 saco. |
+| Melaza | 1 a 2 galones; como alternativa, 5 galones de jugo de caña. |
+| Agua no clorada | 4 galones. |
+
+**Equipo:** un estañón plástico de 200 L con tapa hermética.
+
+##### Elaboración resumida del material fuente
+
+1. Mezclar el mantillo con la semolina de arroz sobre una superficie limpia.
+2. Humedecer con agua y melaza, mezclando hasta alcanzar aproximadamente un 40 % de humedad. El folleto indica comprobar que no escurra agua al apretar la mezcla.
+3. Introducir la mezcla en el estañón y compactarla para desplazar el aire.
+4. Cerrar herméticamente y dejar fermentar entre 25 y 30 días a la sombra.
+5. Rotular y fechar el recipiente.
+
+##### Forma de uso
+
+El folleto indica su utilización para elaborar MM líquido y otros bioinsumos. No se incorpora aquí el uso en alimentación animal por no corresponder al propósito agrícola de esta ficha.
+
+##### Almacenamiento
+
+El folleto describe conservación en el recipiente cerrado y señala una duración de dos años o más, dependiendo del almacenamiento y manejo. Esta indicación debe quedar comprendida en la revisión técnica de la ficha.
+
+##### Datos pendientes de confirmar
+
+- Si los 90 kg de mantillo corresponden al total de los dos sacos.
+- Peso del saco y condiciones para utilizar los materiales alternativos.
+- Equivalencia del galón utilizado, sin convertirlo automáticamente a litros.
+- Versión aprobada del contenido.
+- Fecha exacta de la revisión técnica; responsable identificado: Robert Ulate Rojas.
+- Evidencia de conformidad de la especialista.
+
+##### Comprobación posterior a la carga
+
+Los Developers realizarán la carga técnica únicamente de las recetas aceptadas.
+
+| Comprobación | Evidencia requerida |
+|---|---|
+| Almacenamiento en la base de datos | Identificador del registro y versión cargada. |
+| Coincidencia con el material aprobado | Comparación de ingredientes, cantidades, unidades, pasos, uso y almacenamiento. |
+| Trazabilidad | Fuente, versión, fecha y responsable de revisión almacenados. |
+| Disponibilidad para PB-03 | Consulta de la receta cargada y comprobación de sus campos. |
+| Exclusión de recetas pendientes | Verificación de que no aparecen como contenido validado. |
+
+**Estado de PB-13:** no se declara terminada con esta preparación documental. Para completarla se requiere acreditar la revisión técnica, realizar la carga y comprobar su correspondencia con el material aprobado.
 
 ## 06. Alcance, Product Backlog priorizado y criterios de aceptación
 
@@ -1982,6 +2132,8 @@ Con el acta registrada, el estado de los acuerdos cambia de propuesta a vigente 
 | 23 de noviembre de 2026 | 0.25 | Krisley Castro | Índice; 06; 07.1, 07.3 y 07.4; 11; 13.1 | Se corrige la estructura de una fila de la matriz y se detallan las reglas y los casos de prueba de la calculadora, se aclaran los costos registrados y el CPI, se precisa la trazabilidad de CR-01 y se vincula el respaldo documental de PB-02. |
 | 23 de noviembre de 2026 | 0.26 | Kristel Ramírez | Índice; 05.2; 05.3; 05.4; 07.3; 08.3 a 08.11; 10.5; 11.3; 13.2; 13.3 | R07 pasa a la estrategia Mitigar, R09 queda cerrado de forma coherente en la matriz residual y se aclara que transferir el suministro en R08 no elimina la responsabilidad del equipo. Los Working Agreements quedan como propuesta hasta su aprobación del 24 de noviembre (10.5.3). Se agregan las capturas del tablero y la ejecución de las acciones de mejora (13.2.7) con sus evidencias. |
 | 24 de noviembre de 2026 | 0.27 | Juan Daniel Ulate | 01; 04; 05; 06; 07; 08.10; 11.2 a 11.4; 13.2.7 | Revisión del Release Plan con velocidad real de 16 puntos y déficit de 12; PB-08 se difiere mediante D14 y se alinean objetivo, entregables y backlog; se agregan criterios verificables para PB-16-A/B con estimaciones propuestas de 3 y 5 puntos pendientes de ratificación; CR-01 se resuelve mediante D15 del 24 de noviembre; D16 registra la desviación y la recuperación pendiente de autorización; se separan evidencias internas de confirmaciones externas pendientes. |
+| 25 de noviembre de 2026 | 0.28 | Juan Daniel Ulate | Índice; 05.5; 11.1 | Registro local y privado de PB-13: responsable Robert Ulate Rojas y confirmación del Product Owner sobre las pruebas de las recetas. Se distingue la fecha de registro de las fechas de revisión y recepción no especificadas; la carga técnica y su verificación permanecen pendientes. No se reproduce el contenido del folleto. |
+| 25 de noviembre de 2026 | 0.29 | Juan Daniel Ulate | 05.5; 11.1 | Incorporación del material fuente, inventario de preparaciones, comprobaciones de PB-13 y ficha de ejemplo recibidos del Product Owner. Se identifica a Robert Ulate Rojas como responsable y se distingue la confirmación registrada de la fecha exacta de revisión. No se declara una carga en la base de datos. |
 
 ### 11.2. Registro de decisiones
 
