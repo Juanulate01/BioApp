@@ -217,6 +217,8 @@ Desarrollar una aplicación para consultar la elaboración de bioinsumos y calcu
 - Los resultados dependerán de la exactitud de los datos registrados por la persona usuaria y de la calibración del equipo de atomización.
 - La aplicación no sustituirá la valoración profesional en agronomía ni realizará diagnósticos automáticos de plagas o enfermedades.
 - El alcance del proyecto llegará a una etapa de producción.
+- PB-08, historial de preparaciones y aplicaciones, queda fuera de la versión 1.0 y se difiere para la versión 2 mediante D14.
+- PB-18, administración de recetas y dosis, permanece fuera de la versión 1.0 conforme a la resolución D15 de CR-01.
 - La plataforma, las tecnologías y el presupuesto deberán acordarse durante la planificación.
 
 ### 01.7. Entregables previstos
@@ -224,7 +226,7 @@ Desarrollar una aplicación para consultar la elaboración de bioinsumos y calcu
 1. Catálogo inicial de recetas revisadas y documentadas.
 2. Funcionalidades para registrar cultivos, terrenos y equipos de atomización.
 3. Calculadora con resultados totales y cantidades por tanque.
-4. Historial de preparaciones y aplicaciones.
+4. Aplicación publicada con acceso seguro. El historial de preparaciones y aplicaciones (PB-08) se difiere para la versión 2 y no es un entregable de la versión 1.0.
 5. Documentación del proyecto y evidencia de las pruebas realizadas.
 
 ### 01.8. Condiciones generales de aceptación
@@ -237,9 +239,11 @@ Desarrollar una aplicación para consultar la elaboración de bioinsumos y calcu
 
 ### 01.9. Product Goal
 
-Al finalizar las 10 semanas, las personas agricultoras podrán consultar recetas de bioinsumos con revisión técnica y calcular, con su propia cuenta, la mezcla, la cantidad de bioinsumo y los tanques necesarios para atomizar sus terrenos, a partir de dosis validadas, y conservar el historial de sus preparaciones y aplicaciones.
+Las personas agricultoras podrán consultar recetas de bioinsumos con revisión técnica y calcular, con su propia cuenta, la mezcla, la cantidad de bioinsumo y los tanques necesarios para atomizar sus terrenos, a partir de dosis validadas.
 
-El Product Goal orienta la ordenación del Product Backlog y sirve como referencia para definir el objetivo de cada Sprint.
+La versión 1.0 no incluye el historial de preparaciones y aplicaciones, diferido para la versión 2 mediante D14. El Product Goal orienta la ordenación del Product Backlog y la definición de los objetivos de Sprint.
+
+El horizonte original de diez semanas y la entrega del 7 de diciembre se conservan como línea base. La revisión de capacidad de 07.2 identifica una desviación: no se declara una nueva fecha aprobada ni se garantiza el cumplimiento integral de la fecha original sin resolver el déficit pendiente.
 
 ## 02. Contexto organizacional y restricciones
 
@@ -324,6 +328,8 @@ El proyecto mantiene algunos hitos fijos que no dependen del equipo, como la ent
 
 ### 04.2. Fases del proyecto
 
+Las fases y los calendarios siguientes representan la línea base original. El historial de PB-08 no forma parte de la versión 1.0 tras D14. Las desviaciones y las alternativas de recuperación se documentan en 07.2; no se declara aprobada una extensión.
+
 | Fase | Sprints | Periodo | Propósito | Resultados principales |
 | --- | --- | --- | --- | --- |
 | **Inicio** | Sprint 1 | 30 de septiembre al 13 de octubre | Definir el producto, organizar al equipo y validar la navegación. | Project Charter (borrador), Product Goal, Scrum Team, análisis del contexto, Product Backlog ordenado, Definición de Terminado y prototipo validado. |
@@ -331,6 +337,8 @@ El proyecto mantiene algunos hitos fijos que no dependen del equipo, como la ent
 | **Validación y cierre** | Sprint 5 | 25 de noviembre al 7 de diciembre | Publicar la aplicación, validarla con personas usuarias y entregar la versión final. | Aplicación en producción, evidencias de pruebas, documentación técnica, guía de uso y presentación. |
 
 #### Cronograma de Sprints
+
+**Línea base original:** esta tabla conserva lo previsto al inicio. Desde D14, PB-08 no pertenece a la versión 1.0. La revisión de alcance y capacidad del 24 de noviembre de 2026 en 07.2 prevalece sobre las previsiones originales; los resultados efectivos se registran en 07.4.
 
 | Sprint | Periodo | Elementos del backlog | Objetivo del Sprint |
 | --- | --- | --- | --- |
@@ -432,13 +440,17 @@ Los elementos se clasifican en tres tipos:
 | 10 | PB-06 | Historia de usuario | Calcular la mezcla y la cantidad de bioinsumo | Must | 5 | PB-04, PB-05, PB-15 | 3 |
 | 11 | PB-07 | Historia de usuario | Mostrar cantidades por tanque | Must | 3 | PB-06 | 4 |
 | 12 | PB-14 | Historia de usuario | Validar los datos antes de calcular | Must | 2 | PB-06 | 4 |
-| 13 | PB-08 | Historia de usuario | Guardar y consultar el historial | Should | 5 | PB-07 | 4 |
+| 13 | PB-08 | Historia de usuario | Guardar y consultar el historial | Should | 5 | PB-07 | Versión 2, sin Sprint asignado (D14) |
 | 14 | PB-16 | Habilitador | Publicar la aplicación en producción | Must | 2 | PB-12 | 4 y 5 (PB-16-A y PB-16-B) |
 | 15 | PB-09 | Habilitador | Validar el funcionamiento completo | Must | 5 | PB-03, PB-07, PB-14, PB-16 | 5 |
 | 16 | PB-10 | Habilitador | Preparar la versión final y la documentación | Must | 4 | PB-09 | 5 |
 | 17 | PB-17 | Historia de usuario | Recuperar la contraseña | Could | 2 | PB-11 | Si hay capacidad |
 | 18 | PB-18 | Historia de usuario | Administrar recetas y dosis desde la aplicación | Won't | 4 | PB-13, PB-15 | Fuera de esta versión |
-| | | | **Total planificado (PB-01 a PB-16)** | | **59** | | |
+| | | | **Total de la línea base original (PB-01 a PB-16)** | | **59** | | |
+
+**Actualización del 24 de noviembre de 2026:** PB-08 se difiere para la versión 2 mediante D14 y no debe permanecer como trabajo comprometido del Sprint 4. Su traslado debe reflejarse en Jira; este documento no confirma una modificación del tablero externo.
+
+La tabla anterior conserva las estimaciones iniciales en **días-persona**: 59 en la línea base original y 54 al excluir los 5 días-persona iniciales de PB-08. No deben sumarse ni compararse directamente con los puntos de historia de 07.1. La referencia vigente del Release Plan es de **84 puntos**, excluyendo los 8 puntos de PB-08. PB-17 y PB-18 permanecen fuera del alcance comprometido.
 
 ### 05.2. Tablero de trabajo
 
@@ -893,10 +905,10 @@ Como persona agricultora, quiero guardar y consultar mis preparaciones y aplicac
 **Tipo:** Historia de usuario  
 **Prioridad:** Media (Should)  
 **Estimación propuesta:** 8 puntos  
-**Sprint previsto:** 4  
+**Sprint previsto:** Versión 2, sin Sprint asignado
 **Dependencias:** PB-07
 
-**Notas adicionales:** La estimación considera que el historial debe guardarse en la cuenta del usuario y estar disponible desde distintos dispositivos.
+**Notas adicionales:** D14, del 24 de noviembre de 2026, excluye PB-08 de la versión 1.0. Se conservan la historia, sus criterios y la estimación de 8 puntos para una planificación futura. Posponerla no significa que esté terminada ni permite contabilizar sus puntos como completados. La persistencia por cuenta y el acceso desde distintos dispositivos se evaluarán cuando se planifique su implementación.
 
 ---
 
@@ -918,10 +930,10 @@ Como persona agricultora, quiero acceder a BioApp por Internet desde mi teléfon
 **Tipo:** Habilitador  
 **Prioridad:** Alta (Must)  
 **Estimación propuesta:** 8 puntos  
-**Sprint previsto:** 4 y 5 (PB-16-A y PB-16-B)  
+**Sprint previsto:** A reprogramar según 07.2; previsión original en Sprints 4 y 5
 **Dependencias:** PB-12
 
-**Notas adicionales:** PB-16 se divide en dos entregables para distribuir mejor el trabajo. PB-16-A corresponde a la preparación del entorno de producción durante el Sprint 4 (3 puntos), mientras que PB-16-B corresponde a la publicación y verificación de BioApp durante el Sprint 5 (5 puntos). Ambas partes suman los 8 puntos originales y deberán cumplir sus respectivos criterios de aceptación.
+**Notas adicionales:** PB-16 se divide en PB-16-A y PB-16-B, cuyos entregables y criterios verificables se detallan en 07.2. Se proponen 3 y 5 puntos, respectivamente, pendientes de ratificación por los Developers. La asignación definitiva a Sprints depende del plan de recuperación; no se mantiene automáticamente la distribución inicial entre los Sprints 4 y 5.
 
 
 ---
@@ -1095,15 +1107,17 @@ Las estimaciones las realizan los Developers mediante planning poker; el Product
 | 10 | PB-06 | Calcular la mezcla y la cantidad de bioinsumo | Cálculos | 5 | Must | PB-04, PB-05, PB-15 | 3 |
 | 11 | PB-07 | Mostrar cantidades por tanque | Cálculos | 5 | Must | PB-06 | 4 |
 | 12 | PB-14 | Validar los datos antes de calcular | Cálculos | 5 | Must | PB-06 | 4 |
-| 13 | PB-08 | Guardar y consultar el historial | Historial | 8 | Should | PB-07 | 4 |
+| 13 | PB-08 | Guardar y consultar el historial | Historial | 8 | Should | PB-07 | Versión 2, sin Sprint asignado (D14) |
 | 14 | PB-16 | Publicar la aplicación en producción (PB-16-A y PB-16-B) | Publicación y cierre | 8 | Must | PB-12 | 4 y 5 |
 | 15 | PB-09 | Validar el funcionamiento completo | Publicación y cierre | 8 | Must | PB-03, PB-07, PB-14, PB-16 | 5 |
 | 16 | PB-10 | Preparar la versión final y la documentación | Publicación y cierre | 8 | Must | PB-09 | 5 |
-| | | **Total planificado (PB-01 a PB-16)** | | **92** | | | |
+| | | **Total de la línea base original (PB-01 a PB-16)** | | **92** | | | |
 | 17 | PB-17 | Recuperar la contraseña | Cuentas y datos | 5 | Could | PB-11 | Si hay capacidad |
 | 18 | PB-18 | Administrar recetas y dosis desde la aplicación | Catálogo de recetas | 5 | Won't | PB-13, PB-15 | Fuera de esta versión |
 
 PB-17 y PB-18 no forman parte del total planificado: PB-17 solo se incorporará si sobra capacidad y PB-18 queda fuera de esta versión.
+
+**Alcance revisado mediante D14:** 84 puntos para la versión 1.0, frente a los 92 de la línea base original. Los 8 puntos de PB-08 se retiran del alcance de esa versión y no se contabilizan como terminados. El desglose por épica siguiente conserva la línea base original para la comparación histórica.
 
 #### Desglose por épica
 
@@ -1132,8 +1146,8 @@ Ningún elemento supera los 8 puntos, por lo que ninguno debe dividirse de forma
 #### Velocidad inicial
 
 - **Sprint 1:** se planificaron 8 puntos en las primeras dos historias (PB-01 y PB-02). Este valor no representa la velocidad de desarrollo, porque corresponde a trabajo de planificación y diseño.
-- **Velocidad inicial acordada: 21 puntos por Sprint**, que es la carga planificada para los Sprints 2 y 3, según el cálculo de capacidad del equipo, estos Sprints requieren 108 horas (incluido un 20 % de margen) frente a **129.6 horas disponibles**, por lo que esta velocidad es alcanzable.
-- **Rango:** velocidad mínima de **18 puntos** y máxima de **24 puntos** (aproximadamente un 15 % por debajo y por encima de la velocidad inicial), la mínima representa, por ejemplo, la ausencia parcial de un Developer o un atraso en el contenido; la máxima, un Sprint sin impedimentos.
+- **Hipótesis inicial: 21 puntos por Sprint.** Se calculó con 108 horas de esfuerzo frente a 129,6 horas previstas. Esta hipótesis no fue alcanzada en los Sprints 2 y 3: ambos registraron 16 puntos. Desde la revisión del 24 de noviembre se utiliza la velocidad observada de **16 puntos por Sprint** para las proyecciones; las horas teóricas disponibles no demuestran un aumento de productividad.
+- **Rango de la hipótesis inicial, superado por la evidencia:** velocidad mínima prevista de **18 puntos** y máxima de **24 puntos** (aproximadamente un 15 % por debajo y por encima de la velocidad inicial), la mínima representa, por ejemplo, la ausencia parcial de un Developer o un atraso en el contenido; la máxima, un Sprint sin impedimentos.
 
 - **Actualización de la velocidad:**
   1. En cada Sprint Review se suman los puntos de los elementos que cumplen la Definición de Terminado. Los elementos incompletos no suman puntos.
@@ -1164,6 +1178,8 @@ Las fechas representan objetivos de planificación. El contenido de cada entrega
 
 #### Calendario de entregas
 
+**Línea base original de 92 puntos:** se conserva para comparar las desviaciones. No constituye el compromiso vigente de capacidad. D14 retira PB-08 y la revisión del 24 de noviembre, más adelante en esta sección, identifica el alcance revisado y el déficit pendiente de resolver.
+
 Todas las fechas corresponden al año 2026. Los Sprints comienzan un miércoles. La última ventana se cierra excepcionalmente el lunes 7 de diciembre para coincidir con la entrega final.
 
 | Sprint | Periodo | Fecha de entrega y revisión | Elementos previstos | Puntos previstos | Resultado esperado |
@@ -1175,19 +1191,36 @@ Todas las fechas corresponden al año 2026. Los Sprints comienzan un miércoles.
 | **Sprint 5 — Publicación y entrega final** | 25 de noviembre al 7 de diciembre | **7 de diciembre** | PB-16-B, PB-09 y PB-10 | **21** | Versión 1.0: aplicación publicada mediante HTTPS, contenido revisado cargado, validación final, guía de uso, documentación técnica, evidencias de pruebas y presentación. |
 | **Total** | **Cinco Sprints** | **7 de diciembre** | **Alcance planificado** | **92** | **BioApp publicada y entregada.** |
 
-#### Distribución de la publicación entre los Sprints 4 y 5
+#### División de PB-16 y criterios de aceptación
 
-La matriz inicial concentra 18 puntos en el Sprint 4 y 24 puntos en el Sprint 5. Para equilibrar el trabajo con la velocidad inicial de 21 puntos por Sprint, se propone dividir PB-16:
+El Product Owner propone mantener la división de PB-16 en 3 puntos para PB-16-A y 5 para PB-16-B. Los Developers deberán ratificar las estimaciones; no se presentan como confirmadas sin su acuerdo. La asignación original a los Sprints 4 y 5 es un antecedente y se revisará con el plan de recuperación.
 
-| Subdivisión propuesta | Sprint | Estimación provisional | Entregable verificable |
-| --- | --- | --- | --- |
-| **PB-16-A. Preparar el entorno de producción** | 4 | **3 puntos** | Entorno configurado, base de datos separada de la de pruebas, configuración de HTTPS preparada y respaldo con restauración comprobada mediante datos de prueba. |
-| **PB-16-B. Publicar y comprobar BioApp** | 5 | **5 puntos** | Versión final desplegada, recetas y dosis revisadas cargadas, acceso mediante HTTPS y comprobación de funcionamiento desde teléfono y computadora. |
-| **Total de PB-16** | **4 y 5** | **8 puntos** | **Publicación completa de BioApp.** |
+| Elemento | Puntos propuestos | Dependencias | Entregable verificable |
+|---|---:|---|---|
+| PB-16-A — Preparar el entorno de producción | 3 | PB-12 y selección de servicios tecnológicos. | Entorno configurado, base de datos separada de pruebas, configuración segura y restauración comprobada con datos de prueba. |
+| PB-16-B — Publicar y comprobar BioApp | 5 | PB-16-A y funcionalidades del alcance listas para publicación. | Versión desplegada por HTTPS, contenido validado cargado y comprobaciones básicas desde teléfono y computadora. |
+| **Total PB-16** | **8** | | |
 
-La división de PB-16 entre los Sprints 4 y 5 se incorporó al Release Plan para equilibrar la carga de trabajo. Se asignan provisionalmente 3 puntos a PB-16-A y 5 puntos a PB-16-B, manteniendo los 8 puntos originales. Los Developers deberán confirmar estas estimaciones y los criterios de aceptación de cada parte durante el refinamiento.
+##### PB-16-A — Criterios de aceptación
 
-Cada subdivisión deberá tener criterios de aceptación propios. Solo se contabilizarán sus puntos cuando cumpla la Definición de Terminado; no se contarán nuevamente los 8 puntos del elemento original.
+1. El entorno de producción tiene configuración identificada y una base de datos separada del entorno de pruebas.
+2. Los secretos están fuera del repositorio y los accesos se limitan a las personas autorizadas.
+3. Se ejecuta y documenta una restauración de respaldo con datos de prueba, comprobando su integridad.
+4. Otro Developer puede preparar el entorno siguiendo las instrucciones documentadas.
+5. Se adjuntan las evidencias de configuración, restauración y revisión técnica necesarias para verificar la DoD.
+
+##### PB-16-B — Criterios de aceptación
+
+1. La versión publicada tiene un identificador o commit y una dirección accesible mediante HTTPS.
+2. Se comprueban registro, inicio y cierre de sesión y separación de datos entre cuentas.
+3. Las recetas y dosis cargadas corresponden a versiones con validación técnica documentada.
+4. Se ejecutan y registran comprobaciones básicas del catálogo y de los cálculos desde teléfono y computadora.
+5. Se documenta cómo volver a una versión estable y recuperar los datos ante una falla del despliegue.
+6. Se corrigen los defectos que impidan el uso previsto y se conserva evidencia de cumplimiento de la DoD.
+
+PB-16-B no sustituye la validación integral de PB-09. Una publicación para pruebas no equivale a la aceptación final de la versión 1.0.
+
+Cada parte solo contabiliza sus puntos al cumplir sus criterios y la DoD; no se suman nuevamente los 8 puntos del elemento padre. Krisley Castro apoyará la revisión técnica de los criterios con los Developers y el Product Owner revisará los entregables.
 
 #### Dependencias e hitos de contenido
 
@@ -1204,6 +1237,8 @@ Si se atrasa la revisión de una receta o dosis, podrán continuar las tareas qu
 
 #### Proyección según la velocidad del equipo
 
+**Escenarios de la línea base original:** la tabla siguiente analiza los 84 puntos de construcción previstos inicialmente, no el alcance revisado de 84 puntos totales después de D14. La proyección vigente usa 16 puntos por Sprint y se detalla en el ajuste del 24 de noviembre.
+
 Después de los 8 puntos de organización y diseño quedan **84 puntos** para los cuatro Sprints restantes.
 
 | Escenario | Velocidad por Sprint | Sprints necesarios para los 84 puntos | Proyección |
@@ -1214,25 +1249,46 @@ Después de los 8 puntos de organización y diseño quedan **84 puntos** para lo
 
 La proyección se actualizará con los puntos realmente terminados. PB-18 permanece fuera del release y las pruebas de cada funcionalidad se realizarán durante su propio Sprint.
 
-#### Ajuste del Release Plan después del Sprint 3
+#### Ajuste del Release Plan según la velocidad observada
 
-Al cierre del Sprint 3, el equipo acumuló 40 puntos completados de los 92 planificados. Las historias PB-03 (5 puntos) y PB-06 (5 puntos) quedaron pendientes, por lo que deberán incorporarse a la planificación de los siguientes Sprints.
+**Fecha de revisión:** 24 de noviembre de 2026.
 
-Para atender este atraso y mantener como objetivo la entrega del 7 de diciembre, se propone priorizar las funcionalidades Must y posponer PB-08 (historial), de prioridad Should y estimada en 8 puntos. Esta decisión deberá ser aprobada por el Product Owner y registrada como un cambio de alcance.
+Al cierre del Sprint 3 se registraron 40 puntos completados de los 92 de la línea base original. La velocidad observada en los Sprints 2 y 3 fue de 16 puntos por Sprint.
 
-Con este ajuste, quedarían 44 puntos comprometidos para los dos últimos Sprints, distribuidos de la siguiente manera:
+D14 difiere PB-08, de 8 puntos, para la versión 2. El alcance revisado de la versión 1.0 es de 84 puntos, con 44 pendientes al cierre del Sprint 3.
 
-| Sprint | Historias por completar | Puntos |
-| --- | --- | ---: |
-| Sprint 4 | PB-03, PB-06, PB-07, PB-14 y PB-16-A | 23 |
-| Sprint 5 | PB-16-B, PB-09 y PB-10 | 21 |
-| **Total pendiente** | | **44** |
+| Concepto | Puntos |
+|---|---:|
+| Línea base original | 92 |
+| PB-08 diferida para la versión 2 | -8 |
+| Alcance revisado de la versión 1.0 | 84 |
+| Completados al cierre del Sprint 3 | 40 |
+| Pendientes del alcance revisado | 44 |
+| Capacidad proyectada para dos Sprints a 16 puntos | 32 |
+| Déficit de capacidad | 12 |
 
-Durante el Sprint 4 se dará prioridad a PB-03 y PB-06, ya que son necesarias para completar otras funcionalidades. Una vez finalizada PB-06, se podrá continuar con PB-07 y PB-14.
+El plan anterior de 23 puntos en el Sprint 4 y 21 en el Sprint 5 exigiría incrementos aproximados de 44 % y 31 % sobre la velocidad observada. No existe evidencia suficiente para comprometerlos. La disponibilidad teórica de horas no demuestra por sí sola una mayor velocidad.
 
-El equipo deberá revisar su capacidad y la distribución de tareas, porque completar 23 y 21 puntos en los últimos Sprints exige mejorar el rendimiento observado de 16 puntos por Sprint. Si no se cuenta con la capacidad necesaria, el Product Owner deberá evaluar nuevos ajustes al alcance o al cronograma, sin comprometer los criterios de aceptación ni la Definición de Terminado.
+Se retira esa distribución como compromiso viable. Diferir PB-08 reduce el alcance, pero no permite asegurar toda la versión 1.0 para el 7 de diciembre.
 
-El presupuesto se mantendrá como referencia de planificación y cualquier costo adicional deberá evaluarse y aprobarse antes de incorporarlo.
+##### Escenario de recuperación sujeto a autorización
+
+La siguiente alternativa respeta una referencia de hasta 16 puntos por Sprint y las dependencias entre historias. Es un escenario de evaluación construido con el estado al cierre del Sprint 3, no un resultado declarado del Sprint 4 ni una ampliación aprobada.
+
+| Ventana | Trabajo considerado | Puntos | Resultado previsto |
+|---|---|---:|---|
+| Sprint 4 | PB-03, PB-06 y PB-14 | 15 | Catálogo, cálculo total y validaciones. |
+| Sprint 5 | PB-07, PB-16-A y PB-16-B | 13 | Cantidades por tanque, entorno preparado y publicación con comprobaciones básicas. |
+| Sprint adicional propuesto | PB-09 y PB-10 | 16 | Validación integral, documentación y entrega final. |
+| **Total pendiente** | | **44** | |
+
+El escenario requiere autorizar una ampliación del plazo y del presupuesto; no modifica automáticamente la fecha académica o contractual del 7 de diciembre. Un Sprint adicional tiene un costo de referencia de ₡3 520 000, que debe recalcularse según su composición real. La contingencia de ₡1 796 000 no lo financia por sí sola.
+
+El 24 de noviembre debe registrarse el cierre efectivo del Sprint 4. Después se recalcularán los pendientes y se distribuirá el trabajo desde el Sprint 5; no se reescriben los resultados históricos para hacerlos coincidir con este escenario.
+
+Si no se autoriza ampliar el plazo, el Product Owner deberá acordar una reducción adicional de funcionalidades que elimine al menos el déficit identificado. Se revisarán dependencias, estimaciones, entregables y Product Goal; no se reducirán los criterios de calidad ni se eliminarán las pruebas o la documentación necesarias para declarar terminada la versión.
+
+**Estado de la decisión:** D14 aprueba diferir PB-08; D16 registra la desviación de capacidad. La selección y autorización definitiva de la recuperación queda pendiente. Hasta resolverla, la entrega integral del 7 de diciembre se mantiene en riesgo y no se presenta como respaldada por la velocidad real.
 
 #### Condiciones para liberar la versión 1.0
 
@@ -1353,6 +1409,12 @@ El Sprint 1 corresponde a las actividades de organización y diseño, por lo que
 En el burndown se mostrarán dos líneas: la **planificada**, con los valores **92, 84, 63, 42, 21 y 0**, y la **real**, que se actualizará al verificar los elementos terminados. Si la línea real queda por encima de la planificada, significa que hay más puntos pendientes de los previstos.
 
 La distribución de los puntos pendientes se basa en el Release Plan de la sección 07.2, que contempla 21 puntos para cada Sprint de desarrollo. Esta planificación incorpora la división de PB-16 entre los Sprints 4 y 5 y se actualizará cuando el equipo confirme los ajustes del backlog.
+
+#### Conciliación del alcance después de D14
+
+La tabla y la curva planificadas anteriores conservan la línea base original de 92 puntos para comparar desviaciones. D14 reduce el alcance de la versión 1.0 a 84 puntos. Al cierre del Sprint 3, los 52 puntos originalmente pendientes se concilian como **44 pendientes de la versión 1.0 y 8 diferidos de PB-08**.
+
+Los 8 puntos diferidos no son avance, velocidad ni valor ganado. Los cierres efectivos del Sprint 4 y del Sprint 5 deben separar trabajo completado, trabajo pendiente y cambios de alcance. Sus valores siguen por registrar; no se sustituyen por el escenario de recuperación de 07.2.
 
 #### Indicadores de seguimiento
 
@@ -1529,7 +1591,7 @@ Las acciones se aplican antes de que el riesgo ocurra y se revisan en cada Sprin
 
 **R06 - Atrasos por falta de tiempo u organización del equipo**
 
-- Asignar en la Sprint Planning solo el trabajo que cabe en la capacidad real del equipo (21 puntos por Sprint, sección 07.1).
+- Asignar en la Sprint Planning solo el trabajo que cabe en la capacidad real del equipo. La referencia revisada es de 16 puntos por Sprint según lo observado en los Sprints 2 y 3; se actualizará con evidencia (07.1 y 07.2).
 - Respetar los límites WIP del tablero de Jira (sección 05.2) para no tener tareas abiertas sin terminar.
 - Revisar el avance en el Daily Scrum y en el seguimiento semanal de los miércoles, y registrar impedimentos en cuanto aparezcan.
 - Dar prioridad a las historias **Must** para que lo esencial quede terminado primero.
@@ -1619,6 +1681,23 @@ Los responsables indicados son propuestas que deberán ser confirmadas por el eq
 El Plan de Mitigación (secciones 08.6 a 08.9) define la estrategia, las acciones, los disparadores y el plan de contingencia de cada riesgo.
 
 La matriz deberá revisarse periódicamente durante el proyecto para actualizar las probabilidades, los impactos y agregar nuevos riesgos cuando sea necesario.
+
+#### Estado documental de la validación externa al 24 de noviembre de 2026
+
+Se distingue entre una actividad reportada y su evidencia verificable. Una fecha objetivo no sustituye la fecha efectiva de revisión o recepción.
+
+| Elemento | Estado documentado | Evidencia pendiente | Responsable de obtenerla |
+|---|---|---|---|
+| Recetas de PB-13 | 13.2.7 reporta recepción el 21 de octubre de 2026. | Nombre de la especialista, fuente técnica, archivo y versión de las recetas, fecha de revisión y mensaje o constancia de conformidad. | Juan Daniel Ulate, con apoyo de Krisley Castro. |
+| Dosis de PB-15 | El seguimiento reporta PB-15 terminada en el Sprint 3. | Tabla revisada, fuente, unidades, combinaciones admitidas, versión, persona revisora y fecha efectiva de validación. | Juan Daniel Ulate. |
+| Casos de referencia de los cálculos | Se requieren para comprobar PB-06 y PB-07. | Entradas, resultados esperados, unidades, revisión agronómica y resultados de ejecución de las pruebas. | Krisley Castro coordina los casos; Juan Daniel Ulate obtiene la confirmación externa. |
+| Pruebas con personas agricultoras | Pendientes de confirmación documental. La Review del Sprint 1 no registró interesados externos. | Fecha, participantes identificados por nombre o código, escenarios, observaciones, correcciones y resultados de repetición. | Kristel Ramírez. |
+
+Las referencias a otras secciones del expediente son respaldo interno de lo reportado; no reemplazan la confirmación externa original. Tampoco se concluye que las pruebas con agricultores no ocurrieron: su realización debe confirmarse y documentarse.
+
+Se revisarán los pendientes el 25 de noviembre y el 2 de diciembre. Si las pruebas no se realizaron, Kristel coordinará su ejecución y registrará la fecha efectiva. Las fuentes y confirmaciones se vincularán en 11.3 cuando estén disponibles.
+
+Los riesgos R01, R02, R03, R04, R07 y R10 se actualizarán con evidencia pertinente. No se publicarán recetas, dosis o cálculos sin el respaldo técnico requerido.
 
 ### 08.11. Fechas de revisión y riesgo residual
 
@@ -1902,6 +1981,7 @@ Con el acta registrada, el estado de los acuerdos cambia de propuesta a vigente 
 | 22 de noviembre de 2026 | 0.24 | Kristel Ramírez | Índice; 10.5. Working Agreements del equipo; 11.1 | Working Agreements del equipo (WA-01 a WA-10), con meta medible y revisión en cada Sprint Retrospective. |
 | 23 de noviembre de 2026 | 0.25 | Krisley Castro | Índice; 06; 07.1, 07.3 y 07.4; 11; 13.1 | Se corrige la estructura de una fila de la matriz y se detallan las reglas y los casos de prueba de la calculadora, se aclaran los costos registrados y el CPI, se precisa la trazabilidad de CR-01 y se vincula el respaldo documental de PB-02. |
 | 23 de noviembre de 2026 | 0.26 | Kristel Ramírez | Índice; 05.2; 05.3; 05.4; 07.3; 08.3 a 08.11; 10.5; 11.3; 13.2; 13.3 | R07 pasa a la estrategia Mitigar, R09 queda cerrado de forma coherente en la matriz residual y se aclara que transferir el suministro en R08 no elimina la responsabilidad del equipo. Los Working Agreements quedan como propuesta hasta su aprobación del 24 de noviembre (10.5.3). Se agregan las capturas del tablero y la ejecución de las acciones de mejora (13.2.7) con sus evidencias. |
+| 24 de noviembre de 2026 | 0.27 | Juan Daniel Ulate | 01; 04; 05; 06; 07; 08.10; 11.2 a 11.4; 13.2.7 | Revisión del Release Plan con velocidad real de 16 puntos y déficit de 12; PB-08 se difiere mediante D14 y se alinean objetivo, entregables y backlog; se agregan criterios verificables para PB-16-A/B con estimaciones propuestas de 3 y 5 puntos pendientes de ratificación; CR-01 se resuelve mediante D15 del 24 de noviembre; D16 registra la desviación y la recuperación pendiente de autorización; se separan evidencias internas de confirmaciones externas pendientes. |
 
 ### 11.2. Registro de decisiones
 
@@ -1922,6 +2002,9 @@ Este registro reúne las decisiones más importantes que el equipo ha tomado dur
 | D11 | 13 de octubre de 2026 | Registrar todas las tareas con responsable y actualizar su estado en Jira (MEJ-01). | Hacer visible el trabajo de documentación y coordinación además del desarrollo. | Scrum Team, según 13.2; responsable: Kristel Ramírez | 05.4; 13.2.4 |
 | D12 | 13 de octubre de 2026 | Confirmar por escrito las entregas de agronomía e invitar anticipadamente a interesados a la siguiente Review (MEJ-02). | Reducir la incertidumbre de las dependencias externas y recoger retroalimentación de usuarios. | Scrum Team, según 13.2; responsable: Juan Daniel Ulate | 05.4; 10.4; 13.2.4 |
 | D13 | 13 de octubre de 2026 | Revisar las secciones del expediente con otra persona antes de publicarlas y registrar sus cambios (MEJ-03). | Mejorar la calidad y trazabilidad de la documentación. | Scrum Team, según 13.2; responsable: Krisley Castro | 05.4; 11.1; 13.2.4 |
+| D14 | 24 de noviembre de 2026 | Diferir PB-08 para la versión 2. | Reducir el alcance de la versión 1.0 de 92 a 84 puntos y priorizar lo esencial. Este ajuste no resuelve por sí solo el déficit restante. | Juan Daniel Ulate, Product Owner | 01; 05.1; PB-08; 07.1; 07.2 |
+| D15 | 24 de noviembre de 2026 | Resolver CR-01 difiriendo PB-18 para la versión 2. | No agregar 5 puntos ni nuevas necesidades de controles y pruebas a un plan con atraso. D07 es antecedente, no respuesta a la solicitud del 22 de noviembre. | Juan Daniel Ulate, Product Owner | 11.4.3; PB-18 |
+| D16 | 24 de noviembre de 2026 | Utilizar la velocidad observada de 16 puntos por Sprint y retirar el compromiso de 23 y 21 puntos sin respaldo. | Quedan 44 puntos tras diferir PB-08 frente a 32 proyectados en dos Sprints. Se debe resolver un déficit de 12 mediante reducción adicional o ampliación autorizada. | Juan Daniel Ulate, Product Owner | 07.1; 07.2; 07.4 |
 
 Las decisiones D10 a D13 se incorporan al registro el 19 de noviembre de 2026 con la fecha del evento que las originó. Su registro no acredita por sí solo la ejecución de las acciones.
 
@@ -1945,6 +2028,9 @@ Las siguientes evidencias respaldan el trabajo documentado en el Expediente:
 | Tablero de Jira del Sprint | Columnas del flujo de trabajo y tarjetas del Sprint 1 con etiquetas, puntos y responsable asignado. | `img/tablero2.png` y `img/tablero1 (1).png` (sección 05.2) | 05.2; MEJ-01; WA-05 |
 | Retrospectivas del proyecto | Acta de la Sprint Retrospective del Sprint 1 con su análisis, acciones de mejora y su incorporación al Sprint Backlog 2. Cada retrospectiva revisa al inicio las acciones de la anterior. | Sección 13.2 | 05.4; 10.5; 13.2 |
 | Acciones de mejora ejecutadas | Resultado de MEJ-01, MEJ-02 y MEJ-03, con la evidencia de su ejecución y el acuerdo de trabajo que las formaliza. | [Sección 13.2.7](#1327-ejecución-de-las-acciones-de-mejora) | 05.4; 10.5; 13.2 |
+| Recepción de recetas revisadas | 13.2.7 reporta recepción el 21 de octubre de 2026; falta vincular el documento recibido y la confirmación de la especialista. | Referencia interna: 13.2.7, MEJ-02. Evidencia externa original pendiente. | PB-13; R01; R03; R10 |
+| Dosis y casos de referencia | Se reporta PB-15 terminada en el Sprint 3; faltan archivo, versión, fuente, persona revisora y fecha efectiva de validación. | Referencias internas: 07.4 y 13.2.7. Evidencia externa original pendiente. | PB-15; PB-06; R02; R10 |
+| Pruebas con personas agricultoras | No se identifica en las evidencias revisadas un informe con participantes, fecha, tareas y resultados. | Pendiente de confirmación y respaldo documental; seguimiento en 08.10. | PB-09; R04; R07 |
 
 ### 11.4. Registro de Solicitudes de Cambio
 
@@ -1968,17 +2054,19 @@ El control de cambios permite que el equipo de BioApp evalúe cada solicitud ant
 | Solicitante | Profesional en agronomía. |
 | Descripción | Incorporar PB-18, «Administrar recetas y dosis desde la aplicación», en la versión 1.0. Esta funcionalidad ya se encuentra identificada en el Product Backlog, pero actualmente está fuera del alcance de la primera versión. |
 | Planificación vigente de PB-18 | Fuera del alcance de la versión 1.0 y de los Sprints 1 a 5, según D07. Se mantiene en el backlog para una segunda versión, sin Sprint asignado. |
-| Impacto en alcance | PB-18 tiene una estimación de 5 puntos de historia, según la sección 06. Su incorporación aumentaría el alcance planificado de 92 a 97 puntos si no se elimina o sustituye otra historia. |
+| Impacto en alcance | PB-18 representa 5 puntos adicionales. La línea base original de 92 pasaría a 97 si se incorporara sin retirar otra historia. Tras D14, el alcance revisado de la versión 1.0 es de 84 puntos; incorporar PB-18 lo elevaría a 89. |
 | Impacto en tiempo | Incorporar esta funcionalidad requeriría reorganizar el trabajo de los Sprints restantes y podría comprometer la entrega prevista para el 7 de diciembre de 2026. |
 | Impacto en costo | Si fuera necesario realizar un Sprint adicional, su costo de referencia sería de ₡3.520.000, monto superior a la reserva de contingencia disponible de ₡1.796.000. Por lo tanto, cualquier ampliación del cronograma y del presupuesto tendría que evaluarse y aprobarse previamente. |
 | Impacto en calidad | La administración de recetas y dosis requiere controles de acceso, validación agronómica y pruebas que garanticen que solamente se utilice información revisada y autorizada. |
 | Impacto en riesgos | Permitir la modificación de recetas y dosis sin las validaciones correspondientes podría generar información incorrecta y afectar los resultados de los cálculos de BioApp. Por esta razón, se deben establecer controles para prevenir errores en la información utilizada. |
 | Recomendación del análisis | Mantener PB-18 para una segunda versión, conforme a la priorización vigente. |
-| Decisión sobre CR-01 | Diferida para la versión 2. El Product Owner mantiene el alcance vigente de la versión 1.0 conforme a D07. |
+| Decisión sobre CR-01 | El 24 de noviembre de 2026, Juan Daniel Ulate, Product Owner, decide diferir PB-18 para la versión 2 después de revisar la solicitud del 22 de noviembre. Resolución D15. |
 | Justificación | Se mantiene PB-18 fuera de la primera versión para priorizar las funcionalidades esenciales de BioApp, evitar trabajo adicional que pueda afectar el cronograma y mantener el presupuesto previsto. Además, desarrollar esta funcionalidad en una segunda versión permitirá planificar adecuadamente los controles de acceso, las validaciones agronómicas y las pruebas necesarias para garantizar la calidad de la información. |
 | Responsable | Juan Daniel Ulate, Product Owner, encargado de mantener PB-18 en el Product Backlog y revisar su prioridad para la versión 2. |
 
 D07, registrada el 4 de noviembre de 2026, estableció la priorización de PB-18. CR-01, ingresada el 22 de noviembre, solicita reconsiderar esa priorización para la versión 1.0. El análisis de CR-01 toma como referencia el alcance del Product Backlog (05.1 y 06.1), el Release Plan (07.2) y el presupuesto (07.3).
+
+**Resolución del Product Owner — 24 de noviembre de 2026:** Juan Daniel Ulate revisa CR-01 y mantiene PB-18 fuera de la versión 1.0 mediante D15. La decisión considera el atraso, la velocidad observada y las pruebas adicionales necesarias. D07 es el antecedente; D15 es la respuesta posterior a la solicitud. PB-18 permanece para la versión 2, sin fecha comprometida. La comunicación a la persona solicitante y al Scrum Team deberá registrarse con fecha y medio cuando se realice.
 
 ## 12. Producto / Incremento final y cierre del proyecto
 
@@ -2149,7 +2237,7 @@ Las acciones acordadas en la Sprint Retrospective del Sprint 1 se ejecutaron dur
 | Acción | Resultado | Evidencia | Acuerdo que la formaliza |
 |---|---|---|---|
 | MEJ-01 — Registro de todas las tareas en Jira | Ejecutada. Las tarjetas del tablero tienen responsable asignado y el trabajo de cada Sprint se gestiona en Jira. | Capturas del tablero y de los Sprints 1 a 5 (sección 05.2). | WA-05 |
-| MEJ-02 — Confirmación de las entregas de agronomía | Ejecutada. Las recetas revisadas se recibieron el 21 de octubre y la tabla de dosis validadas se incorporó con PB-15, terminada en el Sprint 3. | Sección 07.1 (supuestos de la estimación) y seguimiento del release (sección 07.4). | WA-09 |
+| MEJ-02 — Confirmación de las entregas de agronomía | Reportada como ejecutada: recepción de recetas el 21 de octubre y dosis incorporadas con PB-15 en el Sprint 3. La confirmación externa y la invitación/asistencia a la Review requieren respaldo documental. | Referencias internas: 07.1 y 07.4. Fuentes y confirmaciones originales pendientes en 08.10 y 11.3. | WA-09 |
 | MEJ-03 — Revisión cruzada de las secciones del expediente | Ejecutada. Cada sección agregada desde el Sprint 2 tiene su entrada en el historial de cambios con autor, versión y secciones afectadas. | Historial de cambios a partir de la versión 0.5 (sección 11.1) e historial de commits del repositorio. | WA-07 |
 
 ### 13.3. Parte 2. Integración y actualización del expediente
